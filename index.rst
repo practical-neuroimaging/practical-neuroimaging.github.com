@@ -3,8 +3,11 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to Practical Neuroimaging's documentation!
-==================================================
+Practical Neuroimaging Analysis course at UC Berkeley
+=====================================================
+
+These are the web pages for the 10-week course on practical neuroimaging
+analysis at UC Berkeley `brain imaging center`_ (BIC).
 
 Contents:
 
@@ -20,3 +23,4 @@ Indices and tables
 * :ref:`modindex`
 * :ref:`search`
 
+.. include:: links_names.inc
