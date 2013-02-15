@@ -12,15 +12,8 @@ analysis at UC Berkeley `brain imaging center`_ (BIC).
 Contents:
 
 .. toctree::
-   :maxdepth: 2
+    :maxdepth: 2
 
-
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+    where_and_when
 
 .. include:: links_names.inc
