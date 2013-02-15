@@ -11,6 +11,10 @@ analysis at UC Berkeley `brain imaging center`_ (BIC).
 
 Please join the `mailing list`_
 
+If you need help with installation, or any other course-related thing, we will
+be doing office hours at 210 Barker hall from 2pm until 4pm on Tuesday,
+Wednesday and Thursday 19, 20, 21st of February.
+
 .. toctree::
     :maxdepth: 2
 

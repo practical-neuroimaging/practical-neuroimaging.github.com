@@ -49,3 +49,5 @@ On Fedora or related distros::
 You will probably already have the editor ``gedit`` installed on your system, if
 not, and you don't have a preferred editor, install it (Ubuntu / Debian : ``sudo
 apt-get install gedit``, Fedora etc : ``yum install gedit``.
+
+.. include:: links_names.inc
