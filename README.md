@@ -19,3 +19,14 @@ Working on the site goes like:
     git commit
     git push # Push up web pages
     git co source # Back to editing if you want
+
+Adding references
+=================
+
+Add reference to ``course.bib``.  Use bibtex citation key, as in ``[donoho2010invitation]_``
+
+Run ``bib4txt.py`` on file with references::
+
+    bib4txt.py -i day0.rst course.bib
+
+Put output at end of ``rst`` file to define references.

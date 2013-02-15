@@ -24,6 +24,10 @@
 .. _nose: http://readthedocs.org/docs/nose/en/latest
 .. _nose-ipdb: https://github.com/flavioamieiro/nose-ipdb
 
+.. IPython
+.. _ipython: http://ipython.org/
+.. _ipython notebook: http://ipython.org/ipython-doc/dev/interactive/htmlnotebook.html
+
 .. Virtualenv and helpers
 .. _virtualenv: http://pypi.python.org/pypi/virtualenv
 .. _virtualenvwrapper: http://www.doughellmann.com/projects/virtualenvwrapper
