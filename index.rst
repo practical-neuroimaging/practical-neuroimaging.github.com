@@ -9,11 +9,15 @@ Practical Neuroimaging Analysis course at UC Berkeley
 These are the web pages for the 10-week course on practical neuroimaging
 analysis at UC Berkeley `brain imaging center`_ (BIC).
 
-Contents:
+Please join the `mailing list`_
 
 .. toctree::
     :maxdepth: 2
 
+    aim
     where_and_when
+    installation
+    example_data
+    program
 
 .. include:: links_names.inc

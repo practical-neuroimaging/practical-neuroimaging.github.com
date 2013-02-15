@@ -1,3 +1,7 @@
+.. Course
+.. _mailing list: https://calmail.berkeley.edu/manage/list/listinfo/practical_fmri@lists.berkeley.edu
+.. _course web directory: http://nipy.bic.berkeley.edu/practical_neuroimaging/
+
 .. Version control
 .. _git: http://git-scm.com
 .. _git parable: http://tom.preston-werner.com/2009/05/19/the-git-parable.html
@@ -5,6 +9,9 @@
 
 .. Editors
 .. _vim: http://www.vim.org
+.. _textmate: http://macromates.com
+.. _textmate download for UC Berkeley: http://ist.berkeley.edu/software-central/textmate
+.. _notepad++ : http://notepad-plus-plus.org/
 
 .. Python and common libraries
 .. _python: http://www.python.org
@@ -47,6 +54,22 @@
 .. Places
 .. _brain imaging center: http://bic.berkeley.edu/
 .. _BIC: http://bic.berkeley.edu/
+
+.. FMRI datasets
+.. _openfmri: https://openfmri.org/
+.. _duncan et al data: https://openfmri.org/dataset/ds000107
+
+.. Languages
+.. _matlab: http://www.mathworks.com
+
+.. Imaging software
+.. _spm: http://www.fil.ion.ucl.ac.uk/spm
+.. _eeglab: http://sccn.ucsd.edu/eeglab
+.. _AFNI: http://afni.nimh.nih.gov/afni
+.. _FSL: http://www.fmrib.ox.ac.uk/fsl
+.. _FreeSurfer: http://surfer.nmr.mgh.harvard.edu
+.. _voxbo: http://www.voxbo.org
+.. _fmristat: http://www.math.mcgill.ca/keith/fmristat
 
 .. Substitutions
 .. |emdash| unicode:: U+02014
