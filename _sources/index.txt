@@ -20,6 +20,7 @@ Wednesday and Thursday 19, 20, 21st of February.
 
     aim
     where_and_when
+    reading
     installation
     example_data
     program

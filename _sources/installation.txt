@@ -7,8 +7,10 @@ Software to install for the class
 * A text editor to edit python code
 * Python and the Numpy package installed
 
-In practice this is only likely to be a problem (for this first class)
-for you, gentle Windows user.
+If you already have some large Python packaging system installed, such as the
+`Enthought Python Distribution`_, you can stick with that, it should provide the
+dependencies you need.  To make sure, see :ref:`check-installation`. If you
+don't have something like that (most of you won't), please read on...
 
 ************************
 If you are using Windows
@@ -27,8 +29,18 @@ If you don't have a preferred editor for code, please install `Notepad++`_.
 If you are using OSX
 ********************
 
-You will already have Python and Numpy installed with your System by Apple.
-That will do for now.
+We have an exciting new installer for the course.  If you do not have Python.org
+python 2.7, installed, or you aren't sure if you have it installed, please start
+by running the installer at
+http://www.python.org/ftp/python/2.7.3/python-2.7.3-macosx10.6.dmg
+
+Next, please try the fancy installer I built for this course, called *Reginald*.
+Download ``reginald.dmg`` with right-click and ``Save link as`` from the `course
+web directory`_.  Double click to mount the installer, then open the mounted
+disk image and look at the ``ReadMe.txt`` file, and then double click the
+installer.
+
+Remember to :ref:`check-installation`
 
 If you do not have a text editor you prefer for editing code, consider
 installing the `textmate`_ editor. There's a free `textmate download for UC
@@ -49,5 +61,16 @@ On Fedora or related distros::
 You will probably already have the editor ``gedit`` installed on your system, if
 not, and you don't have a preferred editor, install it (Ubuntu / Debian : ``sudo
 apt-get install gedit``, Fedora etc : ``yum install gedit``.
+
+.. _check-installation:
+
+***********************
+Check your installation
+***********************
+
+To check you have a working installation, please download this `checklist
+script`_ from Fernando Perez' website, and run it.  The instructions on what to
+do are at the top of the file.  If you have problems, please come to office
+hours and we'll try and help you.
 
 .. include:: links_names.inc
