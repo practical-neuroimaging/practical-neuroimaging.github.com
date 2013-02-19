@@ -75,5 +75,13 @@
 .. _voxbo: http://www.voxbo.org
 .. _fmristat: http://www.math.mcgill.ca/keith/fmristat
 
+.. Installation
+.. _Enthought Python Distribution: http://www.enthought.com/products/epd.php
+.. _EPD: http://www.enthought.com/products/epd.php
+.. _checklist script: http://fperez.org/py4science/workshop_checklist.py
+
+.. Tutorials
+.. _The Python tutorial: http://docs.python.org/2/tutorial/
+
 .. Substitutions
 .. |emdash| unicode:: U+02014
