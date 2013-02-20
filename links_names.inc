@@ -84,5 +84,9 @@
 .. Tutorials
 .. _The Python tutorial: http://docs.python.org/2/tutorial/
 
+.. People
+.. _Matthew : http://matthew.dynevor.org
+.. _Matthew Brett : http://matthew.dynevor.org
+
 .. Substitutions
 .. |emdash| unicode:: U+02014
