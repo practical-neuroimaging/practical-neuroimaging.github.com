@@ -50,13 +50,20 @@ Berkeley`_.
 If you are using Linux
 **********************
 
-You should be fine with  (Ubuntu or Debian)::
+If you are using Ubuntu or Debian, please set up `NeuroDebian`_ using the
+instructions on the NeuroDebian website.  Then::
 
-    sudo apt-get install python-numpy
+    sudo apt-get install python-nipy
+    sudo apt-get install ipython-notebook
+    sudo apt-get install python-matplotlib python-nose
 
-On Fedora or related distros::
+On Fedora or related distros, it's a little more complicated::
 
-    yum install numpy
+    sudo yum install numpy scipy sympy python-setuptools
+    sudo yum install python-matplotlib python-nose
+    sudo yum install python-ipython-notebook
+    sudo easy_install nibabel
+    sudo easy_install nipy
 
 You will probably already have the editor ``gedit`` installed on your system, if
 not, and you don't have a preferred editor, install it (Ubuntu / Debian : ``sudo
@@ -69,8 +76,9 @@ Check your installation
 ***********************
 
 To check you have a working installation, please download this `checklist
-script`_ from Fernando Perez' website, and run it.  The instructions on what to
-do are at the top of the file.  If you have problems, please come to office
-hours and we'll try and help you.
+script`_ from Fernando Perez' website, and run it.  To download, please **Right
+click** on the link and **Save link as** to save to your hard disk.  The
+instructions on what to do are at the top of the file.  If you have problems,
+please come to office hours and we'll try and help you.
 
 .. include:: links_names.inc

@@ -79,6 +79,7 @@
 .. _Enthought Python Distribution: http://www.enthought.com/products/epd.php
 .. _EPD: http://www.enthought.com/products/epd.php
 .. _checklist script: http://fperez.org/py4science/workshop_checklist.py
+.. _NeuroDebian: http://neuro.debian.net
 
 .. Tutorials
 .. _The Python tutorial: http://docs.python.org/2/tutorial/
