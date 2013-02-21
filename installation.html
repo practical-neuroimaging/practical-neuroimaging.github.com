@@ -86,11 +86,18 @@ Berkeley</a>.</p>
 </div>
 <div class="section" id="if-you-are-using-linux">
 <h2>If you are using Linux<a class="headerlink" href="#if-you-are-using-linux" title="Permalink to this headline">¶</a></h2>
-<p>You should be fine with  (Ubuntu or Debian):</p>
-<div class="highlight-python"><pre>sudo apt-get install python-numpy</pre>
+<p>If you are using Ubuntu or Debian, please set up <a class="reference external" href="http://neuro.debian.net">NeuroDebian</a> using the
+instructions on the NeuroDebian website.  Then:</p>
+<div class="highlight-python"><pre>sudo apt-get install python-nipy
+sudo apt-get install ipython-notebook
+sudo apt-get install python-matplotlib python-nose</pre>
 </div>
-<p>On Fedora or related distros:</p>
-<div class="highlight-python"><pre>yum install numpy</pre>
+<p>On Fedora or related distros, it&#8217;s a little more complicated:</p>
+<div class="highlight-python"><pre>sudo yum install numpy scipy sympy python-setuptools
+sudo yum install python-matplotlib python-nose
+sudo yum install python-ipython-notebook
+sudo easy_install nibabel
+sudo easy_install nipy</pre>
 </div>
 <p>You will probably already have the editor <tt class="docutils literal"><span class="pre">gedit</span></tt> installed on your system, if
 not, and you don&#8217;t have a preferred editor, install it (Ubuntu / Debian : <tt class="docutils literal"><span class="pre">sudo</span>
@@ -99,9 +106,10 @@ not, and you don&#8217;t have a preferred editor, install it (Ubuntu / Debian : 
 <div class="section" id="check-your-installation">
 <span id="check-installation"></span><h2>Check your installation<a class="headerlink" href="#check-your-installation" title="Permalink to this headline">¶</a></h2>
 <p>To check you have a working installation, please download this <a class="reference external" href="http://fperez.org/py4science/workshop_checklist.py">checklist
-script</a> from Fernando Perez&#8217; website, and run it.  The instructions on what to
-do are at the top of the file.  If you have problems, please come to office
-hours and we&#8217;ll try and help you.</p>
+script</a> from Fernando Perez&#8217; website, and run it.  To download, please <strong>Right
+click</strong> on the link and <strong>Save link as</strong> to save to your hard disk.  The
+instructions on what to do are at the top of the file.  If you have problems,
+please come to office hours and we&#8217;ll try and help you.</p>
 </div>
 </div>
 
