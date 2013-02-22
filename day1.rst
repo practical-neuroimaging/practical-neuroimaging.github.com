@@ -44,7 +44,7 @@ The Python environment
     * ``scipy.ndimage``: processing tools such as smoothing and convolution
     * ``scipy.linalg``: expanded linear algebra tools with interfaces to much of
       the highly optimized LAPACK linear algebra libraries.
-    * ``scipy.optimize`` processing tools such as smoothing and convolution
+    * ``scipy.optimize``: tools for finding optimum values in functions
 
   Please see the `scipy reference guide`_ for more detail.
 
@@ -68,6 +68,17 @@ The Python environment
 
 There are many other libraries, including some specific to neuroimaging.  We'll
 meet one of those today, nibabel_.
+
+********************
+The Python libraries
+********************
+
+* `The Python libraries raw
+  <https://raw.github.com/practical-neuroimaging/pna-notebooks/master/python_libraries.ipynb>`_
+  notebook file for downloading.
+* `The Python libraries web
+  <http://nbviewer.ipython.org/urls/raw.github.com/practical-neuroimaging/pna-notebooks/master/python_libraries.ipynb>`_
+  notebook presented nicely as a web page.
 
 **********************
 Introduction to python
