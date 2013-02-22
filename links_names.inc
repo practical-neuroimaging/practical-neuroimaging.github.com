@@ -23,8 +23,13 @@
 .. _scipy: http://www.scipy.org
 .. _scipy reference guide: http://docs.scipy.org/doc/scipy/reference/
 .. _matplotlib: http://matplotlib.org/
+.. _matplotlib gallery: http://matplotlib.org/gallery
 .. _cython: http://cython.org/
 .. _sympy: http://sympy.org
+.. _pandas: http://pandas.pydata.org/
+.. _scikit-learn: http://scikit-learn.org/
+.. _scikit-image: http://scikit-image.org/
+.. _statsmodels: http://statsmodels.sourceforge.net/
 .. _old and new python versions: https://launchpad.net/%7Efkrull/+archive/deadsnakes
 .. _nose: http://readthedocs.org/docs/nose/en/latest
 .. _nose-ipdb: https://github.com/flavioamieiro/nose-ipdb

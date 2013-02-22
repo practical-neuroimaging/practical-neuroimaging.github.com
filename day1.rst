@@ -24,7 +24,7 @@ The idea of software carpentry:
 The Python environment
 **********************
 
-* Python itself comes with many useful modules in the `Python standard library`
+* Python itself comes with many useful modules in the `Python standard library`_
     * ``os, sys, shutil, glob, tempfile``
     * ``urllib2``, ``HTMLParser``, ``xml``, many other web libraries
     * ``math, decimal`` (very high precision numbers), ``random``
@@ -49,7 +49,8 @@ The Python environment
   Please see the `scipy reference guide`_ for more detail.
 
 * Matplotlib_ provides 2D and some 3D plotting, with an interface modeled after
-  MATLAB.
+  MATLAB. See the `matplotlib gallery`_ for a taster of the kind of things you
+  can do.
 
 * Cython_: write Python code but with the ability to optimize and compile it
   down to the C level, often giving very large increases in execution speed.
@@ -59,12 +60,20 @@ The Python environment
 * Pandas_: high-level fast data analysis using R-like data frames to hold and
   manipulate data
 
+* scikit-learn_: an extensive machine learning library
+
+* scikit-image_: 2D image processing
+
+* statsmodels_: statistical models
+
 There are many other libraries, including some specific to neuroimaging.  We'll
 meet one of those today, nibabel_.
 
 **********************
 Introduction to python
 **********************
+
+We continue from last week.
 
 * `Introduction to Python raw
   <https://raw.github.com/jbpoline/bayfmri/master/notebooks/001-Introduction-Python.ipynb>`_
