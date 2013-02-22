@@ -87,10 +87,10 @@ Introduction to python
 We continue from last week.
 
 * `Introduction to Python raw
-  <https://raw.github.com/jbpoline/bayfmri/master/notebooks/001-Introduction-Python.ipynb>`_
+  <https://raw.github.com/practical-neuroimaging/pna-notebooks/master/introduction_to_python.ipynb>`_
   notebook file for downloading.
 * `Introduction to Python web
-  <http://nbviewer.ipython.org/urls/raw.github.com/jbpoline/bayfmri/master/notebooks/001-Introduction-Python.ipynb>`_
+  <http://nbviewer.ipython.org/urls/raw.github.com/practical-neuroimaging/pna-notebooks/master/introduction_to_python.ipynb>`_
   notebook presented nicely as a web page.
 
 *****************
