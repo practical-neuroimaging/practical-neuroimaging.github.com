@@ -37,3 +37,4 @@ By day
 .. toctree::
 
     day0
+    day1
