@@ -12,6 +12,8 @@
 .. _textmate: http://macromates.com
 .. _textmate download for UC Berkeley: http://ist.berkeley.edu/software-central/textmate
 .. _notepad++ : http://notepad-plus-plus.org/
+.. _text wrangler: http://www.barebones.com/products/textwrangler/
+.. _sublime text: http://www.sublimetext.com/
 
 .. Python and common libraries
 .. _python: http://www.python.org

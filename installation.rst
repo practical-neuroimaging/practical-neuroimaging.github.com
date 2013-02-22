@@ -46,6 +46,8 @@ If you do not have a text editor you prefer for editing code, consider
 installing the `textmate`_ editor. There's a free `textmate download for UC
 Berkeley`_.
 
+Other options for OSX are `Text Wrangler`_ or `Sublime Text`_.
+
 **********************
 If you are using Linux
 **********************
