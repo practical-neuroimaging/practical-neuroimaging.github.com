@@ -15,11 +15,16 @@
 
 .. Python and common libraries
 .. _python: http://www.python.org
+.. _python standard library: http://docs.python.org/2/library
 .. _python.org releases: http://www.python.org/download/releases
 .. _setuptools: http://pypi.python.org/pypi/setuptools
 .. _distribute: http://pypi.python.org/pypi/distribute
-.. _numpy: http://sourceforge.net/projects/numpy/files
-.. _scipy: http://sourceforge.net/projects/scipy/files
+.. _numpy: http://www.numpy.org
+.. _scipy: http://www.scipy.org
+.. _scipy reference guide: http://docs.scipy.org/doc/scipy/reference/
+.. _matplotlib: http://matplotlib.org/
+.. _cython: http://cython.org/
+.. _sympy: http://sympy.org
 .. _old and new python versions: https://launchpad.net/%7Efkrull/+archive/deadsnakes
 .. _nose: http://readthedocs.org/docs/nose/en/latest
 .. _nose-ipdb: https://github.com/flavioamieiro/nose-ipdb
@@ -52,7 +57,11 @@
 .. _putty: http://www.chiark.greenend.org.uk/~sgtatham/putty
 
 .. Nipy and friends
-.. _nipy: http://nipy.org
+.. _nipy community: http://nipy.org
+.. _nipy project: http://nipy.org/nipy
+.. _nibabel: http://nipy.org/nibabel
+.. _dipy: http://nipy.org/dipy
+.. _nipype: http://nipy.org/nipype
 .. _gitwash: http://github.com/matthew-brett/gitwash
 
 .. Places
