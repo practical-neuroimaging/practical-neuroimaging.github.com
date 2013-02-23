@@ -9,11 +9,18 @@
 
 .. Editors
 .. _vim: http://www.vim.org
+.. _vi: http://en.wikipedia.org/wiki/Vi
+.. _about vim: http://www.vim.org/about.php
+.. _emacs tour: http://www.gnu.org/software/emacs/tour/
+.. _vim: http://www.vim.org
+.. _gvim: http://www.vim.org
 .. _textmate: http://macromates.com
 .. _textmate download for UC Berkeley: http://ist.berkeley.edu/software-central/textmate
 .. _notepad++ : http://notepad-plus-plus.org/
 .. _text wrangler: http://www.barebones.com/products/textwrangler/
 .. _sublime text: http://www.sublimetext.com/
+.. _gedit: http://projects.gnome.org/gedit
+.. _emacs: http://www.gnu.org/software/emacs/
 
 .. Python and common libraries
 .. _python: http://www.python.org
@@ -103,6 +110,7 @@
 .. People
 .. _Matthew : http://matthew.dynevor.org
 .. _Matthew Brett : http://matthew.dynevor.org
+.. _Richard Stallman: http://en.wikipedia.org/wiki/Richard_Stallman
 
 .. Substitutions
 .. |emdash| unicode:: U+02014

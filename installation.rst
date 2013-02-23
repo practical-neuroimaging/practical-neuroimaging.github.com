@@ -4,8 +4,8 @@
 Software to install for the class
 #################################
 
-* A text editor to edit python code
-* Python and the Numpy package installed
+* A text editor to edit python code - see :ref:`choosing-editor`
+* Python and the Python scientific libraries installed - see below.
 
 If you already have some large Python packaging system installed, such as the
 `Enthought Python Distribution`_, you can stick with that, it should provide the
@@ -23,8 +23,6 @@ release.
 
 Choose the default installation options for now.
 
-If you don't have a preferred editor for code, please install `Notepad++`_.
-
 ********************
 If you are using OSX
 ********************
@@ -41,12 +39,6 @@ disk image and look at the ``ReadMe.txt`` file, and then double click the
 installer.
 
 Remember to :ref:`check-installation`
-
-If you do not have a text editor you prefer for editing code, consider
-installing the `textmate`_ editor. There's a free `textmate download for UC
-Berkeley`_.
-
-Other options for OSX are `Text Wrangler`_ or `Sublime Text`_.
 
 **********************
 If you are using Linux
@@ -66,10 +58,6 @@ On Fedora or related distros, it's a little more complicated::
     sudo yum install python-ipython-notebook
     sudo easy_install nibabel
     sudo easy_install nipy
-
-You will probably already have the editor ``gedit`` installed on your system, if
-not, and you don't have a preferred editor, install it (Ubuntu / Debian : ``sudo
-apt-get install gedit``, Fedora etc : ``yum install gedit``.
 
 .. _check-installation:
 

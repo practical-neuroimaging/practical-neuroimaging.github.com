@@ -22,6 +22,7 @@ Wednesday and Thursday 19, 20, 21st of February.
     where_and_when
     reading
     installation
+    choosing_editor
     example_data
     program
 
