@@ -39,14 +39,20 @@ The Python environment
   manipulating arrays including basic linear algebra, random number generation
   and Fourier transforms.  Python + Numpy gets you most of what MATLAB can do.
 
-* Scipy_ adds a large library of scientific code built on top of Numpy.
-  Including:
+* Scipy_ adds a large library of scientific code built on top of Numpy.  It is a
+  collection of many different kinds of routines including:
 
-    * ``scipy.io``: Read / write of scientific data formats including MATLAB ``.mat`` files
-    * ``scipy.ndimage``: processing tools such as smoothing and convolution
+    * ``scipy.io``: Read / write of scientific data formats including MATLAB
+      ``.mat`` files
+    * ``scipy.ndimage``: processing tools such as smoothing and convolution,
+      resampling for N-D (2D, 3D, 4D etc) arrays.
     * ``scipy.linalg``: expanded linear algebra tools with interfaces to much of
       the highly optimized LAPACK linear algebra libraries.
     * ``scipy.optimize``: tools for finding optimum values in functions
+    * ``scipy.sparse``: working with sparse arrays
+    * ``scipy.interpolate``: routines for interpolating data points
+    * ``scipy.stats``: routines for statistical distributions, fitting and
+      tests.
 
   Please see the `scipy reference guide`_ for more detail.
 
@@ -57,16 +63,21 @@ The Python environment
 * Cython_: write Python code but with the ability to optimize and compile it
   down to the C level, often giving very large increases in execution speed.
 
-* Sympy_: a library for symbolic mathematics such as defining and solving equations.
+* Sympy_: a library for symbolic mathematics.  It is a computer algebra system
+  like Mathematica or Maple that allows you to manipulate mathematical symbols
+  and functions.  It is useful for such things as defining and simplifying and
+  solving equations, finding integrals and differentials.
 
 * Pandas_: high-level fast data analysis using R-like data frames to hold and
-  manipulate data
+  manipulate data.
 
-* scikit-learn_: an extensive machine learning library
+* scikit-learn_: an extensive machine learning library, containing algorithms
+  such as independent component analysis, support vector machines among many
+  others.
 
 * scikit-image_: 2D image processing
 
-* statsmodels_: statistical models
+* statsmodels_: statistical models defined and estimated.
 
 There are many other libraries, including some specific to neuroimaging.  We'll
 meet one of those next week, nibabel_.
