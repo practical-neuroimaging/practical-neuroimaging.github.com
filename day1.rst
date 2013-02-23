@@ -20,6 +20,8 @@ The idea of software carpentry:
 * Learning how to use tools.
 * Homework for this week: editors.
 
+See :ref:`choosing-editor` for a review of some choices.
+
 **********************
 The Python environment
 **********************
@@ -67,7 +69,7 @@ The Python environment
 * statsmodels_: statistical models
 
 There are many other libraries, including some specific to neuroimaging.  We'll
-meet one of those today, nibabel_.
+meet one of those next week, nibabel_.
 
 ********************
 The Python libraries
@@ -84,35 +86,13 @@ The Python libraries
 Introduction to python
 **********************
 
-We continue from last week.
+Continuing on from last week:
 
 * `Introduction to Python raw
   <https://raw.github.com/practical-neuroimaging/pna-notebooks/master/introduction_to_python.ipynb>`_
   notebook file for downloading.
 * `Introduction to Python web
   <http://nbviewer.ipython.org/urls/raw.github.com/practical-neuroimaging/pna-notebooks/master/introduction_to_python.ipynb>`_
-  notebook presented nicely as a web page.
-
-*****************
-What is an image?
-*****************
-
-* `What is an image? raw
-  <https://raw.github.com/practical-neuroimaging/pna-notebooks/master/what_is_an_image.ipynb>`_
-  notebook file for downloading.
-* `What is an image? web
-  <http://nbviewer.ipython.org/urls/raw.github.com/practical-neuroimaging/pna-notebooks/master/what_is_an_image.ipynb>`_
-  notebook presented nicely as a web page.
-
-**************
-Loading images
-**************
-
-* `Loading images raw
-  <https://raw.github.com/practical-neuroimaging/pna-notebooks/master/loading_images.ipynb>`_
-  notebook file for downloading.
-* `Loading images web
-  <http://nbviewer.ipython.org/urls/raw.github.com/practical-neuroimaging/pna-notebooks/master/loading_images.ipynb>`_
   notebook presented nicely as a web page.
 
 .. include:: links_names.inc
