@@ -8,9 +8,7 @@ Introduction
 
 Editors - feedback.
 
-Getting data from images.
-
-Using data to diagnose artefacts.
+What is an image?  How do we read the data from an image?
 
 *****************
 What is an image?
@@ -23,13 +21,8 @@ What is an image?
   <http://nbviewer.ipython.org/urls/raw.github.com/practical-neuroimaging/pna-notebooks/master/what_is_an_image.ipynb>`_
   notebook presented nicely as a web page.
 
-**************
-Loading images
-**************
+*****
+Notes
+*****
 
-* `Loading images raw
-  <https://raw.github.com/practical-neuroimaging/pna-notebooks/master/loading_images.ipynb>`_
-  notebook file for downloading.
-* `Loading images web
-  <http://nbviewer.ipython.org/urls/raw.github.com/practical-neuroimaging/pna-notebooks/master/loading_images.ipynb>`_
-  notebook presented nicely as a web page.
+* The `NIfTI data format <http://nifti.nimh.nih.gov/nifti-1>`_
