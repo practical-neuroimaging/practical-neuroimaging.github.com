@@ -26,6 +26,7 @@
     <script type="text/javascript" src="_static/doctools.js"></script>
     <link rel="top" title="Practical neuroimaging analysis" href="index.html" />
     <link rel="up" title="Course program" href="program.html" />
+    <link rel="next" title="Day two : 1 March 2013" href="day2.html" />
     <link rel="prev" title="Day zero : 15 February 2013" href="day0.html" /> 
   </head>
   <body>
@@ -35,6 +36,9 @@
         <li class="right" style="margin-right: 10px">
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="day2.html" title="Day two : 1 March 2013"
+             accesskey="N">next</a> |</li>
         <li class="right" >
           <a href="day0.html" title="Day zero : 15 February 2013"
              accesskey="P">previous</a> |</li>
@@ -64,6 +68,7 @@
 <li>Learning how to use tools.</li>
 <li>Homework for this week: editors.</li>
 </ul>
+<p>See <a class="reference internal" href="choosing_editor.html#choosing-editor"><em>Choosing an editor</em></a> for a review of some choices.</p>
 </div>
 <div class="section" id="the-python-environment">
 <h2>The Python environment<a class="headerlink" href="#the-python-environment" title="Permalink to this headline">¶</a></h2>
@@ -85,15 +90,21 @@
 manipulating arrays including basic linear algebra, random number generation
 and Fourier transforms.  Python + Numpy gets you most of what MATLAB can do.</p>
 </li>
-<li><p class="first"><a class="reference external" href="http://www.scipy.org">Scipy</a> adds a large library of scientific code built on top of Numpy.
-Including:</p>
+<li><p class="first"><a class="reference external" href="http://www.scipy.org">Scipy</a> adds a large library of scientific code built on top of Numpy.  It is a
+collection of many different kinds of routines including:</p>
 <blockquote>
 <div><ul class="simple">
-<li><tt class="docutils literal"><span class="pre">scipy.io</span></tt>: Read / write of scientific data formats including MATLAB <tt class="docutils literal"><span class="pre">.mat</span></tt> files</li>
-<li><tt class="docutils literal"><span class="pre">scipy.ndimage</span></tt>: processing tools such as smoothing and convolution</li>
+<li><tt class="docutils literal"><span class="pre">scipy.io</span></tt>: Read / write of scientific data formats including MATLAB
+<tt class="docutils literal"><span class="pre">.mat</span></tt> files</li>
+<li><tt class="docutils literal"><span class="pre">scipy.ndimage</span></tt>: processing tools such as smoothing and convolution,
+resampling for N-D (2D, 3D, 4D etc) arrays.</li>
 <li><tt class="docutils literal"><span class="pre">scipy.linalg</span></tt>: expanded linear algebra tools with interfaces to much of
 the highly optimized LAPACK linear algebra libraries.</li>
 <li><tt class="docutils literal"><span class="pre">scipy.optimize</span></tt>: tools for finding optimum values in functions</li>
+<li><tt class="docutils literal"><span class="pre">scipy.sparse</span></tt>: working with sparse arrays</li>
+<li><tt class="docutils literal"><span class="pre">scipy.interpolate</span></tt>: routines for interpolating data points</li>
+<li><tt class="docutils literal"><span class="pre">scipy.stats</span></tt>: routines for statistical distributions, fitting and
+tests.</li>
 </ul>
 </div></blockquote>
 <p>Please see the <a class="reference external" href="http://docs.scipy.org/doc/scipy/reference/">scipy reference guide</a> for more detail.</p>
@@ -105,20 +116,25 @@ can do.</p>
 <li><p class="first"><a class="reference external" href="http://cython.org/">Cython</a>: write Python code but with the ability to optimize and compile it
 down to the C level, often giving very large increases in execution speed.</p>
 </li>
-<li><p class="first"><a class="reference external" href="http://sympy.org">Sympy</a>: a library for symbolic mathematics such as defining and solving equations.</p>
+<li><p class="first"><a class="reference external" href="http://sympy.org">Sympy</a>: a library for symbolic mathematics.  It is a computer algebra system
+like Mathematica or Maple that allows you to manipulate mathematical symbols
+and functions.  It is useful for such things as defining and simplifying and
+solving equations, finding integrals and differentials.</p>
 </li>
 <li><p class="first"><a class="reference external" href="http://pandas.pydata.org/">Pandas</a>: high-level fast data analysis using R-like data frames to hold and
-manipulate data</p>
+manipulate data.</p>
 </li>
-<li><p class="first"><a class="reference external" href="http://scikit-learn.org/">scikit-learn</a>: an extensive machine learning library</p>
+<li><p class="first"><a class="reference external" href="http://scikit-learn.org/">scikit-learn</a>: an extensive machine learning library, containing algorithms
+such as independent component analysis, support vector machines among many
+others.</p>
 </li>
 <li><p class="first"><a class="reference external" href="http://scikit-image.org/">scikit-image</a>: 2D image processing</p>
 </li>
-<li><p class="first"><a class="reference external" href="http://statsmodels.sourceforge.net/">statsmodels</a>: statistical models</p>
+<li><p class="first"><a class="reference external" href="http://statsmodels.sourceforge.net/">statsmodels</a>: statistical models defined and estimated.</p>
 </li>
 </ul>
 <p>There are many other libraries, including some specific to neuroimaging.  We&#8217;ll
-meet one of those today, <a class="reference external" href="http://nipy.org/nibabel">nibabel</a>.</p>
+meet one of those next week, <a class="reference external" href="http://nipy.org/nibabel">nibabel</a>.</p>
 </div>
 <div class="section" id="the-python-libraries">
 <h2>The Python libraries<a class="headerlink" href="#the-python-libraries" title="Permalink to this headline">¶</a></h2>
@@ -131,29 +147,11 @@ notebook presented nicely as a web page.</li>
 </div>
 <div class="section" id="introduction-to-python">
 <h2>Introduction to python<a class="headerlink" href="#introduction-to-python" title="Permalink to this headline">¶</a></h2>
-<p>We continue from last week.</p>
+<p>Continuing on from last week:</p>
 <ul class="simple">
-<li><a class="reference external" href="https://raw.github.com/jbpoline/bayfmri/master/notebooks/001-Introduction-Python.ipynb">Introduction to Python raw</a>
+<li><a class="reference external" href="https://raw.github.com/practical-neuroimaging/pna-notebooks/master/introduction_to_python.ipynb">Introduction to Python raw</a>
 notebook file for downloading.</li>
-<li><a class="reference external" href="http://nbviewer.ipython.org/urls/raw.github.com/jbpoline/bayfmri/master/notebooks/001-Introduction-Python.ipynb">Introduction to Python web</a>
-notebook presented nicely as a web page.</li>
-</ul>
-</div>
-<div class="section" id="what-is-an-image">
-<h2>What is an image?<a class="headerlink" href="#what-is-an-image" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><a class="reference external" href="https://raw.github.com/practical-neuroimaging/pna-notebooks/master/what_is_an_image.ipynb">What is an image? raw</a>
-notebook file for downloading.</li>
-<li><a class="reference external" href="http://nbviewer.ipython.org/urls/raw.github.com/practical-neuroimaging/pna-notebooks/master/what_is_an_image.ipynb">What is an image? web</a>
-notebook presented nicely as a web page.</li>
-</ul>
-</div>
-<div class="section" id="loading-images">
-<h2>Loading images<a class="headerlink" href="#loading-images" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><a class="reference external" href="https://raw.github.com/practical-neuroimaging/pna-notebooks/master/loading_images.ipynb">Loading images raw</a>
-notebook file for downloading.</li>
-<li><a class="reference external" href="http://nbviewer.ipython.org/urls/raw.github.com/practical-neuroimaging/pna-notebooks/master/loading_images.ipynb">Loading images web</a>
+<li><a class="reference external" href="http://nbviewer.ipython.org/urls/raw.github.com/practical-neuroimaging/pna-notebooks/master/introduction_to_python.ipynb">Introduction to Python web</a>
 notebook presented nicely as a web page.</li>
 </ul>
 </div>
@@ -172,8 +170,6 @@ notebook presented nicely as a web page.</li>
 <li><a class="reference internal" href="#the-python-environment">The Python environment</a></li>
 <li><a class="reference internal" href="#the-python-libraries">The Python libraries</a></li>
 <li><a class="reference internal" href="#introduction-to-python">Introduction to python</a></li>
-<li><a class="reference internal" href="#what-is-an-image">What is an image?</a></li>
-<li><a class="reference internal" href="#loading-images">Loading images</a></li>
 </ul>
 </li>
 </ul>
@@ -181,6 +177,9 @@ notebook presented nicely as a web page.</li>
   <h4>Previous topic</h4>
   <p class="topless"><a href="day0.html"
                         title="previous chapter">Day zero : 15 February 2013</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="day2.html"
+                        title="next chapter">Day two : 1 March 2013</a></p>
   <h3>This Page</h3>
   <ul class="this-page-menu">
     <li><a href="_sources/day1.txt"
@@ -209,6 +208,9 @@ notebook presented nicely as a web page.</li>
         <li class="right" style="margin-right: 10px">
           <a href="genindex.html" title="General Index"
              >index</a></li>
+        <li class="right" >
+          <a href="day2.html" title="Day two : 1 March 2013"
+             >next</a> |</li>
         <li class="right" >
           <a href="day0.html" title="Day zero : 15 February 2013"
              >previous</a> |</li>
