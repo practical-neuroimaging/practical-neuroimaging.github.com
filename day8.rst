@@ -37,3 +37,14 @@ Loading notebooks
 * `Slice timing web
   <http://nbviewer.ipython.org/urls/raw.github.com/practical-neuroimaging/pna-notebooks/master/slice_timing.ipynb>`_
   notebook presented nicely as a web page.
+
+********
+Homework
+********
+
+* `Find my slice times, raw
+  <https://raw.github.com/practical-neuroimaging/pna-notebooks/master/what_are_my_times.ipynb>`_
+  notebook file for downloading.
+* `Find my slice times, web
+  <http://nbviewer.ipython.org/urls/raw.github.com/practical-neuroimaging/pna-notebooks/master/what_are_my_times.ipynb>`_
+  notebook presented nicely as a web page.
