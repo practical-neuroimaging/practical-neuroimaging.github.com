@@ -6,8 +6,7 @@ Day ten : 3 May 2013
 Introduction
 ************
 
-Wrapping up slice time interpolation
-
+#. Wrapping up slice time interpolation
 #. Workflow
 
     #. Organizing code and notebooks
@@ -38,3 +37,9 @@ Full notebooks with answers
 * `Slice timing intro with answers, web
   <http://nbviewer.ipython.org/urls/raw.github.com/practical-neuroimaging/pna-notebooks/master/slice_timing_full.ipynb>`_
   notebook presented nicely as a web page.
+
+******************
+Background reading
+******************
+
+* http://imaging.mrc-cbu.cam.ac.uk/imaging/SliceTiming
