@@ -6,6 +6,8 @@ Feedback from days 4 through 8
 
 As of April 29 2013
 
+Copied from original `feedback1 etherpad <https://pna.etherpad.mozilla.org/2>`_.
+
 THINGS YOU LIKE BEST ABOUT THE COURSE SO FAR
 --------------------------------------------
 
