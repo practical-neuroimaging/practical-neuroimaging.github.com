@@ -101,7 +101,9 @@ to that in the next few classes.  We have found it difficult to get the balance
 between the convenience of the IPython notebooks and our daily practice of
 coding which has to deal - as you've implied - with big directory trees and long
 processing pipelines, as well as writing utility functions and analysis scripts.
-We'll try and address this better.
+
+One way to help concentrate on this aspect is to spend some of the time in the
+class on solving your own analysis problems.
 
 **************************************************
 Better balance between exercises and demonstration
@@ -151,5 +153,4 @@ useful for some coverage of the basics of programming, Python, and version
 control.  We've heard good things about the `Code Academy Python course
 <http://www.codecademy.com/tracks/python>`_, as well as the amusingly titled
 `Learn Python the Hard Way <http://learnpythonthehardway.org/book/>`_.  We'll
-try and address this better
-next time through the course.
+try and address this better next time through the course.
