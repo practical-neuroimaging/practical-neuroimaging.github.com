@@ -7,7 +7,7 @@ Response to feedback
 Full feedback at :ref:`feedback0` and :ref:`feedback1`
 
 First - thanks to all of you who gave feedback - it's very helpful. Here I'm
-concentrating on the bad feedback to work out the best way to change.
+concentrating on the critical feedback to work out the best way to change.
 
 We haven't said this before, but the course we're trying to teach you is new; we
 don't know of anyone else trying to teach course exactly like this, a
@@ -149,5 +149,7 @@ to provide some background for those who need it; for example, we teach on
 `Software Carpentry <http://software-carpentry.org>`_ courses. These can be very
 useful for some coverage of the basics of programming, Python, and version
 control.  We've heard good things about the `Code Academy Python course
-<http://www.codecademy.com/tracks/python>`_.  We'll try and address this better
+<http://www.codecademy.com/tracks/python>`_, as well as the amusingly titled
+`Learn Python the Hard Way <http://learnpythonthehardway.org/book/>`_.  We'll
+try and address this better
 next time through the course.
