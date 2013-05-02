@@ -6,6 +6,14 @@ Response to feedback
 
 Full feedback at :ref:`feedback0` and :ref:`feedback1`
 
+First - thanks to all of you who gave feedback - it's very helpful. Here I'm
+concentrating on the bad feedback to work out the best way to change.
+
+We haven't said this before, but the course we're trying to teach you is new; we
+don't know of anyone else trying to teach course exactly like this, a
+combination of programming practice and concepts in neuroimaging.  So please,
+bear with us, we are learning too.
+
 **************************
 Course too slow / detailed
 **************************
@@ -37,9 +45,12 @@ Course too slow / detailed
     steps. For instance, how can we test the best parameters to coregister the
     images we may have?
 
-Yes, this is a problem, we need to work out some compromise between showing how
-things really work, and showing you enough for it to be useful for - practical
-neuroimaging analysis.
+It's clear that:
+
+* We're going too slowly
+* There have been various times we've got bogged down in detail
+* We need to give a better overall picture of the analysis
+
 
 **************************************************
 Need more detail on course curriculum and schedule
