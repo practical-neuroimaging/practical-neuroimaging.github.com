@@ -7,7 +7,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Day nine : 26 April 2013 &mdash; Practical neuroimaging analysis</title>
+    <title>Day ten : 3 May 2013 &mdash; Practical neuroimaging analysis</title>
     
     <link rel="stylesheet" href="_static/nature.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -26,8 +26,8 @@
     <script type="text/javascript" src="_static/doctools.js"></script>
     <link rel="top" title="Practical neuroimaging analysis" href="index.html" />
     <link rel="up" title="Course program" href="program.html" />
-    <link rel="next" title="Day ten : 3 May 2013" href="day10.html" />
-    <link rel="prev" title="Day eight : 19 April 2013" href="day8.html" /> 
+    <link rel="next" title="Day eleven : 10 May 2013" href="day11.html" />
+    <link rel="prev" title="Day nine : 26 April 2013" href="day9.html" /> 
   </head>
   <body>
     <div class="related">
@@ -37,10 +37,10 @@
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="day10.html" title="Day ten : 3 May 2013"
+          <a href="day11.html" title="Day eleven : 10 May 2013"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="day8.html" title="Day eight : 19 April 2013"
+          <a href="day9.html" title="Day nine : 26 April 2013"
              accesskey="P">previous</a> |</li>
         <li><a href="index.html">Practical neuroimaging analysis</a> &raquo;</li>
           <li><a href="program.html" accesskey="U">Course program</a> &raquo;</li> 
@@ -52,12 +52,59 @@
         <div class="bodywrapper">
           <div class="body">
             
-  <div class="section" id="day-nine-26-april-2013">
-<h1>Day nine : 26 April 2013<a class="headerlink" href="#day-nine-26-april-2013" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="day-ten-3-may-2013">
+<h1>Day ten : 3 May 2013<a class="headerlink" href="#day-ten-3-may-2013" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="introduction">
 <h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
-<p>Slice time interpolation</p>
-<p>Starting to do batching of commands for pipelines</p>
+<ol class="arabic">
+<li><p class="first">Wrapping up slice time interpolation</p>
+</li>
+<li><p class="first">Workflow</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li>Organizing code and notebooks</li>
+<li>Using version control</li>
+<li>Building pipelines</li>
+<li>Reproducible analysis scripts</li>
+</ol>
+</div></blockquote>
+</li>
+</ol>
+</div>
+<div class="section" id="workflow">
+<h2>Workflow<a class="headerlink" href="#workflow" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="principles">
+<h3>Principles<a class="headerlink" href="#principles" title="Permalink to this headline">¶</a></h3>
+<p>Optimize for</p>
+<ul class="simple">
+<li>Efficiency</li>
+<li>Reliability</li>
+<li>Reproducibility</li>
+</ul>
+<p>Make it as easy as possible to:</p>
+<ul class="simple">
+<li>Record changes</li>
+<li>Write and run tests</li>
+<li>Share code and data with other people</li>
+</ul>
+</div>
+<div class="section" id="components">
+<h3>Components<a class="headerlink" href="#components" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>The data directory</li>
+<li>Scripts</li>
+<li>Notebooks</li>
+<li>Library code</li>
+</ul>
+</div>
+<div class="section" id="suggested-segmentation">
+<h3>Suggested segmentation<a class="headerlink" href="#suggested-segmentation" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>data directory</li>
+<li>scripts / notebooks directory</li>
+<li>library code</li>
+</ul>
+</div>
 </div>
 <div class="section" id="loading-notebooks">
 <h2>Loading notebooks<a class="headerlink" href="#loading-notebooks" title="Permalink to this headline">¶</a></h2>
@@ -67,6 +114,14 @@
 <li><a class="reference external" href="https://raw.github.com/practical-neuroimaging/pna-notebooks/master/slice_timing.ipynb">Slice timing intro for class, raw</a>
 notebook file for downloading.</li>
 <li><a class="reference external" href="http://nbviewer.ipython.org/urls/raw.github.com/practical-neuroimaging/pna-notebooks/master/slice_timing.ipynb">Slice timing intro for class, web</a>
+notebook presented nicely as a web page.</li>
+<li><a class="reference external" href="https://raw.github.com/practical-neuroimaging/pna-notebooks/master/workflow.ipynb">workflow for class, raw</a>
+notebook file for downloading.</li>
+<li><a class="reference external" href="http://nbviewer.ipython.org/urls/raw.github.com/practical-neuroimaging/pna-notebooks/master/workflow.ipynb">workflow for class, web</a>
+notebook presented nicely as a web page.</li>
+<li><a class="reference external" href="https://raw.github.com/practical-neuroimaging/pna-notebooks/master/roll_your_own_cms.ipynb">git introduction intro for class, raw</a>
+notebook file for downloading.</li>
+<li><a class="reference external" href="http://nbviewer.ipython.org/urls/raw.github.com/practical-neuroimaging/pna-notebooks/master/roll_your_own_cms.ipynb">git introduction intro for class, web</a>
 notebook presented nicely as a web page.</li>
 </ul>
 </div>
@@ -80,6 +135,12 @@ notebook presented nicely as a web page.</li>
 </ul>
 </div>
 </div>
+<div class="section" id="background-reading">
+<h2>Background reading<a class="headerlink" href="#background-reading" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><a class="reference external" href="http://imaging.mrc-cbu.cam.ac.uk/imaging/SliceTiming">http://imaging.mrc-cbu.cam.ac.uk/imaging/SliceTiming</a></li>
+</ul>
+</div>
 </div>
 
 
@@ -90,26 +151,33 @@ notebook presented nicely as a web page.</li>
         <div class="sphinxsidebarwrapper">
   <h3><a href="index.html">Table Of Contents</a></h3>
   <ul>
-<li><a class="reference internal" href="#">Day nine : 26 April 2013</a><ul>
+<li><a class="reference internal" href="#">Day ten : 3 May 2013</a><ul>
 <li><a class="reference internal" href="#introduction">Introduction</a></li>
+<li><a class="reference internal" href="#workflow">Workflow</a><ul>
+<li><a class="reference internal" href="#principles">Principles</a></li>
+<li><a class="reference internal" href="#components">Components</a></li>
+<li><a class="reference internal" href="#suggested-segmentation">Suggested segmentation</a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#loading-notebooks">Loading notebooks</a><ul>
 <li><a class="reference internal" href="#notebooks-for-class">Notebooks for class</a></li>
 <li><a class="reference internal" href="#full-notebooks-with-answers">Full notebooks with answers</a></li>
 </ul>
 </li>
+<li><a class="reference internal" href="#background-reading">Background reading</a></li>
 </ul>
 </li>
 </ul>
 
   <h4>Previous topic</h4>
-  <p class="topless"><a href="day8.html"
-                        title="previous chapter">Day eight : 19 April 2013</a></p>
+  <p class="topless"><a href="day9.html"
+                        title="previous chapter">Day nine : 26 April 2013</a></p>
   <h4>Next topic</h4>
-  <p class="topless"><a href="day10.html"
-                        title="next chapter">Day ten : 3 May 2013</a></p>
+  <p class="topless"><a href="day11.html"
+                        title="next chapter">Day eleven : 10 May 2013</a></p>
   <h3>This Page</h3>
   <ul class="this-page-menu">
-    <li><a href="_sources/day9.txt"
+    <li><a href="_sources/day10.txt"
            rel="nofollow">Show Source</a></li>
   </ul>
 <div id="searchbox" style="display: none">
@@ -136,10 +204,10 @@ notebook presented nicely as a web page.</li>
           <a href="genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="day10.html" title="Day ten : 3 May 2013"
+          <a href="day11.html" title="Day eleven : 10 May 2013"
              >next</a> |</li>
         <li class="right" >
-          <a href="day8.html" title="Day eight : 19 April 2013"
+          <a href="day9.html" title="Day nine : 26 April 2013"
              >previous</a> |</li>
         <li><a href="index.html">Practical neuroimaging analysis</a> &raquo;</li>
           <li><a href="program.html" >Course program</a> &raquo;</li> 

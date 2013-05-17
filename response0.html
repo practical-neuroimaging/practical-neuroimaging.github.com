@@ -1,0 +1,242 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Response to feedback &mdash; Practical neuroimaging analysis</title>
+    
+    <link rel="stylesheet" href="_static/nature.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="Practical neuroimaging analysis" href="index.html" />
+    <link rel="prev" title="Feedback from days 4 through 8" href="feedback1.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="feedback1.html" title="Feedback from days 4 through 8"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">Practical neuroimaging analysis</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="response-to-feedback">
+<span id="response0"></span><h1>Response to feedback<a class="headerlink" href="#response-to-feedback" title="Permalink to this headline">¶</a></h1>
+<p>Full feedback at <a class="reference internal" href="feedback0.html#feedback0"><em>Feedback from days 0 through day 3</em></a> and <a class="reference internal" href="feedback1.html#feedback1"><em>Feedback from days 4 through 8</em></a></p>
+<p>First - thanks to all of you who gave feedback - it&#8217;s very helpful. Here I&#8217;m
+concentrating on the critical feedback to work out the best way to change.</p>
+<p>We haven&#8217;t said this before, but the course we&#8217;re trying to teach you is new; we
+don&#8217;t know of anyone else trying to teach course exactly like this, a
+combination of programming practice and concepts in neuroimaging.  So please,
+bear with us, we are learning too.</p>
+<div class="section" id="course-too-slow-detailed">
+<h2>Course too slow / detailed<a class="headerlink" href="#course-too-slow-detailed" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p>I think the course could move a little more quickly, with more emphasis
+being placed on office hours when catch-up work is required.</p>
+<p>The focus on minute details &#8211; a blessing of the course &#8211; can at times
+become its curse, when lengthy, confusing discussions about obscure coding
+or math issues seem to detract from the big picture.  Getting to the bottom
+of those details is without doubt important, but our time is limited, and
+attention could be better allotted to give priority to the most important
+things. +2</p>
+<p>It may be useful to assign some reading before class introducing the issues
+to be dealt with next. For instance, the MRC webpages put together by
+Matthew and others are a good intro and may help to explain the problem we
+are trying to solve for anyone who doesn&#8217;t have much fMRI experience. Then,
+before going through the code, we could go over how we will approach the
+problem conceptually (or go over the statistics before they are implemented
+in the code). This way, even if people get lost in the code, they will be
+able to take away a big picture lesson on how to deal with common imaging
+issues in the future. +1</p>
+<p>It would be great if the instructors could point us to good reading material
+about the issues they aren&#8217;t able to delve deep into. +3</p>
+<p>It would be nice to achieve a couple &#8220;big picture&#8221; items per class in order
+to keep the necessary attention to minute detail in context.+1</p>
+<p>I&#8217;d like to learn a bit more about the pros/cons of various pre-processing
+steps. For instance, how can we test the best parameters to coregister the
+images we may have?</p>
+</div></blockquote>
+<p>It&#8217;s clear that:</p>
+<ul class="simple">
+<li>We&#8217;re going too slowly</li>
+<li>There have been various times we&#8217;ve got bogged down in detail</li>
+<li>We need to give a better overall picture of the analysis</li>
+</ul>
+<p>We don&#8217;t want to give up on the - detail - because we want to teach you how to
+get down and dirty with the data, and this involves - detail.</p>
+<p>But there&#8217;s some detail needed and some not, and we haven&#8217;t always got the
+balance that we need if we&#8217;re going to teach you efficiently.  We are going to
+try restructuring the rest of the course to be explicit about the big picture of
+neuroimaging analysis, and how the work of each class fits into this big
+picture.</p>
+<p>The reading before the class is a good idea, but, we don&#8217;t yet have a good grasp
+of what reading material would be useful, apart from the MRC web-pages.  We&#8217;ll
+update the MRC pages to match the course better; there is a start here:
+<a class="reference external" href="https://github.com/fperez/nipy-notebooks">https://github.com/fperez/nipy-notebooks</a></p>
+</div>
+<div class="section" id="need-more-detail-on-course-curriculum-and-schedule">
+<h2>Need more detail on course curriculum and schedule<a class="headerlink" href="#need-more-detail-on-course-curriculum-and-schedule" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div>It would be helpful to have a course outline at the outset so we know what
+to expect.</div></blockquote>
+<p>The reason we haven&#8217;t done a course outline is because we didn&#8217;t know how the
+course would evolve, because it has not been done before.  We agree that this is
+a problem and it would better both for our planning and yours to have a clear
+idea of the curriculum and how each day relates to the curriculum.  We need to
+allow ourselves some slack to deal with the newness of the course, but we will
+(from now) put up the plan for each week, with reading material as we find it.</p>
+</div>
+<div class="section" id="more-on-data-analysis-workflow">
+<h2>More on data analysis workflow<a class="headerlink" href="#more-on-data-analysis-workflow" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p>I don&#8217;t know where we&#8217;re headed, but it&#8217;s really important to me that, by
+the end of this course, I know how to write all my own code to move from raw
+data to completed analysis.  As long as the course provides pre-written
+notebooks to get from the beginning to the end, I should be OK &#8211; whatever I
+don&#8217;t understand by the end of the course I&#8217;ll review after it&#8217;s over.</p>
+<p>It&#8217;s helpful for a python newbie to hear how the data is structured; once we
+have a baseline knowledge of what it is, it would help me to hear your
+workflow of how to handle it. I assume we&#8217;ll get to that, though.</p>
+</div></blockquote>
+<p>We do need to get to data organization and analysis workflow, and we plan to get
+to that in the next few classes.  We have found it difficult to get the balance
+between the convenience of the IPython notebooks and our daily practice of
+coding which has to deal - as you&#8217;ve implied - with big directory trees and long
+processing pipelines, as well as writing utility functions and analysis scripts.</p>
+<p>One way to help concentrate on this aspect is to spend some of the time in the
+class on solving your own analysis problems.</p>
+</div>
+<div class="section" id="better-balance-between-exercises-and-demonstration">
+<h2>Better balance between exercises and demonstration<a class="headerlink" href="#better-balance-between-exercises-and-demonstration" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p>It would be nice to have some specific projects/assignments to work on soon
++3</p>
+<p>It would be nice if you left some Inputs blank so that we could try writing
+a couple of commands ourselves+2</p>
+<p>I like it when we approach a problem as a class, rather than just reading
+code that has already been written (though that is definitely useful as
+well). +1</p>
+</div></blockquote>
+<p>We&#8217;ve been aware of this problem from early on - it was clear to us and you that
+exercises were very helpful, but we haven&#8217;t found it easy to break the flow of
+the notebook for exercises.   We will work harder on this in the next few
+classes because we agree this is essential.  Please feel free to annoy us about
+this if we don&#8217;t do a good job.</p>
+</div>
+<div class="section" id="difficulty-of-mixing-people-with-different-levels-of-background-knowledge">
+<h2>Difficulty of mixing people with different levels of background knowledge<a class="headerlink" href="#difficulty-of-mixing-people-with-different-levels-of-background-knowledge" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p>I find that I often get lost on these details as well, and most go over my
+head... as a beginner (with a very basic understanding of Python, that is), I
+feel happy when I understand about 50% of what we&#8217;ve covered. I may be alone in
+this... +1</p>
+<p>I think this course might be better divided into two distinct sections: 1) A
+Python basics section that helps everyone feel competent with running basic
+Python code and using the notebook  2) A fMRI analysis section that gets
+into the higher level topics. I think this format could help with
+attrition.+2</p>
+</div></blockquote>
+<p>This is a big problem, and we don&#8217;t know how to handle it yet.  I (Matthew)
+learned a great deal by going to courses in which I got nearly completely lost,
+but soaked up just enough to be able to think better about it the next time I
+heard it.  In fact the course is designed to try and reduce this feeling of
+being lost by showing you how it&#8217;s all done - but it&#8217;s inevitable that we&#8217;ll
+lose some of you for some of the time, given the mixtures of experience in the
+class.  We&#8217;d really like to maintain this mixture though.   We&#8217;re planning how
+to provide some background for those who need it; for example, we teach on
+<a class="reference external" href="http://software-carpentry.org">Software Carpentry</a> courses. These can be very
+useful for some coverage of the basics of programming, Python, and version
+control.  We&#8217;ve heard good things about the <a class="reference external" href="http://www.codecademy.com/tracks/python">Code Academy Python course</a>, as well as the amusingly titled
+<a class="reference external" href="http://learnpythonthehardway.org/book/">Learn Python the Hard Way</a>.  We&#8217;ll
+try and address this better next time through the course.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Response to feedback</a><ul>
+<li><a class="reference internal" href="#course-too-slow-detailed">Course too slow / detailed</a></li>
+<li><a class="reference internal" href="#need-more-detail-on-course-curriculum-and-schedule">Need more detail on course curriculum and schedule</a></li>
+<li><a class="reference internal" href="#more-on-data-analysis-workflow">More on data analysis workflow</a></li>
+<li><a class="reference internal" href="#better-balance-between-exercises-and-demonstration">Better balance between exercises and demonstration</a></li>
+<li><a class="reference internal" href="#difficulty-of-mixing-people-with-different-levels-of-background-knowledge">Difficulty of mixing people with different levels of background knowledge</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="feedback1.html"
+                        title="previous chapter">Feedback from days 4 through 8</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/response0.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="feedback1.html" title="Feedback from days 4 through 8"
+             >previous</a> |</li>
+        <li><a href="index.html">Practical neuroimaging analysis</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2013, Matthew Brett and J-B Poline.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>
