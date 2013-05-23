@@ -7,7 +7,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Day six : 5 April 2013 &mdash; Practical neuroimaging analysis</title>
+    <title>Day fourteen : 31 May 2013 &mdash; Practical neuroimaging analysis</title>
     
     <link rel="stylesheet" href="_static/nature.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -26,8 +26,8 @@
     <script type="text/javascript" src="_static/doctools.js"></script>
     <link rel="top" title="Practical neuroimaging analysis" href="index.html" />
     <link rel="up" title="Course program" href="program.html" />
-    <link rel="next" title="Day seven : 12 April 2013" href="day7.html" />
-    <link rel="prev" title="Day five : 22 March 2013" href="day5.html" /> 
+    <link rel="next" title="Feedback from days 0 through day 3" href="feedback0.html" />
+    <link rel="prev" title="Day thirteen : 24 May 2013" href="day13.html" /> 
   </head>
   <body>
     <div class="related">
@@ -37,10 +37,10 @@
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="day7.html" title="Day seven : 12 April 2013"
+          <a href="feedback0.html" title="Feedback from days 0 through day 3"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="day5.html" title="Day five : 22 March 2013"
+          <a href="day13.html" title="Day thirteen : 24 May 2013"
              accesskey="P">previous</a> |</li>
         <li><a href="index.html">Practical neuroimaging analysis</a> &raquo;</li>
           <li><a href="program.html" accesskey="U">Course program</a> &raquo;</li> 
@@ -52,24 +52,32 @@
         <div class="bodywrapper">
           <div class="body">
             
-  <div class="section" id="day-six-5-april-2013">
-<h1>Day six : 5 April 2013<a class="headerlink" href="#day-six-5-april-2013" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="day-fourteen-31-may-2013">
+<h1>Day fourteen : 31 May 2013<a class="headerlink" href="#day-fourteen-31-may-2013" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="introduction">
 <h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
-<p>Reprise of getting the scan-by-scan difference time course.</p>
-<p>Writing your own function for the RMS.</p>
-<p>Writing a function to remove bad volumes, and replace by the mean of the volumes
-either side.</p>
-<p>Some stuff on workflow and testing</p>
+<ol class="arabic">
+<li><p class="first">Smoothing</p>
+</li>
+<li><p class="first">Statistics</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li>Principles of estimation</li>
+<li>Practical estimation</li>
+</ol>
+</div></blockquote>
+</li>
+</ol>
 </div>
-<div class="section" id="loading-notebook">
-<h2>Loading notebook<a class="headerlink" href="#loading-notebook" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="background-reading">
+<h2>Background reading<a class="headerlink" href="#background-reading" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><a class="reference external" href="https://raw.github.com/practical-neuroimaging/pna-notebooks/master/finding_outliers_reprise.ipynb">Outliers again, raw</a>
+<li><a class="reference external" href="http://imaging.mrc-cbu.cam.ac.uk/imaging/PrinciplesSmoothing">http://imaging.mrc-cbu.cam.ac.uk/imaging/PrinciplesSmoothing</a></li>
+<li><a class="reference external" href="http://imaging.mrc-cbu.cam.ac.uk/imaging/PrinciplesStatistics">http://imaging.mrc-cbu.cam.ac.uk/imaging/PrinciplesStatistics</a></li>
+<li><a class="reference external" href="https://raw.github.com/fperez/nipy-notebooks/master/random_fields.ipynb">Random fields intro, raw</a>
 notebook file for downloading.</li>
-<li><a class="reference external" href="http://nbviewer.ipython.org/urls/raw.github.com/practical-neuroimaging/pna-notebooks/master/finding_outliers_reprise.ipynb">Outliers again web</a>
+<li><a class="reference external" href="http://nbviewer.ipython.org/urls/raw.github.com/fperez/nipy-notebooks/master/random_fields.ipynb">Random fields intro, web</a>
 notebook presented nicely as a web page.</li>
-<li><a class="reference external" href="https://raw.github.com/practical-neuroimaging/pna-notebooks/master/awesome.py">Outliers again, python script</a></li>
 </ul>
 </div>
 </div>
@@ -82,22 +90,22 @@ notebook presented nicely as a web page.</li>
         <div class="sphinxsidebarwrapper">
   <h3><a href="index.html">Table Of Contents</a></h3>
   <ul>
-<li><a class="reference internal" href="#">Day six : 5 April 2013</a><ul>
+<li><a class="reference internal" href="#">Day fourteen : 31 May 2013</a><ul>
 <li><a class="reference internal" href="#introduction">Introduction</a></li>
-<li><a class="reference internal" href="#loading-notebook">Loading notebook</a></li>
+<li><a class="reference internal" href="#background-reading">Background reading</a></li>
 </ul>
 </li>
 </ul>
 
   <h4>Previous topic</h4>
-  <p class="topless"><a href="day5.html"
-                        title="previous chapter">Day five : 22 March 2013</a></p>
+  <p class="topless"><a href="day13.html"
+                        title="previous chapter">Day thirteen : 24 May 2013</a></p>
   <h4>Next topic</h4>
-  <p class="topless"><a href="day7.html"
-                        title="next chapter">Day seven : 12 April 2013</a></p>
+  <p class="topless"><a href="feedback0.html"
+                        title="next chapter">Feedback from days 0 through day 3</a></p>
   <h3>This Page</h3>
   <ul class="this-page-menu">
-    <li><a href="_sources/day6.txt"
+    <li><a href="_sources/day14.txt"
            rel="nofollow">Show Source</a></li>
   </ul>
 <div id="searchbox" style="display: none">
@@ -124,10 +132,10 @@ notebook presented nicely as a web page.</li>
           <a href="genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="day7.html" title="Day seven : 12 April 2013"
+          <a href="feedback0.html" title="Feedback from days 0 through day 3"
              >next</a> |</li>
         <li class="right" >
-          <a href="day5.html" title="Day five : 22 March 2013"
+          <a href="day13.html" title="Day thirteen : 24 May 2013"
              >previous</a> |</li>
         <li><a href="index.html">Practical neuroimaging analysis</a> &raquo;</li>
           <li><a href="program.html" >Course program</a> &raquo;</li> 
