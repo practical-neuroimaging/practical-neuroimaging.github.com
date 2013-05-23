@@ -1,5 +1,5 @@
 ########################
-Day 5 : 22 March 2013
+Day five : 22 March 2013
 ########################
 
 ************
@@ -12,14 +12,13 @@ Finishing the QC in time and space: We will show how to use the Singular Value D
 
 Constructing a little function to remove bad volumes, and replace by the mean or median of the adjacent volumes.
 
-
 ****************
 Loading notebook
 ****************
 
 * `Loading images raw
   <https://raw.github.com/practical-neuroimaging/pna-notebooks/master/bold_QC_again.ipynb>`_
-  notebook file for downloading. 
+  notebook file for downloading.
 * `Loading images web
   <http://nbviewer.ipython.org/urls/raw.github.com/practical-neuroimaging/pna-notebooks/master/bold_QC_again.ipynb>`_
   notebook presented nicely as a web page.
