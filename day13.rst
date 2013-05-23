@@ -31,10 +31,16 @@ Notebooks for class
 * `Registration intro for class, web
   <http://nbviewer.ipython.org/urls/raw.github.com/practical-neuroimaging/pna-notebooks/master/Registration.ipynb>`_
   notebook presented nicely as a web page.
-* `git introduction intro for class, raw
-  <https://raw.github.com/practical-neuroimaging/pna-notebooks/master/roll_your_own_cms.ipynb>`_
+* `motion correction, raw
+  <https://raw.github.com/practical-neuroimaging/pna-notebooks/master/motion_correction.ipynb>`_
   notebook file for downloading.
-* `template matching intro for class, web
+* `motion correction, web
+  <http://nbviewer.ipython.org/urls/raw.github.com/practical-neuroimaging/pna-notebooks/master/motion_correction.ipynb>`_
+  notebook presented nicely as a web page.
+* `template registration, raw
+  <https://raw.github.com/practical-neuroimaging/pna-notebooks/master/template_registration.ipynb>`_
+  notebook file for downloading.
+* `template registration, web
   <http://nbviewer.ipython.org/urls/raw.github.com/practical-neuroimaging/pna-notebooks/master/template_registration.ipynb>`_
   notebook presented nicely as a web page.
 * `mutual information intro for class, raw
