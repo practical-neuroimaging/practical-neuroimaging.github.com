@@ -97,8 +97,7 @@ The script to do this is ``fixup_openfmri.py``.  But:
 
 There are two bugs I've left in the code.  One of them causes a test failure.
 To find that one, first work out how to run the tests (hint : ``nosetests``).
-Fix that one.  The other one makes the script fail if you call it.  Fix that one
-too.
+Fix!  The other one makes the script fail if you call it.  Fix!
 
 ********************************
 Make a new commit with the fixes
