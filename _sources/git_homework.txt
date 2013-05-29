@@ -43,7 +43,7 @@ Set up for git
 **************
 
 Now check the github page on `configuring git for
-github<https://help.github.com/articles/set-up-git>`_ and follow the
+github <https://help.github.com/articles/set-up-git>`_ and follow the
 instructions there.
 
 You might want to check your favorite editor is working properly - see
