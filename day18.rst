@@ -23,6 +23,12 @@ Background reading
 * `GLM, t and F, web
   <http://nbviewer.ipython.org/urls/raw.github.com/practical-neuroimaging/pna-notebooks/master/GLM_t_F.ipynb>`_
   notebook presented nicely as a web page.
+* `Simplest GLM, raw
+  <https://raw.github.com/practical-neuroimaging/pna-notebooks/master/simplest_glm.ipynb>`_
+  notebook file for downloading.
+* `Simplest GLM, web
+  <http://nbviewer.ipython.org/urls/raw.github.com/practical-neuroimaging/pna-notebooks/master/simplest_glm.ipynb>`_
+  notebook presented nicely as a web page.
 
 Some previous notebooks that may be useful:
 
