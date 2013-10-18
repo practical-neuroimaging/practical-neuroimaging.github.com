@@ -26,8 +26,8 @@
     <script type="text/javascript" src="_static/doctools.js"></script>
     <link rel="top" title="Practical neuroimaging analysis" href="index.html" />
     <link rel="up" title="Course program" href="program.html" />
-    <link rel="next" title="Day twenty five: 27 September 2013" href="day25.html" />
-    <link rel="prev" title="Day twenty two: 30 August 2013" href="day22.html" /> 
+    <link rel="next" title="Feedback from days 0 through day 3" href="feedback0.html" />
+    <link rel="prev" title="Day twenty six: 4 October 2013" href="day26.html" /> 
   </head>
   <body>
     <div class="related">
@@ -37,10 +37,10 @@
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="day25.html" title="Day twenty five: 27 September 2013"
+          <a href="feedback0.html" title="Feedback from days 0 through day 3"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="day22.html" title="Day twenty two: 30 August 2013"
+          <a href="day26.html" title="Day twenty six: 4 October 2013"
              accesskey="P">previous</a> |</li>
 <big><big><big><li><a href="index.html">Home</a> |&nbsp;</li>
   <li><a href="https://github.com/practical-neuroimaging/pna-notebooks">Notebooks</a> |&nbsp;</li>
@@ -56,30 +56,41 @@
         <div class="bodywrapper">
           <div class="body">
             
-  <div class="section" id="day-twenty-three-6-september-2013">
-<h1>Day twenty three: 6 September 2013<a class="headerlink" href="#day-twenty-three-6-september-2013" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="day-twenty-seven-18-october-2013">
+<h1>Day twenty seven: 18 October 2013<a class="headerlink" href="#day-twenty-seven-18-october-2013" title="Permalink to this headline">¶</a></h1>
+<p>For the first notebook, you&#8217;ll need this 144MB file downloaded to your
+<tt class="docutils literal"><span class="pre">pna-notebooks</span></tt> directory:
+<a class="reference external" href="http://nipy.bic.berkeley.edu/practical_neuroimaging/srabold.nii.gz">http://nipy.bic.berkeley.edu/practical_neuroimaging/srabold.nii.gz</a></p>
 <div class="section" id="introduction">
 <h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Convolution and the HRF</li>
-<li>Expanding the regressors in the model</li>
-<li>Running a full model on real data</li>
+<li>Running a full HRF model on some real data</li>
+<li>Principles of multiple comparison correction</li>
 </ul>
 </div>
 <div class="section" id="background-reading">
 <h2>Background reading<a class="headerlink" href="#background-reading" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><a class="reference external" href="https://raw.github.com/practical-neuroimaging/pna-notebooks/master/finding_faces_really.ipynb">simple model, extended, raw</a>
+<li><a class="reference external" href="https://raw.github.com/practical-neuroimaging/pna-notebooks/master/more_on_faces.ipynb">real model by hand, raw</a>
 notebook file for downloading.</li>
-<li><a class="reference external" href="http://nbviewer.ipython.org/urls/raw.github.com/practical-neuroimaging/pna-notebooks/master/finding_faces_really.ipynb">simple model, extended, web</a>
+<li><a class="reference external" href="http://nbviewer.ipython.org/urls/raw.github.com/practical-neuroimaging/pna-notebooks/master/more_on_faces.ipynb">real model by hand, web</a>
 notebook presented nicely as a web page.</li>
-<li><a class="reference external" href="https://raw.github.com/practical-neuroimaging/pna-notebooks/master/convolution.ipynb">convolution, raw</a>
+<li><a class="reference external" href="https://raw.github.com/fperez/nipy-notebooks/master/random_fields.ipynb">Random fields intro, raw</a>
 notebook file for downloading.</li>
-<li><a class="reference external" href="http://nbviewer.ipython.org/urls/raw.github.com/practical-neuroimaging/pna-notebooks/master/convolution.ipynb">convolution, web</a>
+<li><a class="reference external" href="http://nbviewer.ipython.org/urls/raw.github.com/fperez/nipy-notebooks/master/random_fields.ipynb">Random fields intro, web</a>
 notebook presented nicely as a web page.</li>
 </ul>
 <div class="section" id="notebook-with-small-solution">
 <h3>Notebook with small solution<a class="headerlink" href="#notebook-with-small-solution" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><a class="reference external" href="https://raw.github.com/practical-neuroimaging/pna-notebooks/master/more_on_faces_really.ipynb">real model by hand + solution, raw</a>
+notebook file for downloading.</li>
+<li><a class="reference external" href="http://nbviewer.ipython.org/urls/raw.github.com/practical-neuroimaging/pna-notebooks/master/more_on_faces_really.ipynb">real model by hand + solution, web</a>
+notebook presented nicely as a web page.</li>
+</ul>
+</div>
+<div class="section" id="relevant-notebook-from-day-23">
+<h3>Relevant notebook from day 23<a class="headerlink" href="#relevant-notebook-from-day-23" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><a class="reference external" href="https://raw.github.com/practical-neuroimaging/pna-notebooks/master/finding_faces.ipynb">simple model, extended, raw</a>
 notebook file for downloading.</li>
@@ -98,10 +109,11 @@ notebook presented nicely as a web page.</li>
         <div class="sphinxsidebarwrapper">
   <h3><a href="index.html">Table Of Contents</a></h3>
   <ul>
-<li><a class="reference internal" href="#">Day twenty three: 6 September 2013</a><ul>
+<li><a class="reference internal" href="#">Day twenty seven: 18 October 2013</a><ul>
 <li><a class="reference internal" href="#introduction">Introduction</a></li>
 <li><a class="reference internal" href="#background-reading">Background reading</a><ul>
 <li><a class="reference internal" href="#notebook-with-small-solution">Notebook with small solution</a></li>
+<li><a class="reference internal" href="#relevant-notebook-from-day-23">Relevant notebook from day 23</a></li>
 </ul>
 </li>
 </ul>
@@ -109,14 +121,14 @@ notebook presented nicely as a web page.</li>
 </ul>
 
   <h4>Previous topic</h4>
-  <p class="topless"><a href="day22.html"
-                        title="previous chapter">Day twenty two: 30 August 2013</a></p>
+  <p class="topless"><a href="day26.html"
+                        title="previous chapter">Day twenty six: 4 October 2013</a></p>
   <h4>Next topic</h4>
-  <p class="topless"><a href="day25.html"
-                        title="next chapter">Day twenty five: 27 September 2013</a></p>
+  <p class="topless"><a href="feedback0.html"
+                        title="next chapter">Feedback from days 0 through day 3</a></p>
   <h3>This Page</h3>
   <ul class="this-page-menu">
-    <li><a href="_sources/day23.txt"
+    <li><a href="_sources/day27.txt"
            rel="nofollow">Show Source</a></li>
   </ul>
 <div id="searchbox" style="display: none">
@@ -143,10 +155,10 @@ notebook presented nicely as a web page.</li>
           <a href="genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="day25.html" title="Day twenty five: 27 September 2013"
+          <a href="feedback0.html" title="Feedback from days 0 through day 3"
              >next</a> |</li>
         <li class="right" >
-          <a href="day22.html" title="Day twenty two: 30 August 2013"
+          <a href="day26.html" title="Day twenty six: 4 October 2013"
              >previous</a> |</li>
 <big><big><big><li><a href="index.html">Home</a> |&nbsp;</li>
   <li><a href="https://github.com/practical-neuroimaging/pna-notebooks">Notebooks</a> |&nbsp;</li>

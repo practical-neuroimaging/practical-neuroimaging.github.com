@@ -60,3 +60,6 @@ By day
     day21
     day22
     day23
+    day25
+    day26
+    day27
