@@ -1,29 +1,33 @@
-##############################
-Day twenty six: 4 October 2013
-##############################
+#################################
+Day twenty seven: 18 October 2013
+#################################
+
+For the first notebook, you'll need this 144MB file downloaded to your
+``pna-notebooks`` directory:
+http://nipy.bic.berkeley.edu/practical_neuroimaging/srabold.nii.gz
 
 ************
 Introduction
 ************
 
-* What happens with correlated regressors?
-* Running a full model on some real data
+* Running a full HRF model on some real data
+* Principles of multiple comparison correction
 
 ******************
 Background reading
 ******************
 
-* `Baseline and temporal derivative, raw
-  <https://raw.github.com/practical-neuroimaging/pna-notebooks/master/cyril.ipynb>`_
-  notebook file for downloading.
-* `Baseline and temporal derivative, web
-  <http://nbviewer.ipython.org/urls/raw.github.com/practical-neuroimaging/pna-notebooks/master/cyril.ipynb>`_
-  notebook presented nicely as a web page.
 * `real model by hand, raw
   <https://raw.github.com/practical-neuroimaging/pna-notebooks/master/more_on_faces.ipynb>`_
   notebook file for downloading.
 * `real model by hand, web
   <http://nbviewer.ipython.org/urls/raw.github.com/practical-neuroimaging/pna-notebooks/master/more_on_faces.ipynb>`_
+  notebook presented nicely as a web page.
+* `Random fields intro, raw
+  <https://raw.github.com/fperez/nipy-notebooks/master/random_fields.ipynb>`_
+  notebook file for downloading.
+* `Random fields intro, web
+  <http://nbviewer.ipython.org/urls/raw.github.com/fperez/nipy-notebooks/master/random_fields.ipynb>`_
   notebook presented nicely as a web page.
 
 Notebook with small solution
