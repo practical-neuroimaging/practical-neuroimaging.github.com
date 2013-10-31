@@ -6,7 +6,7 @@ Course program
 Overview
 ********
 
-We aim to cover:
+We aimed to cover:
 
 * Loading and manipulating images
 * Image diagnostics
@@ -22,13 +22,17 @@ We aim to cover:
 * Methods for correcting for multiple comparisons
 * Multisubject analysis and random effects
 
-Other subjects we may cover according to time and interest:
+(we did not cover the multi-subject analysese or multiple comparisons)
+
+Other subjects we considered covering according to time and interest:
 
 * Connectivity analysis methods
 * Analyzing resting state data
 * Machine learning / classification methods
 * Diffusion imaging principles
 * Diffusion imaging analysis including tractography
+
+(we did not have time for any of these other subjects)
 
 ******
 By day
