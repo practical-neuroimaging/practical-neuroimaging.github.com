@@ -6,13 +6,12 @@
 Practical Neuroimaging Analysis course at UC Berkeley
 =====================================================
 
-These are the web pages for the 14-week course on practical neuroimaging
+These are the web pages for the course on practical neuroimaging
 analysis at UC Berkeley `brain imaging center`_ (BIC).
 
-Please join the `mailing list`_
+The course ran from February until October 2013 - please see the :doc:`program`.
 
-If you need help with installation, or any other course-related thing, we do
-office hours at 210 Barker hall from 2pm until 4pm on Thursday.
+We plan to run the course again next year, we'll announce on the `mailing list`_
 
 .. toctree::
     :maxdepth: 3
@@ -25,8 +24,10 @@ office hours at 210 Barker hall from 2pm until 4pm on Thursday.
     example_data
     program
 
-This is a new course, and we are redesigning it as we get more experience of
-what works and what does not:
+This was a new course, and we will be redesigning it with experience of what
+works and what does not.
+
+Here is the feedback from the course just finished, and our response.
 
 .. toctree::
     :maxdepth: 1

@@ -26,8 +26,8 @@
     <script type="text/javascript" src="_static/doctools.js"></script>
     <link rel="top" title="Practical neuroimaging analysis" href="index.html" />
     <link rel="up" title="Course program" href="program.html" />
-    <link rel="next" title="Day twenty eight: 25 October 2013" href="day28.html" />
-    <link rel="prev" title="Day twenty six: 4 October 2013" href="day26.html" /> 
+    <link rel="next" title="Feedback from days 0 through day 3" href="feedback0.html" />
+    <link rel="prev" title="Day twenty seven: 18 October 2013" href="day27.html" /> 
   </head>
   <body>
     <div class="related">
@@ -37,10 +37,10 @@
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="day28.html" title="Day twenty eight: 25 October 2013"
+          <a href="feedback0.html" title="Feedback from days 0 through day 3"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="day26.html" title="Day twenty six: 4 October 2013"
+          <a href="day27.html" title="Day twenty seven: 18 October 2013"
              accesskey="P">previous</a> |</li>
 <big><big><big><li><a href="index.html">Home</a> |&nbsp;</li>
   <li><a href="https://github.com/practical-neuroimaging/pna-notebooks">Notebooks</a> |&nbsp;</li>
@@ -56,48 +56,33 @@
         <div class="bodywrapper">
           <div class="body">
             
-  <div class="section" id="day-twenty-seven-18-october-2013">
-<h1>Day twenty seven: 18 October 2013<a class="headerlink" href="#day-twenty-seven-18-october-2013" title="Permalink to this headline">¶</a></h1>
-<p>For the first notebook, you&#8217;ll need this 144MB file downloaded to your
-<tt class="docutils literal"><span class="pre">pna-notebooks</span></tt> directory:
-<a class="reference external" href="http://nipy.bic.berkeley.edu/practical_neuroimaging/srabold.nii.gz">http://nipy.bic.berkeley.edu/practical_neuroimaging/srabold.nii.gz</a></p>
+  <div class="section" id="day-twenty-eight-25-october-2013">
+<h1>Day twenty eight: 25 October 2013<a class="headerlink" href="#day-twenty-eight-25-october-2013" title="Permalink to this headline">¶</a></h1>
+<p>Scripting</p>
 <div class="section" id="introduction">
 <h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p>The importance of scripting for:</p>
 <ul class="simple">
-<li>Running a full HRF model on some real data</li>
-<li>Principles of multiple comparison correction</li>
+<li>recording and reproducibility</li>
+<li>reducing error</li>
 </ul>
-</div>
-<div class="section" id="background-reading">
-<h2>Background reading<a class="headerlink" href="#background-reading" title="Permalink to this headline">¶</a></h2>
+<p>Introduction to scripting from the <tt class="docutils literal"><span class="pre">pna-utils</span></tt> repository at:
+<a class="reference external" href="https://github.com/practical-neuroimaging/pna-utils">https://github.com/practical-neuroimaging/pna-utils</a></p>
 <ul class="simple">
-<li><a class="reference external" href="https://raw.github.com/practical-neuroimaging/pna-notebooks/master/more_on_faces.ipynb">real model by hand, raw</a>
-notebook file for downloading.</li>
-<li><a class="reference external" href="http://nbviewer.ipython.org/urls/raw.github.com/practical-neuroimaging/pna-notebooks/master/more_on_faces.ipynb">real model by hand, web</a>
-notebook presented nicely as a web page.</li>
-<li><a class="reference external" href="https://raw.github.com/fperez/nipy-notebooks/master/random_fields.ipynb">Random fields intro, raw</a>
-notebook file for downloading.</li>
-<li><a class="reference external" href="http://nbviewer.ipython.org/urls/raw.github.com/fperez/nipy-notebooks/master/random_fields.ipynb">Random fields intro, web</a>
-notebook presented nicely as a web page.</li>
+<li><a class="reference external" href="https://github.com/practical-neuroimaging/pna-utils/blob/master/diagnostics_openfmri.py">diagnostics
+script</a>
+as an example of a python script using library code, with minimal code in the
+script.</li>
+<li><a class="reference external" href="https://github.com/practical-neuroimaging/pna-utils/blob/master/smooth_openfmri.py">smoothing
+script</a>
+as a worse example, where library code is still in the script, and should be
+refactored out</li>
+<li>Brief sketch of SPM scripting using <a class="reference external" href="https://github.com/practical-neuroimaging/pna-utils/blob/master/spm_batch_ds105.py">spm batch script in
+python</a></li>
+<li>Python as a cross-language batch scripting language</li>
+<li><a class="reference external" href="http://nipy.org/nipype">nipype</a> - a sophisticated scripting framework for
+SPM, AFNI, FSL and other programs.</li>
 </ul>
-<div class="section" id="notebook-with-small-solution">
-<h3>Notebook with small solution<a class="headerlink" href="#notebook-with-small-solution" title="Permalink to this headline">¶</a></h3>
-<ul class="simple">
-<li><a class="reference external" href="https://raw.github.com/practical-neuroimaging/pna-notebooks/master/more_on_faces_really.ipynb">real model by hand + solution, raw</a>
-notebook file for downloading.</li>
-<li><a class="reference external" href="http://nbviewer.ipython.org/urls/raw.github.com/practical-neuroimaging/pna-notebooks/master/more_on_faces_really.ipynb">real model by hand + solution, web</a>
-notebook presented nicely as a web page.</li>
-</ul>
-</div>
-<div class="section" id="relevant-notebook-from-day-23">
-<h3>Relevant notebook from day 23<a class="headerlink" href="#relevant-notebook-from-day-23" title="Permalink to this headline">¶</a></h3>
-<ul class="simple">
-<li><a class="reference external" href="https://raw.github.com/practical-neuroimaging/pna-notebooks/master/finding_faces.ipynb">simple model, extended, raw</a>
-notebook file for downloading.</li>
-<li><a class="reference external" href="http://nbviewer.ipython.org/urls/raw.github.com/practical-neuroimaging/pna-notebooks/master/finding_faces.ipynb">simple model, extended, web</a>
-notebook presented nicely as a web page.</li>
-</ul>
-</div>
 </div>
 </div>
 
@@ -109,26 +94,21 @@ notebook presented nicely as a web page.</li>
         <div class="sphinxsidebarwrapper">
   <h3><a href="index.html">Table Of Contents</a></h3>
   <ul>
-<li><a class="reference internal" href="#">Day twenty seven: 18 October 2013</a><ul>
+<li><a class="reference internal" href="#">Day twenty eight: 25 October 2013</a><ul>
 <li><a class="reference internal" href="#introduction">Introduction</a></li>
-<li><a class="reference internal" href="#background-reading">Background reading</a><ul>
-<li><a class="reference internal" href="#notebook-with-small-solution">Notebook with small solution</a></li>
-<li><a class="reference internal" href="#relevant-notebook-from-day-23">Relevant notebook from day 23</a></li>
-</ul>
-</li>
 </ul>
 </li>
 </ul>
 
   <h4>Previous topic</h4>
-  <p class="topless"><a href="day26.html"
-                        title="previous chapter">Day twenty six: 4 October 2013</a></p>
+  <p class="topless"><a href="day27.html"
+                        title="previous chapter">Day twenty seven: 18 October 2013</a></p>
   <h4>Next topic</h4>
-  <p class="topless"><a href="day28.html"
-                        title="next chapter">Day twenty eight: 25 October 2013</a></p>
+  <p class="topless"><a href="feedback0.html"
+                        title="next chapter">Feedback from days 0 through day 3</a></p>
   <h3>This Page</h3>
   <ul class="this-page-menu">
-    <li><a href="_sources/day27.txt"
+    <li><a href="_sources/day28.txt"
            rel="nofollow">Show Source</a></li>
   </ul>
 <div id="searchbox" style="display: none">
@@ -155,10 +135,10 @@ notebook presented nicely as a web page.</li>
           <a href="genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="day28.html" title="Day twenty eight: 25 October 2013"
+          <a href="feedback0.html" title="Feedback from days 0 through day 3"
              >next</a> |</li>
         <li class="right" >
-          <a href="day26.html" title="Day twenty six: 4 October 2013"
+          <a href="day27.html" title="Day twenty seven: 18 October 2013"
              >previous</a> |</li>
 <big><big><big><li><a href="index.html">Home</a> |&nbsp;</li>
   <li><a href="https://github.com/practical-neuroimaging/pna-notebooks">Notebooks</a> |&nbsp;</li>
