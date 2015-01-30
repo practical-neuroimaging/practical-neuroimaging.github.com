@@ -138,7 +138,8 @@ Install requirements on your machine
 
 Make a private github account.
 
-Todo: rewrite http://practical-neuroimaging.github.io/installation.html
+Installation instructions will be a version of
+http://practical-neuroimaging.github.io/installation.html
 
 Possible reading:
 
@@ -247,7 +248,28 @@ Day:
 * visualize result;
 * (relationship of correlation and regression).
 
-Day 7: 1D interpolation and slice timing
+Day 7: diagnostics using principal component analysis
+=====================================================
+
+This day is for us to practice working with matrices, and to get an idea of
+the level of underlying variance in data.
+
+Reading:
+
+* Notebook on diagnostics:
+  http://nbviewer.ipython.org/urls/bitbucket.org/matthewbrett/talks/raw/master/processing_i/diagnostics.ipynb
+* A tutorial on principal component analysis: http://arxiv.org/abs/1404.1100
+
+Day:
+
+* Get code from notebook;
+* Run PCA;
+* Fetch projection matrices, vectors and values;
+* Reconstruct data using reduced number of components.
+* Investigate and diagnose components;
+* Investigate correlation of vectors with data.
+
+Day 8: 1D interpolation and slice timing
 ========================================
 
 * Notebook on interpolation and slice timing e.g.
@@ -261,7 +283,7 @@ Day:
 * use scipy interpolation code;
 * investigate splines.
 
-Day 8: optimization, 2D interpolation and registration
+Day 9: optimization, 2D interpolation and registration
 ======================================================
 
 Reading:
@@ -280,8 +302,8 @@ Day:
 * Local minima with a 180 degree rotation;
 * Investigate and run FSL motion correction.
 
-Day 9: coordinate systems and cross-modality registration
-=========================================================
+Day 10: coordinate systems and cross-modality registration
+==========================================================
 
 Reading:
 
@@ -301,7 +323,7 @@ Day:
 * FSL coregistration;
 * SPM coregistration.
 
-Day 10: registration between subjects
+Day 11: registration between subjects
 =====================================
 
 Reading:
@@ -324,7 +346,7 @@ Day:
 * Affine plus warping using FSL;
 * Thinking about what makes a good registration.
 
-Day 11: smoothing and modeling
+Day 12: smoothing and modeling
 ==============================
 
 Reading:
@@ -339,7 +361,7 @@ Day:
 * single voxel;
 * whole brain.
 
-Day 12: testing hypotheses with t and F contrasts
+Day 13: testing hypotheses with t and F contrasts
 =================================================
 
 * Notebook on t / F - version of : http://nbviewer.ipython.org/urls/raw.github.com/practical-neuroimaging/pna-notebooks/master/GLM_t_F.ipynb
@@ -351,7 +373,7 @@ Day 12: testing hypotheses with t and F contrasts
 * FSL contrasts;
 * SPM contrasts.
 
-Day 13: statistical inference
+Day 14: statistical inference
 =============================
 
 Reading:
@@ -369,16 +391,13 @@ Day:
 * correct using FDR;
 * correct using permutation.
 
-Day 14: introduction to machine learning tools
-==============================================
-
-* Using machine learning tools with scikit-learn
-
-Possible topics for extra days
+Possible extra days
 ==============================
 
-* Introduction to DICOM
-* Data visualization
+* Using machine learning tools with scikit-learn;
+* Introduction to diffusion imaging;
+* Introduction to DICOM;
+* Data visualization.
 
 .. to discuss:
 
