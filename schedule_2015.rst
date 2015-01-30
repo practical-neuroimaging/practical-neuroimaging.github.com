@@ -29,7 +29,7 @@ Background
 * Relevant concepts in mathematics / statistics / engineering;
 * FMRI analysis steps.
 
-We aim to teach tiresome efficiency of work, so that you can in due course
+We aim to teach awesome efficiency of work, so that you can in due course
 forget about your tools and think about the ideas.  We aim to make things
 simple, rather than easy, so that you can reach a stage where things are both
 simple and easy.
@@ -89,7 +89,6 @@ General reading
 * Donoho reproducibility article : Donoho, David L. 2010. An invitation to
   reproducible computational research. Biostatistics 11, 385–388.
   http://biostatistics.oxfordjournals.org/content/11/3/385.full
-
 
 ************
 Text editors
@@ -353,7 +352,7 @@ Reading:
 * Bonferroni correction : e.g.
   http://nbviewer.ipython.org/urls/raw.github.com/practical-neuroimaging/pna-notebooks/master/bonferonni_notes.ipynb
 * Random fields : e.g. http://perrin.dynevor.org/random_fields.html
-*  FDR: http://nbviewer.ipython.org/github/practical-neuroimaging/pna-notebooks/blob/master/FDR.ipynb
+* FDR: http://nbviewer.ipython.org/github/practical-neuroimaging/pna-notebooks/blob/master/FDR.ipynb
 
 Day:
 
