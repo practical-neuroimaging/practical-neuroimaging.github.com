@@ -75,7 +75,7 @@ Format of the classes
     * 60 minutes problems;
     * 10 minutes review of problems;
 
-For each day there will be a short teaching point on:
+For each day there will be a short teaching point on one of:
 
 * version control;
 * text editing;
@@ -85,7 +85,8 @@ For each day there will be a short teaching point on:
 General reading
 ***************
 
-* Greg Wilson's article on scientific computing
+* Greg Wilson's article on scientific computing: Wilson, Greg, et al. "Best
+  practices for scientific computing." PLoS biology 12.1 (2014): e1001745.
 * Donoho reproducibility article : Donoho, David L. 2010. An invitation to
   reproducible computational research. Biostatistics 11, 385–388.
   http://biostatistics.oxfordjournals.org/content/11/3/385.full
@@ -101,9 +102,9 @@ Text editors
 * Notepad++.
 
 You can use any other text editor, but we'll be doing text editor challenges
-through the course to check your progress in learning the editor.
+through the course to teach ourselves speed and shortcuts for our editors.
 
-This list comes from
+The list of editors comes from
 http://www.rackspace.com/blog/text-editor-madness-bracket-vote-for-your-favorite
 with the edition of TextMate (because we know at least one extremely efficient
 coder who uses it).
@@ -129,11 +130,11 @@ Prior
 
 Install requirements on your machine
 
-* git
-* Python
-* pip
-* scipy-stack
-* nibabel
+* git;
+* Python;
+* pip;
+* scipy-stack (numpy, scipy, matplotlib, IPython, pandas);
+* nibabel.
 
 Make a private github account.
 
@@ -157,7 +158,7 @@ Day:
 * Getting pixel data
 * Text editor intro
 
-Day 1 : Introducing Python
+Day 1 : introducing Python
 ==========================
 
 Reading: TBA
@@ -201,6 +202,8 @@ Day:
 Day 4: first statistics / version control
 =========================================
 
+Reading:
+
 * Make a branch, edit and commit;
 * Merge;
 * Push;
@@ -220,7 +223,7 @@ Reading:
 Day:
 
 * Creating the convolution kernel;
-* Extracting time series;
+* Extracting time series (slicing in 4th dimension);
 * Convolution the dumb way;
 * Convolution the scipy way;
 * Correlating the convolved time course with the data.
@@ -266,6 +269,8 @@ Reading:
 * Notebook on optimization for registration:
   http://nbviewer.ipython.org/urls/bitbucket.org/matthewbrett/talks/raw/master/processing_i/optimizing_space.ipynb
 
+(Add subtracted image after registration).
+
 Day:
 
 * Convert optimization notebook to Python module;
@@ -282,8 +287,10 @@ Reading:
 
 * Tutorial on coordinate systems at:
   http://nipy.org/nibabel/coordinate_systems.html
-* Mutual information : e.g
-  http://nbviewer.ipython.org/urls/bitbucket.org/matthewbrett/talks/raw/master/processing_i/optimizing_space.ipynb
+* Mutual information : e.g.
+  http://nbviewer.ipython.org/urls/bitbucket.org/matthewbrett/talks/raw/master/processing_i/mutual_information_example.ipynb
+
+Need to fix this up.
 
 Day:
 
@@ -317,7 +324,7 @@ Day:
 * Affine plus warping using FSL;
 * Thinking about what makes a good registration.
 
-Day 10: smoothing and modeling
+Day 11: smoothing and modeling
 ==============================
 
 Reading:
@@ -332,7 +339,7 @@ Day:
 * single voxel;
 * whole brain.
 
-Day 11: testing hypotheses with t and F contrasts
+Day 12: testing hypotheses with t and F contrasts
 =================================================
 
 * Notebook on t / F - version of : http://nbviewer.ipython.org/urls/raw.github.com/practical-neuroimaging/pna-notebooks/master/GLM_t_F.ipynb
@@ -344,7 +351,7 @@ Day 11: testing hypotheses with t and F contrasts
 * FSL contrasts;
 * SPM contrasts.
 
-Day 12: statistical inference
+Day 13: statistical inference
 =============================
 
 Reading:
@@ -362,17 +369,18 @@ Day:
 * correct using FDR;
 * correct using permutation.
 
+Day 14: introduction to machine learning tools
+==============================================
+
+* Using machine learning tools with scikit-learn
+
 Possible topics for extra days
 ==============================
 
 * Introduction to DICOM
 * Data visualization
-* Using machine learning tools with scikit-learn
 
-########
-Problems
-########
+.. to discuss:
 
-* Not enough introduction to numpy / matplotlib
-* Role of testing
-* Role of code review
+    * Not enough introduction to numpy / matplotlib?
+    * Role of testing?
