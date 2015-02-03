@@ -13,6 +13,22 @@ Practical neuroimaging, the sequel
 
     15 Fridays 30 January through 8 May.
 
+***********************
+Who is this course for?
+***********************
+
+The course is designed for people starting or doing neuroimaging, with some
+programming experience (for example, writing MATLAB or Python scripts).
+
+We have designed the course to help you:
+
+* Understand the basic concepts in neuroimaging, and how they relate to the
+  wider world of statistics, engineering, computer science;
+* Be comfortable working with neuroimaging data and code, so you can write
+  your own basic algorithms, and understand other people's code;
+* Work with code and data in a way that will save you time, help you
+  collaborate, and continue learning.
+
 ************
 Requirements
 ************
@@ -29,10 +45,10 @@ Background
 * Relevant concepts in mathematics / statistics / engineering;
 * FMRI analysis steps.
 
-We aim to teach awesome efficiency of work, so that you can in due course
-forget about your tools and think about the ideas.  We aim to make things
-simple, rather than easy, so that you can reach a stage where things are both
-simple and easy.
+We aim to teach you to work efficiently, so that you can in due course forget
+about your tools and think about the ideas.  We aim to make things simple,
+rather than easy, so that you can reach a stage where things are both simple
+and easy.
 
 Practical workflow
 ==================
@@ -364,7 +380,11 @@ Day:
 Day 13: testing hypotheses with t and F contrasts
 =================================================
 
-* Notebook on t / F - version of : http://nbviewer.ipython.org/urls/raw.github.com/practical-neuroimaging/pna-notebooks/master/GLM_t_F.ipynb
+Reading:
+    * Notebook on t / F - version of :
+      http://nbviewer.ipython.org/urls/raw.github.com/practical-neuroimaging/pna-notebooks/master/GLM_t_F.ipynb
+
+Day:
 
 * Block (on / off model) F contrasts;
 * Motion parameters as confounds;
@@ -373,7 +393,15 @@ Day 13: testing hypotheses with t and F contrasts
 * FSL contrasts;
 * SPM contrasts.
 
-Day 14: statistical inference
+Day 14: random effects, choosing models
+=======================================
+
+Reading:
+
+Day:
+
+
+Day 15: statistical inference
 =============================
 
 Reading:
@@ -389,10 +417,9 @@ Day:
 * correct using Bonferroni;
 * correct using random fields;
 * correct using FDR;
-* correct using permutation.
 
 Possible extra days
-==============================
+===================
 
 * Using machine learning tools with scikit-learn;
 * Introduction to diffusion imaging;
