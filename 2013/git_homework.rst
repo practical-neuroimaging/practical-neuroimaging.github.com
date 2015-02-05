@@ -47,7 +47,7 @@ github <https://help.github.com/articles/set-up-git>`_ and follow the
 instructions there.
 
 You might want to check your favorite editor is working properly - see
-:ref:`git-editor-setup`.
+:ref:`git-editor-setup-2013`.
 
 **************************
 "Fork" the main repository

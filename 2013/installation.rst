@@ -1,24 +1,27 @@
-.. _installation:
+.. _installation-2013:
 
 #################################
 Software to install for the class
 #################################
 
-* A text editor to edit python code - see :ref:`choosing-editor`
+* A text editor to edit python code - see :ref:`choosing-editor-2013`
 * Python and the Python scientific libraries installed - see below.
 
 If you already have some large Python packaging system installed, such as the
 `Enthought Python Distribution`_, you can stick with that, it should provide the
-dependencies you need.  To make sure, see :ref:`check-installation`. If you
-don't have something like that (most of you won't), please read on...
+dependencies you need.  To make sure, see :ref:`check-installation-2013`. If
+you don't have something like that (most of you won't), please read on...
 
 ************************
 If you are using Windows
 ************************
 
-Download and install Python version 2.7 from `Python downloads
-<https://www.python.org/downloads/>`_.
+Please install Python (X, Y) : http://code.google.com/p/pythonxy/
 
+You want the file ``Python(x,y)-2.7.3.1.exe`` - not the updates, but the full
+release.
+
+Choose the default installation options for now.
 
 ********************
 If you are using OSX
@@ -35,7 +38,7 @@ web directory`_.  Double click to mount the installer, then open the mounted
 disk image and look at the ``ReadMe.txt`` file, and then double click the
 installer.
 
-Remember to :ref:`check-installation`
+Remember to :ref:`check-installation-2013`
 
 **********************
 If you are using Linux
@@ -56,7 +59,7 @@ On Fedora or related distros, it's a little more complicated::
     sudo easy_install nibabel
     sudo easy_install nipy
 
-.. _check-installation:
+.. _check-installation-2013:
 
 ***********************
 Check your installation

@@ -20,7 +20,7 @@ The idea of software carpentry:
 * Learning how to use tools.
 * Homework for this week: editors.
 
-See :ref:`choosing-editor` for a review of some choices.
+See :ref:`choosing-editor-2013` for a review of some choices.
 
 **********************
 The Python environment

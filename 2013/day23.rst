@@ -30,9 +30,9 @@ Background reading
 Notebook with small solution
 ============================
 
-* `simple model, extended, raw
+* `simple model + solution, extended, raw
   <https://raw.github.com/practical-neuroimaging/pna-notebooks/master/finding_faces.ipynb>`_
   notebook file for downloading.
-* `simple model, extended, web
+* `simple model + solution, extended, web
   <http://nbviewer.ipython.org/urls/raw.github.com/practical-neuroimaging/pna-notebooks/master/finding_faces.ipynb>`_
   notebook presented nicely as a web page.

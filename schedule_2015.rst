@@ -101,6 +101,8 @@ For each day there will be a short teaching point on one of:
 General reading
 ***************
 
+* `Nature article on Python in science
+  <http://www.nature.com/news/programming-pick-up-python-1.16833>`_
 * Greg Wilson's article on scientific computing: Wilson, Greg, et al. "Best
   practices for scientific computing." PLoS biology 12.1 (2014): e1001745.
 * Donoho reproducibility article : Donoho, David L. 2010. An invitation to
