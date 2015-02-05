@@ -1,0 +1,205 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Course on Practical Neuroimaging in Python &mdash; Practical neuroimaging analysis</title>
+    
+    <link rel="stylesheet" href="../_static/nature.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="Practical neuroimaging analysis" href="../index.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+<big><big><big><li><a href="../index.html">Home</a> |&nbsp;</li>
+  <li><a href="https://github.com/practical-neuroimaging/pna-notebooks">Notebooks</a> |&nbsp;</li>
+  <li><a href="http://nipy.bic.berkeley.edu/practical_neuroimaging">Data</a> |&nbsp;</li>
+  <li><a href="https://calmail.berkeley.edu/manage/list/listinfo/practical_fmri@lists.berkeley.edu">Mailing list</a> |&nbsp;</li></big></big></big>
+ 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="day-ten-3-may-2013">
+<h1>Day ten : 3 May 2013<a class="headerlink" href="#day-ten-3-may-2013" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic">
+<li><p class="first">Wrapping up slice time interpolation</p>
+</li>
+<li><p class="first">Workflow</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li>Organizing code and notebooks</li>
+<li>Using version control</li>
+<li>Building pipelines</li>
+<li>Reproducible analysis scripts</li>
+</ol>
+</div></blockquote>
+</li>
+</ol>
+</div>
+<div class="section" id="workflow">
+<h2>Workflow<a class="headerlink" href="#workflow" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="principles">
+<h3>Principles<a class="headerlink" href="#principles" title="Permalink to this headline">¶</a></h3>
+<p>Optimize for</p>
+<ul class="simple">
+<li>Efficiency</li>
+<li>Reliability</li>
+<li>Reproducibility</li>
+</ul>
+<p>Make it as easy as possible to:</p>
+<ul class="simple">
+<li>Record changes</li>
+<li>Write and run tests</li>
+<li>Share code and data with other people</li>
+</ul>
+</div>
+<div class="section" id="components">
+<h3>Components<a class="headerlink" href="#components" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>The data directory</li>
+<li>Scripts</li>
+<li>Notebooks</li>
+<li>Library code</li>
+</ul>
+</div>
+<div class="section" id="suggested-segmentation">
+<h3>Suggested segmentation<a class="headerlink" href="#suggested-segmentation" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>data directory</li>
+<li>scripts / notebooks directory</li>
+<li>library code</li>
+</ul>
+</div>
+</div>
+<div class="section" id="loading-notebooks">
+<h2>Loading notebooks<a class="headerlink" href="#loading-notebooks" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="notebooks-for-class">
+<h3>Notebooks for class<a class="headerlink" href="#notebooks-for-class" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><a class="reference external" href="https://raw.github.com/practical-neuroimaging/pna-notebooks/master/slice_timing.ipynb">Slice timing intro for class, raw</a>
+notebook file for downloading.</li>
+<li><a class="reference external" href="http://nbviewer.ipython.org/urls/raw.github.com/practical-neuroimaging/pna-notebooks/master/slice_timing.ipynb">Slice timing intro for class, web</a>
+notebook presented nicely as a web page.</li>
+<li><a class="reference external" href="https://raw.github.com/practical-neuroimaging/pna-notebooks/master/workflow.ipynb">workflow for class, raw</a>
+notebook file for downloading.</li>
+<li><a class="reference external" href="http://nbviewer.ipython.org/urls/raw.github.com/practical-neuroimaging/pna-notebooks/master/workflow.ipynb">workflow for class, web</a>
+notebook presented nicely as a web page.</li>
+<li><a class="reference external" href="https://raw.github.com/practical-neuroimaging/pna-notebooks/master/roll_your_own_cms.ipynb">git introduction intro for class, raw</a>
+notebook file for downloading.</li>
+<li><a class="reference external" href="http://nbviewer.ipython.org/urls/raw.github.com/practical-neuroimaging/pna-notebooks/master/roll_your_own_cms.ipynb">git introduction intro for class, web</a>
+notebook presented nicely as a web page.</li>
+</ul>
+</div>
+<div class="section" id="full-notebooks-with-answers">
+<h3>Full notebooks with answers<a class="headerlink" href="#full-notebooks-with-answers" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><a class="reference external" href="https://raw.github.com/practical-neuroimaging/pna-notebooks/master/slice_timing_full.ipynb">Slice timing intro with answers, raw</a>
+notebook file for downloading.</li>
+<li><a class="reference external" href="http://nbviewer.ipython.org/urls/raw.github.com/practical-neuroimaging/pna-notebooks/master/slice_timing_full.ipynb">Slice timing intro with answers, web</a>
+notebook presented nicely as a web page.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="background-reading">
+<h2>Background reading<a class="headerlink" href="#background-reading" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><a class="reference external" href="http://imaging.mrc-cbu.cam.ac.uk/imaging/SliceTiming">http://imaging.mrc-cbu.cam.ac.uk/imaging/SliceTiming</a></li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Day ten : 3 May 2013</a><ul>
+<li><a class="reference internal" href="#introduction">Introduction</a></li>
+<li><a class="reference internal" href="#workflow">Workflow</a><ul>
+<li><a class="reference internal" href="#principles">Principles</a></li>
+<li><a class="reference internal" href="#components">Components</a></li>
+<li><a class="reference internal" href="#suggested-segmentation">Suggested segmentation</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#loading-notebooks">Loading notebooks</a><ul>
+<li><a class="reference internal" href="#notebooks-for-class">Notebooks for class</a></li>
+<li><a class="reference internal" href="#full-notebooks-with-answers">Full notebooks with answers</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#background-reading">Background reading</a></li>
+</ul>
+</li>
+</ul>
+
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../_sources/2013/day10.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+<big><big><big><li><a href="../index.html">Home</a> |&nbsp;</li>
+  <li><a href="https://github.com/practical-neuroimaging/pna-notebooks">Notebooks</a> |&nbsp;</li>
+  <li><a href="http://nipy.bic.berkeley.edu/practical_neuroimaging">Data</a> |&nbsp;</li>
+  <li><a href="https://calmail.berkeley.edu/manage/list/listinfo/practical_fmri@lists.berkeley.edu">Mailing list</a> |&nbsp;</li></big></big></big>
+ 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2013, Matthew Brett and J-B Poline.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
+    </div>
+  </body>
+</html>

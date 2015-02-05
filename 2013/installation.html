@@ -1,0 +1,163 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Course on Practical Neuroimaging in Python &mdash; Practical neuroimaging analysis</title>
+    
+    <link rel="stylesheet" href="../_static/nature.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="Practical neuroimaging analysis" href="../index.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+<big><big><big><li><a href="../index.html">Home</a> |&nbsp;</li>
+  <li><a href="https://github.com/practical-neuroimaging/pna-notebooks">Notebooks</a> |&nbsp;</li>
+  <li><a href="http://nipy.bic.berkeley.edu/practical_neuroimaging">Data</a> |&nbsp;</li>
+  <li><a href="https://calmail.berkeley.edu/manage/list/listinfo/practical_fmri@lists.berkeley.edu">Mailing list</a> |&nbsp;</li></big></big></big>
+ 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="software-to-install-for-the-class">
+<span id="installation-2013"></span><h1>Software to install for the class<a class="headerlink" href="#software-to-install-for-the-class" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li>A text editor to edit python code - see <a class="reference internal" href="choosing_editor.html#choosing-editor-2013"><em>Choosing an editor</em></a></li>
+<li>Python and the Python scientific libraries installed - see below.</li>
+</ul>
+<p>If you already have some large Python packaging system installed, such as the
+<a class="reference external" href="http://www.enthought.com/products/epd.php">Enthought Python Distribution</a>, you can stick with that, it should provide the
+dependencies you need.  To make sure, see <a class="reference internal" href="#check-installation-2013"><em>Check your installation</em></a>. If
+you don&#8217;t have something like that (most of you won&#8217;t), please read on...</p>
+<div class="section" id="if-you-are-using-windows">
+<h2>If you are using Windows<a class="headerlink" href="#if-you-are-using-windows" title="Permalink to this headline">¶</a></h2>
+<p>Please install Python (X, Y) : <a class="reference external" href="http://code.google.com/p/pythonxy/">http://code.google.com/p/pythonxy/</a></p>
+<p>You want the file <tt class="docutils literal"><span class="pre">Python(x,y)-2.7.3.1.exe</span></tt> - not the updates, but the full
+release.</p>
+<p>Choose the default installation options for now.</p>
+</div>
+<div class="section" id="if-you-are-using-osx">
+<h2>If you are using OSX<a class="headerlink" href="#if-you-are-using-osx" title="Permalink to this headline">¶</a></h2>
+<p>We have an exciting new installer for the course.  If you do not have Python.org
+python 2.7, installed, or you aren&#8217;t sure if you have it installed, please start
+by running the installer at
+<a class="reference external" href="http://www.python.org/ftp/python/2.7.3/python-2.7.3-macosx10.6.dmg">http://www.python.org/ftp/python/2.7.3/python-2.7.3-macosx10.6.dmg</a></p>
+<p>Next, please try the fancy installer I built for this course, called <em>Reginald</em>.
+Download <tt class="docutils literal"><span class="pre">reginald.dmg</span></tt> with right-click and <tt class="docutils literal"><span class="pre">Save</span> <span class="pre">link</span> <span class="pre">as</span></tt> from the <a class="reference external" href="http://nipy.bic.berkeley.edu/practical_neuroimaging/">course
+web directory</a>.  Double click to mount the installer, then open the mounted
+disk image and look at the <tt class="docutils literal"><span class="pre">ReadMe.txt</span></tt> file, and then double click the
+installer.</p>
+<p>Remember to <a class="reference internal" href="#check-installation-2013"><em>Check your installation</em></a></p>
+</div>
+<div class="section" id="if-you-are-using-linux">
+<h2>If you are using Linux<a class="headerlink" href="#if-you-are-using-linux" title="Permalink to this headline">¶</a></h2>
+<p>If you are using Ubuntu or Debian, please set up <a class="reference external" href="http://neuro.debian.net">NeuroDebian</a> using the
+instructions on the NeuroDebian website.  Then:</p>
+<div class="highlight-python"><div class="highlight"><pre>sudo apt-get install python-nipy
+sudo apt-get install ipython-notebook
+sudo apt-get install python-matplotlib python-nose
+</pre></div>
+</div>
+<p>On Fedora or related distros, it&#8217;s a little more complicated:</p>
+<div class="highlight-python"><div class="highlight"><pre>sudo yum install numpy scipy sympy python-setuptools
+sudo yum install python-matplotlib python-nose
+sudo yum install python-ipython-notebook
+sudo easy_install nibabel
+sudo easy_install nipy
+</pre></div>
+</div>
+</div>
+<div class="section" id="check-your-installation">
+<span id="check-installation-2013"></span><h2>Check your installation<a class="headerlink" href="#check-your-installation" title="Permalink to this headline">¶</a></h2>
+<p>To check you have a working installation, please download this <a class="reference external" href="http://fperez.org/py4science/workshop_checklist.py">checklist
+script</a> from Fernando Perez&#8217; website, and run it.  To download, please <strong>Right
+click</strong> on the link and <strong>Save link as</strong> to save to your hard disk.  The
+instructions on what to do are at the top of the file.  If you have problems,
+please come to office hours and we&#8217;ll try and help you.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Software to install for the class</a><ul>
+<li><a class="reference internal" href="#if-you-are-using-windows">If you are using Windows</a></li>
+<li><a class="reference internal" href="#if-you-are-using-osx">If you are using OSX</a></li>
+<li><a class="reference internal" href="#if-you-are-using-linux">If you are using Linux</a></li>
+<li><a class="reference internal" href="#check-your-installation">Check your installation</a></li>
+</ul>
+</li>
+</ul>
+
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../_sources/2013/installation.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+<big><big><big><li><a href="../index.html">Home</a> |&nbsp;</li>
+  <li><a href="https://github.com/practical-neuroimaging/pna-notebooks">Notebooks</a> |&nbsp;</li>
+  <li><a href="http://nipy.bic.berkeley.edu/practical_neuroimaging">Data</a> |&nbsp;</li>
+  <li><a href="https://calmail.berkeley.edu/manage/list/listinfo/practical_fmri@lists.berkeley.edu">Mailing list</a> |&nbsp;</li></big></big></big>
+ 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2013, Matthew Brett and J-B Poline.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
+    </div>
+  </body>
+</html>

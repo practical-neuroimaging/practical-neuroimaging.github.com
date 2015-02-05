@@ -1,0 +1,605 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Course on Practical Neuroimaging in Python &mdash; Practical neuroimaging analysis</title>
+    
+    <link rel="stylesheet" href="_static/nature.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="Practical neuroimaging analysis" href="index.html" />
+    <link rel="next" title="Software to install for the class" href="installation.html" />
+    <link rel="prev" title="Reading for the class" href="reading.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="installation.html" title="Software to install for the class"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="reading.html" title="Reading for the class"
+             accesskey="P">previous</a> |</li>
+<big><big><big><li><a href="index.html">Home</a> |&nbsp;</li>
+  <li><a href="https://github.com/practical-neuroimaging/pna-notebooks">Notebooks</a> |&nbsp;</li>
+  <li><a href="http://nipy.bic.berkeley.edu/practical_neuroimaging">Data</a> |&nbsp;</li>
+  <li><a href="https://calmail.berkeley.edu/manage/list/listinfo/practical_fmri@lists.berkeley.edu">Mailing list</a> |&nbsp;</li></big></big></big>
+ 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="practical-neuroimaging-the-sequel">
+<h1>Practical neuroimaging, the sequel<a class="headerlink" href="#practical-neuroimaging-the-sequel" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="who-is-this-course-for">
+<h2>Who is this course for?<a class="headerlink" href="#who-is-this-course-for" title="Permalink to this headline">¶</a></h2>
+<p>The course is designed for people starting or doing neuroimaging, with some
+programming experience (for example, writing MATLAB or Python scripts).</p>
+<p>We have designed the course to help you:</p>
+<ul class="simple">
+<li>Understand the basic concepts in neuroimaging, and how they relate to the
+wider world of statistics, engineering, computer science;</li>
+<li>Be comfortable working with neuroimaging data and code, so you can write
+your own basic algorithms, and understand other people&#8217;s code;</li>
+<li>Work with code and data in a way that will save you time, help you
+collaborate, and continue learning.</li>
+</ul>
+</div>
+<div class="section" id="requirements">
+<h2>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Reasonable knowledge of programming in any language;</li>
+</ul>
+</div>
+<div class="section" id="background">
+<h2>Background<a class="headerlink" href="#background" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div>That which I cannot build, I do not understand (Feynman)</div></blockquote>
+<ul class="simple">
+<li>Practical workflow for continuous learning;</li>
+<li>Relevant concepts in mathematics / statistics / engineering;</li>
+<li>FMRI analysis steps.</li>
+</ul>
+<p>We aim to teach you to work efficiently, so that you can in due course forget
+about your tools and think about the ideas.  We aim to make things simple,
+rather than easy, so that you can reach a stage where things are both simple
+and easy.</p>
+<div class="section" id="practical-workflow">
+<h3>Practical workflow<a class="headerlink" href="#practical-workflow" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Version control (we teach git);</li>
+<li>Extensible text editor (see below);</li>
+<li>Versatile programming language (we teach Python);</li>
+<li>Testing code;</li>
+<li>Collaborating with code.</li>
+</ul>
+</div>
+<div class="section" id="relevant-concepts">
+<h3>Relevant concepts<a class="headerlink" href="#relevant-concepts" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>convolution (hemodynamic modeling, smoothing);</li>
+<li>interpolation (slice time correction, image resampling);</li>
+<li>optimization (registration, advanced statistics);</li>
+<li>basic linear algebra (statistics);</li>
+</ul>
+</div>
+<div class="section" id="fmri-analysis-steps">
+<h3>FMRI analysis steps<a class="headerlink" href="#fmri-analysis-steps" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Diagnostics;</li>
+<li>slice timing;</li>
+<li>motion correction;</li>
+<li>registration within and between subject;</li>
+<li>smoothing;</li>
+<li>statistical estimation with multiple regression;</li>
+<li>statistical inference.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="format-of-the-classes">
+<h2>Format of the classes<a class="headerlink" href="#format-of-the-classes" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p class="first">Prior reading / homework for each week of approx 30 minutes;</p>
+</li>
+<li><p class="first">Class is 2 hours:</p>
+<blockquote>
+<div><ul class="simple">
+<li>10 minutes debrief from previous class</li>
+<li>30 minutes talk introduction + questions;</li>
+<li>60 minutes problems;</li>
+<li>10 minutes review of problems;</li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+<p>For each day there will be a short teaching point on one of:</p>
+<ul class="simple">
+<li>version control;</li>
+<li>text editing;</li>
+<li>code collaboration.</li>
+</ul>
+</div>
+<div class="section" id="general-reading">
+<h2>General reading<a class="headerlink" href="#general-reading" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><a class="reference external" href="http://www.nature.com/news/programming-pick-up-python-1.16833">Nature article on Python in science</a></li>
+<li>Greg Wilson&#8217;s article on scientific computing: Wilson, Greg, et al. &#8220;Best
+practices for scientific computing.&#8221; PLoS biology 12.1 (2014): e1001745.</li>
+<li>Donoho reproducibility article : Donoho, David L. 2010. An invitation to
+reproducible computational research. Biostatistics 11, 385–388.
+<a class="reference external" href="http://biostatistics.oxfordjournals.org/content/11/3/385.full">http://biostatistics.oxfordjournals.org/content/11/3/385.full</a></li>
+</ul>
+</div>
+<div class="section" id="text-editors">
+<h2>Text editors<a class="headerlink" href="#text-editors" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>vim;</li>
+<li>emacs;</li>
+<li>TextMate;</li>
+<li>sublime text;</li>
+<li>Notepad++.</li>
+</ul>
+<p>You can use any other text editor, but we&#8217;ll be doing text editor challenges
+through the course to teach ourselves speed and shortcuts for our editors.</p>
+<p>The list of editors comes from
+<a class="reference external" href="http://www.rackspace.com/blog/text-editor-madness-bracket-vote-for-your-favorite">http://www.rackspace.com/blog/text-editor-madness-bracket-vote-for-your-favorite</a>
+with the edition of TextMate (because we know at least one extremely efficient
+coder who uses it).</p>
+<p>Your teachers use Vim (x2) and Emacs (x1).</p>
+</div>
+<div class="section" id="general-teaching-points">
+<h2>General teaching points<a class="headerlink" href="#general-teaching-points" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Proceed by iterating through a single subject analysis;</li>
+<li>balance of IPython notebook and Python modules.</li>
+</ul>
+</div>
+<div class="section" id="schedule">
+<h2>Schedule<a class="headerlink" href="#schedule" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="day-0-introduction-and-taster">
+<h3>Day 0 : introduction and taster<a class="headerlink" href="#day-0-introduction-and-taster" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="prior">
+<h4>Prior<a class="headerlink" href="#prior" title="Permalink to this headline">¶</a></h4>
+<p>Install requirements on your machine</p>
+<ul class="simple">
+<li>git;</li>
+<li>Python;</li>
+<li>pip;</li>
+<li>scipy-stack (numpy, scipy, matplotlib, IPython, pandas);</li>
+<li>nibabel.</li>
+</ul>
+<p>Make a private github account.</p>
+<p>Installation instructions will be a version of
+<a class="reference external" href="http://practical-neuroimaging.github.io/installation.html">http://practical-neuroimaging.github.io/installation.html</a></p>
+<p>Possible reading:</p>
+<ul class="simple">
+<li>Class introduction - e.g <a class="reference external" href="http://practical-neuroimaging.github.io/day0.html">http://practical-neuroimaging.github.io/day0.html</a></li>
+<li>Numpy universe package summary - e.g.
+<a class="reference external" href="http://nbviewer.ipython.org/urls/raw.github.com/practical-neuroimaging/pna-notebooks/master/python_libraries.ipynb">http://nbviewer.ipython.org/urls/raw.github.com/practical-neuroimaging/pna-notebooks/master/python_libraries.ipynb</a></li>
+<li>Choosing a text editor - e.g.
+<a class="reference external" href="http://practical-neuroimaging.github.io/choosing_editor.html">http://practical-neuroimaging.github.io/choosing_editor.html</a></li>
+</ul>
+<p>Day:</p>
+<ul class="simple">
+<li>Git clone practical neuroimaging notebooks;</li>
+<li>Numpy / scipy / matplotlib / IPython notebook whirlwind introduction;</li>
+<li>What is an image?</li>
+<li>Loading a 3D image - from :
+<a class="reference external" href="http://nbviewer.ipython.org/urls/raw.github.com/practical-neuroimaging/pna-notebooks/master/loading_images.ipynb">http://nbviewer.ipython.org/urls/raw.github.com/practical-neuroimaging/pna-notebooks/master/loading_images.ipynb</a></li>
+<li>Getting pixel data</li>
+<li>Text editor intro</li>
+</ul>
+</div>
+</div>
+<div class="section" id="day-1-introducing-python">
+<h3>Day 1 : introducing Python<a class="headerlink" href="#day-1-introducing-python" title="Permalink to this headline">¶</a></h3>
+<p>Reading: TBA</p>
+<p>Day: TBA</p>
+</div>
+<div class="section" id="day-2-images-as-arrays-and-plotting">
+<h3>Day 2: images as arrays and plotting<a class="headerlink" href="#day-2-images-as-arrays-and-plotting" title="Permalink to this headline">¶</a></h3>
+<p>Reading:</p>
+<ul class="simple">
+<li>Numpy introduction TBA</li>
+<li>Matplotlib introduction TBA</li>
+<li>What is an image? e.g.
+<a class="reference external" href="http://nbviewer.ipython.org/urls/raw.github.com/practical-neuroimaging/pna-notebooks/master/what_is_an_image.ipynb">http://nbviewer.ipython.org/urls/raw.github.com/practical-neuroimaging/pna-notebooks/master/what_is_an_image.ipynb</a></li>
+</ul>
+<p>Day:</p>
+<ul class="simple">
+<li>Loading a 4D image (e.g.
+<a class="reference external" href="http://nbviewer.ipython.org/urls/raw.github.com/practical-neuroimaging/pna-notebooks/master/loading_images.ipynb">http://nbviewer.ipython.org/urls/raw.github.com/practical-neuroimaging/pna-notebooks/master/loading_images.ipynb</a>)</li>
+<li>Mean, standard deviation, variance over time</li>
+<li>Text editor competition.</li>
+</ul>
+</div>
+<div class="section" id="day-3-diagnostics-version-control">
+<h3>Day 3: diagnostics / version control<a class="headerlink" href="#day-3-diagnostics-version-control" title="Permalink to this headline">¶</a></h3>
+<p>Reading:</p>
+<ul class="simple">
+<li>Workflow e.g.
+<a class="reference external" href="http://nbviewer.ipython.org/urls/raw.github.com/practical-neuroimaging/pna-notebooks/master/workflow.ipynb">http://nbviewer.ipython.org/urls/raw.github.com/practical-neuroimaging/pna-notebooks/master/workflow.ipynb</a></li>
+<li>Git basics: <a class="reference external" href="http://matthew-brett.github.io/pydagogue/curious_git.html">http://matthew-brett.github.io/pydagogue/curious_git.html</a></li>
+</ul>
+<p>Day:</p>
+<ul class="simple">
+<li>Refresher on Python modules and packages;</li>
+<li>Transfer notebook code into text files;</li>
+<li>Add to git;</li>
+<li>Time series diagnostics;</li>
+<li>Make an edit and commit and push;</li>
+</ul>
+</div>
+<div class="section" id="day-4-first-statistics-version-control">
+<h3>Day 4: first statistics / version control<a class="headerlink" href="#day-4-first-statistics-version-control" title="Permalink to this headline">¶</a></h3>
+<p>Reading:</p>
+<ul class="simple">
+<li>Make a branch, edit and commit;</li>
+<li>Merge;</li>
+<li>Push;</li>
+<li>Splitting FMRI time series by slicing;</li>
+<li>Subtracting on blocks from off blocks;</li>
+<li>Visualizing result.</li>
+</ul>
+</div>
+<div class="section" id="day-5-convolution-and-correlation">
+<h3>Day 5: convolution and correlation<a class="headerlink" href="#day-5-convolution-and-correlation" title="Permalink to this headline">¶</a></h3>
+<p>Reading:</p>
+<ul class="simple">
+<li>Something on hemodynamic modeling;</li>
+<li>Notebook on convolution - an edited version of
+<a class="reference external" href="http://nbviewer.ipython.org/urls/raw.github.com/practical-neuroimaging/pna-notebooks/master/convolution.ipynb">http://nbviewer.ipython.org/urls/raw.github.com/practical-neuroimaging/pna-notebooks/master/convolution.ipynb</a></li>
+</ul>
+<p>Day:</p>
+<ul class="simple">
+<li>Creating the convolution kernel;</li>
+<li>Extracting time series (slicing in 4th dimension);</li>
+<li>Convolution the dumb way;</li>
+<li>Convolution the scipy way;</li>
+<li>Correlating the convolved time course with the data.</li>
+</ul>
+</div>
+<div class="section" id="day-6-regression-and-the-general-linear-model">
+<h3>Day 6: regression and the general linear model<a class="headerlink" href="#day-6-regression-and-the-general-linear-model" title="Permalink to this headline">¶</a></h3>
+<p>Reading:</p>
+<ul class="simple">
+<li>Poline and Brett 2012 : <a class="reference external" href="http://matthew.dynevor.org/_downloads/does_glm_love.pdf">http://matthew.dynevor.org/_downloads/does_glm_love.pdf</a></li>
+<li>Notebook on GLM / contrasts - at: <a class="reference external" href="http://perrin.dynevor.org/glm_intro.html">http://perrin.dynevor.org/glm_intro.html</a></li>
+</ul>
+<p>Day:</p>
+<ul class="simple">
+<li>Load time course;</li>
+<li>rebuild convolved regressor;</li>
+<li>set up matrices;</li>
+<li>run estimation;</li>
+<li>visualize result;</li>
+<li>replicate subtraction analysis from previous day with dummy regressors;</li>
+<li>visualize result;</li>
+<li>(relationship of correlation and regression).</li>
+</ul>
+</div>
+<div class="section" id="day-7-diagnostics-using-principal-component-analysis">
+<h3>Day 7: diagnostics using principal component analysis<a class="headerlink" href="#day-7-diagnostics-using-principal-component-analysis" title="Permalink to this headline">¶</a></h3>
+<p>This day is for us to practice working with matrices, and to get an idea of
+the level of underlying variance in data.</p>
+<p>Reading:</p>
+<ul class="simple">
+<li>Notebook on diagnostics:
+<a class="reference external" href="http://nbviewer.ipython.org/urls/bitbucket.org/matthewbrett/talks/raw/master/processing_i/diagnostics.ipynb">http://nbviewer.ipython.org/urls/bitbucket.org/matthewbrett/talks/raw/master/processing_i/diagnostics.ipynb</a></li>
+<li>A tutorial on principal component analysis: <a class="reference external" href="http://arxiv.org/abs/1404.1100">http://arxiv.org/abs/1404.1100</a></li>
+</ul>
+<p>Day:</p>
+<ul class="simple">
+<li>Get code from notebook;</li>
+<li>Run PCA;</li>
+<li>Fetch projection matrices, vectors and values;</li>
+<li>Reconstruct data using reduced number of components.</li>
+<li>Investigate and diagnose components;</li>
+<li>Investigate correlation of vectors with data.</li>
+</ul>
+</div>
+<div class="section" id="day-8-1d-interpolation-and-slice-timing">
+<h3>Day 8: 1D interpolation and slice timing<a class="headerlink" href="#day-8-1d-interpolation-and-slice-timing" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Notebook on interpolation and slice timing e.g.
+<a class="reference external" href="http://nbviewer.ipython.org/urls/bitbucket.org/matthewbrett/talks/raw/master/processing_i/slice_timing.ipynb">http://nbviewer.ipython.org/urls/bitbucket.org/matthewbrett/talks/raw/master/processing_i/slice_timing.ipynb</a></li>
+</ul>
+<p>Day:</p>
+<ul class="simple">
+<li>Convert notebook to Python module;</li>
+<li>write code to do linear interpolation on example time series;</li>
+<li>write tests;</li>
+<li>use scipy interpolation code;</li>
+<li>investigate splines.</li>
+</ul>
+</div>
+<div class="section" id="day-9-optimization-2d-interpolation-and-registration">
+<h3>Day 9: optimization, 2D interpolation and registration<a class="headerlink" href="#day-9-optimization-2d-interpolation-and-registration" title="Permalink to this headline">¶</a></h3>
+<p>Reading:</p>
+<ul class="simple">
+<li>Notebook on optimization for registration:
+<a class="reference external" href="http://nbviewer.ipython.org/urls/bitbucket.org/matthewbrett/talks/raw/master/processing_i/optimizing_space.ipynb">http://nbviewer.ipython.org/urls/bitbucket.org/matthewbrett/talks/raw/master/processing_i/optimizing_space.ipynb</a></li>
+</ul>
+<p>(Add subtracted image after registration).</p>
+<p>Day:</p>
+<ul class="simple">
+<li>Convert optimization notebook to Python module;</li>
+<li>Run;</li>
+<li>Try different cost functions;</li>
+<li>Try different optimization methods;</li>
+<li>Local minima with a 180 degree rotation;</li>
+<li>Investigate and run FSL motion correction.</li>
+</ul>
+</div>
+<div class="section" id="day-10-coordinate-systems-and-cross-modality-registration">
+<h3>Day 10: coordinate systems and cross-modality registration<a class="headerlink" href="#day-10-coordinate-systems-and-cross-modality-registration" title="Permalink to this headline">¶</a></h3>
+<p>Reading:</p>
+<ul class="simple">
+<li>Tutorial on coordinate systems at:
+<a class="reference external" href="http://nipy.org/nibabel/coordinate_systems.html">http://nipy.org/nibabel/coordinate_systems.html</a></li>
+<li>Mutual information : e.g.
+<a class="reference external" href="http://nbviewer.ipython.org/urls/bitbucket.org/matthewbrett/talks/raw/master/processing_i/mutual_information_example.ipynb">http://nbviewer.ipython.org/urls/bitbucket.org/matthewbrett/talks/raw/master/processing_i/mutual_information_example.ipynb</a></li>
+</ul>
+<p>Need to fix this up.</p>
+<p>Day:</p>
+<ul class="simple">
+<li>Load EPI;</li>
+<li>Load anatomical;</li>
+<li>Reslicing using coordinate transforms;</li>
+<li>Scipy ndimage and affine_transform;</li>
+<li>FSL coregistration;</li>
+<li>SPM coregistration.</li>
+</ul>
+</div>
+<div class="section" id="day-11-registration-between-subjects">
+<h3>Day 11: registration between subjects<a class="headerlink" href="#day-11-registration-between-subjects" title="Permalink to this headline">¶</a></h3>
+<p>Reading:</p>
+<ul class="simple">
+<li>Localization paper at <a class="reference external" href="http://matthew.dynevor.org/_downloads/location.pdf">http://matthew.dynevor.org/_downloads/location.pdf</a></li>
+<li>Tutorial on inter-subject registration (spatial normalization). Yet to be
+written.  Some material at:<ul>
+<li><a class="reference external" href="http://nbviewer.ipython.org/urls/raw.github.com/practical-neuroimaging/pna-notebooks/master/ANTS_normalization.ipynb">http://nbviewer.ipython.org/urls/raw.github.com/practical-neuroimaging/pna-notebooks/master/ANTS_normalization.ipynb</a></li>
+<li><a class="reference external" href="http://nbviewer.ipython.org/urls/raw.github.com/practical-neuroimaging/pna-notebooks/master/template_registration.ipynb">http://nbviewer.ipython.org/urls/raw.github.com/practical-neuroimaging/pna-notebooks/master/template_registration.ipynb</a></li>
+<li><a class="reference external" href="http://nipy.org/dipy/examples_built/syn_registration_2d.html#example-syn-registration-2d">http://nipy.org/dipy/examples_built/syn_registration_2d.html#example-syn-registration-2d</a></li>
+<li><a class="reference external" href="http://nipy.org/dipy/examples_built/syn_registration_2d.html#example-syn-registration-3d">http://nipy.org/dipy/examples_built/syn_registration_2d.html#example-syn-registration-3d</a></li>
+</ul>
+</li>
+</ul>
+<p>Day:</p>
+<ul class="simple">
+<li>Affine registration using scipy;</li>
+<li>Affine registration using FSL;</li>
+<li>Warping in 2D using dipy regtools;</li>
+<li>Diagnosing the warp using the deformation mesh;</li>
+<li>Affine plus warping using FSL;</li>
+<li>Thinking about what makes a good registration.</li>
+</ul>
+</div>
+<div class="section" id="day-12-smoothing-and-modeling">
+<h3>Day 12: smoothing and modeling<a class="headerlink" href="#day-12-smoothing-and-modeling" title="Permalink to this headline">¶</a></h3>
+<p>Reading:</p>
+<ul class="simple">
+<li>Introduction to smoothing: <a class="reference external" href="http://perrin.dynevor.org/smoothing_intro.html">http://perrin.dynevor.org/smoothing_intro.html</a></li>
+</ul>
+<p>Day:</p>
+<ul class="simple">
+<li>Smoothing as convolution;</li>
+<li>HRF regressor model on smoothed and unsmoothed data;</li>
+<li>Different smoothing levels;</li>
+<li>single voxel;</li>
+<li>whole brain.</li>
+</ul>
+</div>
+<div class="section" id="day-13-testing-hypotheses-with-t-and-f-contrasts">
+<h3>Day 13: testing hypotheses with t and F contrasts<a class="headerlink" href="#day-13-testing-hypotheses-with-t-and-f-contrasts" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>Reading:</dt>
+<dd><ul class="first last simple">
+<li>Notebook on t / F - version of :
+<a class="reference external" href="http://nbviewer.ipython.org/urls/raw.github.com/practical-neuroimaging/pna-notebooks/master/GLM_t_F.ipynb">http://nbviewer.ipython.org/urls/raw.github.com/practical-neuroimaging/pna-notebooks/master/GLM_t_F.ipynb</a></li>
+</ul>
+</dd>
+</dl>
+<p>Day:</p>
+<ul class="simple">
+<li>Block (on / off model) F contrasts;</li>
+<li>Motion parameters as confounds;</li>
+<li>t contrasts for motion;</li>
+<li>F contrasts for motion;</li>
+<li>FSL contrasts;</li>
+<li>SPM contrasts.</li>
+</ul>
+</div>
+<div class="section" id="day-14-random-effects-choosing-models">
+<h3>Day 14: random effects, choosing models<a class="headerlink" href="#day-14-random-effects-choosing-models" title="Permalink to this headline">¶</a></h3>
+<p>Reading:</p>
+<ul class="simple">
+<li>random versus fixed effect in neuroimaging litterature
+<a class="reference external" href="ftp://193.62.66.20/spm/data/face_rfx/RFXabstract.pdf">ftp://193.62.66.20/spm/data/face_rfx/RFXabstract.pdf</a>
+<a class="reference external" href="http://www.fil.ion.ucl.ac.uk/spm/doc/books/hbf2/pdfs/Ch12.pdf">http://www.fil.ion.ucl.ac.uk/spm/doc/books/hbf2/pdfs/Ch12.pdf</a></li>
+<li>a simple tutorial on cross validation
+<a class="reference external" href="http://www.autonlab.org/tutorials/overfit.html">http://www.autonlab.org/tutorials/overfit.html</a></li>
+</ul>
+<p>Day:</p>
+<ul>
+<li><dl class="first docutils">
+<dt>Recall t and F tests: what are they doing exactly.  Where does my variability come from?</dt>
+<dd><ul class="first last simple">
+<li>example within run (from previous course)</li>
+<li>example random effect (between subjects).</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p class="first">Wait a second: What is a model exactly ?</p>
+</li>
+<li><p class="first">I am chosing a very wrong model: Consequences on the results of t/F tests.</p>
+</li>
+<li><dl class="first docutils">
+<dt>How do I know my model is - is not very wrong? the good, the bad, the ugly (reverse order)</dt>
+<dd><ul class="first last simple">
+<li>the ugly: p-hacking. Let&#8217;s try it.</li>
+<li>the bad: use R2.</li>
+<li>the good: model validation</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p class="first">Model validation: Principle.  Example of &#8220;random effect&#8221; model testing the effect of &#8220;grumpiness&#8221;.</p>
+</li>
+</ul>
+</div>
+<div class="section" id="day-15-statistical-inference">
+<h3>Day 15: statistical inference<a class="headerlink" href="#day-15-statistical-inference" title="Permalink to this headline">¶</a></h3>
+<p>Reading:</p>
+<ul class="simple">
+<li>Bonferroni correction : e.g.
+<a class="reference external" href="http://nbviewer.ipython.org/urls/raw.github.com/practical-neuroimaging/pna-notebooks/master/bonferonni_notes.ipynb">http://nbviewer.ipython.org/urls/raw.github.com/practical-neuroimaging/pna-notebooks/master/bonferonni_notes.ipynb</a></li>
+<li>Random fields : e.g. <a class="reference external" href="http://perrin.dynevor.org/random_fields.html">http://perrin.dynevor.org/random_fields.html</a></li>
+<li>FDR: <a class="reference external" href="http://nbviewer.ipython.org/github/practical-neuroimaging/pna-notebooks/blob/master/FDR.ipynb">http://nbviewer.ipython.org/github/practical-neuroimaging/pna-notebooks/blob/master/FDR.ipynb</a></li>
+</ul>
+<p>Day:</p>
+<ul class="simple">
+<li>Generate map of T</li>
+<li>correct using Bonferroni;</li>
+<li>correct using random fields;</li>
+<li>correct using FDR;</li>
+</ul>
+</div>
+<div class="section" id="possible-extra-days">
+<h3>Possible extra days<a class="headerlink" href="#possible-extra-days" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Using machine learning tools with scikit-learn;</li>
+<li>Introduction to diffusion imaging;</li>
+<li>Introduction to DICOM;</li>
+<li>Data visualization.</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Practical neuroimaging, the sequel</a><ul>
+<li><a class="reference internal" href="#who-is-this-course-for">Who is this course for?</a></li>
+<li><a class="reference internal" href="#requirements">Requirements</a></li>
+<li><a class="reference internal" href="#background">Background</a><ul>
+<li><a class="reference internal" href="#practical-workflow">Practical workflow</a></li>
+<li><a class="reference internal" href="#relevant-concepts">Relevant concepts</a></li>
+<li><a class="reference internal" href="#fmri-analysis-steps">FMRI analysis steps</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#format-of-the-classes">Format of the classes</a></li>
+<li><a class="reference internal" href="#general-reading">General reading</a></li>
+<li><a class="reference internal" href="#text-editors">Text editors</a></li>
+<li><a class="reference internal" href="#general-teaching-points">General teaching points</a></li>
+<li><a class="reference internal" href="#schedule">Schedule</a><ul>
+<li><a class="reference internal" href="#day-0-introduction-and-taster">Day 0 : introduction and taster</a><ul>
+<li><a class="reference internal" href="#prior">Prior</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#day-1-introducing-python">Day 1 : introducing Python</a></li>
+<li><a class="reference internal" href="#day-2-images-as-arrays-and-plotting">Day 2: images as arrays and plotting</a></li>
+<li><a class="reference internal" href="#day-3-diagnostics-version-control">Day 3: diagnostics / version control</a></li>
+<li><a class="reference internal" href="#day-4-first-statistics-version-control">Day 4: first statistics / version control</a></li>
+<li><a class="reference internal" href="#day-5-convolution-and-correlation">Day 5: convolution and correlation</a></li>
+<li><a class="reference internal" href="#day-6-regression-and-the-general-linear-model">Day 6: regression and the general linear model</a></li>
+<li><a class="reference internal" href="#day-7-diagnostics-using-principal-component-analysis">Day 7: diagnostics using principal component analysis</a></li>
+<li><a class="reference internal" href="#day-8-1d-interpolation-and-slice-timing">Day 8: 1D interpolation and slice timing</a></li>
+<li><a class="reference internal" href="#day-9-optimization-2d-interpolation-and-registration">Day 9: optimization, 2D interpolation and registration</a></li>
+<li><a class="reference internal" href="#day-10-coordinate-systems-and-cross-modality-registration">Day 10: coordinate systems and cross-modality registration</a></li>
+<li><a class="reference internal" href="#day-11-registration-between-subjects">Day 11: registration between subjects</a></li>
+<li><a class="reference internal" href="#day-12-smoothing-and-modeling">Day 12: smoothing and modeling</a></li>
+<li><a class="reference internal" href="#day-13-testing-hypotheses-with-t-and-f-contrasts">Day 13: testing hypotheses with t and F contrasts</a></li>
+<li><a class="reference internal" href="#day-14-random-effects-choosing-models">Day 14: random effects, choosing models</a></li>
+<li><a class="reference internal" href="#day-15-statistical-inference">Day 15: statistical inference</a></li>
+<li><a class="reference internal" href="#possible-extra-days">Possible extra days</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="reading.html"
+                        title="previous chapter">Reading for the class</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="installation.html"
+                        title="next chapter">Software to install for the class</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/schedule_2015.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="installation.html" title="Software to install for the class"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="reading.html" title="Reading for the class"
+             >previous</a> |</li>
+<big><big><big><li><a href="index.html">Home</a> |&nbsp;</li>
+  <li><a href="https://github.com/practical-neuroimaging/pna-notebooks">Notebooks</a> |&nbsp;</li>
+  <li><a href="http://nipy.bic.berkeley.edu/practical_neuroimaging">Data</a> |&nbsp;</li>
+  <li><a href="https://calmail.berkeley.edu/manage/list/listinfo/practical_fmri@lists.berkeley.edu">Mailing list</a> |&nbsp;</li></big></big></big>
+ 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2013, Matthew Brett and J-B Poline.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
+    </div>
+  </body>
+</html>

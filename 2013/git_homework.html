@@ -1,0 +1,235 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Course on Practical Neuroimaging in Python &mdash; Practical neuroimaging analysis</title>
+    
+    <link rel="stylesheet" href="../_static/nature.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="Practical neuroimaging analysis" href="../index.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+<big><big><big><li><a href="../index.html">Home</a> |&nbsp;</li>
+  <li><a href="https://github.com/practical-neuroimaging/pna-notebooks">Notebooks</a> |&nbsp;</li>
+  <li><a href="http://nipy.bic.berkeley.edu/practical_neuroimaging">Data</a> |&nbsp;</li>
+  <li><a href="https://calmail.berkeley.edu/manage/list/listinfo/practical_fmri@lists.berkeley.edu">Mailing list</a> |&nbsp;</li></big></big></big>
+ 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="git-homework">
+<span id="id1"></span><h1>Git homework<a class="headerlink" href="#git-homework" title="Permalink to this headline">¶</a></h1>
+<p>This should take you around 30 minutes.</p>
+<p>Some of the time you&#8217;ll be spending getting set up to have backups of your git
+repositories; this is likely to be useful to you for a long time.</p>
+<p>Try to get as far as you can.  If you get stuck, please, email me (Matthew) or
+the list, and / or come to office hours on Thursday 2-4.</p>
+<div class="section" id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p>Imagine we are all collaborating on some code.</p>
+<p>I&#8217;ve put the current versions of these files somewhere, but there are some bugs.
+You want to get the files, find the bugs, fix them, and then ask me to update
+the original copies so we can all use the fixed versions.</p>
+<p>Here is some practice - I&#8217;ve left a couple of small bugs in the code and I am
+hoping you can find them, fix them, and give the fixes back to me, using git and
+an online service for git repositories called <a class="reference external" href="http://github.com">github</a>.</p>
+</div>
+<div class="section" id="make-a-github-account">
+<h2>Make a Github account<a class="headerlink" href="#make-a-github-account" title="Permalink to this headline">¶</a></h2>
+<p>(You can skip this step if you already have a github account).</p>
+<p><a class="reference external" href="http://github.com">Github</a> is a popular site for free hosting of git repositories.</p>
+<p>You first need to make a (free) account on the github service.</p>
+<p>Click on the &#8220;Sign up for free&#8221; button and follow the instructions.</p>
+</div>
+<div class="section" id="set-up-for-git">
+<h2>Set up for git<a class="headerlink" href="#set-up-for-git" title="Permalink to this headline">¶</a></h2>
+<p>Now check the github page on <a class="reference external" href="https://help.github.com/articles/set-up-git">configuring git for
+github</a> and follow the
+instructions there.</p>
+<p>You might want to check your favorite editor is working properly - see
+<a class="reference internal" href="git_setup.html#git-editor-setup-2013"><em>Git setup for different editors</em></a>.</p>
+</div>
+<div class="section" id="fork-the-main-repository">
+<h2>&#8220;Fork&#8221; the main repository<a class="headerlink" href="#fork-the-main-repository" title="Permalink to this headline">¶</a></h2>
+<p>This will make your own personal public copy of the main github repository.  The
+copy is on the github servers.</p>
+<ul class="simple">
+<li>Log in to github using your (maybe new) username and password</li>
+<li>Go to the page with my copy of the repository:
+<a class="reference external" href="https://github.com/practical-neuroimaging/pna-utils">https://github.com/practical-neuroimaging/pna-utils</a></li>
+<li>Click on the &#8220;Fork&#8221; button near the top right of the page.  You want to fork
+to your own account</li>
+<li>After a while you should get dumped at your own &#8220;fork&#8221; of the <tt class="docutils literal"><span class="pre">pna-utils</span></tt>
+repository, like this (for my github username):
+<a class="reference external" href="https://github.com/matthew-brett/pna-utils">https://github.com/matthew-brett/pna-utils</a> (your username will appear in the
+URL instead of <tt class="docutils literal"><span class="pre">matthew-brett</span></tt>)</li>
+</ul>
+</div>
+<div class="section" id="clone-your-forked-repository-to-your-computer">
+<h2>&#8220;Clone&#8221; your forked repository to your computer<a class="headerlink" href="#clone-your-forked-repository-to-your-computer" title="Permalink to this headline">¶</a></h2>
+<p>A few lines down from the top of the page like
+<a class="reference external" href="https://github.com/matthew-brett/pna-utils">https://github.com/matthew-brett/pna-utils</a> (with your username), you&#8217;ll see the
+URL to paste for doing a <tt class="docutils literal"><span class="pre">git</span> <span class="pre">clone</span></tt>.  For me, the URL is:</p>
+<blockquote>
+<div><a class="reference external" href="https://github.com/matthew-brett/pna-utils.git">https://github.com/matthew-brett/pna-utils.git</a></div></blockquote>
+<p>So next do:</p>
+<div class="highlight-python"><div class="highlight"><pre>cd ~/code
+git clone https://github.com/&lt;your-github-username&gt;/pna-utils.git
+</pre></div>
+</div>
+<p>If you are on windows, use the git bash shell that got installed with git; on
+OSX or Linux, just use the terminal.  Now you have the full copy of all the
+history on your machine.</p>
+</div>
+<div class="section" id="find-and-fix-the-bugs">
+<h2>Find and fix the bugs<a class="headerlink" href="#find-and-fix-the-bugs" title="Permalink to this headline">¶</a></h2>
+<p>The problem the new code was designed to solve, was to run through the Haxby
+dataset, and set the TR and the slice timing value into each image file.</p>
+<p>The script to do this is <tt class="docutils literal"><span class="pre">fixup_openfmri.py</span></tt>.  But:</p>
+<p>There are two bugs I&#8217;ve left in the code.  One of them causes a test failure.
+To find that one, first work out how to run the tests (hint : <tt class="docutils literal"><span class="pre">nosetests</span></tt>).
+Fix!  The other one makes the script fail if you call it.  Fix!</p>
+</div>
+<div class="section" id="make-a-new-commit-with-the-fixes">
+<h2>Make a new commit with the fixes<a class="headerlink" href="#make-a-new-commit-with-the-fixes" title="Permalink to this headline">¶</a></h2>
+<p>For each file that you change, when you&#8217;ve finished editing, do:</p>
+<div class="highlight-python"><div class="highlight"><pre>git add &lt;name_of_file&gt;
+</pre></div>
+</div>
+<p>Check what files you&#8217;ve changed with:</p>
+<div class="highlight-python"><div class="highlight"><pre>git status
+</pre></div>
+</div>
+<p>Check the changes you haven&#8217;t added yet (not in the staging area) with:</p>
+<div class="highlight-python"><div class="highlight"><pre>git diff
+</pre></div>
+</div>
+<p>When you are done, do:</p>
+<div class="highlight-python"><div class="highlight"><pre>git commit -m &quot;Message about what you did&quot;
+</pre></div>
+</div>
+<p>When you do this, you make a new commit on the <tt class="docutils literal"><span class="pre">master</span></tt> branch.  More
+explanation next class.</p>
+</div>
+<div class="section" id="push-the-new-commit-back-up-to-your-fork">
+<h2>Push the new commit back up to your fork<a class="headerlink" href="#push-the-new-commit-back-up-to-your-fork" title="Permalink to this headline">¶</a></h2>
+<p>Now you want to let me see the changes so I can add them back.  To do this, you
+want to <tt class="docutils literal"><span class="pre">push</span></tt> your changes back up to github.  To do this:</p>
+<div class="highlight-python"><div class="highlight"><pre>git push origin master --set-upstream
+</pre></div>
+</div>
+<p>This pushes the new changes up to the <tt class="docutils literal"><span class="pre">master</span></tt> branch in your copy of the
+repository on github.</p>
+<p>If you&#8217;ve used the default &#8220;https&#8221; URL above (as I have) github will ask you for
+your github username and password when you do this.</p>
+</div>
+<div class="section" id="ask-me-to-fix-my-stuff">
+<h2>Ask me to fix my stuff<a class="headerlink" href="#ask-me-to-fix-my-stuff" title="Permalink to this headline">¶</a></h2>
+<p>Now you&#8217;ve fixed the code, you want to share the fixes with everyone else.  So,
+make a <em>pull request</em>. This is a request for me to take your changes and put
+them into my repository.</p>
+<ul class="simple">
+<li>Go to the github page for your repo - e.g.
+<a class="reference external" href="https://github.com/matthew-brett/pna-utils">https://github.com/matthew-brett/pna-utils</a></li>
+<li>Click on the &#8220;Pull request&#8221; button on the second from top line towards the
+right on this page.</li>
+<li>Notice that github automatically realizes you probably meant to ask me to add
+the changes because that&#8217;s where you &#8220;forked&#8221; from originally.</li>
+<li>Fill in a title and some explanation of the changes</li>
+<li>Click &#8220;Send pull request&#8221;</li>
+</ul>
+<p>Congratulations - you are now a member of the open-source community...</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Git homework</a><ul>
+<li><a class="reference internal" href="#introduction">Introduction</a></li>
+<li><a class="reference internal" href="#make-a-github-account">Make a Github account</a></li>
+<li><a class="reference internal" href="#set-up-for-git">Set up for git</a></li>
+<li><a class="reference internal" href="#fork-the-main-repository">&#8220;Fork&#8221; the main repository</a></li>
+<li><a class="reference internal" href="#clone-your-forked-repository-to-your-computer">&#8220;Clone&#8221; your forked repository to your computer</a></li>
+<li><a class="reference internal" href="#find-and-fix-the-bugs">Find and fix the bugs</a></li>
+<li><a class="reference internal" href="#make-a-new-commit-with-the-fixes">Make a new commit with the fixes</a></li>
+<li><a class="reference internal" href="#push-the-new-commit-back-up-to-your-fork">Push the new commit back up to your fork</a></li>
+<li><a class="reference internal" href="#ask-me-to-fix-my-stuff">Ask me to fix my stuff</a></li>
+</ul>
+</li>
+</ul>
+
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../_sources/2013/git_homework.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+<big><big><big><li><a href="../index.html">Home</a> |&nbsp;</li>
+  <li><a href="https://github.com/practical-neuroimaging/pna-notebooks">Notebooks</a> |&nbsp;</li>
+  <li><a href="http://nipy.bic.berkeley.edu/practical_neuroimaging">Data</a> |&nbsp;</li>
+  <li><a href="https://calmail.berkeley.edu/manage/list/listinfo/practical_fmri@lists.berkeley.edu">Mailing list</a> |&nbsp;</li></big></big></big>
+ 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2013, Matthew Brett and J-B Poline.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
+    </div>
+  </body>
+</html>

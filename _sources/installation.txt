@@ -16,12 +16,9 @@ don't have something like that (most of you won't), please read on...
 If you are using Windows
 ************************
 
-Please install Python (X, Y) : http://code.google.com/p/pythonxy/
+Download and install Python version 2.7 from `Python downloads
+<https://www.python.org/downloads/>`_.
 
-You want the file ``Python(x,y)-2.7.3.1.exe`` - not the updates, but the full
-release.
-
-Choose the default installation options for now.
 
 ********************
 If you are using OSX

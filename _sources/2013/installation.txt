@@ -1,0 +1,74 @@
+.. _installation-2013:
+
+#################################
+Software to install for the class
+#################################
+
+* A text editor to edit python code - see :ref:`choosing-editor-2013`
+* Python and the Python scientific libraries installed - see below.
+
+If you already have some large Python packaging system installed, such as the
+`Enthought Python Distribution`_, you can stick with that, it should provide the
+dependencies you need.  To make sure, see :ref:`check-installation-2013`. If
+you don't have something like that (most of you won't), please read on...
+
+************************
+If you are using Windows
+************************
+
+Please install Python (X, Y) : http://code.google.com/p/pythonxy/
+
+You want the file ``Python(x,y)-2.7.3.1.exe`` - not the updates, but the full
+release.
+
+Choose the default installation options for now.
+
+********************
+If you are using OSX
+********************
+
+We have an exciting new installer for the course.  If you do not have Python.org
+python 2.7, installed, or you aren't sure if you have it installed, please start
+by running the installer at
+http://www.python.org/ftp/python/2.7.3/python-2.7.3-macosx10.6.dmg
+
+Next, please try the fancy installer I built for this course, called *Reginald*.
+Download ``reginald.dmg`` with right-click and ``Save link as`` from the `course
+web directory`_.  Double click to mount the installer, then open the mounted
+disk image and look at the ``ReadMe.txt`` file, and then double click the
+installer.
+
+Remember to :ref:`check-installation-2013`
+
+**********************
+If you are using Linux
+**********************
+
+If you are using Ubuntu or Debian, please set up `NeuroDebian`_ using the
+instructions on the NeuroDebian website.  Then::
+
+    sudo apt-get install python-nipy
+    sudo apt-get install ipython-notebook
+    sudo apt-get install python-matplotlib python-nose
+
+On Fedora or related distros, it's a little more complicated::
+
+    sudo yum install numpy scipy sympy python-setuptools
+    sudo yum install python-matplotlib python-nose
+    sudo yum install python-ipython-notebook
+    sudo easy_install nibabel
+    sudo easy_install nipy
+
+.. _check-installation-2013:
+
+***********************
+Check your installation
+***********************
+
+To check you have a working installation, please download this `checklist
+script`_ from Fernando Perez' website, and run it.  To download, please **Right
+click** on the link and **Save link as** to save to your hard disk.  The
+instructions on what to do are at the top of the file.  If you have problems,
+please come to office hours and we'll try and help you.
+
+.. include:: links_names.inc

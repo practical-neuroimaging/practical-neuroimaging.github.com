@@ -3,15 +3,17 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Practical Neuroimaging Analysis course at UC Berkeley
+UC Berkeley course on practical neuroimaging analysis
 =====================================================
 
 These are the web pages for the course on practical neuroimaging
 analysis at UC Berkeley `brain imaging center`_ (BIC).
 
-The course ran from February until October 2013 - please see the :doc:`program`.
+The current pages are for the 2015 course.
 
-We plan to run the course again next year, we'll announce on the `mailing list`_
+Pages from the previous (2013) course are :doc:`here <2013/index>`.
+
+Course news and announcements go to the `mailing list`_
 
 .. toctree::
     :maxdepth: 3
@@ -19,21 +21,9 @@ We plan to run the course again next year, we'll announce on the `mailing list`_
     aim
     where_and_when
     reading
+    schedule_2015
     installation
     choosing_editor
-    example_data
-    program
 
-This was a new course, and we will be redesigning it with experience of what
-works and what does not.
-
-Here is the feedback from the course just finished, and our response.
-
-.. toctree::
-    :maxdepth: 1
-
-    feedback0
-    feedback1
-    response0
 
 .. include:: links_names.inc
