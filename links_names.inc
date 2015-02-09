@@ -106,6 +106,8 @@
 
 .. Tutorials
 .. _The Python tutorial: http://docs.python.org/2/tutorial/
+.. _The Python 3 tutorial: http://docs.python.org/3/tutorial/
+.. _Introduction to Python: http://www.introtopython.org
 
 .. People
 .. _Matthew : http://matthew.dynevor.org
@@ -114,3 +116,6 @@
 
 .. Substitutions
 .. |emdash| unicode:: U+02014
+.. |--| unicode:: U+2013   .. en dash
+.. |---| unicode:: U+2014  .. em dash, trimming surrounding whitespace
+   :trim:

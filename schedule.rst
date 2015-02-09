@@ -1,174 +1,14 @@
-##################################
-Practical neuroimaging, the sequel
-##################################
-
-.. Berkeley dates
-
-    Spring semester: http://registrar.berkeley.edu/stucal.html
-
-    Semester begins 13 January 2015;
-    Instruction begins 20 January;
-    Final exams May 11-15;
-    Semester ends May 15.
-
-    15 Fridays 30 January through 8 May.
-
-***********************
-Who is this course for?
-***********************
-
-The course is designed for people starting or doing neuroimaging, with some
-programming experience (for example, writing MATLAB or Python scripts).
-
-We have designed the course to help you:
-
-* Understand the basic concepts in neuroimaging, and how they relate to the
-  wider world of statistics, engineering, computer science;
-* Be comfortable working with neuroimaging data and code, so you can write
-  your own basic algorithms, and understand other people's code;
-* Work with code and data in a way that will save you time, help you
-  collaborate, and continue learning.
-
-************
-Requirements
-************
-
-* Reasonable knowledge of programming in any language;
-
-**********
-Background
-**********
-
-    That which I cannot build, I do not understand (Feynman)
-
-* Practical workflow for continuous learning;
-* Relevant concepts in mathematics / statistics / engineering;
-* FMRI analysis steps.
-
-We aim to teach you to work efficiently, so that you can in due course forget
-about your tools and think about the ideas.  We aim to make things simple,
-rather than easy, so that you can reach a stage where things are both simple
-and easy.
-
-Practical workflow
-==================
-
-* Version control (we teach git);
-* Extensible text editor (see below);
-* Versatile programming language (we teach Python);
-* Testing code;
-* Collaborating with code.
-
-Relevant concepts
-=================
-
-* convolution (hemodynamic modeling, smoothing);
-* interpolation (slice time correction, image resampling);
-* optimization (registration, advanced statistics);
-* basic linear algebra (statistics);
-
-FMRI analysis steps
-===================
-
-* Diagnostics;
-* slice timing;
-* motion correction;
-* registration within and between subject;
-* smoothing;
-* statistical estimation with multiple regression;
-* statistical inference.
-
-*********************
-Format of the classes
-*********************
-
-* Prior reading / homework for each week of approx 30 minutes;
-
-* Class is 2 hours:
-
-    * 10 minutes debrief from previous class
-    * 30 minutes talk introduction + questions;
-    * 60 minutes problems;
-    * 10 minutes review of problems;
-
-For each day there will be a short teaching point on one of:
-
-* version control;
-* text editing;
-* code collaboration.
-
-***************
-General reading
-***************
-
-* `Nature article on Python in science
-  <http://www.nature.com/news/programming-pick-up-python-1.16833>`_
-* `Essay by Peter Norvig <http://norvig.com/21-days.html>`_.  `Peter Norvig
-  <http://en.wikipedia.org/wiki/Peter_Norvig>` is director of research at
-  Google.
-* Greg Wilson's article on scientific computing: Wilson, Greg, et al. "Best
-  practices for scientific computing." PLoS biology 12.1 (2014): e1001745.
-* Donoho reproducibility article : Donoho, David L. 2010. An invitation to
-  reproducible computational research. Biostatistics 11, 385–388.
-  http://biostatistics.oxfordjournals.org/content/11/3/385.full
-
-************
-Text editors
-************
-
-* vim;
-* emacs;
-* TextMate;
-* sublime text;
-* Notepad++.
-
-You can use any other text editor, but we'll be doing text editor challenges
-through the course to teach ourselves speed and shortcuts for our editors.
-
-The list of editors comes from
-http://www.rackspace.com/blog/text-editor-madness-bracket-vote-for-your-favorite
-with the edition of TextMate (because we know at least one extremely efficient
-coder who uses it).
-
-Your teachers use Vim (x2) and Emacs (x1).
-
-***********************
-General teaching points
-***********************
-
-* Proceed by iterating through a single subject analysis;
-* balance of IPython notebook and Python modules.
-
-********
+########
 Schedule
-********
+########
 
+*******************************
 Day 0 : introduction and taster
-===============================
+*******************************
 
-Prior
------
+Prior:
 
-Install requirements on your machine
-
-* git;
-* Python;
-* pip;
-* scipy-stack (numpy, scipy, matplotlib, IPython, pandas);
-* nibabel.
-
-Make a private github account.
-
-Installation instructions will be a version of
-http://practical-neuroimaging.github.io/installation.html
-
-Possible reading:
-
-* Class introduction - e.g http://practical-neuroimaging.github.io/day0.html
-* Numpy universe package summary - e.g.
-  http://nbviewer.ipython.org/urls/raw.github.com/practical-neuroimaging/pna-notebooks/master/python_libraries.ipynb
-* Choosing a text editor - e.g.
-  http://practical-neuroimaging.github.io/choosing_editor.html
+Install requirements on your machine |--| see :doc:`installation`.
 
 Day:
 
@@ -180,15 +20,21 @@ Day:
 * Getting pixel data
 * Text editor intro
 
+**************************
 Day 1 : introducing Python
-==========================
+**************************
 
-Reading: TBA
+Prior:
 
-Day: TBA
+Make a private github account.
 
+Reading: `introduction to Python`_.
+
+Day: Python exercises.
+
+************************************
 Day 2: images as arrays and plotting
-====================================
+************************************
 
 Reading:
 
@@ -204,8 +50,9 @@ Day:
 * Mean, standard deviation, variance over time
 * Text editor competition.
 
+************************************
 Day 3: diagnostics / version control
-====================================
+************************************
 
 Reading:
 
@@ -221,8 +68,9 @@ Day:
 * Time series diagnostics;
 * Make an edit and commit and push;
 
+*****************************************
 Day 4: first statistics / version control
-=========================================
+*****************************************
 
 Reading:
 
@@ -233,8 +81,9 @@ Reading:
 * Subtracting on blocks from off blocks;
 * Visualizing result.
 
+**********************************
 Day 5: convolution and correlation
-==================================
+**********************************
 
 Reading:
 
@@ -250,8 +99,9 @@ Day:
 * Convolution the scipy way;
 * Correlating the convolved time course with the data.
 
+**********************************************
 Day 6: regression and the general linear model
-==============================================
+**********************************************
 
 Reading:
 
@@ -269,8 +119,9 @@ Day:
 * visualize result;
 * (relationship of correlation and regression).
 
+*****************************************************
 Day 7: diagnostics using principal component analysis
-=====================================================
+*****************************************************
 
 This day is for us to practice working with matrices, and to get an idea of
 the level of underlying variance in data.
@@ -290,8 +141,9 @@ Day:
 * Investigate and diagnose components;
 * Investigate correlation of vectors with data.
 
+****************************************
 Day 8: 1D interpolation and slice timing
-========================================
+****************************************
 
 * Notebook on interpolation and slice timing e.g.
   http://nbviewer.ipython.org/urls/bitbucket.org/matthewbrett/talks/raw/master/processing_i/slice_timing.ipynb
@@ -304,8 +156,9 @@ Day:
 * use scipy interpolation code;
 * investigate splines.
 
+******************************************************
 Day 9: optimization, 2D interpolation and registration
-======================================================
+******************************************************
 
 Reading:
 
@@ -323,8 +176,9 @@ Day:
 * Local minima with a 180 degree rotation;
 * Investigate and run FSL motion correction.
 
+**********************************************************
 Day 10: coordinate systems and cross-modality registration
-==========================================================
+**********************************************************
 
 Reading:
 
@@ -344,8 +198,9 @@ Day:
 * FSL coregistration;
 * SPM coregistration.
 
+*************************************
 Day 11: registration between subjects
-=====================================
+*************************************
 
 Reading:
 
@@ -367,8 +222,9 @@ Day:
 * Affine plus warping using FSL;
 * Thinking about what makes a good registration.
 
+******************************
 Day 12: smoothing and modeling
-==============================
+******************************
 
 Reading:
 
@@ -382,8 +238,9 @@ Day:
 * single voxel;
 * whole brain.
 
+*************************************************
 Day 13: testing hypotheses with t and F contrasts
-=================================================
+*************************************************
 
 Reading:
     * Notebook on t / F - version of :
@@ -398,8 +255,9 @@ Day:
 * FSL contrasts;
 * SPM contrasts.
 
+***************************************
 Day 14: random effects, choosing models
-=======================================
+***************************************
 
 Reading:
 
@@ -428,8 +286,9 @@ Day:
 * Model validation: Principle.  Example of "random effect" model testing the effect of "grumpiness".
 
 
+*****************************
 Day 15: statistical inference
-=============================
+*****************************
 
 Reading:
 
@@ -445,15 +304,13 @@ Day:
 * correct using random fields;
 * correct using FDR;
 
+*******************
 Possible extra days
-===================
+*******************
 
 * Using machine learning tools with scikit-learn;
 * Introduction to diffusion imaging;
 * Introduction to DICOM;
 * Data visualization.
 
-.. to discuss:
-
-    * Not enough introduction to numpy / matplotlib?
-    * Role of testing?
+.. include:: links_names.inc

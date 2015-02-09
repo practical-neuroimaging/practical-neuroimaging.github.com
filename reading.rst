@@ -1,18 +1,43 @@
-#####################
-Reading for the class
-#####################
+#############################
+General reading for the class
+#############################
 
-If you are new to Python, we highly recommend reading `the Python tutorial`_ on
-the main Python website.  It has a good pace for beginners.
+******
+Python
+******
 
-There's a nice interactive web tutorial at
-http://learnpython.org
+If you are new to Python, we recommend starting off with the excellent
+`Introduction to Python`_.
 
-There are some very fine tutorials on using Python for science at
-https://github.com/jrjohansson/scientific-python-lectures#online-read-only-versions
+There are a good set of `resources
+<http://www.introtopython.org/resources.html>`_ via the "Resources" link on
+that site.  We especially like the Google course, if you like to watch videos
+to go with your exercises.
 
-The book `Learning Python <http://shop.oreilly.com/product/9780596158071.do>`_
-has got a bit too long in the current versions, but we have the pithy first
-edition which is very well paced.  First come to office hours, first borrow.
+**********
+Background
+**********
+
+* `Nature article on Python in science
+  <http://www.nature.com/news/programming-pick-up-python-1.16833>`_. This is a
+  recent news article about the benefits of using Python for scientific
+  programming.
+* `Essay by Peter Norvig <http://norvig.com/21-days.html>`_.  `Peter Norvig
+  <http://en.wikipedia.org/wiki/Peter_Norvig>` is director of research at
+  Google.  The essay explains that, to learn programming, and therefore how to
+  do computational science well, takes a long time to learn.  We plan to teach
+  you the steps that help you keep learning so you continue to get better.
+* Greg Wilson's article on scientific computing: Wilson, Greg, et al. `Best
+  practices for scientific computing.
+  <http://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1001745>`_
+  PLoS biology 12.1 (2014): e1001745.  Greg Wilson and others set out the
+  standard set of good habits that reduce errors and increase efficiency for
+  scientific computing.
+* Donoho, David L. 2010. An invitation to reproducible computational research.
+  Biostatistics 11, 385–388.
+  http://biostatistics.oxfordjournals.org/content/11/3/385.full . David Donoho
+  is a professor in the Stanford statistics department who has long championed
+  the need to make our work available to others in a form that lets them
+  reproduce our results.
 
 .. include:: links_names.inc
