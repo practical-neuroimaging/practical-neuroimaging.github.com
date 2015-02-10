@@ -67,8 +67,8 @@ As for vim, to use it well, it needs some practice to get used to the
 keystrokes used, and as for vim, this practice is amply repaid by very fluent
 movement and editing.
 
-Emacs is at least as complicated as vim to configure, partly because it is so
-powerful.  We are very happy to help with this if you are interested.
+Emacs hard to configure, largely because it is so powerful.  We are very happy
+to help with this if you are interested.
 
 *************************************
 Other editors that you might consider
@@ -77,10 +77,9 @@ Other editors that you might consider
 We will support these editors too for anyone who wants to use them.  If you
 prefer another editor, we will help as best we can.
 
-This list of editors comes from `the results of a text editor competition <
-http://www.rackspace.com/blog/text-editor-madness-bracket-vote-for-your-favorite>`_
-with the edition of TextMate (because we know at least one extremely efficient
-coder who uses it).
+This suggested set of editors comes from the top four editors from  `text
+editor competition`_ with the addition of TextMate (because we know at least
+one extremely efficient coder who uses it).
 
 For any platform
 ================
