@@ -23,9 +23,10 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="author" title="About these documents" href="about.html" />
     <link rel="top" title="Practical neuroimaging analysis" href="index.html" />
-    <link rel="next" title="Choosing an editor" href="choosing_editor.html" />
-    <link rel="prev" title="Practical neuroimaging, the sequel" href="schedule_2015.html" /> 
+    <link rel="next" title="Schedule" href="schedule.html" />
+    <link rel="prev" title="General reading for the class" href="reading.html" /> 
   </head>
   <body>
     <div class="related">
@@ -35,10 +36,10 @@
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="choosing_editor.html" title="Choosing an editor"
+          <a href="schedule.html" title="Schedule"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="schedule_2015.html" title="Practical neuroimaging, the sequel"
+          <a href="reading.html" title="General reading for the class"
              accesskey="P">previous</a> |</li>
 <big><big><big><li><a href="index.html">Home</a> |&nbsp;</li>
   <li><a href="https://github.com/practical-neuroimaging/pna-notebooks">Notebooks</a> |&nbsp;</li>
@@ -55,56 +56,156 @@
             
   <div class="section" id="software-to-install-for-the-class">
 <span id="installation"></span><h1>Software to install for the class<a class="headerlink" href="#software-to-install-for-the-class" title="Permalink to this headline">¶</a></h1>
-<ul class="simple">
-<li>A text editor to edit python code - see <a class="reference internal" href="choosing_editor.html#choosing-editor"><em>Choosing an editor</em></a></li>
-<li>Python and the Python scientific libraries installed - see below.</li>
-</ul>
+<p>You will need Python and some Python scientific libraries installed.</p>
 <p>If you already have some large Python packaging system installed, such as the
-<a class="reference external" href="http://www.enthought.com/products/epd.php">Enthought Python Distribution</a>, you can stick with that, it should provide the
-dependencies you need.  To make sure, see <a class="reference internal" href="#check-installation"><em>Check your installation</em></a>. If you
-don&#8217;t have something like that (most of you won&#8217;t), please read on...</p>
+<cite>Anaconda</cite> or the <a class="reference external" href="http://www.enthought.com/products/epd.php">Enthought Python Distribution</a>, you can stick with that,
+it should provide the dependencies you need.  To make sure, see the relevant
+instructions below for checking your installation.  If you don&#8217;t have
+something like that (most of you won&#8217;t), please read on...</p>
 <div class="section" id="if-you-are-using-windows">
 <h2>If you are using Windows<a class="headerlink" href="#if-you-are-using-windows" title="Permalink to this headline">¶</a></h2>
-<p>Download and install Python version 2.7 from <a class="reference external" href="https://www.python.org/downloads/">Python downloads</a>.</p>
+<div class="section" id="download-and-install-python-and-packages-using-python-x-y">
+<h3>Download and install Python and packages using Python (X,Y)<a class="headerlink" href="#download-and-install-python-and-packages-using-python-x-y" title="Permalink to this headline">¶</a></h3>
+<p>Go the the Python (X,Y) website: <a class="reference external" href="https://code.google.com/p/pythonxy/">https://code.google.com/p/pythonxy/</a></p>
+<p>Click on the Downloads link to take you to the Downloads page
+(<a class="reference external" href="https://code.google.com/p/pythonxy/wiki/Downloads">https://code.google.com/p/pythonxy/wiki/Downloads</a>).</p>
+<p>Click on the link for the ConnectMV mirror (it appears to be in Canada, where
+the other download links are in Europe).</p>
+<p>Download the Python (X,Y) exe file, and double click to install.</p>
+<p>Accept all the defaults.</p>
+</div>
+<div class="section" id="use-pip-to-install-the-nibabel-package">
+<h3>Use pip to install the nibabel package<a class="headerlink" href="#use-pip-to-install-the-nibabel-package" title="Permalink to this headline">¶</a></h3>
+<p>Open the <tt class="docutils literal"><span class="pre">cmd</span></tt> program program by clicking on the Windows Start button and
+typing <tt class="docutils literal"><span class="pre">cmd</span></tt> (Return).</p>
+<p>At the prompt, type:</p>
+<div class="highlight-python"><div class="highlight"><pre>pip install nibabel
+</pre></div>
+</div>
+<p>This will cause pip to install the <tt class="docutils literal"><span class="pre">nibabel</span></tt> package for reading
+neuroimaging file formats.</p>
+</div>
+<div class="section" id="check-the-installation-has-worked">
+<h3>Check the installation has worked<a class="headerlink" href="#check-the-installation-has-worked" title="Permalink to this headline">¶</a></h3>
+<p>Download (right-click, save as) this Python script file to your computer:
+<a class="reference external" href="https://nipy.bic.berkeley.edu/pna/check_pna_install.py">https://nipy.bic.berkeley.edu/pna/check_pna_install.py</a></p>
+<p>Open the cmd program again.  Change directory to the directory containing the
+script file, e.g. <tt class="docutils literal"><span class="pre">cd</span> <span class="pre">Downloads</span></tt>.</p>
+<p>Run the script with:</p>
+<div class="highlight-python"><div class="highlight"><pre>python check_pna_install.py
+</pre></div>
+</div>
+<p>If you have any problems, follow the printed instructions after you run the
+script, and let us know (see <a class="reference internal" href="#installation-problems"><em>Installation problems</em></a>).</p>
+</div>
+<div class="section" id="install-git-the-version-control-system">
+<h3>Install git, the version control system<a class="headerlink" href="#install-git-the-version-control-system" title="Permalink to this headline">¶</a></h3>
+<p>Go to <a class="reference external" href="http://git-scm.com/">http://git-scm.com/</a></p>
+<p>Click on the Downloads for Windows link at the bottom right.</p>
+<p>Download the file they propose, with a filename something like
+<tt class="docutils literal"><span class="pre">Git-1.9.5-preview20141217.exe</span></tt>.</p>
+<p>Run the file to start the installation.</p>
+<p>We suggest you accept the defaults, except the sceen called &#8220;Adjusting your
+PATH environment&#8221;, where we suggest you choose the option &#8220;Use git from the
+Windows Command Prompt&#8221;.</p>
+</div>
 </div>
 <div class="section" id="if-you-are-using-osx">
 <h2>If you are using OSX<a class="headerlink" href="#if-you-are-using-osx" title="Permalink to this headline">¶</a></h2>
-<p>We have an exciting new installer for the course.  If you do not have Python.org
-python 2.7, installed, or you aren&#8217;t sure if you have it installed, please start
-by running the installer at
-<a class="reference external" href="http://www.python.org/ftp/python/2.7.3/python-2.7.3-macosx10.6.dmg">http://www.python.org/ftp/python/2.7.3/python-2.7.3-macosx10.6.dmg</a></p>
-<p>Next, please try the fancy installer I built for this course, called <em>Reginald</em>.
-Download <tt class="docutils literal"><span class="pre">reginald.dmg</span></tt> with right-click and <tt class="docutils literal"><span class="pre">Save</span> <span class="pre">link</span> <span class="pre">as</span></tt> from the <a class="reference external" href="http://nipy.bic.berkeley.edu/practical_neuroimaging/">course
-web directory</a>.  Double click to mount the installer, then open the mounted
-disk image and look at the <tt class="docutils literal"><span class="pre">ReadMe.txt</span></tt> file, and then double click the
-installer.</p>
-<p>Remember to <a class="reference internal" href="#check-installation"><em>Check your installation</em></a></p>
+<div class="section" id="download-and-install-python">
+<h3>Download and install Python<a class="headerlink" href="#download-and-install-python" title="Permalink to this headline">¶</a></h3>
+<p>Download the latest version of Python 2 from <a class="reference external" href="https://www.python.org/downloads/">Python downloads</a>.  The current version at the time of
+writing is Python 2.7.9.</p>
+<p>Install in the usual way, by double clicking the installer, and following the
+defaults.</p>
+</div>
+<div class="section" id="id1">
+<h3>Use pip to install the nibabel package<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p>Open the Terminal program by running <tt class="docutils literal"><span class="pre">Terminal.app</span></tt> (type command-space to
+run spotlight or click on the spotlight icon and type <tt class="docutils literal"><span class="pre">terminal</span></tt> to find
+this if you don&#8217;t know where it is on your Mac).</p>
+<p>At the Terminal.app prompt, type:</p>
+<div class="highlight-python"><div class="highlight"><pre>pip install nibabel
+</pre></div>
+</div>
+<p>This will cause pip to install the <tt class="docutils literal"><span class="pre">nibabel</span></tt> package for reading
+neuroimaging file formats.</p>
+</div>
+<div class="section" id="id2">
+<h3>Check the installation has worked<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<p>Download (right-click, save as) this Python script file to your computer:
+<a class="reference external" href="https://nipy.bic.berkeley.edu/pna/check_pna_install.py">https://nipy.bic.berkeley.edu/pna/check_pna_install.py</a></p>
+<p>Open the Terminal.app again if it is not already open.  Change directory to
+the directory containing the script file, e.g. <tt class="docutils literal"><span class="pre">cd</span> <span class="pre">Downloads</span></tt>.</p>
+<p>Run the script with:</p>
+<div class="highlight-python"><div class="highlight"><pre>python2.7 check_pna_install.py
+</pre></div>
+</div>
+<p>If you have any problems, follow the printed instructions after you run the
+script, and let us know (see <a class="reference internal" href="#installation-problems"><em>Installation problems</em></a>).</p>
+</div>
+<div class="section" id="id3">
+<h3>Install git, the version control system<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="if-you-are-on-osx-10-9-mavericks-or-above">
+<h4>If you are on OSX 10.9 (Mavericks) or above<a class="headerlink" href="#if-you-are-on-osx-10-9-mavericks-or-above" title="Permalink to this headline">¶</a></h4>
+<p>On Mavericks and above, <tt class="docutils literal"><span class="pre">git</span></tt> comes with the Apple OSX command line tools.</p>
+<p>To get these, type <tt class="docutils literal"><span class="pre">git</span></tt> at the terminal command line.  If git is not
+installed already you will get a dialog box like this:</p>
+<img alt="_images/git_developer_tools.png" src="_images/git_developer_tools.png" />
+<p>Click &#8216;install&#8217; to install the OSX developer command line tools, including
+git.</p>
+</div>
+<div class="section" id="if-you-are-on-osx-10-8-mountain-lion-or-below">
+<h4>If you are on OSX 10.8 (Mountain lion) or below<a class="headerlink" href="#if-you-are-on-osx-10-8-mountain-lion-or-below" title="Permalink to this headline">¶</a></h4>
+<p>Install git from the <a class="reference external" href="http://sourceforge.net/projects/git-osx-installer/files/git-2.2.1-intel-universal-snow-leopard.dmg/download">Git snow-leopard installer</a>
+by doing the usual routine of double clicking the <tt class="docutils literal"><span class="pre">.dmg</span></tt> file then
+double-clicking the <tt class="docutils literal"><span class="pre">.pkg</span></tt> installer.  Check the installation has worked by
+closing Terminal.app and opening again, and typing <tt class="docutils literal"><span class="pre">git</span></tt> at the command
+line.</p>
+</div>
+</div>
 </div>
 <div class="section" id="if-you-are-using-linux">
 <h2>If you are using Linux<a class="headerlink" href="#if-you-are-using-linux" title="Permalink to this headline">¶</a></h2>
-<p>If you are using Ubuntu or Debian, please set up <a class="reference external" href="http://neuro.debian.net">NeuroDebian</a> using the
-instructions on the NeuroDebian website.  Then:</p>
-<div class="highlight-python"><div class="highlight"><pre>sudo apt-get install python-nipy
-sudo apt-get install ipython-notebook
-sudo apt-get install python-matplotlib python-nose
+<p>If you are using recent Ubuntu or Debian, try the following commands:</p>
+<div class="highlight-python"><div class="highlight"><pre>sudo apt-get update
+sudo apt-get install -y python-pip
+sudo apt-get install -y python-dev
+sudo apt-get install -y python-matplotlib
+sudo apt-get install -y python-scipy python-nose python-pandas
+sudo pip install -U pip
+sudo pip install nibabel
+sudo pip install -U ipython[notebook]
+sudo apt-get install -y git
 </pre></div>
 </div>
-<p>On Fedora or related distros, it&#8217;s a little more complicated:</p>
-<div class="highlight-python"><div class="highlight"><pre>sudo yum install numpy scipy sympy python-setuptools
-sudo yum install python-matplotlib python-nose
-sudo yum install python-ipython-notebook
-sudo easy_install nibabel
-sudo easy_install nipy
+<p>On Fedora or related distros:</p>
+<div class="highlight-python"><div class="highlight"><pre>sudo yum install -y make gcc-c++
+sudo yum install -y python-pip
+sudo yum install -y python-ipython-notebook python-matplotlib
+sudo yum install -y python-scipy python-nose python-pandas
+sudo pip install -U pip
+sudo pip install nibabel
+sudo pip install -U ipython[notebook]
+sudo yum install -y git
 </pre></div>
 </div>
+<p>Check the installation with:</p>
+<div class="highlight-python"><div class="highlight"><pre>curl -O https://nipy.bic.berkeley.edu/pna/check_pna_install.py
+python check_pna_install.py
+</pre></div>
 </div>
-<div class="section" id="check-your-installation">
-<span id="check-installation"></span><h2>Check your installation<a class="headerlink" href="#check-your-installation" title="Permalink to this headline">¶</a></h2>
-<p>To check you have a working installation, please download this <a class="reference external" href="http://fperez.org/py4science/workshop_checklist.py">checklist
-script</a> from Fernando Perez&#8217; website, and run it.  To download, please <strong>Right
-click</strong> on the link and <strong>Save link as</strong> to save to your hard disk.  The
-instructions on what to do are at the top of the file.  If you have problems,
-please come to office hours and we&#8217;ll try and help you.</p>
+<p>If you have any problems, follow the printed instructions after you run the
+script, and let us know (see <a class="reference internal" href="#installation-problems"><em>Installation problems</em></a>).</p>
+</div>
+<div class="section" id="installation-problems">
+<span id="id4"></span><h2>Installation problems<a class="headerlink" href="#installation-problems" title="Permalink to this headline">¶</a></h2>
+<p>Any problems at all, please come see us in <a class="reference internal" href="index.html#office-hours"><em>Office hours</em></a>, or email:</p>
+<ul class="simple">
+<li>matthew dot brett at gmail dot com</li>
+<li>jbpoline at gmail.com</li>
+<li>sjvdwalt at gmail dot com</li>
+</ul>
 </div>
 </div>
 
@@ -117,20 +218,36 @@ please come to office hours and we&#8217;ll try and help you.</p>
   <h3><a href="index.html">Table Of Contents</a></h3>
   <ul>
 <li><a class="reference internal" href="#">Software to install for the class</a><ul>
-<li><a class="reference internal" href="#if-you-are-using-windows">If you are using Windows</a></li>
-<li><a class="reference internal" href="#if-you-are-using-osx">If you are using OSX</a></li>
+<li><a class="reference internal" href="#if-you-are-using-windows">If you are using Windows</a><ul>
+<li><a class="reference internal" href="#download-and-install-python-and-packages-using-python-x-y">Download and install Python and packages using Python (X,Y)</a></li>
+<li><a class="reference internal" href="#use-pip-to-install-the-nibabel-package">Use pip to install the nibabel package</a></li>
+<li><a class="reference internal" href="#check-the-installation-has-worked">Check the installation has worked</a></li>
+<li><a class="reference internal" href="#install-git-the-version-control-system">Install git, the version control system</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#if-you-are-using-osx">If you are using OSX</a><ul>
+<li><a class="reference internal" href="#download-and-install-python">Download and install Python</a></li>
+<li><a class="reference internal" href="#id1">Use pip to install the nibabel package</a></li>
+<li><a class="reference internal" href="#id2">Check the installation has worked</a></li>
+<li><a class="reference internal" href="#id3">Install git, the version control system</a><ul>
+<li><a class="reference internal" href="#if-you-are-on-osx-10-9-mavericks-or-above">If you are on OSX 10.9 (Mavericks) or above</a></li>
+<li><a class="reference internal" href="#if-you-are-on-osx-10-8-mountain-lion-or-below">If you are on OSX 10.8 (Mountain lion) or below</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li><a class="reference internal" href="#if-you-are-using-linux">If you are using Linux</a></li>
-<li><a class="reference internal" href="#check-your-installation">Check your installation</a></li>
+<li><a class="reference internal" href="#installation-problems">Installation problems</a></li>
 </ul>
 </li>
 </ul>
 
   <h4>Previous topic</h4>
-  <p class="topless"><a href="schedule_2015.html"
-                        title="previous chapter">Practical neuroimaging, the sequel</a></p>
+  <p class="topless"><a href="reading.html"
+                        title="previous chapter">General reading for the class</a></p>
   <h4>Next topic</h4>
-  <p class="topless"><a href="choosing_editor.html"
-                        title="next chapter">Choosing an editor</a></p>
+  <p class="topless"><a href="schedule.html"
+                        title="next chapter">Schedule</a></p>
   <h3>This Page</h3>
   <ul class="this-page-menu">
     <li><a href="_sources/installation.txt"
@@ -160,10 +277,10 @@ please come to office hours and we&#8217;ll try and help you.</p>
           <a href="genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="choosing_editor.html" title="Choosing an editor"
+          <a href="schedule.html" title="Schedule"
              >next</a> |</li>
         <li class="right" >
-          <a href="schedule_2015.html" title="Practical neuroimaging, the sequel"
+          <a href="reading.html" title="General reading for the class"
              >previous</a> |</li>
 <big><big><big><li><a href="index.html">Home</a> |&nbsp;</li>
   <li><a href="https://github.com/practical-neuroimaging/pna-notebooks">Notebooks</a> |&nbsp;</li>

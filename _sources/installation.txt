@@ -4,68 +4,193 @@
 Software to install for the class
 #################################
 
-* A text editor to edit python code - see :ref:`choosing-editor`
-* Python and the Python scientific libraries installed - see below.
+You will need Python and some Python scientific libraries installed.
 
 If you already have some large Python packaging system installed, such as the
-`Enthought Python Distribution`_, you can stick with that, it should provide the
-dependencies you need.  To make sure, see :ref:`check-installation`. If you
-don't have something like that (most of you won't), please read on...
+`Anaconda` or the `Enthought Python Distribution`_, you can stick with that,
+it should provide the dependencies you need.  To make sure, see the relevant
+instructions below for checking your installation.  If you don't have
+something like that (most of you won't), please read on...
 
 ************************
 If you are using Windows
 ************************
 
-Download and install Python version 2.7 from `Python downloads
-<https://www.python.org/downloads/>`_.
+Download and install Python and packages using Python (X,Y)
+===========================================================
 
+Go the the Python (X,Y) website: https://code.google.com/p/pythonxy/
+
+Click on the Downloads link to take you to the Downloads page
+(https://code.google.com/p/pythonxy/wiki/Downloads).
+
+Click on the link for the ConnectMV mirror (it appears to be in Canada, where
+the other download links are in Europe).
+
+Download the Python (X,Y) exe file, and double click to install.
+
+Accept all the defaults.
+
+Use pip to install the nibabel package
+======================================
+
+Open the ``cmd`` program program by clicking on the Windows Start button and
+typing ``cmd`` (Return).
+
+At the prompt, type::
+
+    pip install nibabel
+
+This will cause pip to install the ``nibabel`` package for reading
+neuroimaging file formats.
+
+Check the installation has worked
+=================================
+
+Download (right-click, save as) this Python script file to your computer:
+https://nipy.bic.berkeley.edu/pna/check_pna_install.py
+
+Open the cmd program again.  Change directory to the directory containing the
+script file, e.g. ``cd Downloads``.
+
+Run the script with::
+
+    python check_pna_install.py
+
+If you have any problems, follow the printed instructions after you run the
+script, and let us know (see :ref:`installation-problems`).
+
+Install git, the version control system
+=======================================
+
+Go to http://git-scm.com/
+
+Click on the Downloads for Windows link at the bottom right.
+
+Download the file they propose, with a filename something like
+``Git-1.9.5-preview20141217.exe``.
+
+Run the file to start the installation.
+
+We suggest you accept the defaults, except the sceen called "Adjusting your
+PATH environment", where we suggest you choose the option "Use git from the
+Windows Command Prompt".
 
 ********************
 If you are using OSX
 ********************
 
-We have an exciting new installer for the course.  If you do not have Python.org
-python 2.7, installed, or you aren't sure if you have it installed, please start
-by running the installer at
-http://www.python.org/ftp/python/2.7.3/python-2.7.3-macosx10.6.dmg
+Download and install Python
+===========================
 
-Next, please try the fancy installer I built for this course, called *Reginald*.
-Download ``reginald.dmg`` with right-click and ``Save link as`` from the `course
-web directory`_.  Double click to mount the installer, then open the mounted
-disk image and look at the ``ReadMe.txt`` file, and then double click the
-installer.
+Download the latest version of Python 2 from `Python downloads
+<https://www.python.org/downloads/>`_.  The current version at the time of
+writing is Python 2.7.9.
 
-Remember to :ref:`check-installation`
+Install in the usual way, by double clicking the installer, and following the
+defaults.
+
+Use pip to install the nibabel package
+======================================
+
+Open the Terminal program by running ``Terminal.app`` (type command-space to
+run spotlight or click on the spotlight icon and type ``terminal`` to find
+this if you don't know where it is on your Mac).
+
+At the Terminal.app prompt, type::
+
+    pip install nibabel
+
+This will cause pip to install the ``nibabel`` package for reading
+neuroimaging file formats.
+
+Check the installation has worked
+=================================
+
+Download (right-click, save as) this Python script file to your computer:
+https://nipy.bic.berkeley.edu/pna/check_pna_install.py
+
+Open the Terminal.app again if it is not already open.  Change directory to
+the directory containing the script file, e.g. ``cd Downloads``.
+
+Run the script with::
+
+    python2.7 check_pna_install.py
+
+If you have any problems, follow the printed instructions after you run the
+script, and let us know (see :ref:`installation-problems`).
+
+Install git, the version control system
+=======================================
+
+If you are on OSX 10.9 (Mavericks) or above
+-------------------------------------------
+
+On Mavericks and above, ``git`` comes with the Apple OSX command line tools.
+
+To get these, type ``git`` at the terminal command line.  If git is not
+installed already you will get a dialog box like this:
+
+.. image:: images/git_developer_tools.png
+
+Click 'install' to install the OSX developer command line tools, including
+git.
+
+If you are on OSX 10.8 (Mountain lion) or below
+-----------------------------------------------
+
+Install git from the `Git snow-leopard installer
+<http://sourceforge.net/projects/git-osx-installer/files/git-2.2.1-intel-universal-snow-leopard.dmg/download>`_
+by doing the usual routine of double clicking the ``.dmg`` file then
+double-clicking the ``.pkg`` installer.  Check the installation has worked by
+closing Terminal.app and opening again, and typing ``git`` at the command
+line.
 
 **********************
 If you are using Linux
 **********************
 
-If you are using Ubuntu or Debian, please set up `NeuroDebian`_ using the
-instructions on the NeuroDebian website.  Then::
+If you are using recent Ubuntu or Debian, try the following commands::
 
-    sudo apt-get install python-nipy
-    sudo apt-get install ipython-notebook
-    sudo apt-get install python-matplotlib python-nose
+    sudo apt-get update
+    sudo apt-get install -y python-pip
+    sudo apt-get install -y python-dev
+    sudo apt-get install -y python-matplotlib
+    sudo apt-get install -y python-scipy python-nose python-pandas
+    sudo pip install -U pip
+    sudo pip install nibabel
+    sudo pip install -U ipython[notebook]
+    sudo apt-get install -y git
 
-On Fedora or related distros, it's a little more complicated::
+On Fedora or related distros::
 
-    sudo yum install numpy scipy sympy python-setuptools
-    sudo yum install python-matplotlib python-nose
-    sudo yum install python-ipython-notebook
-    sudo easy_install nibabel
-    sudo easy_install nipy
+    sudo yum install -y make gcc-c++
+    sudo yum install -y python-pip
+    sudo yum install -y python-ipython-notebook python-matplotlib
+    sudo yum install -y python-scipy python-nose python-pandas
+    sudo pip install -U pip
+    sudo pip install nibabel
+    sudo pip install -U ipython[notebook]
+    sudo yum install -y git
 
-.. _check-installation:
+Check the installation with::
 
-***********************
-Check your installation
-***********************
+    curl -O https://nipy.bic.berkeley.edu/pna/check_pna_install.py
+    python check_pna_install.py
 
-To check you have a working installation, please download this `checklist
-script`_ from Fernando Perez' website, and run it.  To download, please **Right
-click** on the link and **Save link as** to save to your hard disk.  The
-instructions on what to do are at the top of the file.  If you have problems,
-please come to office hours and we'll try and help you.
+If you have any problems, follow the printed instructions after you run the
+script, and let us know (see :ref:`installation-problems`).
+
+.. _installation-problems:
+
+*********************
+Installation problems
+*********************
+
+Any problems at all, please come see us in :ref:`office-hours`, or email:
+
+* matthew dot brett at gmail dot com
+* jbpoline at gmail.com
+* sjvdwalt at gmail dot com
 
 .. include:: links_names.inc

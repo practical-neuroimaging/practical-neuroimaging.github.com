@@ -23,6 +23,7 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="author" title="About these documents" href="#" />
     <link rel="top" title="Practical neuroimaging analysis" href="index.html" />
     <link rel="next" title="Where and when and what?" href="where_and_when.html" />
     <link rel="prev" title="UC Berkeley course on practical neuroimaging analysis" href="index.html" /> 
@@ -55,16 +56,101 @@
             
   <div class="section" id="aim-of-the-course">
 <span id="aims"></span><h1>Aim of the course<a class="headerlink" href="#aim-of-the-course" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div><p>What I cannot create, I do not understand</p>
+<p><a class="reference external" href="http://en.wikiquote.org/wiki/Richard_Feynman">Richard Feynman</a></p>
+</div></blockquote>
 <p>We aim to teach you how to work with data and with code so that you can get a
 deeper understanding of how the methods work, how they can fail, how to fix
 them, and how to develop new methods, if you need them.</p>
+<p>We aim to teach you to work efficiently, so that you can in due course forget
+about your tools and think about the ideas.  We aim to make things <a class="reference external" href="http://www.infoq.com/presentations/Simple-Made-Easy">simple,
+before easy</a>, so that
+you can reach a stage where things are both simple and easy.</p>
 <p>We hope that you will come out of this course feeling comfortable working with
 data from raw images to finished activation maps.  We will teach you the
 standard best practice of how to work with code and data to make your analyses
 more reliable, easier to share, and easier to reproduce.</p>
 <p>We&#8217;ll use <a class="reference external" href="http://www.python.org">Python</a> for most of the course, but the principles apply equally to
-<a class="reference external" href="http://www.mathworks.com">MATLAB</a>, and we&#8217;ll also be using some MATLAB routines and standard packages such
-as <a class="reference external" href="http://afni.nimh.nih.gov/afni">AFNI</a>, <a class="reference external" href="http://www.fmrib.ox.ac.uk/fsl">FSL</a> and <a class="reference external" href="http://www.fil.ion.ucl.ac.uk/spm">SPM</a>.</p>
+languages like <a class="reference external" href="http://www.mathworks.com">MATLAB</a>.  We&#8217;ll be using Python libraries to show how the
+analysis works.  Later we will show how these principles relate to analysis
+with standard imaging software such as <a class="reference external" href="http://www.fmrib.ox.ac.uk/fsl">FSL</a> and <a class="reference external" href="http://www.fil.ion.ucl.ac.uk/spm">SPM</a>.</p>
+</div>
+<div class="section" id="who-is-this-course-for">
+<h1>Who is this course for?<a class="headerlink" href="#who-is-this-course-for" title="Permalink to this headline">¶</a></h1>
+<p>The course is designed for people starting or doing neuroimaging, with some
+programming experience (for example, writing MATLAB or Python scripts).</p>
+<p>We have designed the course to help you:</p>
+<ul class="simple">
+<li>Understand the basic concepts in neuroimaging, and how they relate to the
+wider world of statistics, engineering, computer science;</li>
+<li>Be comfortable working with neuroimaging data and code, so you can write
+your own basic algorithms, and understand other people&#8217;s code;</li>
+<li>Work with code and data in a way that will save you time, help you
+collaborate, and continue learning.</li>
+</ul>
+</div>
+<div class="section" id="requirements">
+<h1>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li>Reasonable knowledge of programming in any language;</li>
+</ul>
+</div>
+<div class="section" id="topics-we-cover">
+<h1>Topics we cover<a class="headerlink" href="#topics-we-cover" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="practical-workflow">
+<h2>Practical workflow<a class="headerlink" href="#practical-workflow" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Version control (we teach git);</li>
+<li>Extensible text editor (see below);</li>
+<li>Versatile programming language (we teach Python);</li>
+<li>Testing code;</li>
+<li>Collaborating with code.</li>
+</ul>
+</div>
+<div class="section" id="relevant-concepts">
+<h2>Relevant concepts<a class="headerlink" href="#relevant-concepts" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>convolution (hemodynamic modeling, smoothing);</li>
+<li>interpolation (slice time correction, image resampling);</li>
+<li>optimization (registration, advanced statistics);</li>
+<li>basic linear algebra (statistics);</li>
+</ul>
+</div>
+<div class="section" id="fmri-analysis-steps">
+<h2>FMRI analysis steps<a class="headerlink" href="#fmri-analysis-steps" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Diagnostics;</li>
+<li>slice timing;</li>
+<li>motion correction;</li>
+<li>registration within and between subject;</li>
+<li>smoothing;</li>
+<li>statistical estimation with multiple regression;</li>
+<li>statistical inference.</li>
+</ul>
+</div>
+<div class="section" id="format-of-the-class">
+<h2>Format of the class<a class="headerlink" href="#format-of-the-class" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p class="first">Prior reading / homework for each week of approx 30 minutes;</p>
+</li>
+<li><p class="first">Class is 2 hours:</p>
+<blockquote>
+<div><ul class="simple">
+<li>10 minutes debrief from previous class</li>
+<li>30 minutes talk introduction + questions;</li>
+<li>60 minutes problems;</li>
+<li>10 minutes review of problems;</li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+<p>As we cover the material, we will also pause at times to cover how to do:</p>
+<ul class="simple">
+<li>version control;</li>
+<li>code collaboration.</li>
+</ul>
+</div>
 </div>
 
 
@@ -73,6 +159,20 @@ as <a class="reference external" href="http://afni.nimh.nih.gov/afni">AFNI</a>, 
       </div>
       <div class="sphinxsidebar">
         <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Aim of the course</a></li>
+<li><a class="reference internal" href="#who-is-this-course-for">Who is this course for?</a></li>
+<li><a class="reference internal" href="#requirements">Requirements</a></li>
+<li><a class="reference internal" href="#topics-we-cover">Topics we cover</a><ul>
+<li><a class="reference internal" href="#practical-workflow">Practical workflow</a></li>
+<li><a class="reference internal" href="#relevant-concepts">Relevant concepts</a></li>
+<li><a class="reference internal" href="#fmri-analysis-steps">FMRI analysis steps</a></li>
+<li><a class="reference internal" href="#format-of-the-class">Format of the class</a></li>
+</ul>
+</li>
+</ul>
+
   <h4>Previous topic</h4>
   <p class="topless"><a href="index.html"
                         title="previous chapter">UC Berkeley course on practical neuroimaging analysis</a></p>
@@ -81,7 +181,7 @@ as <a class="reference external" href="http://afni.nimh.nih.gov/afni">AFNI</a>, 
                         title="next chapter">Where and when and what?</a></p>
   <h3>This Page</h3>
   <ul class="this-page-menu">
-    <li><a href="_sources/aim.txt"
+    <li><a href="_sources/about.txt"
            rel="nofollow">Show Source</a></li>
   </ul>
 <div id="searchbox" style="display: none">

@@ -18,12 +18,24 @@ Course news and announcements go to the `mailing list`_
 .. toctree::
     :maxdepth: 3
 
-    aim
+    about
     where_and_when
     reading
-    schedule_2015
     installation
+    schedule
     choosing_editor
 
+.. _office-hours:
+
+Office hours
+============
+
+Office hours are from 2-4pm in 210Q Barker hall.
+
+Feel free to email us with any problems:
+
+* matthew dot brett at gmail dot com
+* jbpoline at gmail dot com
+* sjvdwalt at gmail dot com
 
 .. include:: links_names.inc
