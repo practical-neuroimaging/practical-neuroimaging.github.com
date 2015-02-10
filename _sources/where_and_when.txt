@@ -41,7 +41,7 @@ times after that for stragglers.
 When?
 *****
 
-Fridays from 10am to 12 until the end of the 2013 semester.
+Fridays from 10am to 12 until the end of the spring 2015 semester.
 
 *****
 What?
