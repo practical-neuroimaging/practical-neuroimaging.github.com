@@ -13,6 +13,10 @@ likely spend many hundreds of hours using this editor for various parts of
 your work over the rest of your career.  Be careful with your choice, and
 consider investing time to learn an editor well.
 
+If you do learn your text editor well, you will find yourself using it for
+many different tasks, including editing code, documents and configuration
+files.
+
 Programmers are a strange bunch of people who are extremely intolerant of
 tools that waste their time or energy.  Take their impatience seriously when
 you consider choosing your editor.  No programmer would use Windows Notepad
@@ -62,6 +66,9 @@ how to start learning emacs.
 As for vim, to use it well, it needs some practice to get used to the
 keystrokes used, and as for vim, this practice is amply repaid by very fluent
 movement and editing.
+
+Emacs is at least as complicated as vim to configure, partly because it is so
+powerful.  We are very happy to help with this if you are interested.
 
 *************************************
 Other editors that you might consider
