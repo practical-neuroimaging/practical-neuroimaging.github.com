@@ -43,7 +43,7 @@
              accesskey="P">previous</a> |</li>
 <big><big><big><li><a href="index.html">Home</a> |&nbsp;</li>
   <li><a href="https://github.com/practical-neuroimaging/pna-notebooks">Notebooks</a> |&nbsp;</li>
-  <li><a href="http://nipy.bic.berkeley.edu/practical_neuroimaging">Data</a> |&nbsp;</li>
+  <li><a href="http://nipy.bic.berkeley.edu/pna">Data</a> |&nbsp;</li>
   <li><a href="https://calmail.berkeley.edu/manage/list/listinfo/practical_fmri@lists.berkeley.edu">Mailing list</a> |&nbsp;</li></big></big></big>
  
       </ul>
@@ -119,20 +119,20 @@ writing is Python 2.7.9.</p>
 <p>Install in the usual way, by double clicking the installer, and following the
 defaults.</p>
 </div>
-<div class="section" id="id1">
-<h3>Use pip to install the nibabel package<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="use-pip-to-install-the-packages-you-need">
+<h3>Use pip to install the packages you need<a class="headerlink" href="#use-pip-to-install-the-packages-you-need" title="Permalink to this headline">¶</a></h3>
 <p>Open the Terminal program by running <tt class="docutils literal"><span class="pre">Terminal.app</span></tt> (type command-space to
 run spotlight or click on the spotlight icon and type <tt class="docutils literal"><span class="pre">terminal</span></tt> to find
 this if you don&#8217;t know where it is on your Mac).</p>
-<p>At the Terminal.app prompt, type:</p>
-<div class="highlight-python"><div class="highlight"><pre>pip install nibabel
+<p>At the Terminal.app prompt, type (or copy / paste):</p>
+<div class="highlight-python"><div class="highlight"><pre>pip install scipy matplotlib pandas ipython[notebook,test] nibabel
 </pre></div>
 </div>
-<p>This will cause pip to install the <tt class="docutils literal"><span class="pre">nibabel</span></tt> package for reading
-neuroimaging file formats.</p>
+<p>This will cause pip to install the named packages, including the <tt class="docutils literal"><span class="pre">nibabel</span></tt>
+package for reading neuroimaging file formats.</p>
 </div>
-<div class="section" id="id2">
-<h3>Check the installation has worked<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id1">
+<h3>Check the installation has worked<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
 <p>Download (right-click, save as) this Python script file to your computer:
 <a class="reference external" href="https://nipy.bic.berkeley.edu/pna/check_pna_install.py">https://nipy.bic.berkeley.edu/pna/check_pna_install.py</a></p>
 <p>Open the Terminal.app again if it is not already open.  Change directory to
@@ -144,8 +144,8 @@ the directory containing the script file, e.g. <tt class="docutils literal"><spa
 <p>If you have any problems, follow the printed instructions after you run the
 script, and let us know (see <a class="reference internal" href="#installation-problems"><em>Installation problems</em></a>).</p>
 </div>
-<div class="section" id="id3">
-<h3>Install git, the version control system<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id2">
+<h3>Install git, the version control system<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="if-you-are-on-osx-10-9-mavericks-or-above">
 <h4>If you are on OSX 10.9 (Mavericks) or above<a class="headerlink" href="#if-you-are-on-osx-10-9-mavericks-or-above" title="Permalink to this headline">¶</a></h4>
 <p>On Mavericks and above, <tt class="docutils literal"><span class="pre">git</span></tt> comes with the Apple OSX command line tools.</p>
@@ -199,7 +199,7 @@ python check_pna_install.py
 script, and let us know (see <a class="reference internal" href="#installation-problems"><em>Installation problems</em></a>).</p>
 </div>
 <div class="section" id="installation-problems">
-<span id="id4"></span><h2>Installation problems<a class="headerlink" href="#installation-problems" title="Permalink to this headline">¶</a></h2>
+<span id="id3"></span><h2>Installation problems<a class="headerlink" href="#installation-problems" title="Permalink to this headline">¶</a></h2>
 <p>Any problems at all, please come see us in <a class="reference internal" href="index.html#office-hours"><em>Office hours</em></a>, or email:</p>
 <ul class="simple">
 <li>matthew dot brett at gmail dot com</li>
@@ -227,9 +227,9 @@ script, and let us know (see <a class="reference internal" href="#installation-p
 </li>
 <li><a class="reference internal" href="#if-you-are-using-osx">If you are using OSX</a><ul>
 <li><a class="reference internal" href="#download-and-install-python">Download and install Python</a></li>
-<li><a class="reference internal" href="#id1">Use pip to install the nibabel package</a></li>
-<li><a class="reference internal" href="#id2">Check the installation has worked</a></li>
-<li><a class="reference internal" href="#id3">Install git, the version control system</a><ul>
+<li><a class="reference internal" href="#use-pip-to-install-the-packages-you-need">Use pip to install the packages you need</a></li>
+<li><a class="reference internal" href="#id1">Check the installation has worked</a></li>
+<li><a class="reference internal" href="#id2">Install git, the version control system</a><ul>
 <li><a class="reference internal" href="#if-you-are-on-osx-10-9-mavericks-or-above">If you are on OSX 10.9 (Mavericks) or above</a></li>
 <li><a class="reference internal" href="#if-you-are-on-osx-10-8-mountain-lion-or-below">If you are on OSX 10.8 (Mountain lion) or below</a></li>
 </ul>
@@ -284,7 +284,7 @@ script, and let us know (see <a class="reference internal" href="#installation-p
              >previous</a> |</li>
 <big><big><big><li><a href="index.html">Home</a> |&nbsp;</li>
   <li><a href="https://github.com/practical-neuroimaging/pna-notebooks">Notebooks</a> |&nbsp;</li>
-  <li><a href="http://nipy.bic.berkeley.edu/practical_neuroimaging">Data</a> |&nbsp;</li>
+  <li><a href="http://nipy.bic.berkeley.edu/pna">Data</a> |&nbsp;</li>
   <li><a href="https://calmail.berkeley.edu/manage/list/listinfo/practical_fmri@lists.berkeley.edu">Mailing list</a> |&nbsp;</li></big></big></big>
  
       </ul>

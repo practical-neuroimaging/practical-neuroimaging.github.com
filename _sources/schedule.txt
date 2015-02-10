@@ -6,6 +6,8 @@ Schedule
 Day 0 : introduction and taster
 *******************************
 
+2 / 13 / 2015
+
 Prior:
 
 Install requirements on your machine |--| see :doc:`installation`.
@@ -24,6 +26,8 @@ Day:
 Day 1 : introducing Python
 **************************
 
+2 / 20 / 2015
+
 Prior:
 
 Make a private github account.
@@ -35,6 +39,8 @@ Day: Python exercises.
 ************************************
 Day 2: images as arrays and plotting
 ************************************
+
+2 / 27 / 2015
 
 Reading:
 
@@ -54,6 +60,8 @@ Day:
 Day 3: diagnostics / version control
 ************************************
 
+3 / 6 / 2015
+
 Reading:
 
 * Workflow e.g.
@@ -72,6 +80,8 @@ Day:
 Day 4: first statistics / version control
 *****************************************
 
+3 / 13 / 2015
+
 Reading:
 
 * Make a branch, edit and commit;
@@ -84,6 +94,8 @@ Reading:
 **********************************
 Day 5: convolution and correlation
 **********************************
+
+3 / 20 / 2015
 
 Reading:
 
@@ -102,6 +114,8 @@ Day:
 **********************************************
 Day 6: regression and the general linear model
 **********************************************
+
+3 / 27 / 2015
 
 Reading:
 
@@ -122,6 +136,8 @@ Day:
 *****************************************************
 Day 7: diagnostics using principal component analysis
 *****************************************************
+
+4 / 3 / 2015
 
 This day is for us to practice working with matrices, and to get an idea of
 the level of underlying variance in data.
@@ -145,6 +161,8 @@ Day:
 Day 8: 1D interpolation and slice timing
 ****************************************
 
+4 / 10 / 2015
+
 * Notebook on interpolation and slice timing e.g.
   http://nbviewer.ipython.org/urls/bitbucket.org/matthewbrett/talks/raw/master/processing_i/slice_timing.ipynb
 
@@ -159,6 +177,8 @@ Day:
 ******************************************************
 Day 9: optimization, 2D interpolation and registration
 ******************************************************
+
+4 / 17 / 2015
 
 Reading:
 
@@ -179,6 +199,8 @@ Day:
 **********************************************************
 Day 10: coordinate systems and cross-modality registration
 **********************************************************
+
+4 / 24 / 2015
 
 Reading:
 
@@ -201,6 +223,8 @@ Day:
 *************************************
 Day 11: registration between subjects
 *************************************
+
+5 / 1 / 2015
 
 Reading:
 
@@ -226,6 +250,8 @@ Day:
 Day 12: smoothing and modeling
 ******************************
 
+5 / 8 / 2015
+
 Reading:
 
 * Introduction to smoothing: http://perrin.dynevor.org/smoothing_intro.html
@@ -241,6 +267,8 @@ Day:
 *************************************************
 Day 13: testing hypotheses with t and F contrasts
 *************************************************
+
+5 / 15 / 2015
 
 Reading:
     * Notebook on t / F - version of :
@@ -258,6 +286,8 @@ Day:
 ***************************************
 Day 14: random effects, choosing models
 ***************************************
+
+5 / 22 / 2015
 
 Reading:
 
@@ -285,10 +315,11 @@ Day:
 
 * Model validation: Principle.  Example of "random effect" model testing the effect of "grumpiness".
 
-
 *****************************
 Day 15: statistical inference
 *****************************
+
+5 / 29 / 2015
 
 Reading:
 

@@ -90,19 +90,19 @@ writing is Python 2.7.9.
 Install in the usual way, by double clicking the installer, and following the
 defaults.
 
-Use pip to install the nibabel package
-======================================
+Use pip to install the packages you need
+========================================
 
 Open the Terminal program by running ``Terminal.app`` (type command-space to
 run spotlight or click on the spotlight icon and type ``terminal`` to find
 this if you don't know where it is on your Mac).
 
-At the Terminal.app prompt, type::
+At the Terminal.app prompt, type (or copy / paste)::
 
-    pip install nibabel
+    pip install scipy matplotlib pandas ipython[notebook,test] nibabel
 
-This will cause pip to install the ``nibabel`` package for reading
-neuroimaging file formats.
+This will cause pip to install the named packages, including the ``nibabel``
+package for reading neuroimaging file formats.
 
 Check the installation has worked
 =================================
