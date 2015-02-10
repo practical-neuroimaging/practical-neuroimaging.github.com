@@ -21,6 +21,8 @@
 .. _sublime text: http://www.sublimetext.com/
 .. _gedit: http://projects.gnome.org/gedit
 .. _emacs: http://www.gnu.org/software/emacs/
+.. _text editor competition:
+    http://www.rackspace.com/blog/text-editor-madness-bracket-vote-for-your-favorite
 
 .. Python and common libraries
 .. _python: http://www.python.org
