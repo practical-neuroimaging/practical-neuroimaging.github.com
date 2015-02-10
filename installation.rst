@@ -4,20 +4,20 @@
 Software to install for the class
 #################################
 
-* A text editor to edit python code - see :ref:`choosing-editor`
-* Python and the Python scientific libraries installed - see below.
+You will need Python and some Python scientific libraries installed.
 
 If you already have some large Python packaging system installed, such as the
-`Enthought Python Distribution`_, you can stick with that, it should provide the
-dependencies you need.  To make sure, see :ref:`check-installation`. If you
-don't have something like that (most of you won't), please read on...
+`Anaconda` or the `Enthought Python Distribution`_, you can stick with that,
+it should provide the dependencies you need.  To make sure, see the relevant
+instructions below for checking your installation.  If you don't have
+something like that (most of you won't), please read on...
 
 ************************
 If you are using Windows
 ************************
 
-Download and install Python using Python (X,Y)
-==============================================
+Download and install Python and packages using Python (X,Y)
+===========================================================
 
 Go the the Python (X,Y) website: https://code.google.com/p/pythonxy/
 
@@ -72,8 +72,8 @@ Download the file they propose, with a filename something like
 
 Run the file to start the installation.
 
-I suggest you accept the defaults, except the sceen called "Adjusting your
-PATH environment", where I suggest you choose the option "Use git from the
+We suggest you accept the defaults, except the sceen called "Adjusting your
+PATH environment", where we suggest you choose the option "Use git from the
 Windows Command Prompt".
 
 ********************

@@ -35,7 +35,7 @@ Office hours are from 2-4pm in 210Q Barker hall.
 Feel free to email us with any problems:
 
 * matthew dot brett at gmail dot com
-* jbpoline at gmail.com
+* jbpoline at gmail dot com
 * sjvdwalt at gmail dot com
 
 .. include:: links_names.inc

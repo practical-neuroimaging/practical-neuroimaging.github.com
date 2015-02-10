@@ -100,6 +100,7 @@
 
 .. Installation
 .. _Enthought Python Distribution: http://www.enthought.com/products/epd.php
+.. _Anaconda: https://store.continuum.io/cshop/anaconda
 .. _EPD: http://www.enthought.com/products/epd.php
 .. _checklist script: http://fperez.org/py4science/workshop_checklist.py
 .. _NeuroDebian: http://neuro.debian.net
