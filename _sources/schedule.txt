@@ -2,25 +2,11 @@
 Schedule
 ########
 
-*******************************
-Day 0 : introduction and taster
-*******************************
+.. toctree::
+    :maxdepth: 1
 
-2 / 13 / 2015
+    day0
 
-Prior:
-
-Install requirements on your machine |--| see :doc:`installation`.
-
-Day:
-
-* Git clone practical neuroimaging notebooks;
-* Numpy / scipy / matplotlib / IPython notebook whirlwind introduction;
-* What is an image?
-* Loading a 3D image - from :
-  http://nbviewer.ipython.org/urls/raw.github.com/practical-neuroimaging/pna-notebooks/master/loading_images.ipynb
-* Getting pixel data
-* Text editor intro
 
 **************************
 Day 1 : introducing Python

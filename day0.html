@@ -1,0 +1,262 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Course on Practical Neuroimaging in Python &mdash; Practical neuroimaging analysis</title>
+    
+    <link rel="stylesheet" href="_static/nature.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="author" title="About these documents" href="about.html" />
+    <link rel="top" title="Practical neuroimaging analysis" href="index.html" />
+    <link rel="up" title="Schedule" href="schedule.html" />
+    <link rel="next" title="Choosing an editor" href="choosing_editor.html" />
+    <link rel="prev" title="Schedule" href="schedule.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="choosing_editor.html" title="Choosing an editor"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="schedule.html" title="Schedule"
+             accesskey="P">previous</a> |</li>
+<big><big><big><li><a href="index.html">Home</a> |&nbsp;</li>
+  <li><a href="https://github.com/practical-neuroimaging/pna-notebooks">Notebooks</a> |&nbsp;</li>
+  <li><a href="http://nipy.bic.berkeley.edu/pna">Data</a> |&nbsp;</li>
+  <li><a href="https://calmail.berkeley.edu/manage/list/listinfo/practical_fmri@lists.berkeley.edu">Mailing list</a> |&nbsp;</li></big></big></big>
+
+          <li><a href="schedule.html" accesskey="U">Schedule</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="day-0-introduction-what-is-an-image">
+<h1>Day 0 : introduction; what is an image?<a class="headerlink" href="#day-0-introduction-what-is-an-image" title="Permalink to this headline">¶</a></h1>
+<p>February 13 2015</p>
+<div class="section" id="homework">
+<h2>Homework<a class="headerlink" href="#homework" title="Permalink to this headline">¶</a></h2>
+<p>Install requirements on your machine – see <a class="reference internal" href="installation.html"><em>Software to install for the class</em></a>.</p>
+</div>
+<div class="section" id="an-introduction-to-the-course">
+<h2>An introduction to the course.<a class="headerlink" href="#an-introduction-to-the-course" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Replication crisis;</li>
+<li>The ubiquity of error;</li>
+<li>Scientists as coders;</li>
+<li>Best practice;</li>
+<li>The benefits of fluency;</li>
+<li>Build your own light-sabre;</li>
+<li>Simple first, then easy;</li>
+<li>Why Python?;</li>
+<li>Why git?</li>
+<li>Your text editor.</li>
+</ul>
+</div>
+<div class="section" id="admin-stuff">
+<h2>Admin stuff<a class="headerlink" href="#admin-stuff" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p class="first">Around 30 minutes homework;</p>
+</li>
+<li><p class="first">Homework ready by end of day Monday for following Friday course;</p>
+</li>
+<li><p class="first">Class consists of:</p>
+<blockquote>
+<div><ul class="simple">
+<li>5 minute debrief from previous class;</li>
+<li>30 minute talk and introduction to problems;</li>
+<li>60 minutes working on problems;</li>
+<li>10 minutes reviewing.</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first">Office hours;</p>
+</li>
+</ul>
+</div>
+<div class="section" id="introduction-to-the-exercises">
+<h2>Introduction to the exercises<a class="headerlink" href="#introduction-to-the-exercises" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Open terminal;</li>
+<li>Make a directory &#8220;pna&#8221;;</li>
+<li>Change directory to &#8220;pna&#8221;;</li>
+<li>Insert USB drive;</li>
+<li>Find USB drive;</li>
+<li>git clone &lt;usb-drive&gt;/pna2015.git</li>
+<li>cd pna2015</li>
+<li>ls</li>
+<li>ipython notebook;</li>
+<li>open what is an image notebook;</li>
+<li>Loading a 3D image - from :
+<a class="reference external" href="http://nbviewer.ipython.org/urls/raw.github.com/practical-neuroimaging/pna-notebooks/master/loading_images.ipynb">http://nbviewer.ipython.org/urls/raw.github.com/practical-neuroimaging/pna-notebooks/master/loading_images.ipynb</a></li>
+<li>Getting pixel data</li>
+</ul>
+</div>
+<div class="section" id="references">
+<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><a class="reference external" href="http://nipyworld.blogspot.com/2012/04/replication-in-functional-mri.html">http://nipyworld.blogspot.com/2012/04/replication-in-functional-mri.html</a></li>
+<li>Why most published research findings are false:
+<a class="reference external" href="http://www.plosmedicine.org/article/info:doi/10.1371/journal.pmed.0020124">http://www.plosmedicine.org/article/info:doi/10.1371/journal.pmed.0020124</a></li>
+</ul>
+</div>
+<div class="section" id="quotes-from-david-donoho">
+<h2>Quotes from David Donoho<a class="headerlink" href="#quotes-from-david-donoho" title="Permalink to this headline">¶</a></h2>
+<p>Donoho quote 0:</p>
+<blockquote>
+<div>&#8220;The scientific method’s central motivation is the ubiquity of error <a href="#id6"><span class="problematic" id="id7">|–-|</span></a>
+the awareness that mistakes and self-delusion can creep in absolutely
+anywhere and that the scientist’s effort is primarily expended in
+recognizing and rooting out error.&#8221; <a class="reference internal" href="#donoho2009reproducible" id="id1">[donoho2009reproducible]</a></div></blockquote>
+<p>Donoho quote 1:</p>
+<blockquote>
+<div>“In stark contrast to the sciences relying on deduction or empiricism,
+computational science is far less visibly concerned with the ubiquity of
+error. At conferences and in publications, it’s now completely acceptable
+for a researcher to simply say, ‘here is what I did, and here are my
+results.’ Presenters devote almost no time to explaining why the audience
+should believe that they found and corrected errors in their computations.
+The presentation’s core isn’t about the struggle to root out error — as it
+would be in mature fields — but is instead a sales pitch: an enthusiastic
+presentation of ideas and a breezy demo of an implementation. Computational
+science has nothing like the elaborate mechanisms of formal proof in
+mathematics or meta-analysis in empirical science. Many users of scientific
+computing aren’t even trying to follow a systematic, rigorous discipline
+that would in principle allow others to verify the claims they make. How
+dare we imagine that computational science, as routinely practiced, is
+reliable!” <a class="reference internal" href="#donoho2009reproducible" id="id2">[donoho2009reproducible]</a></div></blockquote>
+<p>Donoho quote 2:</p>
+<blockquote>
+<div><p>“In my own experience, error is ubiquitous in scientific computing, and one
+needs to work very diligently and energetically to eliminate it. One needs a
+very clear idea of what has been done in order to know where to look for
+likely sources of error. I often cannot really be sure what a student or
+colleague has done from his/her own presentation, and in fact often his/her
+description does not agree with my own understanding of what has been done,
+once I look carefully at the scripts. Actually, I find that researchers
+quite generally forget what they have done and misrepresent their
+computations.</p>
+<p>Computing results are now being presented in a very loose, “breezy” way—in
+journal articles, in conferences, and in books. All too often one simply
+takes computations at face value. This is spectacularly against the evidence
+of my own experience. I would much rather that at talks and in referee
+reports, the possibility of such error were seriously examined.&#8221;
+<a class="reference internal" href="#donoho2010invitation" id="id3">[donoho2010invitation]</a></p>
+</div></blockquote>
+<table class="docutils citation" frame="void" id="donoho2009reproducible" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label">[donoho2009reproducible]</td><td><em>(<a class="fn-backref" href="#id1">1</a>, <a class="fn-backref" href="#id2">2</a>)</em> Donoho, David L, et al. 2009. Reproducible research in computational
+harmonic analysis. <em>Computing in Science &amp; Engineering</em> 11, 8&#8211;18.
+<a class="reference external" href="http://www.stanford.edu/~vcs/papers/ReproducibleResearch20080811.pdf">http://www.stanford.edu/~vcs/papers/ReproducibleResearch20080811.pdf</a></td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="donoho2010invitation" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id3">[donoho2010invitation]</a></td><td>Donoho, David L. 2010. An invitation to reproducible
+computational research. <em>Biostatistics</em> 11, 385&#8211;388.
+<a class="reference external" href="http://biostatistics.oxfordjournals.org/content/11/3/385.full">http://biostatistics.oxfordjournals.org/content/11/3/385.full</a></td></tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Day 0 : introduction; what is an image?</a><ul>
+<li><a class="reference internal" href="#homework">Homework</a></li>
+<li><a class="reference internal" href="#an-introduction-to-the-course">An introduction to the course.</a></li>
+<li><a class="reference internal" href="#admin-stuff">Admin stuff</a></li>
+<li><a class="reference internal" href="#introduction-to-the-exercises">Introduction to the exercises</a></li>
+<li><a class="reference internal" href="#references">References</a></li>
+<li><a class="reference internal" href="#quotes-from-david-donoho">Quotes from David Donoho</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="schedule.html"
+                        title="previous chapter">Schedule</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="choosing_editor.html"
+                        title="next chapter">Choosing an editor</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/day0.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="choosing_editor.html" title="Choosing an editor"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="schedule.html" title="Schedule"
+             >previous</a> |</li>
+<big><big><big><li><a href="index.html">Home</a> |&nbsp;</li>
+  <li><a href="https://github.com/practical-neuroimaging/pna-notebooks">Notebooks</a> |&nbsp;</li>
+  <li><a href="http://nipy.bic.berkeley.edu/pna">Data</a> |&nbsp;</li>
+  <li><a href="https://calmail.berkeley.edu/manage/list/listinfo/practical_fmri@lists.berkeley.edu">Mailing list</a> |&nbsp;</li></big></big></big>
+
+          <li><a href="schedule.html" >Schedule</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2013, Matthew Brett and J-B Poline.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
+    </div>
+  </body>
+</html>
