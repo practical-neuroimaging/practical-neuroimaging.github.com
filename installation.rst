@@ -181,8 +181,6 @@ Check the installation with::
 If you have any problems, follow the printed instructions after you run the
 script, and let us know (see :ref:`installation-problems`).
 
-.. _installation-problems:
-
 ******************************************************
 If you don't want to do an install on your machine yet
 ******************************************************
@@ -218,6 +216,8 @@ machine and pressing the *Start* button.
 
 In due course virtualbox will open a Linux (Debian) machine desktop with all the
 course software installed.
+
+.. _installation-problems:
 
 *********************
 Installation problems
