@@ -14,13 +14,20 @@ Day 1 : introducing Python
 
 2 / 20 / 2015
 
-Prior:
+Prior
+-----
 
-Make a private github account.
+* Make sure your Python environment installed on day 0 still works
+* Finish first Python Module on Codecademy: http://www.codecademy.com/courses/introduction-to-python-6WeG3/0/1
 
-Reading: `introduction to Python`_.
+Day
+---
 
-Day: Python exercises.
+* variables, math
+* flow control (conditional statements, loops)
+* basic data structures (lists and dictionaries)
+* importing modules
+* reading and parsing text files (basic)
 
 ************************************
 Day 2: images as arrays and plotting
