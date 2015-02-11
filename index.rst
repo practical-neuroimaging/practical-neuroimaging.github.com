@@ -16,7 +16,7 @@ Pages from the previous (2013) course are :doc:`here <2013/index>`.
 Course news and announcements go to the `mailing list`_
 
 .. toctree::
-    :maxdepth: 3
+    :maxdepth: 2
 
     about
     where_and_when
