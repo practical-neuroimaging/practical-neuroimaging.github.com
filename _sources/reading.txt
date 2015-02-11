@@ -14,6 +14,13 @@ There are a good set of `resources
 that site.  We especially like the Google course, if you like to watch videos
 to go with your exercises.
 
+Here are some good sites that help you practice writing Python:
+
+* `CodingBat <http://codingbat.com/python>`_ by the same author as the Google
+  Python course;
+* `Code Academy Python track <http://www.codecademy.com/tracks/python>`_
+* `SingPath <http://singpath.com>`_
+
 **********
 Background
 **********
