@@ -30,7 +30,7 @@ Course news and announcements go to the `mailing list`_
 Office hours
 ============
 
-Office hours are from 2-4pm in 210Q Barker hall.
+Office hours are on Wednesdays from 2-4pm in 210Q Barker hall.
 
 Feel free to email us with any problems:
 
