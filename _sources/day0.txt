@@ -1,5 +1,5 @@
 #######################################
-Day 0 : introduction; what is an image?
+Day 0 : introduction: what is an image?
 #######################################
 
 February 13 2015
@@ -73,7 +73,7 @@ Quotes from David Donoho
 
 Donoho quote 0:
 
-    "The scientific method’s central motivation is the ubiquity of error |–-|
+    "The scientific method’s central motivation is the ubiquity of error |--|
     the awareness that mistakes and self-delusion can creep in absolutely
     anywhere and that the scientist’s effort is primarily expended in
     recognizing and rooting out error." [donoho2009reproducible]_
