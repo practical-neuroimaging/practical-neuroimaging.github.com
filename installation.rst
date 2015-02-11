@@ -175,7 +175,7 @@ On Fedora or related distros::
 
 Check the installation with::
 
-    curl -O https://nipy.bic.berkeley.edu/pna/check_pna_install.py
+    wget https://nipy.bic.berkeley.edu/pna/check_pna_install.py
     python check_pna_install.py
 
 If you have any problems, follow the printed instructions after you run the
