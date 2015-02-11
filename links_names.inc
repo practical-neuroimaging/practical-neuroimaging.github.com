@@ -106,6 +106,7 @@
 .. _EPD: http://www.enthought.com/products/epd.php
 .. _checklist script: http://fperez.org/py4science/workshop_checklist.py
 .. _NeuroDebian: http://neuro.debian.net
+.. _VirtualBox: https://www.virtualbox.org/
 
 .. Tutorials
 .. _The Python tutorial: http://docs.python.org/2/tutorial/

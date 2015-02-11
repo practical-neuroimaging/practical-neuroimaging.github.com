@@ -183,6 +183,42 @@ script, and let us know (see :ref:`installation-problems`).
 
 .. _installation-problems:
 
+******************************************************
+If you don't want to do an install on your machine yet
+******************************************************
+
+If you don't want to do this install, or you want to get a feel for the classes
+before you commit to the install, or you have missed a few classes and want to
+get going with something while you catch up, we also have a virtual machine that
+you can download.
+
+The virtual machine is a full version of Linux, provided by our friends at
+`NeuroDebian`_.  We have installed all the software you need to get started on
+this Linux machine.
+
+We strongly recommend you do install the software on your own computer rather
+than using the virtual machine.  A large part of the course is about getting
+comfortable with your tools, and this is always harder if you are using a
+different system for the course than you use for your other work.
+
+If you do want to use the virtual machine, you can run it using VirtualBox_.
+
+First download the virtual machine image from
+http://nipy.bic.berkeley.edu/pna/pna2015.ova.  The file is about 3 gigabytes
+large.
+
+Next, install VirtualBox_ on your own machine.
+
+Finally, open the VirtualBox application, and import the ``pna2015.ova`` image
+by following `these instructions
+<http://docs.oracle.com/cd/E26217_01/E26796/html/qs-import-vm.html>`_
+
+Now start your new virtual machine by selecting the new NeuroDebian virtual
+machine and pressing the *Start* button.
+
+In due course virtualbox will open a Linux (Debian) machine desktop with all the
+course software installed.
+
 *********************
 Installation problems
 *********************
