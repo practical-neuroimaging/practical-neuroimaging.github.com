@@ -191,12 +191,37 @@ sudo yum install -y git
 </pre></div>
 </div>
 <p>Check the installation with:</p>
-<div class="highlight-python"><div class="highlight"><pre>curl -O https://nipy.bic.berkeley.edu/pna/check_pna_install.py
+<div class="highlight-python"><div class="highlight"><pre>wget https://nipy.bic.berkeley.edu/pna/check_pna_install.py
 python check_pna_install.py
 </pre></div>
 </div>
 <p>If you have any problems, follow the printed instructions after you run the
 script, and let us know (see <a class="reference internal" href="#installation-problems"><em>Installation problems</em></a>).</p>
+</div>
+<div class="section" id="if-you-don-t-want-to-do-an-install-on-your-machine-yet">
+<h2>If you don&#8217;t want to do an install on your machine yet<a class="headerlink" href="#if-you-don-t-want-to-do-an-install-on-your-machine-yet" title="Permalink to this headline">¶</a></h2>
+<p>If you don&#8217;t want to do this install, or you want to get a feel for the classes
+before you commit to the install, or you have missed a few classes and want to
+get going with something while you catch up, we also have a virtual machine that
+you can download.</p>
+<p>The virtual machine is a full version of Linux, provided by our friends at
+<a class="reference external" href="http://neuro.debian.net">NeuroDebian</a>.  We have installed all the software you need to get started on
+this Linux machine.</p>
+<p>We strongly recommend you do install the software on your own computer rather
+than using the virtual machine.  A large part of the course is about getting
+comfortable with your tools, and this is always harder if you are using a
+different system for the course than you use for your other work.</p>
+<p>If you do want to use the virtual machine, you can run it using <a class="reference external" href="https://www.virtualbox.org/">VirtualBox</a>.</p>
+<p>First download the virtual machine image from
+<a class="reference external" href="http://nipy.bic.berkeley.edu/pna/pna2015.ova">http://nipy.bic.berkeley.edu/pna/pna2015.ova</a>.  The file is about 3 gigabytes
+large.</p>
+<p>Next, install <a class="reference external" href="https://www.virtualbox.org/">VirtualBox</a> on your own machine.</p>
+<p>Finally, open the VirtualBox application, and import the <tt class="docutils literal"><span class="pre">pna2015.ova</span></tt> image
+by following <a class="reference external" href="http://docs.oracle.com/cd/E26217_01/E26796/html/qs-import-vm.html">these instructions</a></p>
+<p>Now start your new virtual machine by selecting the new NeuroDebian virtual
+machine and pressing the <em>Start</em> button.</p>
+<p>In due course virtualbox will open a Linux (Debian) machine desktop with all the
+course software installed.</p>
 </div>
 <div class="section" id="installation-problems">
 <span id="id3"></span><h2>Installation problems<a class="headerlink" href="#installation-problems" title="Permalink to this headline">¶</a></h2>
@@ -237,6 +262,7 @@ script, and let us know (see <a class="reference internal" href="#installation-p
 </ul>
 </li>
 <li><a class="reference internal" href="#if-you-are-using-linux">If you are using Linux</a></li>
+<li><a class="reference internal" href="#if-you-don-t-want-to-do-an-install-on-your-machine-yet">If you don&#8217;t want to do an install on your machine yet</a></li>
 <li><a class="reference internal" href="#installation-problems">Installation problems</a></li>
 </ul>
 </li>
