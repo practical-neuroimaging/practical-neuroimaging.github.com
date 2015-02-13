@@ -164,3 +164,6 @@ gh-pages: git-clean html
 	cp -r _build/html/* .
 	git stage .
 	@echo 'Commit and push when ready or git reset --hard && git checkout source to revert'
+
+slides-%:
+	pandoc -t beamer -s $*_slides.md -o $*_slides.pdf
