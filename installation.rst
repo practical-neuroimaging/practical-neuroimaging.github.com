@@ -99,7 +99,7 @@ this if you don't know where it is on your Mac).
 
 At the Terminal.app prompt, type (or copy / paste)::
 
-    pip install scipy matplotlib pandas ipython[notebook,test] nibabel
+    pip install numpy scipy matplotlib pandas ipython[notebook,test] nibabel
 
 This will cause pip to install the named packages, including the ``nibabel``
 package for reading neuroimaging file formats.
