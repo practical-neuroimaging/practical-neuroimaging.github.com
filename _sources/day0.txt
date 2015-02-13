@@ -4,6 +4,8 @@ Day 0 : introduction: what is an image?
 
 February 13 2015
 
+Download day0 slides from :download:`day0 slides <day0_slides.pdf>`
+
 ********
 Homework
 ********
@@ -30,7 +32,7 @@ Admin stuff
 ***********
 
 * Around 30 minutes homework;
-* Homework ready by end of day Monday for following Friday course;
+* Homework ready by end of day Monday for following FridBy kladcat [CC BY 2.0 (http://creativecommons.org/licenses/by/2.0)], via Wikimedia Commonsay course;
 * Class consists of:
 
     * 5 minute debrief from previous class;
@@ -47,17 +49,12 @@ Introduction to the exercises
 * Open terminal;
 * Make a directory "pna";
 * Change directory to "pna";
-* Insert USB drive;
-* Find USB drive;
-* git clone <usb-drive>/pna2015.git
+* git clone git://github.com/practical-neuroimaging/pna2015.git
 * cd pna2015
 * ls
 
 * ipython notebook;
-* open what is an image notebook;
-* Loading a 3D image - from :
-  http://nbviewer.ipython.org/urls/raw.github.com/practical-neuroimaging/pna-notebooks/master/loading_images.ipynb
-* Getting pixel data
+* select and open "what is an image" notebook;
 
 **********
 References
