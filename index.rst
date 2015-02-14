@@ -21,21 +21,10 @@ Course news and announcements go to the `mailing list`_
     about
     where_and_when
     reading
+    office_hours
     installation
     schedule
     choosing_editor
 
-.. _office-hours:
-
-Office hours
-============
-
-Office hours are on Wednesdays from 2-4pm in 210Q Barker hall.
-
-Feel free to email us with any problems:
-
-* matthew dot brett at gmail dot com
-* jbpoline at gmail dot com
-* sjvdwalt at gmail dot com
 
 .. include:: links_names.inc

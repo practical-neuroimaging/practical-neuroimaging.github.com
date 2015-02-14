@@ -4,7 +4,7 @@ Day 0 : introduction: what is an image?
 
 February 13 2015
 
-Download day0 slides from :download:`day0 slides <day0_slides.pdf>`
+Download :download:`day0 slides <day0_slides.pdf>`
 
 ********
 Homework

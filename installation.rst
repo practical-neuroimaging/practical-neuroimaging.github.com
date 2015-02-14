@@ -241,7 +241,7 @@ Next, install VirtualBox_ on your own machine.
 
 Finally, open the VirtualBox application, and import the ``pna2015.ova`` image
 by following `these instructions
-<http://docs.oracle.com/cd/E26217_01/E26796/html/qs-import-vm.html>`_
+<http://docs.oracle.com/cd/E26217_01/E26796/html/qs-import-vm.html>`_.
 
 Now start your new virtual machine by selecting the new NeuroDebian virtual
 machine and pressing the *Start* button.
