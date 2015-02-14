@@ -44,6 +44,7 @@
 .. _old and new python versions: https://launchpad.net/%7Efkrull/+archive/deadsnakes
 .. _nose: http://readthedocs.org/docs/nose/en/latest
 .. _nose-ipdb: https://github.com/flavioamieiro/nose-ipdb
+.. _pip: http://pypi.python.org/pypi/pip
 
 .. IPython
 .. _ipython: http://ipython.org/

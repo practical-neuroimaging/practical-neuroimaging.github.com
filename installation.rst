@@ -6,12 +6,6 @@ Software to install for the class
 
 You will need Python and some Python scientific libraries installed.
 
-If you already have some large Python packaging system installed, such as the
-`Anaconda` or the `Enthought Python Distribution`_, you can stick with that,
-it should provide the dependencies you need.  To make sure, see the relevant
-instructions below for checking your installation.  If you don't have
-something like that (most of you won't), please read on...
-
 ************************
 If you are using Windows
 ************************
@@ -79,6 +73,11 @@ Windows Command Prompt".
 ********************
 If you are using OSX
 ********************
+
+OSX ships with a version of Python that you will find in ``/usr/bin/python``.
+For reasons `explained here
+<https://github.com/MacPython/wiki/wiki/Which-Python>`_ you should use another
+installation of Python for your own work.
 
 Download and install Python
 ===========================
@@ -183,6 +182,32 @@ On Fedora or related distros::
 Check the installation with::
 
     wget https://nipy.bic.berkeley.edu/pna/check_pna_install.py
+    python check_pna_install.py
+
+If you have any problems, follow the printed instructions after you run the
+script, and let us know (see :ref:`installation-problems`).
+
+*****************************************************************
+If you have already have Python from Anaconda or Enthought Canopy
+*****************************************************************
+
+If you already have some large Python packaging system installed, such as the
+`Anaconda` or the `Enthought Python Distribution`_, you will need to install
+one extra package - nibabel_.
+
+First make sure you have the pip_ (the Python package manager) installed on
+your system, by typing pip_ from the command line.  You should see the help
+for pip.  Then install nibabel with::
+
+    pip install nibabel
+
+Download (right-click, save as) this Python script file to your computer:
+https://nipy.bic.berkeley.edu/pna/check_pna_install.py
+
+Finally, check your installation by opening your command line application,
+changing into the directory containing the ``check_pna_install.py`` script,
+and running the following command::
+
     python check_pna_install.py
 
 If you have any problems, follow the printed instructions after you run the

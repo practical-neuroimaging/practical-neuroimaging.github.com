@@ -32,7 +32,7 @@ Admin stuff
 ***********
 
 * Around 30 minutes homework;
-* Homework ready by end of day Monday for following FridBy kladcat [CC BY 2.0 (http://creativecommons.org/licenses/by/2.0)], via Wikimedia Commonsay course;
+* Homework ready by end of day Monday for following Friday course;
 * Class consists of:
 
     * 5 minute debrief from previous class;
@@ -46,15 +46,15 @@ Admin stuff
 Introduction to the exercises
 *****************************
 
-* Open terminal;
-* Make a directory "pna";
-* Change directory to "pna";
-* git clone git://github.com/practical-neuroimaging/pna2015.git
-* cd pna2015
-* ls
+* Open terminal (Mac, Linux) or Git Bash (Windows);
+* Make a directory ``pna`` with ``mkdir pna``;
+* Change directory to ``pna`` with ``cd pna``;
+* ``git clone git://github.com/practical-neuroimaging/pna2015.git``
+* ``cd pna2015``
+* ``ls``
 
-* ipython notebook;
-* select and open "what is an image" notebook;
+* Start the IPython notebook with `ipython notebook`
+* select and open "what_is_an_image" notebook.
 
 **********
 References
