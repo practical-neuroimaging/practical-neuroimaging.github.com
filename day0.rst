@@ -63,6 +63,8 @@ References
 * http://nipyworld.blogspot.com/2012/04/replication-in-functional-mri.html
 * Why most published research findings are false:
   http://www.plosmedicine.org/article/info:doi/10.1371/journal.pmed.0020124
+* `why Python uses 0-based indexing
+  <http://python-history.blogspot.com/2013/10/why-python-uses-0-based-indexing.html>`_
 
 ************************
 Quotes from David Donoho

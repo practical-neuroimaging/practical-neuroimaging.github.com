@@ -139,12 +139,19 @@ git.
 If you are on OSX 10.8 (Mountain lion) or below
 -----------------------------------------------
 
-Install git from the `Git snow-leopard installer
-<http://sourceforge.net/projects/git-osx-installer/files/git-2.2.1-intel-universal-snow-leopard.dmg/download>`_
+Install git from this old copy of the `Git Snow Leopard installer
+<http://nipy.bic.berkeley.edu/pna/archives/git-1.8.3-intel-universal-snow-leopard.dmg>`_
 by doing the usual routine of double clicking the ``.dmg`` file then
 double-clicking the ``.pkg`` installer.  Check the installation has worked by
-closing Terminal.app and opening again, and typing ``git`` at the command
-line.
+closing Terminal.app and opening again, and typing ``git`` at the command line.
+
+The reason we suggest using this old installer is that some people have had
+problems with the latest (version 2.2.1 at time of writing) git Snow Leopard
+``.dmg`` installer from http://sourceforge.net/projects/git-osx-installer/files.
+
+If you still have problems, please follow the instructions on `this forum post
+<http://gitforums.org/forum/main-category/main-forum/1264-illegal-instruction-4-when-running-git-on-osx-10-7-5?p=1265#post1265>`_
+(thanks to Ana Navarro Cebrian for tracking this down).
 
 **********************
 If you are using Linux
