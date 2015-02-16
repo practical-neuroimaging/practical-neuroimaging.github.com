@@ -8,8 +8,11 @@ Day 1 : introducing Python
 Prior
 *****
 
-* Make sure your Python environment installed on day 0 still works
-* Finish first Python Module on Codecademy: http://www.codecademy.com/courses/introduction-to-python-6WeG3/0/1
+* Make sure your Python environment installed on day 0 still works - see
+  :ref:`installation` for how to check your installation.  Please :ref:`ask
+  for help <installation-problems>` if you have any doubt.
+* Finish the first Python Module on Codecademy:
+  http://www.codecademy.com/courses/introduction-to-python-6WeG3/0/1
 
 ***
 Day
