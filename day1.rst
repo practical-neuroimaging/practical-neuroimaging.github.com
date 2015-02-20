@@ -23,3 +23,12 @@ Day
 * basic data structures (lists and dictionaries)
 * importing modules
 * reading and parsing text files (basic)
+
+*************
+The exercises
+*************
+
+* ``cd pna/pna2015``
+* ``git pull``
+* ``cd day1``
+* ``ipython notebook``
