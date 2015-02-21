@@ -53,7 +53,10 @@ Introduction to the exercises
 * ``cd pna2015``
 * ``ls``
 
-* Start the IPython notebook with `ipython notebook`
+You should see a directory listed called ``day0``.
+
+* ``cd day0``
+* Start the IPython notebook with ``ipython notebook``
 * select and open "what_is_an_image" notebook.
 
 **********
