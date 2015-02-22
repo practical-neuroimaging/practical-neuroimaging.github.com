@@ -119,6 +119,11 @@
 .. _Matthew Brett : http://matthew.dynevor.org
 .. _Richard Stallman: http://en.wikipedia.org/wiki/Richard_Stallman
 
+.. Tutorials
+.. _Scipy lecture notes: http://scipy-lectures.github.io
+.. _numpy array object: http://scipy-lectures.github.io/intro/numpy/array_object.html
+.. _Array operations: http://scipy-lectures.github.io/intro/numpy/operations.html
+
 .. Substitutions
 .. |emdash| unicode:: U+02014
 .. |--| unicode:: U+2013   .. en dash
