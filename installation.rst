@@ -13,10 +13,12 @@ If you are using Windows
 Download and install Python and packages using Python (X,Y)
 ===========================================================
 
-Go the the Python (X,Y) website: https://code.google.com/p/pythonxy/
+Go the the `Python(X,Y)`_ website. (If you happen to be following this course
+from a country `blocked by Google code`_, download Python(X,Y from the
+`Python(X,Y) UK mirror`_).
 
-Click on the Downloads link to take you to the Downloads page
-(https://code.google.com/p/pythonxy/wiki/Downloads).
+From the Google code website, click on the Downloads link to take you to the
+Downloads page (https://code.google.com/p/pythonxy/wiki/Downloads).
 
 Click on the link for the ConnectMV mirror (it appears to be in Canada, where
 the other download links are in Europe).
@@ -24,6 +26,8 @@ the other download links are in Europe).
 Download the Python (X,Y) exe file, and double click to install.
 
 Accept all the defaults.
+
+.. _python-xy-pip:
 
 Use pip to install the nibabel package
 ======================================
@@ -138,19 +142,18 @@ git.
 If you are on OSX 10.8 (Mountain lion) or below
 -----------------------------------------------
 
-Install git from this old copy of the `Git Snow Leopard installer
-<http://nipy.bic.berkeley.edu/pna/archives/git-1.8.3-intel-universal-snow-leopard.dmg>`_
-by doing the usual routine of double clicking the ``.dmg`` file then
-double-clicking the ``.pkg`` installer.  Check the installation has worked by
-closing Terminal.app and opening again, and typing ``git`` at the command line.
+Install git from this `git OSX installer`_ page by doing the usual routine of
+double clicking the ``.dmg`` file then double-clicking the ``.pkg`` installer.
+Check the installation has worked by closing Terminal.app and opening again,
+and typing ``git`` at the command line.
 
-The reason we suggest using this old installer is that some people have had
-problems with the latest (version 2.2.1 at time of writing) git Snow Leopard
-``.dmg`` installer from http://sourceforge.net/projects/git-osx-installer/files.
-
-If you still have problems, please follow the instructions on `this forum post
-<http://gitforums.org/forum/main-category/main-forum/1264-illegal-instruction-4-when-running-git-on-osx-10-7-5?p=1265#post1265>`_
-(thanks to Ana Navarro Cebrian for tracking this down).
+The reason we suggest using this installer rather than the more standard git
+Snow Leopard ``.dmg`` installer from
+http://sourceforge.net/projects/git-osx-installer/files is that `some people
+<http://gitforums.org/forum/main-category/main-forum/1264-illegal-instruction-4-when-running-git-on-osx-10-7-5>`_
+have reported ``Illegal instruction: 4`` errors when trying to run git from
+this standard installer.  Thanks to Ana Navarro Cebrian for tracking this
+down.
 
 **********************
 If you are using Linux
@@ -192,12 +195,13 @@ If you have already have Python from Anaconda or Enthought Canopy
 *****************************************************************
 
 If you already have some large Python packaging system installed, such as the
-`Anaconda` or the `Enthought Python Distribution`_, you will need to install
-one extra package - nibabel_.
+`Anaconda`, `Enthought Canopy`_ or `Python(X,Y)`_, you will need to install
+one extra package - nibabel_.  If you are using Python(X,Y) then go to the
+:ref:`python-xy-pip` section for instructions.  Otherwise, please read on.
 
-First make sure you have the pip_ (the Python package manager) installed on
-your system, by typing pip_ from the command line.  You should see the help
-for pip.  Then install nibabel with::
+First make sure you have pip_ (the Python package manager) installed on your
+system, by typing pip_ from the command line.  You should see the help for
+pip.  Then install nibabel with::
 
     pip install nibabel
 

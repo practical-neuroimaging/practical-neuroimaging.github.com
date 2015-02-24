@@ -31,4 +31,15 @@ Day:
 * Mean, standard deviation, variance over time
 * Text editor competition.
 
+.. To cover
+    Numpy allows creation of arrays
+    An image is an array
+    An array can be displayed with matplotlib
+    An array can be reshaped
+    A 3D image is a 3D array
+    A 3D array can be reshaped to 1D and back again
+    Histograms.
+    Operations on 1D (implicit) - mean, min, max
+    Operations over axes (explicit) - mean, min, max
+
 .. include:: links_names.inc

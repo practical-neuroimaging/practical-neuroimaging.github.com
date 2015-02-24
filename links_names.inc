@@ -4,6 +4,7 @@
 
 .. Version control
 .. _git: http://git-scm.com
+.. _git OSX installer: http://mackyle.github.io/git-osx-installer/
 .. _git parable: http://tom.preston-werner.com/2009/05/19/the-git-parable.html
 .. _github: http://github.com
 
@@ -102,9 +103,13 @@
 .. _fmristat: http://www.math.mcgill.ca/keith/fmristat
 
 .. Installation
+.. _Python(X,Y): https://code.google.com/p/pythonxy/
+.. _Python(X,Y) UK mirror: http://www.mirrorservice.org/sites/pythonxy.com
+.. _blocked by Google code: http://nipyworld.blogspot.com/2011/07/why-you-shouldnt-use-google-code.html
 .. _Enthought Python Distribution: http://www.enthought.com/products/epd.php
 .. _Anaconda: https://store.continuum.io/cshop/anaconda
 .. _EPD: http://www.enthought.com/products/epd.php
+.. _Enthought canopy: https://www.enthought.com/products/canopy/
 .. _checklist script: http://fperez.org/py4science/workshop_checklist.py
 .. _NeuroDebian: http://neuro.debian.net
 .. _VirtualBox: https://www.virtualbox.org/
