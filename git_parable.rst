@@ -6,7 +6,7 @@ The git parable
 
     This is a minimally edited version of the `git parable`_ by Tom
     Preston-Werner, with his kind permission.  Please contact Tom
-    Preston-Warner for permission to copy this copy or the original.
+    Preston-Werner for permission to copy this copy or the original.
 
     The only changes from the original are:
 
