@@ -127,6 +127,9 @@
 .. _Matthew Brett : http://matthew.dynevor.org
 .. _Richard Stallman: http://en.wikipedia.org/wiki/Richard_Stallman
 
+.. Licenses
+.. _cc-by-nc-sa: http://creativecommons.org/licenses/by-nc-sa/4.0
+
 .. Substitutions
 .. |emdash| unicode:: U+02014
 .. |--| unicode:: U+2013   .. en dash
