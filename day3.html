@@ -25,8 +25,9 @@
     <script type="text/javascript" src="_static/doctools.js"></script>
     <link rel="author" title="About these documents" href="about.html" />
     <link rel="top" title="Practical neuroimaging analysis" href="index.html" />
-    <link rel="next" title="Office hours" href="office_hours.html" />
-    <link rel="prev" title="Where and when and what?" href="where_and_when.html" /> 
+    <link rel="up" title="Schedule" href="schedule.html" />
+    <link rel="next" title="Day 4: first statistics / version control" href="day4.html" />
+    <link rel="prev" title="Day 2: images as arrays and plotting" href="day2.html" /> 
   </head>
   <body>
     <div class="related">
@@ -36,16 +37,17 @@
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="office_hours.html" title="Office hours"
+          <a href="day4.html" title="Day 4: first statistics / version control"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="where_and_when.html" title="Where and when and what?"
+          <a href="day2.html" title="Day 2: images as arrays and plotting"
              accesskey="P">previous</a> |</li>
 <big><big><big><li><a href="index.html">Home</a> |&nbsp;</li>
   <li><a href="https://github.com/practical-neuroimaging/pna-notebooks">Notebooks</a> |&nbsp;</li>
   <li><a href="http://nipy.bic.berkeley.edu/pna">Data</a> |&nbsp;</li>
   <li><a href="https://calmail.berkeley.edu/manage/list/listinfo/practical_fmri@lists.berkeley.edu">Mailing list</a> |&nbsp;</li></big></big></big>
- 
+
+          <li><a href="schedule.html" accesskey="U">Schedule</a> &raquo;</li> 
       </ul>
     </div>  
 
@@ -54,45 +56,33 @@
         <div class="bodywrapper">
           <div class="body">
             
-  <div class="section" id="general-reading-for-the-class">
-<h1>General reading for the class<a class="headerlink" href="#general-reading-for-the-class" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="python">
-<h2>Python<a class="headerlink" href="#python" title="Permalink to this headline">¶</a></h2>
-<p>If you are new to Python, we recommend starting off with the excellent
-<a class="reference external" href="http://www.introtopython.org">Introduction to Python</a>.</p>
-<p>There are a good set of <a class="reference external" href="http://www.introtopython.org/resources.html">resources</a> via the &#8220;Resources&#8221; link on
-that site.  We especially like the Google course, if you like to watch videos
-to go with your exercises.</p>
-<p>Here are some good sites that help you practice writing Python:</p>
-<ul class="simple">
-<li><a class="reference external" href="http://codingbat.com/python">CodingBat</a> by the same author as the Google
-Python course;</li>
-<li><a class="reference external" href="http://www.codecademy.com/tracks/python">Code Academy Python track</a></li>
-<li><a class="reference external" href="http://singpath.com">SingPath</a></li>
-</ul>
+  <div class="section" id="day-3-diagnostics-version-control">
+<h1>Day 3: diagnostics / version control<a class="headerlink" href="#day-3-diagnostics-version-control" title="Permalink to this headline">¶</a></h1>
+<p>3 / 6 / 2015</p>
+<div class="section" id="reading">
+<h2>Reading<a class="headerlink" href="#reading" title="Permalink to this headline">¶</a></h2>
+<p>We are going to start getting used to the <a class="reference external" href="http://git-scm.com">git</a> version control system this
+week.</p>
+<p>Git is an essential tool for anyone using code and data, and you will find
+yourself using this tool all the time, so it is important to invest time
+learning how to use git.</p>
+<p>To use git, it is very important to understand the basic ideas behind it.</p>
+<p>Git uses <em>hashes</em> a great deal.  To get the background for these, read this very
+short introduction to <a class="reference internal" href="cryptographic_hashes.html"><em>Cryptographic hashes</em></a>.</p>
+<p>Next, please read the <a class="reference external" href="http://tom.preston-werner.com/2009/05/19/the-git-parable.html">git parable</a> – an excellent introduction to the ideas
+behind git.  I suggest you read this in conjunction with the <a class="reference download internal" href="_downloads/git_parable_johan_herland.pdf"><tt class="xref download docutils literal"><span class="pre">slides</span>
+<span class="pre">from</span> <span class="pre">a</span> <span class="pre">talk</span> <span class="pre">by</span> <span class="pre">Johan</span> <span class="pre">Herland</span></tt></a> – Johan&#8217;s
+slides illustrate the text in the git parable.  You should start at slide 10 of
+Johan&#8217;s talk.</p>
 </div>
-<div class="section" id="background">
-<h2>Background<a class="headerlink" href="#background" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="day">
+<h2>Day<a class="headerlink" href="#day" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><a class="reference external" href="http://www.nature.com/news/programming-pick-up-python-1.16833">Nature article on Python in science</a>. This is a
-recent news article about the benefits of using Python for scientific
-programming.</li>
-<li><a class="reference external" href="http://norvig.com/21-days.html">Essay by Peter Norvig</a>.  <cite>Peter Norvig
-&lt;http://en.wikipedia.org/wiki/Peter_Norvig&gt;</cite> is director of research at
-Google.  The essay explains that, to learn programming, and therefore how to
-do computational science well, takes a long time to learn.  We plan to teach
-you the steps that help you keep learning so you continue to get better.</li>
-<li>Greg Wilson&#8217;s article on scientific computing: Wilson, Greg, et al. <a class="reference external" href="http://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1001745">Best
-practices for scientific computing.</a>
-PLoS biology 12.1 (2014): e1001745.  Greg Wilson and others set out the
-standard set of good habits that reduce errors and increase efficiency for
-scientific computing.</li>
-<li>Donoho, David L. 2010. An invitation to reproducible computational research.
-Biostatistics 11, 385–388.
-<a class="reference external" href="http://biostatistics.oxfordjournals.org/content/11/3/385.full">http://biostatistics.oxfordjournals.org/content/11/3/385.full</a> . David Donoho
-is a professor in the Stanford statistics department who has long championed
-the need to make our work available to others in a form that lets them
-reproduce our results.</li>
+<li>Refresher on Python modules and packages;</li>
+<li>Transfer notebook code into text files;</li>
+<li>Add to git;</li>
+<li>Time series diagnostics;</li>
+<li>Make an edit and commit and push;</li>
 </ul>
 </div>
 </div>
@@ -105,22 +95,22 @@ reproduce our results.</li>
         <div class="sphinxsidebarwrapper">
   <h3><a href="index.html">Table Of Contents</a></h3>
   <ul>
-<li><a class="reference internal" href="#">General reading for the class</a><ul>
-<li><a class="reference internal" href="#python">Python</a></li>
-<li><a class="reference internal" href="#background">Background</a></li>
+<li><a class="reference internal" href="#">Day 3: diagnostics / version control</a><ul>
+<li><a class="reference internal" href="#reading">Reading</a></li>
+<li><a class="reference internal" href="#day">Day</a></li>
 </ul>
 </li>
 </ul>
 
   <h4>Previous topic</h4>
-  <p class="topless"><a href="where_and_when.html"
-                        title="previous chapter">Where and when and what?</a></p>
+  <p class="topless"><a href="day2.html"
+                        title="previous chapter">Day 2: images as arrays and plotting</a></p>
   <h4>Next topic</h4>
-  <p class="topless"><a href="office_hours.html"
-                        title="next chapter">Office hours</a></p>
+  <p class="topless"><a href="day4.html"
+                        title="next chapter">Day 4: first statistics / version control</a></p>
   <h3>This Page</h3>
   <ul class="this-page-menu">
-    <li><a href="_sources/reading.txt"
+    <li><a href="_sources/day3.txt"
            rel="nofollow">Show Source</a></li>
   </ul>
 <div id="searchbox" style="display: none">
@@ -147,16 +137,17 @@ reproduce our results.</li>
           <a href="genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="office_hours.html" title="Office hours"
+          <a href="day4.html" title="Day 4: first statistics / version control"
              >next</a> |</li>
         <li class="right" >
-          <a href="where_and_when.html" title="Where and when and what?"
+          <a href="day2.html" title="Day 2: images as arrays and plotting"
              >previous</a> |</li>
 <big><big><big><li><a href="index.html">Home</a> |&nbsp;</li>
   <li><a href="https://github.com/practical-neuroimaging/pna-notebooks">Notebooks</a> |&nbsp;</li>
   <li><a href="http://nipy.bic.berkeley.edu/pna">Data</a> |&nbsp;</li>
   <li><a href="https://calmail.berkeley.edu/manage/list/listinfo/practical_fmri@lists.berkeley.edu">Mailing list</a> |&nbsp;</li></big></big></big>
- 
+
+          <li><a href="schedule.html" >Schedule</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer">

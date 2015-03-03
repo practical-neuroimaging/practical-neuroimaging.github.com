@@ -112,13 +112,4 @@ We started going through Ariel Rokem's "Introduction to Python" notebook.
 We ran the notebook by first downloading the raw file (above), then, in the same
 directory, running the command ``ipython notebook``
 
-.. [donoho2009reproducible]
-   Donoho, David L, et al. 2009. Reproducible research in computational 
-   harmonic analysis. *Computing in Science & Engineering* 11, 8--18.
-   http://www.stanford.edu/~vcs/papers/ReproducibleResearch20080811.pdf
-
-.. [donoho2010invitation] Donoho, David L. 2010. An invitation to reproducible
-   computational research. *Biostatistics* 11, 385--388.
-   http://biostatistics.oxfordjournals.org/content/11/3/385.full
-
 .. include:: links_names.inc

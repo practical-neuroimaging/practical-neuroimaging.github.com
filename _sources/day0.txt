@@ -4,7 +4,7 @@ Day 0 : introduction: what is an image?
 
 February 13 2015
 
-Download day0 slides from :download:`day0 slides <day0_slides.pdf>`
+Download :download:`day0 slides <day0_slides.pdf>`
 
 ********
 Homework
@@ -32,7 +32,7 @@ Admin stuff
 ***********
 
 * Around 30 minutes homework;
-* Homework ready by end of day Monday for following FridBy kladcat [CC BY 2.0 (http://creativecommons.org/licenses/by/2.0)], via Wikimedia Commonsay course;
+* Homework ready by end of day Monday for following Friday course;
 * Class consists of:
 
     * 5 minute debrief from previous class;
@@ -46,15 +46,18 @@ Admin stuff
 Introduction to the exercises
 *****************************
 
-* Open terminal;
-* Make a directory "pna";
-* Change directory to "pna";
-* git clone git://github.com/practical-neuroimaging/pna2015.git
-* cd pna2015
-* ls
+* Open terminal (Mac, Linux) or Git Bash (Windows);
+* Make a directory ``pna`` with ``mkdir pna``;
+* Change directory to ``pna`` with ``cd pna``;
+* ``git clone git://github.com/practical-neuroimaging/pna2015.git``
+* ``cd pna2015``
+* ``ls``
 
-* ipython notebook;
-* select and open "what is an image" notebook;
+You should see a directory listed called ``day0``.
+
+* ``cd day0``
+* Start the IPython notebook with ``ipython notebook``
+* select and open "what_is_an_image" notebook.
 
 **********
 References
@@ -63,6 +66,8 @@ References
 * http://nipyworld.blogspot.com/2012/04/replication-in-functional-mri.html
 * Why most published research findings are false:
   http://www.plosmedicine.org/article/info:doi/10.1371/journal.pmed.0020124
+* `why Python uses 0-based indexing
+  <http://python-history.blogspot.com/2013/10/why-python-uses-0-based-indexing.html>`_
 
 ************************
 Quotes from David Donoho
