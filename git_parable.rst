@@ -11,8 +11,8 @@ The git parable
     The only changes from the original are:
 
     * the addition of :ref:`a short section on cryptographic hashes
-      <on-hashes>`
-    * I have added many of Johan Herland's nice illustrations from
+      <on-hashes>` (copyright Matthew Brett, released the public domain);
+    * We have added many of Johan Herland's nice illustrations from
       https://github.com/jherland/git_parable |--| the illustrations are his
       copyright, released under `CC-by-NC-SA`_.
     * Some one-line linking text between Johan's illustrations of the git
