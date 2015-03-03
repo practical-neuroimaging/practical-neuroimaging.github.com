@@ -1,5 +1,5 @@
 ####################################
-Day 3: diagnostics / version control
+Day 3: version control / diagnostics
 ####################################
 
 3 / 6 / 2015
