@@ -59,6 +59,16 @@ exercise today.
 Introduction to day 2
 =====================
 
+To get started
+--------------
+
+::
+
+    cd pna2015
+    git pull
+    cd day2
+    ipython notebook
+
 Some new Python stuff
 ---------------------
 
@@ -76,7 +86,6 @@ Revision from homework
 * Showing an array as an image with `imshow`;
 * Plotting a line from an array with `plot`;
 * Slicing arrays;
-* Copies and views;
 * Indexing arrays with masks;
 * Numerical operations in numpy;
 * ``+ - * / == != > < >= <=`` are always elementwise;
@@ -88,11 +97,6 @@ Some useful background resources
 
 * What is an image? e.g.
   http://nbviewer.ipython.org/urls/bitbucket.org/matthewbrett/talks/raw/master/processing_i/what_is_an_image.ipynb
-* Loading a 4D image e.g.
-  http://nbviewer.ipython.org/urls/raw.github.com/practical-neuroimaging/pna-notebooks/master/loading_images.ipynb
-* Diagnostics e.g.
-  http://nbviewer.ipython.org/urls/bitbucket.org/matthewbrett/talks/raw/master/processing_i/diagnostics.ipynb
-* Mean, standard deviation, variance over time
 
 .. To cover
     Numpy allows creation of arrays

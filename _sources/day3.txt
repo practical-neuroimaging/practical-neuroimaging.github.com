@@ -1,5 +1,5 @@
 ####################################
-Day 3: diagnostics / version control
+Day 3: version control / diagnostics
 ####################################
 
 3 / 6 / 2015
@@ -17,14 +17,11 @@ learning how to use git.
 
 To use git, it is very important to understand the basic ideas behind it.
 
-Git uses *hashes* a great deal.  To get the background for these, read this very
-short introduction to :doc:`cryptographic_hashes`.
-
-Next, please read the `git parable`_ |--| an excellent introduction to the ideas
-behind git.  I suggest you read this in conjunction with the :download:`slides
-from a talk by Johan Herland <git_parable_johan_herland.pdf>` |--| Johan's
-slides illustrate the text in the git parable.  You should start at slide 10 of
-Johan's talk.
+So, please read the :doc:`git_parable` |--| an excellent introduction to the
+ideas behind git.  I've added some illustrations from :download:`slides from a
+talk by Johan Herland <git_parable_johan_herland.pdf>` |--| I did not add some
+of the later slides to our local copy of the git parable page, but you may well find them
+useful for illustrating the last few sections of the git parable.
 
 ***
 Day
