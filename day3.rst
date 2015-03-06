@@ -31,13 +31,16 @@ Day
 * Four dimension is space then time;
 * Slicing over arbitrary dimensions (including time);
 * Using boolean arrays for indexing;
-* Exercise : standard deviation per volume.
-
 * Python functions;
-* Exercises : making an spm_global function.
+* Exercises:
+
+   * standard deviation per volume;
+   * making an ``spm_global`` function.
 
 * Python modules and packages;
-* Exercises : make notebook code into self-contained module.
+* Exercises:
+
+    * make notebook code into self-contained module.
 
 * Starting with version control;
 * Make new git repository;
