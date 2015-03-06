@@ -30,10 +30,21 @@ Johan's talk.
 Day
 ***
 
-* Refresher on Python modules and packages;
-* Transfer notebook code into text files;
-* Add to git;
-* Time series diagnostics;
-* Make an edit and commit and push;
+* Loading data with nibabel;
+* Four dimension is space then time;
+* Slicing over arbitrary dimensions (including time);
+* Using boolean arrays for indexing;
+* Exercise : standard deviation per volume.
+
+* Python functions;
+* Exercises : making an spm_global function.
+
+* Python modules and packages;
+* Exercises : make notebook code into self-contained module.
+
+* Starting with version control;
+* Make new git repository;
+* Add module to git repository;
+* Commit;
 
 .. include:: links_names.inc
