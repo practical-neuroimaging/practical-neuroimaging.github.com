@@ -24,48 +24,46 @@ A git repository consists of a working directory (or working tree) with a
 hidden subdirectory containing the files that git uses to store and track
 snapshots.
 
-First make the working directory:
+First make the working directory::
 
-mkdir thrilling_paper
-cd thrilling paper
+    mkdir thrilling_paper
+    cd thrilling paper
 
 This is our working directory.
 
 There are no files in the directory at the moment.
 
-Let's start the paper.
+Let's start the paper::
 
-vim nobel_prize.txt
+    vim nobel_prize.txt
 
 How the brain works
 -------------------
 
 It sends electrical messages around and that adds up to everything.
 
-Let's make an analysis script as well:
+Let's make an analysis script as well::
 
-import random
+    import random
 
-the_number = random.randint(0, 50)
-while the_number != 42:
-    print("Oops, try again")
     the_number = random.randint(0, 50)
+    while the_number != 42:
+        print("Oops, try again")
+        the_number = random.randint(0, 50)
 
-print("The answer is", the_number)
+    print("The answer is", the_number)
 
 Now let's say we're ready to start making snapshots with git.
 
-First we make a git repository to store the snapshots and history
+First we make a git repository to store the snapshots and history::
 
-git init
+    git init
+    ls
 
-ls
+The directory `.git` is hidden::
 
-The directory `.git` is hidden
-
-ls -a
-
-ls .git
+    ls -a
+    ls .git
 
 The directory has various things in it.
 
@@ -74,70 +72,71 @@ our branches and tags, and the `objects` directory will store our file and
 directory snapshots.
 
 We haven't taken any snapshots yet, so there is nothing in the objects
-directory.
+directory::
 
-ls .git/objects
+    ls .git/objects
 
-git status
+    git status
 
-Notice that the files a 'untracked'.  That means that git has never previously
-taken a snapshot of these files, and so far assumes they should not go into
-our snapshots.
+Notice that the files are 'untracked'.  That means that git has never
+previously taken a snapshot of these files, and so far assumes they should not
+go into our snapshots.
 
 As you remember from the git parable, before we do a snapshot, we first put
 the stuff that will go into the snapshot, into the staging area.   We do that
-with `git add`
+with ``git add``.
 
-Now let's add nobel_prize.txt to the staging area:
+Now let's add nobel_prize.txt to the staging area::
 
-git add nobel_prize.txt
+    git add nobel_prize.txt
 
 What just happened?  First, we can see that a snapshot of `nobel_prize.txt` has
-gone into the staging area:
+gone into the staging area::
 
-git status
-
+    git status
 
 Second, behind the scenes, git has made a copy of the file and put it into its
-objects directory.
+objects directory::
 
-ls .git/objects
+    ls .git/objects
 
 The file has a filename that comes from its hash.  Don't worry about that for
 now.  We can even get git to fetch this stored copy of `nobel_prize.txt` for
-us, with git show.  Don't worry about the details of this command:
+us, with git show.  Don't worry about the details of this command::
 
-git show :nobel_prize.txt
+    git show :nobel_prize.txt
 
 This is the snapshot of the file that has gone into the staging area.
 
 If we now change the file in the working tree, it will be different from the
 snapshot version.
 
-Edit nobel_prize.txt
+Edit nobel_prize.txt::
 
-I have discovered the electrical impulses in the brain change when I think
-about being famous.
+    I have discovered the electrical impulses in the brain change when I think
+    about being famous.
 
 The copy of nobel_prize.txt in the working directory contains a new sentence.
-But the snapshot stored copy is the same as it was when we took the snapshot:
+But the snapshot stored copy is the same as it was when we took the snapshot::
 
-git show :nobel_prize.txt
+    git show :nobel_prize.txt
 
-Now what happens when I do a git stage:
+Now what happens when I do a git status?::
+
+    git status
 
 The green shows the initial snapshot I did of this file, into the staging
 area.  The red 'not staged for commit' shows that the file that is in the
 working tree is different from the file in the staging area.  The redness of
 the red text is warning me that I may want to update my copy in the staging
-area.  I'll do that now.
+area.  I'll do that now::
 
-git add nobel_prize.txt
+    git add nobel_prize.txt
 
-git status
+    git status
 
 Notice that I now have two files in the objects directory - these correspond
-to the first snapshot I made of `nobel_prize.txt` and the second that I just
+to the first snapshot I made of ``nobel_prize.txt`` and the second that I just
 made.  This reminds us that git is very careful to make use we don't
 accidentally lose our backups.   Even though we probably don't care about the
 first version of the file, git will keep it for us for a month or so, in the
@@ -145,10 +144,10 @@ first version of the file, git will keep it for us for a month or so, in the
 housekeeping clearout, and that backup will disappear, unless it is part of
 any of the full snapshots (commits) that will come on to soon.
 
-Now I will also add `analysis_script.txt`.
+Now I will also add `analysis_script.txt`::
 
-git add analysis_script.txt
-git status
+    git add analysis_script.txt
+    git status
 
 So now both files are in the staging area, and the versions in the staging
 area are the same as the versions in the working tree.
@@ -164,7 +163,9 @@ snapshot of the working tree.
 
 Let's do the commit.
 
-I'm first going to do the commit as I would normally do it:
+I'm first going to do the commit as I would normally do it::
+
+    git commit
 
 Git opened my text editor for me and shows me some helpful information about
 what is going into this commit.
@@ -186,15 +187,15 @@ You will then need to set up your text editor properly.  Google is your
 friend.
 
 So, just to show you how it works, if your text editor isn't set up right,
-I'll use the `-m` flag to pass the message, so git doesn't open the editor:
+I'll use the `-m` flag to pass the message, so git doesn't open the editor::
 
-git commit -m "First snapshot of my files"
+    git commit -m "First snapshot of my files"
 
 Git helpfully tells us what went into the snapshot.
 
-Now I can look at the short history of the project.
+Now I can look at the short history of the project::
 
-git log
+    git log
 
 The next step in understanding git is understanding how git connects commits
 together with the commit parents, and how git stores branches and tags as
@@ -207,9 +208,9 @@ You can see from the commit message that git seems to be on a "branch" called
 
 "master" is the default branch, the branch that git creates by default.
 
-We can see which branch we are on using ``git branch``:
+We can see which branch we are on using ``git branch``::
 
-git branch
+    git branch
 
 At the moment we only have one branch "master"
 
@@ -217,14 +218,14 @@ As we saw in the git parable, a "branch" is just a label that points to a
 particular snapshot.  Remember a snapshot is a "commit" in git terminology.
 
 Remember that git log showed us the identifier for the commit - the commit
-hash:
+hash::
 
-git log
+    git log
 
 We can also see which commit the branch is pointing at by using the ``-v``
-flag:
+flag::
 
-git branch -v
+    git branch -v
 
 As you can see the output tells us that the "master" branch is pointing to the
 git commit that starts with 'd839074' - the same hash reported by git log.
@@ -233,23 +234,24 @@ In the git parable, we stored the branch positions in a text file, and git
 does something very similar.  Git records the current position of each branch
 in a tiny text file in the ``.git/refs/heads`` directory.  Here is the current
 contents of ``.git/refs/heads/master`` - the current position of the master
-branch.
+branch::
 
-cat .git/refs/heads/master
+    cat .git/refs/heads/master
 
 As you can see it points to the commit (snapshot) hash we see in the output
-from git log and from git branch -v.
+from ``git log`` and from ``git branch -v``.
 
 Now let's make a new commit.
 
-I'll now make some edits to ``nobel_prize.txt``.
+I'll now make some edits to ``nobel_prize.txt``. First I delete the last
+sentence.  Now I add::
 
-I am starting to feel famous while I write this paper.
+    I am starting to feel famous while I write this paper.
 
 I do git status to show me what has changed between the working tree and the
-staging area:
+staging area::
 
-git status
+    git status
 
 Sure enough, the ``nobel_prize.txt`` paper has new changes that the staging
 area does not know about.
@@ -258,28 +260,28 @@ Remember that the staging area always starts off the contents of the last
 commit.
 
 In fact, we can ask git to tell us exactly what changes there are in the
-working tree, compared to the staging area, with the ``git diff`` command:
+working tree, compared to the staging area, with the ``git diff`` command::
 
-git diff
+    git diff
 
 Git diff only works well on simple text files like the files in our working
 tree.  The new lines are in green with a plus.  Any deleted lines are in red
 with a minus sign preceding.
 
-OK - I am happy to add these changes to the staging area for the new commit.
+OK - I am happy to add these changes to the staging area for the new commit::
 
-git add nobel_prize.txt
-git status
+    git add nobel_prize.txt
+    git status
 
 All seems ready.
 
-Let's make the new commit:
+Let's make the new commit::
 
-git commit -m "More inspiring thoughts"
+    git commit -m "More inspiring thoughts"
 
-Let's look at the history of our project now:
+Let's look at the history of our project now::
 
-git log
+    git log
 
 The project has two commits, the commit we have just done, and the first
 commit.
@@ -290,9 +292,9 @@ this commit.
 Our new commit points back to the first commit to record the history, that
 our latest commit follows on from the first commit.
 
-We can see that by using the ``--parents`` flag to git log
+We can see that by using the ``--parents`` flag to git log::
 
-git log --parents
+    git log --parents
 
 We still have the hash of our commit at the beginning of the first line.
 After that, for our second commit, we have the "parent" of this commit.  The
@@ -303,20 +305,20 @@ of history between the commits.
 How about the branch?  Remember that the position of the branch should move
 when we make a commit.  The branch position moves from pointing to the
 previous commit, to point to the current commit.  As we remember, the current
-commit is :
+commit is::
 
-git log
+    git log
 
-Here is the position of the 'master' branch now:
+Here is the position of the 'master' branch now::
 
-git branch -v
+    git branch -v
 
 You can see that the branch position has moved to point to the latest commit.
 
 You won't be surprised to see that git stored this information in the
-``.git/refs/heads/master`` file.
+``.git/refs/heads/master`` file::
 
-cat .git/refs/heads/master
+    cat .git/refs/heads/master
 
 You now know most of the important things you need to know to understand git.
 
