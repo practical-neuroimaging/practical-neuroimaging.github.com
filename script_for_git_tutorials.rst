@@ -2,7 +2,16 @@
 Script for git tutorial screencasts
 ###################################
 
-This is the script I used for two short screencasts introducing git.
+These are the scripts I used for two short screencasts introducing git.
+
+* https://vimeo.com/121579300
+* https://vimeo.com/121579601
+
+*****************************************
+Script for introduction to git repository
+*****************************************
+
+* https://vimeo.com/121579300
 
 In the terms of the `git parable`_, snapshot is the same thing as a commit.
 
@@ -37,10 +46,12 @@ Let's start the paper::
 
     vim nobel_prize.txt
 
-How the brain works
--------------------
+then::
 
-It sends electrical messages around and that adds up to everything.
+    How the brain works
+    -------------------
+
+    It sends electrical messages around and that adds up to everything.
 
 Let's make an analysis script as well::
 
@@ -196,6 +207,13 @@ Git helpfully tells us what went into the snapshot.
 Now I can look at the short history of the project::
 
     git log
+
+
+************************************************
+Script for video on git history and git branches
+************************************************
+
+* https://vimeo.com/121579601
 
 The next step in understanding git is understanding how git connects commits
 together with the commit parents, and how git stores branches and tags as
