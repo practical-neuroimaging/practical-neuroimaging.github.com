@@ -35,10 +35,15 @@ Getting started with version control
 * Add module to git repository;
 * Commit;
 
+On the Python path
+==================
+
+See :doc:`python_path`.
+
 Our first pass at FMRI statistics
 =================================
 
 * Splitting FMRI time series by slicing;
 * Subtracting on blocks from off blocks;
-* Correlating with predicted time-course;
-* Visualizing result.
+* Removing artefacts;
+* Visualizing results.
