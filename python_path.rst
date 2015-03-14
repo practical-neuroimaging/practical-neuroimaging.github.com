@@ -17,7 +17,7 @@ Here is the contents of ``myfunctions.py``::
 I'm working in some directory ``/Users/mb312/working``
 (``/Users/mb312/working`` is my current directory).
 
-I want to be able to start Python, ``import myfunction``, and then
+I want to be able to start Python, ``import myfunctions``, and then
 do something like::
 
     print(myfunctions.add_badly(10, 3))
