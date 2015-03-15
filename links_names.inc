@@ -130,6 +130,12 @@
 .. Licenses
 .. _cc-by-nc-sa: http://creativecommons.org/licenses/by-nc-sa/4.0
 
+.. Neuroimaging stuff
+.. _BOLD: https://en.wikipedia.org/wiki/Blood-oxygen-level_dependent
+.. _blood-oxygen-level dependent: https://en.wikipedia.org/wiki/Blood-oxygen-level_dependent
+.. _convolution: https://en.wikipedia.org/wiki/Convolution
+.. _impulse response: https://en.wikipedia.org/wiki/Impulse_response
+
 .. Substitutions
 .. |emdash| unicode:: U+02014
 .. |--| unicode:: U+2013   .. en dash
