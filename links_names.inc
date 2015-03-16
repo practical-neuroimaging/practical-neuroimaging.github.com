@@ -135,6 +135,7 @@
 .. _blood-oxygen-level dependent: https://en.wikipedia.org/wiki/Blood-oxygen-level_dependent
 .. _convolution: https://en.wikipedia.org/wiki/Convolution
 .. _impulse response: https://en.wikipedia.org/wiki/Impulse_response
+.. _boxcar function: https://en.wikipedia.org/wiki/Boxcar_function
 
 .. Substitutions
 .. |emdash| unicode:: U+02014
