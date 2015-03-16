@@ -26,5 +26,17 @@ Course news and announcements go to the `mailing list`_
     schedule
     choosing_editor
 
-
 .. include:: links_names.inc
+
+.. The hidden toctree below is to suppress build warnings
+
+.. toctree::
+    :hidden:
+
+    cryptographic_hashes
+    git_parable
+    git_setup
+    on_convolution
+    python_path
+    schedule_2015
+    script_for_git_tutorials
