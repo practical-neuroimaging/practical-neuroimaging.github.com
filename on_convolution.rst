@@ -6,20 +6,37 @@ Convolution
 Neural and hemodynamic models
 *****************************
 
-In functional MRI, we often have the subjects do a task in the scanner.  For
-example, we might have the subject lying looking at a fixation cross on the
-screen for most of the time, and sometimes show a very brief burst of visual
-stimulation, such as a flashing checkerboard.
+In functional MRI (FMRI), we often have the subjects do a task in the scanner.
+For example, we might have the subject lying looking at a fixation cross on
+the screen for most of the time, and sometimes show a very brief burst of
+visual stimulation, such as a flashing checkerboard.
 
 We will call each burst of stimulation an *event*.
 
-We know when these events happened.
+We will later want to see if the event has caused a change in the FMRI signal.
+In order to do that, we need to be able to predict the change in signal caused
+by the event.
 
-The neural model
-================
+The FMRI signal comes about first through changes in neuronal firing, and then
+by blood flow responses to the changes in neuronal firing.  In order to
+predict the FMRI signal to an event, we first need a prediction (model) of the
+changes in neuronal firing, and second we need a prediction (model) of how
+the blood flow will change in response to the neuronal firing.
 
-Our next step is to predict what profile of neural activity the event may have
-caused in the brain.
+So we have a two-stage problem:
+
+* predict the neuronal firing to the event (make a *neuronal firing model*);
+* predict the blood flow changes caused by the neuronal firing (a *hemodynamic
+  model*).
+
+Convolution_ is a simple way to create a hemodynamic model from a neuronal
+firing model.
+
+The neuronal firing model
+=========================
+
+The neuronal firing model is our prediction of the profile of neural activity
+in response to the event.
 
 For example, in this case, with a single stimulation, we might predict that,
 as soon as the visual stimulation went on, the cells in the visual cortex
@@ -44,6 +61,8 @@ seconds, might look like this:
     plt.ylabel('neural signal')
     plt.ylim(0, 1.2)
     plt.title("Neural model for 5 second event starting at time 4")
+
+This type of simple off - on - off model is a `boxcar function`_.
 
 Of course we could have had another neural model, with the activity gradually
 increasing, or starting high and then dropping, but let us stick to this

@@ -255,3 +255,7 @@ intersphinx_mapping = {'http://docs.python.org/': None}
 # Config of plot_directive
 plot_include_source = True
 plot_html_show_source_link = False
+
+# Set path to mathjax
+# This appears to fix some math formatting errors
+mathjax_path="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
