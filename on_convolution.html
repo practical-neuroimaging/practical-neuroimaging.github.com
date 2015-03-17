@@ -64,9 +64,6 @@ For example, we might have the subject lying looking at a fixation cross on
 the screen for most of the time, and sometimes show a very brief burst of
 visual stimulation, such as a flashing checkerboard.</p>
 <p>We will call each burst of stimulation an <em>event</em>.</p>
-<p>We will later want to see if the event has caused a change in the FMRI signal.
-In order to do that, we need to be able to predict the change in signal caused
-by the event.</p>
 <p>The FMRI signal comes about first through changes in neuronal firing, and then
 by blood flow responses to the changes in neuronal firing.  In order to
 predict the FMRI signal to an event, we first need a prediction (model) of the
@@ -119,7 +116,7 @@ firing.</p>
 <h3>The impulse response<a class="headerlink" href="#the-impulse-response" title="Permalink to this headline">¶</a></h3>
 <p>Let&#8217;s simplify a little by specifying that the event was really short.  Call
 this event – an <em>impulse</em>.  This simplifies our neural model to a single
-spike in time instead of a sustained rise (or box-car).</p>
+spike in time instead of the sustained rise of the box-car function.</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="n">neural_signal</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">n_time_points</span><span class="p">)</span>
 <span class="n">i_time_4</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">times</span> <span class="o">==</span> <span class="mi">4</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>  <span class="c"># index of value 4 in &quot;times&quot;</span>
 <span class="n">neural_signal</span><span class="p">[</span><span class="n">i_time_4</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>  <span class="c"># A single spike at time == 4</span>
@@ -134,8 +131,6 @@ spike in time instead of a sustained rise (or box-car).</p>
 <div class="figure">
 <img alt="_images/on_convolution-2.png" src="_images/on_convolution-2.png" />
 </div>
-<p>So, this is our <em>impulse</em>.  Call our neural time-series the <em>input signal</em>.  Call
-our prediction for the hemodynamic response – the <em>output signal</em>.</p>
 <p>Let us now imagine that I know what the hemodynamic <em>response</em> will be to such
 an impulse.  I might have got this estimate from taking the FMRI signal
 following very brief events, and averaging over many events.  Here is one such
@@ -212,8 +207,8 @@ shifting by 4, as before, and then multiplying the HRF by 2:</p>
 <img alt="_images/on_convolution-6.png" src="_images/on_convolution-6.png" />
 </div>
 <p>What if I have several impulses?  For example, imagine I had an impulse
-amplitude 2 at time == 4, then another of amplitude 1 at time == 10.
-time == 20 amplitude 3?</p>
+amplitude 2 at time == 4, then another of amplitude 1 at time == 10, and another
+of amplitude 3 at time == 20.</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="n">neural_signal</span><span class="p">[</span><span class="n">i_time_4</span><span class="p">]</span> <span class="o">=</span> <span class="mi">2</span>  <span class="c"># An impulse with amplitude 2</span>
 <span class="n">i_time_10</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">times</span> <span class="o">==</span> <span class="mi">10</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>  <span class="c"># index of value 10 in &quot;times&quot;</span>
 <span class="n">neural_signal</span><span class="p">[</span><span class="n">i_time_10</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>  <span class="c"># An impulse with amplitude 1</span>
@@ -294,13 +289,13 @@ our input neural signal:</p>
 <ol class="arabic">
 <li><p class="first">Start with a output vector that is a vector of zeros</p>
 </li>
-<li><p class="first">For each index in the <em>input vector</em> (the neural signal):</p>
+<li><p class="first">For each index <span class="math">\(i\)</span> in the <em>input vector</em> (the neural signal):</p>
 <blockquote>
 <div><ol class="arabic simple" start="3">
-<li>Prepare a shifted copy of the HRF vector, starting at this index. Call this
-the <em>shifted HRF vector</em>;</li>
-<li>Multiply the shifted HRF vector by the value in the input at this index, to give the
-shifted, scaled HRF vector*;</li>
+<li>Prepare a shifted copy of the HRF vector, starting at <span class="math">\(i\)</span>. Call this the
+<em>shifted HRF vector</em>;</li>
+<li>Multiply the shifted HRF vector by the value in the input at index <span class="math">\(i\)</span>,
+to give the <em>shifted, scaled HRF vector</em>;</li>
 <li>Add the shifted scaled HRF vector to the output.</li>
 </ol>
 </div></blockquote>
@@ -311,7 +306,7 @@ vector.</p>
 <p>Imagine that our input (neural) vector is N time points long.  Say the original
 HRF vector is M time points long.</p>
 <p>In our algorithm, when the iteration gets to the last index of the <em>input
-vector</em> (index == N-1), the shifted scaled HRF vector will, as ever, be M points
+vector</em> (<span class="math">\(i = N-1\)</span>), the shifted scaled HRF vector will, as ever, be M points
 long.  If the output vector is the same length as the input vector, we can add
 only the first point of the new scaled IRF vector to the last point of the
 output vector, but all the subsequent values of the scaled IRF vector have no
@@ -387,9 +382,10 @@ event last 3 seconds:</p>
 scaled version of the HRF to the output, for every index.  This is step 5 of our
 algorithm.</p>
 <p>Now let us go back to our convolution algorithm.  Imagine that, instead of
-adding the shifted scaled HRF to the output vector, we store them as a row in an
-array, that has one row for each index in the input vector.  Then we get exactly
-the same output vector as before by taking the sum across the columns.</p>
+adding the shifted scaled HRF to the output vector, we store each shifted scaled
+HRF as a row in an array, that has one row for each index in the input vector.
+Then we can get exactly the same output vector as before by taking the sum
+across the columns of this array:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="n">N</span> <span class="o">=</span> <span class="n">n_time_points</span>
 <span class="n">M</span> <span class="o">=</span> <span class="n">n_hrf_points</span>
 <span class="n">shifted_scaled_hrfs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">N</span><span class="p">,</span> <span class="n">N</span> <span class="o">+</span> <span class="n">M</span> <span class="o">-</span> <span class="mi">1</span><span class="p">))</span>
@@ -446,8 +442,8 @@ operation:</p>
 \[\begin{split}\begin{pmatrix}
     xa + yb + zc   \\
     xd + ye + zf
-=
 \end{pmatrix}
+=
 \begin{pmatrix}
     x &amp; y &amp; z
 \end{pmatrix}

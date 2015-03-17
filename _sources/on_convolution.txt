@@ -13,10 +13,6 @@ visual stimulation, such as a flashing checkerboard.
 
 We will call each burst of stimulation an *event*.
 
-We will later want to see if the event has caused a change in the FMRI signal.
-In order to do that, we need to be able to predict the change in signal caused
-by the event.
-
 The FMRI signal comes about first through changes in neuronal firing, and then
 by blood flow responses to the changes in neuronal firing.  In order to
 predict the FMRI signal to an event, we first need a prediction (model) of the
@@ -76,7 +72,7 @@ The impulse response
 
 Let's simplify a little by specifying that the event was really short.  Call
 this event |--| an *impulse*.  This simplifies our neural model to a single
-spike in time instead of a sustained rise (or box-car).
+spike in time instead of the sustained rise of the box-car function.
 
 .. plot::
     :context:
@@ -89,9 +85,6 @@ spike in time instead of a sustained rise (or box-car).
     plt.ylabel('neural signal')
     plt.ylim(0, 1.2)
     plt.title("Neural model for very brief event at time 4")
-
-So, this is our *impulse*.  Call our neural time-series the *input signal*.  Call
-our prediction for the hemodynamic response |--| the *output signal*.
 
 Let us now imagine that I know what the hemodynamic *response* will be to such
 an impulse.  I might have got this estimate from taking the FMRI signal
@@ -167,8 +160,8 @@ shifting by 4, as before, and then multiplying the HRF by 2:
     plt.title('Output BOLD signal for amplitude 2 impulse')
 
 What if I have several impulses?  For example, imagine I had an impulse
-amplitude 2 at time == 4, then another of amplitude 1 at time == 10.
-time == 20 amplitude 3?
+amplitude 2 at time == 4, then another of amplitude 1 at time == 10, and another
+of amplitude 3 at time == 20.
 
 .. plot::
     :context:
@@ -246,12 +239,12 @@ Now we have a general algorithm for making our output hemodynamic signal from
 our input neural signal:
 
 1. Start with a output vector that is a vector of zeros
-2. For each index in the *input vector* (the neural signal):
+2. For each index $i$ in the *input vector* (the neural signal):
 
-    3. Prepare a shifted copy of the HRF vector, starting at this index. Call this
-       the *shifted HRF vector*;
-    4. Multiply the shifted HRF vector by the value in the input at this index, to give the
-       shifted, scaled HRF vector*;
+    3. Prepare a shifted copy of the HRF vector, starting at $i$. Call this the
+       *shifted HRF vector*;
+    4. Multiply the shifted HRF vector by the value in the input at index $i$,
+       to give the *shifted, scaled HRF vector*;
     5. Add the shifted scaled HRF vector to the output.
 
 There is a little problem with our algorithm |--| the length of the output
@@ -261,7 +254,7 @@ Imagine that our input (neural) vector is N time points long.  Say the original
 HRF vector is M time points long.
 
 In our algorithm, when the iteration gets to the last index of the *input
-vector* (index == N-1), the shifted scaled HRF vector will, as ever, be M points
+vector* ($i = N-1$), the shifted scaled HRF vector will, as ever, be M points
 long.  If the output vector is the same length as the input vector, we can add
 only the first point of the new scaled IRF vector to the last point of the
 output vector, but all the subsequent values of the scaled IRF vector have no
@@ -335,9 +328,10 @@ scaled version of the HRF to the output, for every index.  This is step 5 of our
 algorithm.
 
 Now let us go back to our convolution algorithm.  Imagine that, instead of
-adding the shifted scaled HRF to the output vector, we store them as a row in an
-array, that has one row for each index in the input vector.  Then we get exactly
-the same output vector as before by taking the sum across the columns.
+adding the shifted scaled HRF to the output vector, we store each shifted scaled
+HRF as a row in an array, that has one row for each index in the input vector.
+Then we can get exactly the same output vector as before by taking the sum
+across the columns of this array:
 
 .. plot::
     :context:
@@ -402,8 +396,8 @@ Now remember matrix multiplication:
     \begin{pmatrix}
         xa + yb + zc   \\
         xd + ye + zf
-    =
     \end{pmatrix}
+    =
     \begin{pmatrix}
         x & y & z
     \end{pmatrix}
