@@ -37,3 +37,13 @@ Here is the feedback from the course just finished, and our response.
     response0
 
 .. include:: links_names.inc
+
+.. The hidden toctree below is to suppress build warnings
+
+.. toctree::
+    :hidden:
+
+    git_homework
+    git_setup
+    index
+    psych199

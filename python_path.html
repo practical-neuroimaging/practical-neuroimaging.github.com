@@ -1,0 +1,209 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Course on Practical Neuroimaging in Python &mdash; Practical neuroimaging analysis</title>
+    
+    <link rel="stylesheet" href="_static/nature.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.2',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="author" title="About these documents" href="about.html" />
+    <link rel="top" title="Practical neuroimaging analysis" href="index.html" />
+    <link rel="next" title="Practical neuroimaging, the sequel" href="schedule_2015.html" />
+    <link rel="prev" title="Convolution" href="on_convolution.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="schedule_2015.html" title="Practical neuroimaging, the sequel"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="on_convolution.html" title="Convolution"
+             accesskey="P">previous</a> |</li>
+<big><big><big><li><a href="index.html">Home</a> |&nbsp;</li>
+  <li><a href="https://github.com/practical-neuroimaging/pna-notebooks">Notebooks</a> |&nbsp;</li>
+  <li><a href="http://nipy.bic.berkeley.edu/pna">Data</a> |&nbsp;</li>
+  <li><a href="https://calmail.berkeley.edu/manage/list/listinfo/practical_fmri@lists.berkeley.edu">Mailing list</a> |&nbsp;</li></big></big></big>
+ 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="putting-modules-on-the-python-path">
+<h1>Putting modules on the Python path<a class="headerlink" href="#putting-modules-on-the-python-path" title="Permalink to this headline">¶</a></h1>
+<p>Let&#8217;s say I have a Python module called <tt class="docutils literal"><span class="pre">myfunctions.py</span></tt>.  I have stored this
+in a directory <tt class="docutils literal"><span class="pre">/Users/mb312/code</span></tt>.  So, the full path to the file is
+<tt class="docutils literal"><span class="pre">/Users/mb312/code/myfunctions.py</span></tt>.</p>
+<p>Here is the contents of <tt class="docutils literal"><span class="pre">myfunctions.py</span></tt>:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="sd">&quot;&quot;&quot; Some useful functions that I use, usefully</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="k">def</span> <span class="nf">add_badly</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span> <span class="o">+</span> <span class="mi">1</span>
+</pre></div>
+</div>
+<p>I&#8217;m working in some directory <tt class="docutils literal"><span class="pre">/Users/mb312/working</span></tt>
+(<tt class="docutils literal"><span class="pre">/Users/mb312/working</span></tt> is my current directory).</p>
+<p>I want to be able to start Python, <tt class="docutils literal"><span class="pre">import</span> <span class="pre">myfunctions</span></tt>, and then
+do something like:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">print</span><span class="p">(</span><span class="n">myfunctions</span><span class="o">.</span><span class="n">add_badly</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>and get the expected answer <tt class="docutils literal"><span class="pre">14</span></tt>.</p>
+<p>If I start Python and do that:</p>
+<div class="highlight-python"><div class="highlight"><pre>$ python
+Python 2.7.9 (v2.7.9:648dcafa7e5f, Dec 10 2014, 10:10:46)
+[GCC 4.2.1 (Apple Inc. build 5666) (dot 3)] on darwin
+Type &quot;help&quot;, &quot;copyright&quot;, &quot;credits&quot; or &quot;license&quot; for more information.
+&gt;&gt;&gt; import myfunctions
+Traceback (most recent call last):
+File &quot;&lt;stdin&gt;&quot;, line 1, in &lt;module&gt;
+ImportError: No module named myfunctions
+</pre></div>
+</div>
+<p>This is because Python does not know where to find <tt class="docutils literal"><span class="pre">myfunctions.py</span></tt>.</p>
+<p>When Python is looking for a new module, like <tt class="docutils literal"><span class="pre">myfunctions.py</span></tt>, it searches
+a list of directories stored as the <tt class="docutils literal"><span class="pre">path</span></tt> variable, in the <tt class="docutils literal"><span class="pre">sys</span></tt> module.</p>
+<p>Here is the contents of that variable on my system:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">sys</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span><span class="p">(</span><span class="s">&#39;</span><span class="se">\n</span><span class="s">&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="p">))</span>
+
+<span class="go">/Library/Frameworks/Python.framework/Versions/2.7/lib/python27.zip</span>
+<span class="go">/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7</span>
+<span class="go">/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/plat-darwin</span>
+<span class="go">/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/plat-mac</span>
+<span class="go">/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/plat-mac/lib-scriptpackages</span>
+<span class="go">/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/lib-tk</span>
+<span class="go">/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/lib-old</span>
+<span class="go">/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/lib-dynload</span>
+<span class="go">/Users/mb312/Library/Python/2.7/lib/python/site-packages</span>
+<span class="go">/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages</span>
+<span class="go">/Library/Python/2.7/site-packages</span>
+</pre></div>
+</div>
+<p>Notice that <tt class="docutils literal"><span class="pre">sys.path</span></tt> is a simple list:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="nb">type</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="p">)</span>
+<span class="go">&lt;type &#39;list&#39;&gt;</span>
+</pre></div>
+</div>
+<p>When I run the command <tt class="docutils literal"><span class="pre">import</span> <span class="pre">myfunctions</span></tt>, Python will look for a file
+<tt class="docutils literal"><span class="pre">myfunctions.py</span></tt> <a class="footnote-reference" href="#on-extensions" id="id1">[1]</a> in each of the directories in the list,
+starting with the first.  As soon as it finds this file, it stops, and imports
+it.  If it does not find the file, I get the <tt class="docutils literal"><span class="pre">ImportError</span></tt> we saw above.</p>
+<p>The <tt class="docutils literal"><span class="pre">sys.path</span></tt> list of directories is also called the <em>module search path</em>.
+See <a class="reference external" href="https://docs.python.org/2/tutorial/modules.html#the-module-search-path">https://docs.python.org/2/tutorial/modules.html#the-module-search-path</a> for
+more detail.</p>
+<p>If we want to be able to <tt class="docutils literal"><span class="pre">import</span> <span class="pre">myfunctions</span></tt> we need to put <em>the directory
+containing the module</em> into the <em>module search path</em>.  In our case we want to
+put the directory <tt class="docutils literal"><span class="pre">/Users/mb312/code</span></tt> onto the module search path.</p>
+<p>There are various ways to do this, but the most direct way to do that, is to
+change the value of the <tt class="docutils literal"><span class="pre">sys.path</span></tt> variable after starting Python.</p>
+<p>Because <tt class="docutils literal"><span class="pre">sys.path</span></tt> is a list of strings, I can append my directory
+string to the list using standard list methods, so that Python will now search
+the new directory.  In my case:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s">&#39;/Users/mb312/code&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Now we can import our custom module:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">myfunctions</span>
+</pre></div>
+</div>
+<table class="docutils footnote" frame="void" id="on-extensions" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id1">[1]</a></td><td>Most Python code is stored in files with the extension
+<tt class="docutils literal"><span class="pre">.py</span></tt>.  You can also write <a class="reference external" href="https://docs.python.org/2/extending/extending.html">extensions</a> for Python, which
+are compiled libraries that Python can also import.  You can define
+functions and classes in these files as you can for Python code in <tt class="docutils literal"><span class="pre">.py</span></tt>
+files.  These files have filename extensions that depend on the platform
+you are running on.  On Linux or OSX the extension is generally <tt class="docutils literal"><span class="pre">.so</span></tt>, on
+Windows, the extension is often <tt class="docutils literal"><span class="pre">.pyd</span></tt>.</td></tr>
+</tbody>
+</table>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="on_convolution.html"
+                        title="previous chapter">Convolution</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="schedule_2015.html"
+                        title="next chapter">Practical neuroimaging, the sequel</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/python_path.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="schedule_2015.html" title="Practical neuroimaging, the sequel"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="on_convolution.html" title="Convolution"
+             >previous</a> |</li>
+<big><big><big><li><a href="index.html">Home</a> |&nbsp;</li>
+  <li><a href="https://github.com/practical-neuroimaging/pna-notebooks">Notebooks</a> |&nbsp;</li>
+  <li><a href="http://nipy.bic.berkeley.edu/pna">Data</a> |&nbsp;</li>
+  <li><a href="https://calmail.berkeley.edu/manage/list/listinfo/practical_fmri@lists.berkeley.edu">Mailing list</a> |&nbsp;</li></big></big></big>
+ 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2013-2015, Matthew Brett and J-B Poline.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
+    </div>
+  </body>
+</html>

@@ -14,7 +14,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     '0.1',
+        VERSION:     '0.2',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -23,6 +23,7 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="author" title="About these documents" href="about.html" />
     <link rel="top" title="Practical neuroimaging analysis" href="index.html" />
     <link rel="up" title="Schedule" href="schedule.html" />
@@ -59,15 +60,44 @@
   <div class="section" id="day-4-first-statistics-version-control">
 <h1>Day 4: first statistics / version control<a class="headerlink" href="#day-4-first-statistics-version-control" title="Permalink to this headline">¶</a></h1>
 <p>3 / 13 / 2015</p>
-<p>Reading:</p>
+<div class="section" id="reading">
+<h2>Reading<a class="headerlink" href="#reading" title="Permalink to this headline">¶</a></h2>
+<p>We finish our git introduction with two short videos:</p>
+<iframe src="https://player.vimeo.com/video/121579300" width="500"
+height="342" frameborder="0" webkitallowfullscreen mozallowfullscreen
+allowfullscreen></iframe> <p><a
+href="https://vimeo.com/121579300">Introduction to the git working tree,
+repository and staging area</a> (18 minutes).</p>
+
+<iframe src="https://player.vimeo.com/video/121579601" width="500"
+height="341" frameborder="0" webkitallowfullscreen mozallowfullscreen
+allowfullscreen></iframe> <p><a href="https://vimeo.com/121579601">The
+links between git commits, and git branches</a> (9 minutes).</p></div>
+<div class="section" id="day">
+<h2>Day<a class="headerlink" href="#day" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="getting-started-with-version-control">
+<h3>Getting started with version control<a class="headerlink" href="#getting-started-with-version-control" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li>Make a branch, edit and commit;</li>
-<li>Merge;</li>
-<li>Push;</li>
+<li>Starting with version control;</li>
+<li>Make new git repository;</li>
+<li>Add module to git repository;</li>
+<li>Commit;</li>
+</ul>
+</div>
+<div class="section" id="on-the-python-path">
+<h3>On the Python path<a class="headerlink" href="#on-the-python-path" title="Permalink to this headline">¶</a></h3>
+<p>See <a class="reference internal" href="python_path.html"><em>Putting modules on the Python path</em></a>.</p>
+</div>
+<div class="section" id="our-first-pass-at-fmri-statistics">
+<h3>Our first pass at FMRI statistics<a class="headerlink" href="#our-first-pass-at-fmri-statistics" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
 <li>Splitting FMRI time series by slicing;</li>
 <li>Subtracting on blocks from off blocks;</li>
-<li>Visualizing result.</li>
+<li>Removing artefacts;</li>
+<li>Visualizing results.</li>
 </ul>
+</div>
+</div>
 </div>
 
 
@@ -76,6 +106,20 @@
       </div>
       <div class="sphinxsidebar">
         <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Day 4: first statistics / version control</a><ul>
+<li><a class="reference internal" href="#reading">Reading</a></li>
+<li><a class="reference internal" href="#day">Day</a><ul>
+<li><a class="reference internal" href="#getting-started-with-version-control">Getting started with version control</a></li>
+<li><a class="reference internal" href="#on-the-python-path">On the Python path</a></li>
+<li><a class="reference internal" href="#our-first-pass-at-fmri-statistics">Our first pass at FMRI statistics</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
   <h4>Previous topic</h4>
   <p class="topless"><a href="day3.html"
                         title="previous chapter">Day 3: version control / diagnostics</a></p>
@@ -125,7 +169,7 @@
       </ul>
     </div>
     <div class="footer">
-        &copy; Copyright 2013, Matthew Brett and J-B Poline.
+        &copy; Copyright 2013-2015, Matthew Brett and J-B Poline.
       Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
     </div>
   </body>
