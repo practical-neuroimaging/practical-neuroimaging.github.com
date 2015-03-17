@@ -238,7 +238,7 @@ Working out an algorithm
 Now we have a general algorithm for making our output hemodynamic signal from
 our input neural signal:
 
-1. Start with a output vector that is a vector of zeros
+1. Start with an output vector that is a vector of zeros;
 2. For each index $i$ in the *input vector* (the neural signal):
 
     3. Prepare a shifted copy of the HRF vector, starting at $i$. Call this the
@@ -256,10 +256,11 @@ HRF vector is M time points long.
 In our algorithm, when the iteration gets to the last index of the *input
 vector* ($i = N-1$), the shifted scaled HRF vector will, as ever, be M points
 long.  If the output vector is the same length as the input vector, we can add
-only the first point of the new scaled IRF vector to the last point of the
-output vector, but all the subsequent values of the scaled IRF vector have no
-corresponding index in the output.  The way to solve this is to extend the
-output vector by the necessary M-1 points. Now we can do our algorithm in code.
+only the first point of the new scaled HRF vector to the last point of the
+output vector, but all the subsequent values of the scaled HRF vector extend
+off the end of the output vector and have no corresponding index in the
+output.  The way to solve this is to extend the output vector by the necessary
+M-1 points. Now we can do our algorithm in code.
 
 .. plot::
     :context:
@@ -369,6 +370,7 @@ operation:
         input_value = neural_signal[i]
         # Scaling the stored HRF by the input value
         shifted_scaled_hrfs[i, :] = shifted_hrfs[i, :] * input_value
+    # Then the sum
     bold_signal_again = np.sum(shifted_scaled_hrfs, axis=0)
     # This gives exactly the same result, once again
     assert np.all(bold_signal == bold_signal_again)
@@ -441,8 +443,8 @@ matrix multiplying onto an input vector.
 Convolution is like cross-correlation
 =====================================
 
-Last, we are now ready to show something slightly odd that arises from the way
-that convolution works.
+We are now ready to show something slightly odd that arises from the way that
+convolution works.
 
 Consider index $i$ in the input (neural) vector.  Let's say $i = 25$.  We want to get
 value index $i$ in the output (hemodynamic vector). What do we need to do?
