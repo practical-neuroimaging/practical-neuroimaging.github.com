@@ -4,15 +4,15 @@ Day 5: convolution and correlation
 
 3 / 20 / 2015
 
-#######
+*******
 Reading
-#######
+*******
 
 Please read :doc:`this tutorial on convolution <on_convolution>`.
 
-###
+***
 Day
-###
+***
 
 * Creating the convolution kernel;
 * Extracting time series (slicing in 4th dimension);
