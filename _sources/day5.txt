@@ -8,7 +8,7 @@ Day 5: convolution and correlation
 Reading
 #######
 
-Please read :doc:`this tutorial on convolution `on_convolution`.
+Please read :doc:`this tutorial on convolution <on_convolution>`.
 
 ###
 Day
