@@ -13,10 +13,6 @@ visual stimulation, such as a flashing checkerboard.
 
 We will call each burst of stimulation an *event*.
 
-We will later want to see if the event has caused a change in the FMRI signal.
-In order to do that, we need to be able to predict the change in signal caused
-by the event.
-
 The FMRI signal comes about first through changes in neuronal firing, and then
 by blood flow responses to the changes in neuronal firing.  In order to
 predict the FMRI signal to an event, we first need a prediction (model) of the
@@ -52,7 +48,7 @@ seconds, might look like this:
     import numpy as np
     import matplotlib.pyplot as plt
 
-    times = np.arange(0, 30, 0.1)
+    times = np.arange(0, 40, 0.1)
     n_time_points = len(times)
     neural_signal = np.zeros(n_time_points)
     neural_signal[(times >= 4) & (times < 9)] = 1
@@ -68,50 +64,20 @@ Of course we could have had another neural model, with the activity gradually
 increasing, or starting high and then dropping, but let us stick to this
 simple model for now.
 
-The hemodynamic model
-=====================
+Now we need to predict our hemodynamic signal, given our prediction of neuronal
+firing.
 
-The signal we have actually collected in FMRI is not neural signal, but
-`blood-oxygen-level dependent`_ signal (BOLD).  The BOLD signal depends on the
-changes in blood flow, and responds relatively slowly to changes in neuronal
-activity.  For this reason the BOLD response is also often known as the
-hemodynamic response.  The BOLD (hemodynamic) signal to a very quick on-off
-neural event starting at time 0, looks something like this:
+The impulse response
+====================
 
-.. plot::
-    :context:
-
-    def afni_hrf(t):
-        "The hemodynamic response from the AFNI software package"
-        return t ** 8.6 * np.exp(-t / 0.547)
-
-    hrf_times = np.arange(0, 20, 0.1)
-    hrf_signal = afni_hrf(hrf_times)
-    plt.plot(hrf_times, hrf_signal)
-    plt.xlabel('time (seconds)')
-    plt.ylabel('BOLD signal')
-    plt.title('Estimated BOLD signal for event at time 0')
-
-This is the hemodynamic response to a very short neural event.  It is
-therefore also called the *hemodynamic response function* (HRF).
-
-We know that the neural signal will be transformed by this slower
-hemodynamic effect.  So, how do we use this information to get from a model of
-the time course of the neural signal to a model of the BOLD signal?
-
-This is the where convolution_ steps in.
-
-Convolution and the impulse response
-====================================
-
-Let's simplify a little by pretending that the event was really short.  Call
+Let's simplify a little by specifying that the event was really short.  Call
 this event |--| an *impulse*.  This simplifies our neural model to a single
-spike in time instead of a sustained rise (or box-car).
+spike in time instead of the sustained rise of the box-car function.
 
 .. plot::
     :context:
 
-    neural_signal = np.zeros_like(times)
+    neural_signal = np.zeros(n_time_points)
     i_time_4 = np.where(times == 4)[0]  # index of value 4 in "times"
     neural_signal[i_time_4] = 1  # A single spike at time == 4
     plt.plot(times, neural_signal)
@@ -120,227 +86,400 @@ spike in time instead of a sustained rise (or box-car).
     plt.ylim(0, 1.2)
     plt.title("Neural model for very brief event at time 4")
 
-So, this is our *impulse*.  Above we see the hemodynamic response to a very
-short impulse like this.  The HRF is the response in the FMRI signal to a very
-brief neural impulse.  In signal processing terms the HRF would be the
-response to the impulse, or `impulse response function <impulse response>`_
-(IRF).
-
-The idea of convolution is this: we assume that every time there is an impulse
-in the *input signal* (in our case, the neural signal), then there will be an
-IRF evoked in the *output signal*.
-
-We assume there is no difference in the relationship of the impulse to the
-response over time |--| one impulse always generates the same response.  This
-is the *time invariant* assumption.
-
-We assume that, if two evoked responses overlap, then we get the resulting output signal by
-adding up the evoked responses for each time point.  This is the *linear*
-assumption.
-
-If we make both of these assumptions then we have a *linear time-invariant*
-system, and this is the system for which convolution can do our work for us.
-
-We will see that the mathematical operation of *convolving* the neural input
-signal with the HRF gives us a prediction of the hemodynamic output signal, as
-long as we can make the *linear* and *time-invariant* assumptions.
-
-Convolution as adding responses
-===============================
-
-The principle of convolution is very simple.  For every impulse in the input
-signal, we add a matching copy of the IRF to the output signal.
-
-In the simplest case we might have a very brief neural impulse as in the plot
-above.
-
-Convolution will give us one copy of the IRF (HRF) in the output signal,
-starting at the position of the impulse.
-
-For now we will do the convolution with the numpy ``convolve`` routine without
-further explanation so you can see the output:
+Let us now imagine that I know what the hemodynamic *response* will be to such
+an impulse.  I might have got this estimate from taking the FMRI signal
+following very brief events, and averaging over many events.  Here is one such
+estimate of the hemodynamic *response* to a very brief stimulus:
 
 .. plot::
     :context:
 
-    bold_signal = np.convolve(neural_signal, hrf_signal)[:n_time_points]
+    def hrf(t):
+        "A hemodynamic response function"
+        return t ** 8.6 * np.exp(-t / 0.547)
+
+    hrf_times = np.arange(0, 20, 0.1)
+    hrf_signal = hrf(hrf_times)
+    plt.plot(hrf_times, hrf_signal)
+    plt.xlabel('time (seconds)')
+    plt.ylabel('BOLD signal')
+    plt.title('Estimated BOLD signal for event at time 0')
+
+This is the hemodynamic response to a neural impulse.  In signal processing
+terms this is the hemodynamic `impulse response function <impulse response>`_.
+It is usually called the hemodynamic response function (HRF), because it is a
+function that gives the predicted hemodynamic response at any given time
+following an impulse at time 0.
+
+Building the hemodynamic output from the neural input
+=====================================================
+
+We now have an easy way to predict the hemodynamic output from our single impulse
+at time 4.  We take the HRF (prediction for an impulse starting at time 0), and
+shift it by 4 seconds-worth to give our predicted output:
+
+.. plot::
+    :context:
+
+    n_hrf_points = len(hrf_signal)
+    bold_signal = np.zeros(n_time_points)
+    bold_signal[i_time_4:i_time_4 + n_hrf_points] = hrf_signal
     plt.plot(times, bold_signal)
     plt.xlabel('time (seconds)')
     plt.ylabel('bold signal')
-    plt.title('Output BOLD signal predicted by convolution')
+    plt.title('Output BOLD signal for event at time=4')
 
-The output is exactly the same as if we had added a time-shifted copy of the
-HRF to a vector of zeros.
-
-.. plot::
-    :context:
-    :nofigs:
-
-    n_hrf_points = len(hrf_signal)
-    bold_more_simple = np.zeros(n_time_points)
-    bold_more_simple[i_time_4:i_time_4 + n_hrf_points] = hrf_signal
-    assert np.all(bold_more_simple == bold_signal)
-
-Now let's say we have three impulses, at 4, 10, and 30 seconds:
+Our impulse so far has an amplitude of 1.  What if the impulse was twice as
+strong, with an amplitude of 2?
 
 .. plot::
     :context:
 
-    times_3 = np.arange(0, 50, 0.1)
-    n_time_points_3 = len(times_3)
-    neural_signal_3 = np.zeros(n_time_points_3)
-    i_time_4 = np.where(times_3 == 4)[0]  # index of value 4 in "times_3"
-    i_time_10 = np.where(times_3 == 10)[0]  # index of value 10 in "times_3"
-    i_time_30 = np.where(times_3 == 30)[0]  # index of value 30 in "times_3"
-    neural_signal_3[i_time_4] = 1  # A single spike at time == 4
-    neural_signal_3[i_time_10] = 1  # A single spike at time == 10
-    neural_signal_3[i_time_30] = 1  # A single spike at time == 30
-    plt.plot(times_3, neural_signal_3)
-    plt.xlabel('time (seconds)')
-    plt.ylabel('neural signal')
-    plt.ylim(0, 1.2)
-    plt.title('Neural model for very brief events at times 4, 10, 30')
-
-The convolution is the same as taking one HRF offset by 4 seconds, one by 10
-seconds and one by 30 seconds, and summing them up:
-
-.. plot::
-    :context:
-
-    bold_signal_3 = np.convolve(neural_signal_3, hrf_signal)[:n_time_points_3]
-    plt.plot(times_3, bold_signal_3)
-    plt.xlabel('time (seconds)')
-    plt.ylabel('bold signal')
-    plt.title('Output BOLD signal for 3 events predicted by convolution')
-
-Now say that the second event, at 10 seconds has twice the amplitude of the
-events at 4 and 30 seconds:
-
-.. plot::
-    :context:
-
-    neural_signal_3[i_time_10] = 2  # A bigger spike at time == 10
-    plt.plot(times_3, neural_signal_3)
+    neural_signal[i_time_4] = 2  # An impulse with amplitude 2
+    plt.plot(times, neural_signal)
     plt.xlabel('time (seconds)')
     plt.ylabel('neural signal')
     plt.ylim(0, 2.2)
-    plt.title('Neural model for larger event at 10 seconds')
+    plt.title('Neural model for amplitude 2 impulse')
 
-Now the convolution is the same as adding:
+Maybe I can make the assumption that, if the impulse is twice as large then the
+response will be twice as large.  This is the assumption that the response
+scales linearly with the impulse.
 
-* the HRF offset to 4 seconds and scaled by 1;
-* the HRF offset to 10 seconds and scaled by 2;
-* the HRF offset to 30 seconds and scaled by 1;
+Now I can predict the output for an impulse of amplitude 2 by taking my HRF,
+shifting by 4, as before, and then multiplying the HRF by 2:
 
 .. plot::
     :context:
 
-    bold_signal_3 = np.convolve(neural_signal_3, hrf_signal)[:n_time_points_3]
-    plt.plot(times_3, bold_signal_3)
+    bold_signal = np.zeros(n_time_points)
+    bold_signal[i_time_4:i_time_4 + n_hrf_points] = hrf_signal * 2
+    plt.plot(times, bold_signal)
     plt.xlabel('time (seconds)')
     plt.ylabel('bold signal')
-    plt.title('Output BOLD signal for larger event at 10 seconds')
+    plt.title('Output BOLD signal for amplitude 2 impulse')
 
-Convolution rephrased
+What if I have several impulses?  For example, imagine I had an impulse
+amplitude 2 at time == 4, then another of amplitude 1 at time == 10, and another
+of amplitude 3 at time == 20.
+
+.. plot::
+    :context:
+
+    neural_signal[i_time_4] = 2  # An impulse with amplitude 2
+    i_time_10 = np.where(times == 10)[0]  # index of value 10 in "times"
+    neural_signal[i_time_10] = 1  # An impulse with amplitude 1
+    i_time_20 = np.where(times == 20)[0]  # index of value 20 in "times"
+    neural_signal[i_time_20] = 3  # An impulse with amplitude 3
+    plt.plot(times, neural_signal)
+    plt.xlabel('time (seconds)')
+    plt.ylabel('neural signal')
+    plt.ylim(0, 3.2)
+    plt.title('Neural model for three impulses')
+
+Maybe I can also make the assumption that the response to an impulse will be
+exactly the same over time.  The response to any given impulse at time 10 will
+be the same as the response to the same impulse at time 4 or at time 30.
+
+In that case my job is still simple.  For the impulse amplitude 2 at time == 4,
+I add the HRF shifted to start at time == 4, and scaled by 2.  To that result I
+then add the HRF shifted to time == 10 and scaled by 1.  Finally, I further add
+the HRF shifted to time == 20 and scaled by 3:
+
+.. plot::
+    :context:
+
+    bold_signal = np.zeros(n_time_points)
+    bold_signal[i_time_4:i_time_4 + n_hrf_points] = hrf_signal * 2
+    bold_signal[i_time_10:i_time_10 + n_hrf_points] += hrf_signal * 1
+    bold_signal[i_time_20:i_time_20 + n_hrf_points] += hrf_signal * 3
+    plt.plot(times, bold_signal)
+    plt.xlabel('time (seconds)')
+    plt.ylabel('bold signal')
+    plt.title('Output BOLD signal for three impulses')
+
+At the moment, an *impulse* is an event that lasts for just one time point. In
+our case, the time vector (``times`` in the code above) has one point for every
+0.1 seconds (10 time points per second).
+
+What happens if an event lasts for 0.5 seconds?  Maybe I can assume that an
+event lasting 0.5 seconds has exactly the same effect as 5 impulses 0.1
+seconds apart:
+
+.. plot::
+    :context:
+
+    neural_signal[i_time_4:i_time_4 + 5] = 2
+    plt.plot(times, neural_signal)
+    plt.xlabel('time (seconds)')
+    plt.ylabel('neural signal')
+    plt.ylim(0, 3.2)
+    plt.title('Neural model including event lasting 0.5 seconds')
+
+Now I need to add a new shifted HRF for the impulse corresponding to time == 4,
+and for time == 4.1 and so on until time == 4.4:
+
+.. plot::
+    :context:
+
+    bold_signal = np.zeros(n_time_points)
+    for i in range(5):
+        bold_signal[i_time_4 + i:i_time_4  + i + n_hrf_points] += hrf_signal * 2
+    bold_signal[i_time_10:i_time_10 + n_hrf_points] += hrf_signal * 1
+    bold_signal[i_time_20:i_time_20 + n_hrf_points] += hrf_signal * 3
+    plt.plot(times, bold_signal)
+    plt.xlabel('time (seconds)')
+    plt.ylabel('bold signal')
+    plt.title('Output BOLD signal with event lasting 0.5 seconds')
+
+Working out an algorithm
+========================
+
+Now we have a general algorithm for making our output hemodynamic signal from
+our input neural signal:
+
+1. Start with a output vector that is a vector of zeros
+2. For each index $i$ in the *input vector* (the neural signal):
+
+    3. Prepare a shifted copy of the HRF vector, starting at $i$. Call this the
+       *shifted HRF vector*;
+    4. Multiply the shifted HRF vector by the value in the input at index $i$,
+       to give the *shifted, scaled HRF vector*;
+    5. Add the shifted scaled HRF vector to the output.
+
+There is a little problem with our algorithm |--| the length of the output
+vector.
+
+Imagine that our input (neural) vector is N time points long.  Say the original
+HRF vector is M time points long.
+
+In our algorithm, when the iteration gets to the last index of the *input
+vector* ($i = N-1$), the shifted scaled HRF vector will, as ever, be M points
+long.  If the output vector is the same length as the input vector, we can add
+only the first point of the new scaled IRF vector to the last point of the
+output vector, but all the subsequent values of the scaled IRF vector have no
+corresponding index in the output.  The way to solve this is to extend the
+output vector by the necessary M-1 points. Now we can do our algorithm in code.
+
+.. plot::
+    :context:
+
+    N = n_time_points
+    M = n_hrf_points
+    bold_signal = np.zeros(N + M - 1)  # adding the tail
+    for i in range(N):
+        input_value = neural_signal[i]
+        # Adding the shifted, scaled HRF
+        bold_signal[i : i + n_hrf_points] += hrf_signal * input_value
+    # We have to extend 'times' to deal with more points in 'bold_signal'
+    extra_times = np.arange(n_hrf_points - 1) * 0.1 + 40
+    times_and_tail = np.concatenate((times, extra_times))
+    plt.plot(times_and_tail, bold_signal)
+    plt.xlabel('time (seconds)')
+    plt.ylabel('bold signal')
+    plt.title('Output BOLD signal using our algorithm')
+
+We have *convolution*
 =====================
 
-The general principle of the convolution is this:
+We now have |--| convolution.  Here's the same thing using the numpy
+``convolve`` function:
 
-* Start with a output vector that is a vector of zeros
-* Iterate over each index in the *input vector* (in our case, the neural
-  signal);
-* Take the value of the input at this index, and multiply by the IRF (in our
-  case, the HRF) |--| call this the *scaled IRF vector*.
-* Add the scaled IRF vector to the output vector, with the first value in the
-  the scaled IRF vector added at the current index, the next at the next index
-  and so on.
+.. plot::
+    :context:
 
-Imagine the input vector has N elements, and the IRF has M elements.
+    bold_signal = np.convolve(neural_signal, hrf_signal)
+    plt.plot(times_and_tail, bold_signal)
+    plt.xlabel('time (seconds)')
+    plt.ylabel('bold signal')
+    plt.title('Our algorithm is the same as convolution')
 
-Notice that, when the iteration gets to the last index of the *input vector*
-(index == N-1), the scaled IRF vector will, as ever, be M points long.  If the
-output vector is the same length as the input vector, we can add only the
-first point of the new scaled IRF vector to the last point of the output
-vector, but all the subsequent values of the scaled IRF vector have no
-corresponding index in the output.  The way to solve this is to extend the
-output vector by the necessary M-1 points, so the output vector from a default
-convolution is N + M - 1 elements long:
+Convolution with matrices
+=========================
+
+For what follows, it is a bit easier to see what is going on with a lower time
+resolution |--| say one time point per second.  This time we'll make the first
+event last 3 seconds:
+
+.. plot::
+    :context:
+
+    times = np.arange(0, 40)  # One time point per second
+    n_time_points = len(times)
+    neural_signal = np.zeros(n_time_points)
+    neural_signal[4:7] = 1  # A 3 second event
+    neural_signal[10] = 1
+    neural_signal[20] = 3
+    hrf_times = np.arange(20)
+    hrf_signal = hrf(hrf_times)  # The HRF at one second time resolution
+    n_hrf_points = len(hrf_signal)
+    bold_signal = np.convolve(neural_signal, hrf_signal)
+    times_and_tail = np.arange(n_time_points + n_hrf_points - 1)
+    fig, axes = plt.subplots(3, 1, figsize=(8, 15))
+    axes[0].plot(times, neural_signal)
+    axes[0].set_title('Neural signal, 1 second resolution')
+    axes[1].plot(hrf_times, hrf_signal)
+    axes[1].set_title('Hemodynamic impulse response, 1 second resolution')
+    axes[2].plot(times_and_tail, bold_signal)
+    axes[2].set_title('Predicted BOLD signal from convolution, 1 second resolution')
+
+Our algorithm, which turned out to give convolution, had us add a shifted,
+scaled version of the HRF to the output, for every index.  This is step 5 of our
+algorithm.
+
+Now let us go back to our convolution algorithm.  Imagine that, instead of
+adding the shifted scaled HRF to the output vector, we store each shifted scaled
+HRF as a row in an array, that has one row for each index in the input vector.
+Then we can get exactly the same output vector as before by taking the sum
+across the columns of this array:
 
 .. plot::
     :context:
     :nofigs:
 
-    default_convolved = np.convolve(neural_signal_3, hrf_signal)
-    assert len(default_convolved) == n_time_points_3 + n_hrf_points - 1
-    assert len(default_convolved) == len(neural_signal_3) + len(hrf_signal) - 1
+    N = n_time_points
+    M = n_hrf_points
+    shifted_scaled_hrfs = np.zeros((N, N + M - 1))
+    for i in range(N):
+        input_value = neural_signal[i]
+        # Storing the shifted, scaled HRF
+        shifted_scaled_hrfs[i, i : i + n_hrf_points] = hrf_signal * input_value
+    bold_signal_again = np.sum(shifted_scaled_hrfs, axis=0)
+    # This gives exactly the same result as before
+    assert np.all(bold_signal == bold_signal_again)
 
-The algorithm for convolution is clearer in actual code:
+We can also do exactly the same operation by first making an array with the
+*shifted* HRFs, without scaling, and then multiplying each row by the
+corresponding input value, before doing the sum.  Here we are doing the shifting
+first, and then the scaling, and then the sum.  It all adds up to the same
+operation:
+
+.. plot::
+    :context:
+    :nofigs:
+
+    # First we make the shifted HRFs
+    shifted_hrfs = np.zeros((N, N + M - 1))
+    for i in range(N):
+        # Storing the shifted HRF without scaling
+        shifted_hrfs[i, i : i + n_hrf_points] = hrf_signal
+    # Then do the scaling
+    shifted_scaled_hrfs = np.zeros((N, N + M - 1))
+    for i in range(N):
+        input_value = neural_signal[i]
+        # Scaling the stored HRF by the input value
+        shifted_scaled_hrfs[i, :] = shifted_hrfs[i, :] * input_value
+    bold_signal_again = np.sum(shifted_scaled_hrfs, axis=0)
+    # This gives exactly the same result, once again
+    assert np.all(bold_signal == bold_signal_again)
+
+The `shifted_hrfs` array looks like this as an image:
 
 .. plot::
     :context:
 
-    # The output is N + M - 1 long
-    n_output = n_time_points_3 + n_hrf_points - 1
-    output = np.zeros(n_output)
-    for i in range(n_time_points_3):
-        neural_value = neural_signal_3[i]
-        scaled_irf = neural_value * hrf_signal
-        output[i:i+n_hrf_points] = output[i:i+n_hrf_points] + scaled_irf
-    corresponding_times = np.arange(n_output) * 0.1
-    plt.plot(corresponding_times, output)
+    plt.imshow(shifted_hrfs, cmap='gray', interpolation='nearest')
 
-Notice that this last plot has the same values as the previous plot, but with
-a 20 (-0.1) second tail at the end, caused by the M-1 extension in the output.
-
-What happens with a box-car instead of an impulse?
-==================================================
-
-We started off with a neural model where the nerves turned on at time == 4
-seconds and stayed on at the same level for 5 seconds.
-
-What would convolution to this signal?
-
-You can now predict what it will do, but here is what it looks like:
+Each new row of `shifted_hrfs` corresponds to the HRF, shifted by one more column to the right:
 
 .. plot::
     :context:
 
-    neural_signal_5s = np.zeros(n_time_points)
-    neural_signal_5s[(times >= 4) & (times < 9)] = 1
-    bold_signal_5s = np.convolve(neural_signal_5s, hrf_signal)[:n_time_points]
-    neural_signal_impulse = np.zeros(n_time_points)
-    neural_signal_impulse[(times == 4)] = 1
-    bold_signal_impulse = np.convolve(neural_signal_impulse, hrf_signal)[:n_time_points]
-    plt.plot(times, bold_signal_5s, label='5 second event signal')
-    plt.plot(times, bold_signal_impulse, label='impulse event signal')
-    plt.xlabel('time (seconds)')
-    plt.ylabel('bold signal')
-    plt.title('Output BOLD signal for event 5 seconds long')
-    plt.legend()
+    fig, axes = plt.subplots(5, 1)
+    for row_no in range(5):
+        axes[row_no].plot(shifted_hrfs[row_no, :])
 
-How did this happen?  The algorithm says that when the convolution gets to
-the position of time == 4 in the input, it finds a value 1, so adds an HRF to
-the output at that position.  It then moves one index along (corresponding to
-0.1 seconds) finds another value 1 and adds another HRF to the output and so
-on until the end of the event, at the time corresponding to 9 seconds - 0.1.
-So the output is the result of adding 50 HRFs, each offset by 0.1 seconds from
-the next.
+Now remember matrix multiplication:
 
-Put another way, the convolution says that you will get the same output from
-two events 0.1 seconds apart as you will from one event lasting 0.2 seconds.
-In the case of the 5 second event we are saying that the 5 second event will
-cause the same signal as 50 events all 0.1 seconds apart.  This is the linear
-time invariant assumption.
+.. math::
 
-When we use convolution we have to keep these assumptions in mind, because
-they may not be reasonable in some situations.
+    \begin{pmatrix}
+        xa + yb + zc   \\
+        xd + ye + zf
+    \end{pmatrix}
+    =
+    \begin{pmatrix}
+        x & y & z
+    \end{pmatrix}
+    \begin{pmatrix}
+        a & d \\
+        b & e \\
+        c & f
+    \end{pmatrix}
 
-More reading on convolution
-===========================
+Now let us make our input neural vector into a 1 by N row vector.  If we *matrix
+multiply* this vector onto the `shifted_hrfs` array (matrix), then we do the
+scaling of the HRFs and the sum operation, all in one go.  Like this:
 
-We can unpack this algorithm a further to show it can be done more efficiently
-in code, and how convolution can be implemented with matrix multiplication
-|--| see this `notebook on convolution
-<http://nbviewer.ipython.org/urls/raw.github.com/practical-neuroimaging/pna-notebooks/master/convolution.ipynb>`_
+.. plot::
+    :context:
+    :nofigs:
+
+    neural_vector = np.reshape(neural_signal, (1, N))
+    # The scaling and summing by the magic of matrix multiplication
+    bold_signal_again = neural_vector.dot(shifted_hrfs)
+    # This gives exactly the same result as previously, yet one more time
+    assert np.all(bold_signal == bold_signal_again)
+
+The matrix transpose rule says $(A B)^T = B^T A^T$ where $A^T$ is the transpose
+of matrix $A$.  So we could also do this exact same operation by doing a matrix
+multiply of the transpose of `shifted_hrfs` onto the `neural_signal` as a column
+vector:
+
+.. plot::
+    :context:
+    :nofigs:
+
+    bold_signal_again = shifted_hrfs.T.dot(neural_vector.T)
+    # Exactly the same, but transposed
+    assert np.all(bold_signal == bold_signal_again.T)
+
+In this last formulation, the `shifted_hrfs` matrix is the *convolution* matrix,
+in that (as we have just shown) you can apply the convolution of the HRF by
+matrix multiplying onto an input vector.
+
+Convolution is like cross-correlation
+=====================================
+
+Last, we are now ready to show something slightly odd that arises from the way
+that convolution works.
+
+Consider index $i$ in the input (neural) vector.  Let's say $i = 25$.  We want to get
+value index $i$ in the output (hemodynamic vector). What do we need to do?
+
+Looking at our non-transposed matrix formulation, we see that value $i$ in the
+output is the matrix multiplication of the neural signal (row vector) by column
+$i$ in `shifted_hrfs`.  There are a lot of zeros in this column |--| is there a
+way of avoiding all those (zero by something) multiplications?  If you stare at
+column 25 of `shifted_hrfs` for a while, you see that you will get the result
+that you need, avoiding most of the zeros, by doing this:
+
+.. plot::
+    :context:
+    :nofigs:
+
+    i = 25
+    M = n_hrf_points
+    neural_signal_part = neural_signal[i - M + 1 : i + 1]
+    hrf_column_part = shifted_hrfs[i - M + 1 : i + 1, i]
+    output_value = np.sum(neural_signal_part * hrf_column_part)
+    # It gives the right value
+    assert output_value == bold_signal[i]
+
+We have selected a length $M$ subset of the row and column because the HRF only
+lasts for $M$ points.  But now have a look at the part of the `shifted_hrfs`
+column that we extracted:
+
+.. plot::
+    :context:
+
+    plt.plot(hrf_column_part)
+
+It is the HRF, *reversed*.  This follows from the way we constructed the rows of
+the original matrix.  Each HRF was shifted across by one column, therefore,
+reading up the columns from the diagonals, will also give you the HRF shape.
+
+In this sense, convolution is rather like cross-correlating the reversed HRF
+with the input vector.
 
 .. include:: links_names.inc
