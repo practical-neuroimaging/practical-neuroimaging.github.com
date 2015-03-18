@@ -535,7 +535,7 @@ continuous generalization of the vector $\mathbf{n}$ in our discrete model.  The
 continuous function to convolve with is $g$.  In our case $g$ is the HRF, also
 a function of time.  $g$ is the generalized continuous version of the vector
 $\mathbf{h}$ in the previous section.  The convolution of $f$ and $g$ is often
-written $(f * g)$ and for any given input $t$ is defined as:
+written $(f * g)$ and for any given $t$ is defined as:
 
 .. math::
 
