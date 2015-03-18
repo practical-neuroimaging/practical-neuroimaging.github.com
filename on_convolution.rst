@@ -331,8 +331,8 @@ algorithm.
 Now let us go back to our convolution algorithm.  Imagine that, instead of
 adding the shifted scaled HRF to the output vector, we store each shifted scaled
 HRF as a row in an array, that has one row for each index in the input vector.
-Then we can get exactly the same output vector as before by taking the sum
-across the columns of this array:
+Then we can get the same output vector as before by taking the sum across the
+columns of this array:
 
 .. plot::
     :context:
@@ -346,8 +346,11 @@ across the columns of this array:
         # Storing the shifted, scaled HRF
         shifted_scaled_hrfs[i, i : i + n_hrf_points] = hrf_signal * input_value
     bold_signal_again = np.sum(shifted_scaled_hrfs, axis=0)
-    # This gives exactly the same result as before
-    assert np.all(bold_signal == bold_signal_again)
+
+    # We check that the result is almost exactly the same
+    # (allowing for tiny differences due to the order of +, * operations)
+    import numpy.testing as npt
+    npt.assert_almost_equal(bold_signal, bold_signal_again)
 
 We can also do exactly the same operation by first making an array with the
 *shifted* HRFs, without scaling, and then multiplying each row by the
@@ -372,17 +375,18 @@ operation:
         shifted_scaled_hrfs[i, :] = shifted_hrfs[i, :] * input_value
     # Then the sum
     bold_signal_again = np.sum(shifted_scaled_hrfs, axis=0)
-    # This gives exactly the same result, once again
-    assert np.all(bold_signal == bold_signal_again)
+    # This gives the same result, once again
+    npt.assert_almost_equal(bold_signal, bold_signal_again)
 
-The `shifted_hrfs` array looks like this as an image:
+The ``shifted_hrfs`` array looks like this as an image:
 
 .. plot::
     :context:
 
     plt.imshow(shifted_hrfs, cmap='gray', interpolation='nearest')
 
-Each new row of `shifted_hrfs` corresponds to the HRF, shifted by one more column to the right:
+Each new row of ``shifted_hrfs`` corresponds to the HRF, shifted by one more
+column to the right:
 
 .. plot::
     :context:
@@ -410,23 +414,27 @@ Now remember matrix multiplication:
     \end{pmatrix}
 
 Now let us make our input neural vector into a 1 by N row vector.  If we *matrix
-multiply* this vector onto the `shifted_hrfs` array (matrix), then we do the
+multiply* this vector onto the ``shifted_hrfs`` array (matrix), then we do the
 scaling of the HRFs and the sum operation, all in one go.  Like this:
 
 .. plot::
     :context:
     :nofigs:
 
-    neural_vector = np.reshape(neural_signal, (1, N))
+    def as_row_vector(v):
+        " Convert 1D vector to row vector "
+        return v.reshape((1, -1))
+
+    neural_vector = as_row_vector(neural_signal)
     # The scaling and summing by the magic of matrix multiplication
     bold_signal_again = neural_vector.dot(shifted_hrfs)
-    # This gives exactly the same result as previously, yet one more time
-    assert np.all(bold_signal == bold_signal_again)
+    # This gives the same result as previously, yet one more time
+    npt.assert_almost_equal(as_row_vector(bold_signal), bold_signal_again)
 
 The matrix transpose rule says $(A B)^T = B^T A^T$ where $A^T$ is the transpose
 of matrix $A$.  So we could also do this exact same operation by doing a matrix
-multiply of the transpose of `shifted_hrfs` onto the `neural_signal` as a column
-vector:
+multiply of the transpose of ``shifted_hrfs`` onto the ``neural_signal`` as a
+column vector:
 
 .. plot::
     :context:
@@ -434,14 +442,14 @@ vector:
 
     bold_signal_again = shifted_hrfs.T.dot(neural_vector.T)
     # Exactly the same, but transposed
-    assert np.all(bold_signal == bold_signal_again.T)
+    npt.assert_almost_equal(as_row_vector(bold_signal), bold_signal_again.T)
 
-In this last formulation, the `shifted_hrfs` matrix is the *convolution* matrix,
-in that (as we have just shown) you can apply the convolution of the HRF by
-matrix multiplying onto an input vector.
+In this last formulation, the ``shifted_hrfs`` matrix is the *convolution*
+matrix, in that (as we have just shown) you can apply the convolution of the
+HRF by matrix multiplying onto an input vector.
 
-Convolution is like cross-correlation
-=====================================
+Convolution is like cross-correlation with the reversed HRF
+===========================================================
 
 We are now ready to show something slightly odd that arises from the way that
 convolution works.
@@ -450,38 +458,94 @@ Consider index $i$ in the input (neural) vector.  Let's say $i = 25$.  We want t
 value index $i$ in the output (hemodynamic vector). What do we need to do?
 
 Looking at our non-transposed matrix formulation, we see that value $i$ in the
-output is the matrix multiplication of the neural signal (row vector) by column
-$i$ in `shifted_hrfs`.  There are a lot of zeros in this column |--| is there a
-way of avoiding all those (zero by something) multiplications?  If you stare at
-column 25 of `shifted_hrfs` for a while, you see that you will get the result
-that you need, avoiding most of the zeros, by doing this:
+output is the matrix multiplication of the neural signal (row vector) by
+column $i$ in ``shifted_hrfs``.  Here is a plot of column 25 in
+``shifted_hrfs``:
+
+.. plot::
+    :context:
+
+    plt.plot(shifted_hrfs[:, 25])
+
+The column contains a *reversed* copy of the HRF signal, where the first value
+from the original HRF signal is at index 25 ($i$), the second value is at
+index 24 ($i - 1$) and so on back to index 25 - 20 = 5.  The reversed HRF
+follows from the way we constructed the rows of the original matrix.  Each new
+HRF row was shifted across by one column, therefore, reading up the columns
+from the diagonals, will also give you the HRF shape.
+
+Let us rephrase the matrix multiplication that gives us the value at index $i$
+in the output vector.  Call the neural input vector $\mathbf{n}$ with values
+$n_0, n_1 ... n_{N-1}$.  Call the ``shifted_hrfs`` array $\mathbf{S}$ with $N$
+rows and $N + M - 1$ columns.  $\mathbf{S}_{:,i}$ is column $i$ in
+$\mathbf{S}$.
+
+So, the output value $o_i$ is given by the matrix multiplication of row
+$\mathbf{n}$ onto column $\mathbf{S}_{:,i}$.  The matrix multiplication (dot
+product) gives us the usual sum of products as the output:
+
+.. math::
+
+    o_i = \sum_{j=0}^{N-1}{n_j S_{j,i}}
+
+The formula above describes what is happening in the matrix multiplication in
+this piece of code:
 
 .. plot::
     :context:
     :nofigs:
 
     i = 25
-    M = n_hrf_points
-    neural_signal_part = neural_signal[i - M + 1 : i + 1]
-    hrf_column_part = shifted_hrfs[i - M + 1 : i + 1, i]
-    output_value = np.sum(neural_signal_part * hrf_column_part)
-    # It gives the right value
-    assert output_value == bold_signal[i]
+    bold_i = neural_vector.dot(shifted_hrfs[:, i])
 
-We have selected a length $M$ subset of the row and column because the HRF only
-lasts for $M$ points.  But now have a look at the part of the `shifted_hrfs`
-column that we extracted:
+    npt.assert_almost_equal(bold_i, bold_signal[i])
 
-.. plot::
-    :context:
+Can we simplify the formula without using the ``shifted_hrfs`` $\mathbf{S}$
+matrix?  We saw above that column $i$ in ``shifted_hrfs`` contains a reversed
+HRF, starting at index $i$ and going backwards towards index 0.
 
-    plt.plot(hrf_column_part)
+The 1-second resolution HRF is our array ``hrf_signal``.  So ``shifted_hrfs[i,
+i]`` contains ``hrf_signal[0]``, ``shifted_hrfs[i-1, i]`` contains
+``hrf_signal[1]`` and so on.  In general, for any index $j$ into
+``shifted_hrfs[:, i]``, ``shifted_hrfs[j, i] == hrf_signal[i-j]`` (assuming
+we return zero for any ``hrf_signal[i-j]`` where ``i-j`` is outside the
+bounds of the vector, with ``i-j`` < 0 or >= M).
 
-It is the HRF, *reversed*.  This follows from the way we constructed the rows of
-the original matrix.  Each HRF was shifted across by one column, therefore,
-reading up the columns from the diagonals, will also give you the HRF shape.
+Realizing this, we can replace $\mathbf{S}_{:,i}$ in our equation above.  Call
+our ``hrf_signal`` vector $\mathbf{h}$ with values $h_0, h_1, ... h_{M-1}$.
+Then:
 
-In this sense, convolution is rather like cross-correlating the reversed HRF
-with the input vector.
+.. math::
+
+    o_i = \sum_{j=0}^{N-1}{n_j h_{i-j}}
+
+This is the sum of the {products of the elements of $\mathbf{n}$ with the
+matching elements from the [reversed HRF vector $\mathbf{h}$, shifted by $i$
+elements]}.
+
+The mathematical definition for convolution
+===========================================
+
+See : convolution_.
+
+This brings us to the abstract definition of convolution for continuous
+functions.
+
+In general, call the continuous input a function $f(\tau)$.  In our case the
+input signal is the neuronal model, that is a function of time.  This is the
+continuous generalization of the vector $\mathbf{n}$ in our discrete model.  The
+continuous function to convolve with is $g(\tau)$.  In our case $g(\tau)$ is
+the HRF, also a function of time.  $g(\tau)$ is the generalized continuous
+version of $\mathbf{h}$.  The convolution of $f$ and $g$ is often written $(f
+* g)$ and for any given input $t$ is defined as:
+
+.. math::
+
+    (f * g )(t) \stackrel{\mathrm{def}}{=}\ \int_{-\infty}^\infty f(\tau)\,
+    g(t - \tau)\, d\tau
+
+As you can see, and as we have already discovered in the discrete case, the
+convolution in the integral of the product of the two functions as the second
+function $g$ is reversed and shifted.
 
 .. include:: links_names.inc
