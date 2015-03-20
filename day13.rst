@@ -2,7 +2,7 @@
 Day 13: testing hypotheses with t and F contrasts
 #################################################
 
-5 / 15 / 2015
+5 / 22 / 2015
 
 Reading:
     * Notebook on t / F - version of :

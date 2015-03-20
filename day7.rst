@@ -2,7 +2,7 @@
 Day 7: diagnostics using principal component analysis
 #####################################################
 
-4 / 3 / 2015
+4 / 10 / 2015
 
 This day is for us to practice working with matrices, and to get an idea of
 the level of underlying variance in data.

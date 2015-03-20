@@ -2,7 +2,7 @@
 Day 8: 1D interpolation and slice timing
 ########################################
 
-4 / 10 / 2015
+4 / 17 / 2015
 
 * Notebook on interpolation and slice timing e.g.
   http://nbviewer.ipython.org/urls/bitbucket.org/matthewbrett/talks/raw/master/processing_i/slice_timing.ipynb

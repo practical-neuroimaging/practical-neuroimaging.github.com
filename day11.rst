@@ -2,7 +2,7 @@
 Day 11: registration between subjects
 #####################################
 
-5 / 1 / 2015
+5 / 8 / 2015
 
 Reading:
 

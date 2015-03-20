@@ -2,7 +2,7 @@
 Day 12: smoothing and modeling
 ##############################
 
-5 / 8 / 2015
+5 / 15 / 2015
 
 Reading:
 

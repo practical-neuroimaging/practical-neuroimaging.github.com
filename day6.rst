@@ -2,7 +2,7 @@
 Day 6: regression and the general linear model
 ##############################################
 
-3 / 27 / 2015
+4 / 3 / 2015
 
 *******
 Reading
