@@ -529,13 +529,13 @@ The mathematical definition for convolution
 This brings us to the abstract definition of convolution for continuous
 functions.
 
-In general, call the continuous input a function $f$.  In our case the
-input signal is the neuronal model, that is a function of time.  This is the
-continuous generalization of the vector $\mathbf{n}$ in our discrete model.  The
-continuous function to convolve with is $g$.  In our case $g$ is the HRF, also
-a function of time.  $g$ is the generalized continuous version of the vector
-$\mathbf{h}$ in the previous section.  The convolution of $f$ and $g$ is often
-written $(f * g)$ and for any given $t$ is defined as:
+In general, call the continuous input a function $f$.  In our case the input
+signal is the neuronal model, that is a function of time.  This is the
+continuous generalization of the vector $\mathbf{n}$ in our discrete model.
+The continuous function to convolve with is $g$.  In our case $g$ is the HRF,
+also a function of time.  $g$ is the generalized continuous version of the
+vector $\mathbf{h}$ in the previous section.  The convolution of $f$ and $g$
+is often written $(f * g)$ and for any given $t$ is defined as:
 
 .. math::
 
@@ -543,7 +543,7 @@ written $(f * g)$ and for any given $t$ is defined as:
     g(t - \tau)\, d\tau
 
 As you can see, and as we have already discovered in the discrete case, the
-convolution in the integral of the product of the two functions as the second
+convolution is the integral of the product of the two functions as the second
 function $g$ is reversed and shifted.
 
 See : the `wikipedia convolution definition section
