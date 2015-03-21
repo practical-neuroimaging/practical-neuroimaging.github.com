@@ -47,3 +47,19 @@ Our first pass at FMRI statistics
 * Subtracting on blocks from off blocks;
 * Removing artefacts;
 * Visualizing results.
+
+*********
+Exercises
+*********
+
+We start with a type-along session with git.
+
+Then we go on to the usual instructions:
+
+* ``cd pna/pna2015``
+* ``git pull``
+* ``cd day4``
+* ``ipython notebook``
+
+There is a web page listing of the exercise files at
+https://github.com/practical-neuroimaging/pna2015/tree/master/day4

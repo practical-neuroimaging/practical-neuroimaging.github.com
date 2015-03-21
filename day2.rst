@@ -95,6 +95,9 @@ Revision from homework
 Some useful background resources
 --------------------------------
 
+There is a web page listing of the day 2 exercise files at
+https://github.com/practical-neuroimaging/pna2015/tree/master/day2
+
 * What is an image? e.g.
   http://nbviewer.ipython.org/urls/bitbucket.org/matthewbrett/talks/raw/master/processing_i/what_is_an_image.ipynb
 

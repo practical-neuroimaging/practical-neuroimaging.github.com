@@ -28,7 +28,7 @@ Day
 ***
 
 * Loading data with nibabel;
-* Four dimension is space then time;
+* Four dimensions is space then time;
 * Slicing over arbitrary dimensions (including time);
 * Using boolean arrays for indexing;
 * Python functions;
@@ -46,5 +46,19 @@ Day
 * Make new git repository;
 * Add module to git repository;
 * Commit;
+
+*********
+Exercises
+*********
+
+The usual instructions:
+
+* ``cd pna/pna2015``
+* ``git pull``
+* ``cd day3``
+* ``ipython notebook``
+
+There is a web page listing of the exercise files at
+https://github.com/practical-neuroimaging/pna2015/tree/master/day3
 
 .. include:: links_names.inc
