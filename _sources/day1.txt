@@ -28,7 +28,13 @@ Day
 The exercises
 *************
 
+If you haven't done this already, see the instructions in :doc:`day0` on how
+to get the repository for the exercises.
+
 * ``cd pna/pna2015``
 * ``git pull``
 * ``cd day1``
 * ``ipython notebook``
+
+There is a web page listing of the exercise files at
+https://github.com/practical-neuroimaging/pna2015/tree/master/day1

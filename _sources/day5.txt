@@ -22,13 +22,18 @@ Day
 * Correlating the convolved time course with the data.
 * Writing our own correlation function.
 
-::
+*********
+Exercises
+*********
 
-    cd pna2015/day5
-    git pull
+* ``cd pna/pna2015``
+* ``git pull``
+* ``cd day5``
+* ``ipython notebook``
 
-Start with `hrf_convolution` notebook.
+Start with ``hrf_convolution`` notebook.
 
-If you have time, go on to the `more_correlation` notebook.
+If you have time, go on to the ``more_correlation`` notebook.
 
-Have fun.
+There is a web page listing of the exercise files at
+https://github.com/practical-neuroimaging/pna2015/tree/master/day5
