@@ -11,7 +11,8 @@ neuroimaging analysis at UC Berkeley `brain imaging center`_ (BIC).
 
 The course ran from February until October 2013 - please see the :doc:`program`.
 
-We plan to run the course again next year, we'll announce on the `mailing list`_
+We revised the course for 2015 - see :doc:`the current course pages
+</index>`.
 
 .. toctree::
     :maxdepth: 3
@@ -24,10 +25,10 @@ We plan to run the course again next year, we'll announce on the `mailing list`_
     example_data
     program
 
-This was a new course, and we will be redesigning it with experience of what
-works and what does not.
+This was a new course, and we planned to redesign it with experience of what
+worked and what did not.  The result was the 2015 course.
 
-Here is the feedback from the course just finished, and our response.
+Here is the feedback from the 2013 course, and our response.
 
 .. toctree::
     :maxdepth: 1

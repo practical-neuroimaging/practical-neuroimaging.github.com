@@ -8,33 +8,41 @@
     
     <title>Course on Practical Neuroimaging in Python &mdash; Practical neuroimaging analysis</title>
     
-    <link rel="stylesheet" href="../_static/nature.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/nature.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '../',
+        URL_ROOT:    './',
         VERSION:     '0.2',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
       };
     </script>
-    <script type="text/javascript" src="../_static/jquery.js"></script>
-    <script type="text/javascript" src="../_static/underscore.js"></script>
-    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <link rel="author" title="About these documents" href="../about.html" />
-    <link rel="top" title="Practical neuroimaging analysis" href="../index.html" /> 
+    <link rel="author" title="About these documents" href="about.html" />
+    <link rel="top" title="Practical neuroimaging analysis" href="index.html" />
+    <link rel="next" title="Where and when and what?" href="where_and_when.html" />
+    <link rel="prev" title="Aim of the course" href="about.html" /> 
   </head>
   <body>
     <div class="related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
-          <a href="../genindex.html" title="General Index"
+          <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
-<big><big><big><li><a href="../index.html">Home</a> |&nbsp;</li>
+        <li class="right" >
+          <a href="where_and_when.html" title="Where and when and what?"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="about.html" title="Aim of the course"
+             accesskey="P">previous</a> |</li>
+<big><big><big><li><a href="index.html">Home</a> |&nbsp;</li>
   <li><a href="https://github.com/practical-neuroimaging/pna2015">Exercises</a> |&nbsp;</li>
   <li><a href="https://calmail.berkeley.edu/manage/list/listinfo/practical_fmri@lists.berkeley.edu">Mailing list</a> |&nbsp;</li></big></big></big>
  
@@ -46,18 +54,26 @@
         <div class="bodywrapper">
           <div class="body">
             
-  <div class="section" id="aim-of-the-course">
-<span id="aims-2013"></span><h1>Aim of the course<a class="headerlink" href="#aim-of-the-course" title="Permalink to this headline">¶</a></h1>
-<p>We aim to teach you how to work with data and with code so that you can get a
-deeper understanding of how the methods work, how they can fail, how to fix
-them, and how to develop new methods, if you need them.</p>
-<p>We hope that you will come out of this course feeling comfortable working with
-data from raw images to finished activation maps.  We will teach you the
-standard best practice of how to work with code and data to make your analyses
-more reliable, easier to share, and easier to reproduce.</p>
-<p>We&#8217;ll use <a class="reference external" href="http://www.python.org">Python</a> for most of the course, but the principles apply equally to
-<a class="reference external" href="http://www.mathworks.com">MATLAB</a>, and we&#8217;ll also be using some MATLAB routines and standard packages such
-as <a class="reference external" href="http://afni.nimh.nih.gov/afni">AFNI</a>, <a class="reference external" href="http://www.fmrib.ox.ac.uk/fsl">FSL</a> and <a class="reference external" href="http://www.fil.ion.ucl.ac.uk/spm">SPM</a>.</p>
+  <div class="section" id="format-of-the-class">
+<h1>Format of the class<a class="headerlink" href="#format-of-the-class" title="Permalink to this headline">¶</a></h1>
+<ul>
+<li><p class="first">Prior reading / homework for each week of about 30 minutes;</p>
+</li>
+<li><p class="first">Class is 2 hours:</p>
+<blockquote>
+<div><ul class="simple">
+<li>10 minutes debrief from previous class</li>
+<li>40 minutes talk introduction + questions;</li>
+<li>60 minutes problems;</li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+<p>As we cover the material, we will also pause at times to cover how to do:</p>
+<ul class="simple">
+<li>version control;</li>
+<li>code collaboration.</li>
+</ul>
 </div>
 
 
@@ -66,14 +82,20 @@ as <a class="reference external" href="http://afni.nimh.nih.gov/afni">AFNI</a>, 
       </div>
       <div class="sphinxsidebar">
         <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="about.html"
+                        title="previous chapter">Aim of the course</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="where_and_when.html"
+                        title="next chapter">Where and when and what?</a></p>
   <h3>This Page</h3>
   <ul class="this-page-menu">
-    <li><a href="../_sources/2013/aim.txt"
+    <li><a href="_sources/format.txt"
            rel="nofollow">Show Source</a></li>
   </ul>
 <div id="searchbox" style="display: none">
   <h3>Quick search</h3>
-    <form class="search" action="../search.html" method="get">
+    <form class="search" action="search.html" method="get">
       <input type="text" name="q" />
       <input type="submit" value="Go" />
       <input type="hidden" name="check_keywords" value="yes" />
@@ -92,9 +114,15 @@ as <a class="reference external" href="http://afni.nimh.nih.gov/afni">AFNI</a>, 
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
-          <a href="../genindex.html" title="General Index"
+          <a href="genindex.html" title="General Index"
              >index</a></li>
-<big><big><big><li><a href="../index.html">Home</a> |&nbsp;</li>
+        <li class="right" >
+          <a href="where_and_when.html" title="Where and when and what?"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="about.html" title="Aim of the course"
+             >previous</a> |</li>
+<big><big><big><li><a href="index.html">Home</a> |&nbsp;</li>
   <li><a href="https://github.com/practical-neuroimaging/pna2015">Exercises</a> |&nbsp;</li>
   <li><a href="https://calmail.berkeley.edu/manage/list/listinfo/practical_fmri@lists.berkeley.edu">Mailing list</a> |&nbsp;</li></big></big></big>
  
