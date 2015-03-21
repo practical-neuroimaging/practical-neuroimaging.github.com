@@ -30,10 +30,11 @@ Background
   recent news article about the benefits of using Python for scientific
   programming.
 * `Essay by Peter Norvig <http://norvig.com/21-days.html>`_.  `Peter Norvig
-  <http://en.wikipedia.org/wiki/Peter_Norvig>` is director of research at
+  <http://en.wikipedia.org/wiki/Peter_Norvig>`_ is director of research at
   Google.  The essay explains that, to learn programming, and therefore how to
-  do computational science well, takes a long time to learn.  We plan to teach
-  you the steps that help you keep learning so you continue to get better.
+  do computational science well, takes a long time.  We plan to teach you the
+  steps so that you can continue learning computing for the rest of your
+  career.
 * Greg Wilson's article on scientific computing: Wilson, Greg, et al. `Best
   practices for scientific computing.
   <http://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1001745>`_

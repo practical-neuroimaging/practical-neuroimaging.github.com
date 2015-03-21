@@ -19,6 +19,7 @@ Course news and announcements go to the `mailing list`_
     :maxdepth: 2
 
     about
+    format
     where_and_when
     reading
     office_hours
