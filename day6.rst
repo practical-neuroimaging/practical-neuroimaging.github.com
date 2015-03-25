@@ -4,12 +4,16 @@ Day 6: regression and the general linear model
 
 3 / 27 / 2015
 
-Reading:
+*******
+Reading
+*******
 
-* Poline and Brett 2012 : http://matthew.dynevor.org/_downloads/does_glm_love.pdf
-* Notebook on GLM / contrasts - at: http://perrin.dynevor.org/glm_intro.html
+* Introduction to the general linear model at:
+  http://perrin.dynevor.org/glm_intro.html
 
-Day:
+***
+Day
+***
 
 * Load time course;
 * rebuild convolved regressor;
