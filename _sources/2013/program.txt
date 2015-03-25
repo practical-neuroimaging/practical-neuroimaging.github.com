@@ -22,7 +22,7 @@ We aimed to cover:
 * Methods for correcting for multiple comparisons
 * Multisubject analysis and random effects
 
-(we did not cover the multi-subject analysese or multiple comparisons)
+(we did not cover the multi-subject analyses or multiple comparisons)
 
 Other subjects we considered covering according to time and interest:
 
