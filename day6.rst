@@ -15,11 +15,31 @@ Reading
 Day
 ***
 
-* Load time course;
-* rebuild convolved regressor;
-* set up matrices;
-* run estimation;
-* visualize result;
-* replicate subtraction analysis from previous day with dummy regressors;
-* visualize result;
-* (relationship of correlation and regression).
+* git:
+
+  * remotes;
+  * branches
+
+* testing
+* regression in FMRI:
+
+    * Load time course;
+    * rebuild convolved regressor;
+    * set up matrices;
+    * run estimation;
+    * visualize;
+    * improving the model;
+    * making t-statistics.
+
+*********
+Exercises
+*********
+
+* ``cd pna/pna2015``
+* ``git pull``
+* ``ipython notebook``
+
+Navigate to ``day6`` directory in notebook.
+
+There is a web page listing of the exercise files at
+https://github.com/practical-neuroimaging/pna2015/tree/master/day6
