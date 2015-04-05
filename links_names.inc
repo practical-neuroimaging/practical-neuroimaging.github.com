@@ -1,3 +1,5 @@
+.. vim:ft=rst
+
 .. Course
 .. _mailing list: https://calmail.berkeley.edu/manage/list/listinfo/practical_fmri@lists.berkeley.edu
 .. _course web directory: http://nipy.bic.berkeley.edu/practical_neuroimaging/
@@ -121,6 +123,10 @@
 .. _Scipy lecture notes: http://scipy-lectures.github.io
 .. _numpy array object: http://scipy-lectures.github.io/intro/numpy/array_object.html
 .. _Array operations: http://scipy-lectures.github.io/intro/numpy/operations.html
+
+.. Ideas
+.. _principal component analysis:
+   https://en.wikipedia.org/wiki/Principal_component_analysis
 
 .. People
 .. _Matthew : http://matthew.dynevor.org

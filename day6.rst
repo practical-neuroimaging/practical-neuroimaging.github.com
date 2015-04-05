@@ -41,5 +41,8 @@ Exercises
 
 Navigate to ``day6`` directory in notebook.
 
+We will start with the ``working_with_utilities.ipynb`` and then go on to
+``regression.ipynb``.
+
 There is a web page listing of the exercise files at
 https://github.com/practical-neuroimaging/pna2015/tree/master/day6
