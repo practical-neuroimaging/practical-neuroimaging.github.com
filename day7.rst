@@ -5,26 +5,25 @@ Day 7: diagnostics using principal component analysis
 4 / 10 / 2015
 
 This class is for us to get an idea of the variation in the FMRI data, and to
-practice our linear algebra by working with images as matrices. We will do
-this using `principal component analysis`_ (PCA).
+start working with images as matrices. We will do this using `principal
+component analysis`_ (PCA).
 
 *******
 Reading
 *******
 
-PCA is useful for our purpose, for two reasons:
+In the class we will cover what PCA is and how it works.
 
-#. it is a useful way of investigating the image data in more depth,
-   including screening for image artifacts.
-#. it is good practice for thinking about the kind of linear algebra that
-   comes up a lot in the GLM statistics and other places in image analysis;
+For this explanation we need some basic ideas from linear algebra, and in
+particular, the idea of projecting a vector onto another vector using the dot
+product.  This background will also be useful to us later in thinking about
+regressors and statistical models.
 
-To get ready for the PCA, we need some basic linear algebra under our belts,
-to get us used to dot products, angles between vectors, and projections.
+So the "readings" for this week are some excellent Khan academy videos on
+linear algebra.
 
-Khan academy has some excellent tutorials on these subjects.
-
-Here is the basic background on dot products:
+Basic background on dot products
+================================
 
 * `Vector dot product and vector length
   <https://www.khanacademy.org/math/linear-algebra/vectors_and_spaces/dot_cross_products/v/vector-dot-product-and-vector-length>`_
@@ -35,26 +34,37 @@ Here is the basic background on dot products:
   (11 minutes) (reminding us of - and proving - some mathematical properties
   of dot products on vectors).
 
-These are good extra background:
+Helpful extra background
+========================
+
+Optional but highly recommended:
 
 * `Defining the angle between vectors
   <https://www.khanacademy.org/math/linear-algebra/vectors_and_spaces/dot_cross_products/v/defining-the-angle-between-vectors>`_
   (25 minutes) (among other things - why orthogonal vectors have dot product
   of zero);
-* `Unit vectors <https://www.khanacademy.org/math/linear-algebra/matrix_transformations/lin_trans_examples/v/unit-vectors>`_ (7 minutes).
+* `Unit vectors
+  <https://www.khanacademy.org/math/linear-algebra/matrix_transformations/lin_trans_examples/v/unit-vectors>`_
+  (7 minutes).
 
-The last video is the key homework for the class.  The videos above are
+Key video on projecting vectors
+===============================
+
+The following video is the key homework for the class.  The videos above are
 background for this video.
 
 * `Introduction to projections
   <https://www.khanacademy.org/math/linear-algebra/matrix_transformations/lin_trans_examples/v/introduction-to-projections>`_
   (15 minutes);
 
-If you have extra time on your hands or feel you already know about matrices
-and projection and want something more advanced, this is introductory
-`tutorial on principal component analysis <http://arxiv.org/abs/1404.1100>`_.
-It does assume that you know about projecting vectors, which you will, after
-covering the Khan academy videos.
+If you are racing ahead
+=======================
+
+If you have extra time on your hands or you are confident you already know
+about matrices and projection and want something more advanced, this is
+introductory `tutorial on principal component analysis
+<http://arxiv.org/abs/1404.1100>`_.  It does assume that you know about
+projecting vectors, which you will, after covering the Khan academy videos.
 
 ***
 Day
