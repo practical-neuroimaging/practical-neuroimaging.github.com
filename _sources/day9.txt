@@ -2,7 +2,7 @@
 Day 9: optimization, 2D interpolation and registration
 ######################################################
 
-4 / 17 / 2015
+4 / 24 / 2015
 
 Reading:
 

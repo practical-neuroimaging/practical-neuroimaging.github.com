@@ -58,24 +58,69 @@
             
   <div class="section" id="day-7-diagnostics-using-principal-component-analysis">
 <h1>Day 7: diagnostics using principal component analysis<a class="headerlink" href="#day-7-diagnostics-using-principal-component-analysis" title="Permalink to this headline">¶</a></h1>
-<p>4 / 3 / 2015</p>
-<p>This day is for us to practice working with matrices, and to get an idea of
-the level of underlying variance in data.</p>
-<p>Reading:</p>
+<p>4 / 10 / 2015</p>
+<p>This class is for us to get an idea of the variation in the FMRI data, and to
+start working with images as matrices. We will do this using <a class="reference external" href="https://en.wikipedia.org/wiki/Principal_component_analysis">principal
+component analysis</a> (PCA).</p>
+<div class="section" id="reading">
+<h2>Reading<a class="headerlink" href="#reading" title="Permalink to this headline">¶</a></h2>
+<p>In the class we will cover what PCA is and how it works.</p>
+<p>For this explanation we need some basic ideas from linear algebra, and in
+particular, the idea of projecting a vector onto another vector using the dot
+product.  This background will also be useful to us later in thinking about
+regressors and statistical models.</p>
+<p>So the &#8220;readings&#8221; for this week are some excellent Khan academy videos on
+linear algebra.</p>
+<div class="section" id="basic-background-on-dot-products">
+<h3>Basic background on dot products<a class="headerlink" href="#basic-background-on-dot-products" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li>Notebook on diagnostics:
-<a class="reference external" href="http://nbviewer.ipython.org/urls/bitbucket.org/matthewbrett/talks/raw/master/processing_i/diagnostics.ipynb">http://nbviewer.ipython.org/urls/bitbucket.org/matthewbrett/talks/raw/master/processing_i/diagnostics.ipynb</a></li>
-<li>A tutorial on principal component analysis: <a class="reference external" href="http://arxiv.org/abs/1404.1100">http://arxiv.org/abs/1404.1100</a></li>
+<li><a class="reference external" href="https://www.khanacademy.org/math/linear-algebra/vectors_and_spaces/dot_cross_products/v/vector-dot-product-and-vector-length">Vector dot product and vector length</a>
+(9 minutes) (calculating vector length in N dimensions, and the relationship
+to the vector dot product);</li>
+<li><a class="reference external" href="https://www.khanacademy.org/math/linear-algebra/vectors_and_spaces/dot_cross_products/v/proving-vector-dot-product-properties">Proving vector dot product properties</a>
+(11 minutes) (reminding us of - and proving - some mathematical properties
+of dot products on vectors).</li>
 </ul>
-<p>Day:</p>
+</div>
+<div class="section" id="helpful-extra-background">
+<h3>Helpful extra background<a class="headerlink" href="#helpful-extra-background" title="Permalink to this headline">¶</a></h3>
+<p>Optional but highly recommended:</p>
 <ul class="simple">
-<li>Get code from notebook;</li>
+<li><a class="reference external" href="https://www.khanacademy.org/math/linear-algebra/vectors_and_spaces/dot_cross_products/v/defining-the-angle-between-vectors">Defining the angle between vectors</a>
+(25 minutes) (among other things - why orthogonal vectors have dot product
+of zero);</li>
+<li><a class="reference external" href="https://www.khanacademy.org/math/linear-algebra/matrix_transformations/lin_trans_examples/v/unit-vectors">Unit vectors</a>
+(7 minutes).</li>
+</ul>
+</div>
+<div class="section" id="key-video-on-projecting-vectors">
+<h3>Key video on projecting vectors<a class="headerlink" href="#key-video-on-projecting-vectors" title="Permalink to this headline">¶</a></h3>
+<p>The following video is the key homework for the class.  The videos above are
+background for this video.</p>
+<ul class="simple">
+<li><a class="reference external" href="https://www.khanacademy.org/math/linear-algebra/matrix_transformations/lin_trans_examples/v/introduction-to-projections">Introduction to projections</a>
+(15 minutes);</li>
+</ul>
+</div>
+<div class="section" id="if-you-are-racing-ahead">
+<h3>If you are racing ahead<a class="headerlink" href="#if-you-are-racing-ahead" title="Permalink to this headline">¶</a></h3>
+<p>If you have extra time on your hands or you are confident you already know
+about matrices and projection and want something more advanced, this is
+introductory <a class="reference external" href="http://arxiv.org/abs/1404.1100">tutorial on principal component analysis</a>.  It does assume that you know about
+projecting vectors, which you will, after covering the Khan academy videos.</p>
+</div>
+</div>
+<div class="section" id="day">
+<h2>Day<a class="headerlink" href="#day" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Get data from image</li>
 <li>Run PCA;</li>
 <li>Fetch projection matrices, vectors and values;</li>
 <li>Reconstruct data using reduced number of components.</li>
 <li>Investigate and diagnose components;</li>
 <li>Investigate correlation of vectors with data.</li>
 </ul>
+</div>
 </div>
 
 
@@ -84,6 +129,21 @@ the level of underlying variance in data.</p>
       </div>
       <div class="sphinxsidebar">
         <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Day 7: diagnostics using principal component analysis</a><ul>
+<li><a class="reference internal" href="#reading">Reading</a><ul>
+<li><a class="reference internal" href="#basic-background-on-dot-products">Basic background on dot products</a></li>
+<li><a class="reference internal" href="#helpful-extra-background">Helpful extra background</a></li>
+<li><a class="reference internal" href="#key-video-on-projecting-vectors">Key video on projecting vectors</a></li>
+<li><a class="reference internal" href="#if-you-are-racing-ahead">If you are racing ahead</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#day">Day</a></li>
+</ul>
+</li>
+</ul>
+
   <h4>Previous topic</h4>
   <p class="topless"><a href="day6.html"
                         title="previous chapter">Day 6: regression and the general linear model</a></p>

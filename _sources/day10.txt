@@ -2,7 +2,7 @@
 Day 10: coordinate systems and cross-modality registration
 ##########################################################
 
-4 / 24 / 2015
+5 / 1 / 2015
 
 Reading:
 

@@ -2,11 +2,11 @@
 Day 14: random effects, choosing models
 #######################################
 
-5 / 22 / 2015
+5 / 29 / 2015
 
 Reading:
 
-* random versus fixed effect in neuroimaging litterature
+* random versus fixed effect in neuroimaging literature
   ftp://193.62.66.20/spm/data/face_rfx/RFXabstract.pdf
   http://www.fil.ion.ucl.ac.uk/spm/doc/books/hbf2/pdfs/Ch12.pdf
 
@@ -21,7 +21,7 @@ Day:
 
 * Wait a second: What is a model exactly ?
 
-* I am chosing a very wrong model: Consequences on the results of t/F tests.
+* I am choosing a very wrong model: Consequences on the results of t/F tests.
 
 * How do I know my model is - is not very wrong? the good, the bad, the ugly (reverse order)
    - the ugly: p-hacking. Let's try it.

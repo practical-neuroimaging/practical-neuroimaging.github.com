@@ -2,6 +2,9 @@
 Schedule
 ########
 
+We are taking a break in the classes for Cesar Chavez holiday on March 27, 2015.
+Otherwise the classes are from 10-12 every Friday in the Brain Imaging Center.
+
 .. toctree::
     :maxdepth: 1
 

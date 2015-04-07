@@ -2,7 +2,7 @@
 Day 15: statistical inference
 #############################
 
-5 / 29 / 2015
+6 / 5 / 2015
 
 Reading:
 
