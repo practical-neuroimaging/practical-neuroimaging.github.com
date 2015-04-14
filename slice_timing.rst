@@ -127,7 +127,7 @@ times for different slices in the z axis.
 
 How can we make a new 4D time series, where all the slices in each volume
 correspond to our best guess at what these slices would have looked like, if
-we had acquired them all at the same time.
+we had acquired them all at the same time?
 
 This is the job of the *slice timing correction*.
 
@@ -176,8 +176,8 @@ We get the time courses from slice 0 and slice 1:
     >>> time_course_slice_0 = data[vox_x, vox_y, 0, :]
     >>> time_course_slice_1 = data[vox_x, vox_y, 1, :]
 
-The times of acquisition of the voxels in the first slice are the at the
-beginning of each TR:
+The times of acquisition of the voxels for slice 0 are at the beginning of
+each TR:
 
 .. plot::
     :context:
@@ -188,8 +188,7 @@ beginning of each TR:
     >>> vol_onset_times = vol_nos * TR
     >>> times_slice_0 = vol_onset_times
 
-The times of acquisition of the voxels in the second slice are half a TR
-later:
+The times of acquisition of the voxels in slice 1 are half a TR later:
 
 .. plot::
     :context:
@@ -197,8 +196,8 @@ later:
 
     >>> times_slice_1 = vol_onset_times + TR / 2.
 
-We can plot first slice time course against slice 0 acquisition time, along with the
-second slice time course against slice 1 acquisition time:
+We can plot the slice 0 time course against slice 0 acquisition time, along
+with the slice 1 time course against slice 1 acquisition time:
 
 .. plot::
     :context:
@@ -345,7 +344,7 @@ Luckily ``scipy`` has a sub-package called ``scipy.interpolate`` that takes
 care of this for us.
 
 We use it by first creating an interpolation object, that will do the
-interpolation for us:
+interpolation:
 
 .. plot::
     :context:
@@ -362,12 +361,12 @@ interpolation for us:
 
 Our new object knows how to get the linear interpolation between the y values
 we passed in, given new x values.  Here it is in action replicating our manual
-calculation above:
+calculation above.
 
 .. plot::
     :context:
 
-    We use the interpolator to get the values for us:
+    We use the interpolator to get the values for slice 0 times:
 
     >>> interped_vals = lin_interper(times_slice_0)
 
