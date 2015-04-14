@@ -1,4 +1,4 @@
-# We use the interpolator to get the values for us:
+# We use the interpolator to get the values for slice 0 times:
 
 interped_vals = lin_interper(times_slice_0)
 

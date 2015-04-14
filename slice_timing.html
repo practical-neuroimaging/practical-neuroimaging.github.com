@@ -122,7 +122,7 @@ Otherwise we would need to sample our hemodynamic prediction at different
 times for different slices in the z axis.</p>
 <p>How can we make a new 4D time series, where all the slices in each volume
 correspond to our best guess at what these slices would have looked like, if
-we had acquired them all at the same time.</p>
+we had acquired them all at the same time?</p>
 <p>This is the job of the <em>slice timing correction</em>.</p>
 <div class="section" id="slice-timing-is-interpolation-in-time">
 <h2>Slice timing is interpolation in time<a class="headerlink" href="#slice-timing-is-interpolation-in-time" title="Permalink to this headline">¶</a></h2>
@@ -164,21 +164,20 @@ the slice above it (slice 1):</p>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">time_course_slice_1</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="n">vox_x</span><span class="p">,</span> <span class="n">vox_y</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="p">:]</span>
 </pre></div>
 </div>
-<p>The times of acquisition of the voxels in the first slice are the at the
-beginning of each TR:</p>
+<p>The times of acquisition of the voxels for slice 0 are at the beginning of
+each TR:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">vol_nos</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">vol_onset_times</span> <span class="o">=</span> <span class="n">vol_nos</span> <span class="o">*</span> <span class="n">TR</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">times_slice_0</span> <span class="o">=</span> <span class="n">vol_onset_times</span>
 </pre></div>
 </div>
-<p>The times of acquisition of the voxels in the second slice are half a TR
-later:</p>
+<p>The times of acquisition of the voxels in slice 1 are half a TR later:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">times_slice_1</span> <span class="o">=</span> <span class="n">vol_onset_times</span> <span class="o">+</span> <span class="n">TR</span> <span class="o">/</span> <span class="mf">2.</span>
 </pre></div>
 </div>
-<p>We can plot first slice time course against slice 0 acquisition time, along with the
-second slice time course against slice 1 acquisition time:</p>
+<p>We can plot the slice 0 time course against slice 0 acquisition time, along
+with the slice 1 time course against slice 1 acquisition time:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">times_slice_0</span><span class="p">,</span> <span class="n">time_course_slice_0</span><span class="p">,</span> <span class="s">&#39;b:+&#39;</span><span class="p">,</span>
 <span class="gp">... </span>    <span class="n">label</span><span class="o">=</span><span class="s">&#39;slice 0 time course&#39;</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">times_slice_1</span><span class="p">,</span> <span class="n">time_course_slice_1</span><span class="p">,</span> <span class="s">&#39;r:+&#39;</span><span class="p">,</span>
@@ -279,7 +278,7 @@ end.</p>
 <p>Luckily <tt class="docutils literal"><span class="pre">scipy</span></tt> has a sub-package called <tt class="docutils literal"><span class="pre">scipy.interpolate</span></tt> that takes
 care of this for us.</p>
 <p>We use it by first creating an interpolation object, that will do the
-interpolation for us:</p>
+interpolation:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">scipy.interpolate</span> <span class="kn">import</span> <span class="n">InterpolatedUnivariateSpline</span> <span class="k">as</span> <span class="n">Interp</span>
 </pre></div>
 </div>
@@ -292,8 +291,8 @@ interpolation (<tt class="docutils literal"><span class="pre">k=1</span></tt> ar
 </div>
 <p>Our new object knows how to get the linear interpolation between the y values
 we passed in, given new x values.  Here it is in action replicating our manual
-calculation above:</p>
-<p>We use the interpolator to get the values for us:</p>
+calculation above.</p>
+<p>We use the interpolator to get the values for slice 0 times:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">interped_vals</span> <span class="o">=</span> <span class="n">lin_interper</span><span class="p">(</span><span class="n">times_slice_0</span><span class="p">)</span>
 </pre></div>
 </div>
