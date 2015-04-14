@@ -127,6 +127,8 @@
 .. Ideas
 .. _principal component analysis:
    https://en.wikipedia.org/wiki/Principal_component_analysis
+.. _linear_interpolation:
+    http://en.wikipedia.org/wiki/Linear_interpolation
 
 .. People
 .. _Matthew : http://matthew.dynevor.org
