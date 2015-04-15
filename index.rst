@@ -41,3 +41,4 @@ Course news and announcements go to the `mailing list`_
     python_path
     schedule_2015
     script_for_git_tutorials
+    slice_timing
