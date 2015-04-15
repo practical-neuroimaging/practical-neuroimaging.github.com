@@ -24,7 +24,7 @@ For example, here is a 4D FMRI image:
 
 You can get the 4D image from :download:`an_example_4d.nii`.
 
-This 4D FMRI image has 16 slices on the third axis (slices in z) and 166
+This 4D FMRI image has 16 slices on the third axis (slices in z) and 100
 volumes:
 
 .. plot::
