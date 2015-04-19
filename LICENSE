@@ -1,0 +1,24 @@
+############################################
+LICENSE for practical-neuroimaging web pages
+############################################
+
+Unless we state otherwise, the files are copyright Matthew Brett, JB Poline,
+Stefan van der Walt 2015, licensed under the Creative Commons attribution 2.0
+generic license (CC-by 2.0): see http://creativecommons.org/licenses/by/2.0/
+
+The BOLD data ``an_example_4d.nii`` is a modified version of an image from the
+OpenFMRI project dataset ``ds107``: https://openfmri.org/dataset/ds000107 .  It
+is a version of the image ``sub012/BOLD/task001_run002/bold.nii.gz``. Compared
+to the original, the image is decompressed, and sliced to contain only z slices
+from 15 through 30, and volumes 0 through 99. We adjusted the affine accordingly::
+
+    import numpy as np
+    import nibabel as nib
+    img = nib.load('sub012/BOLD/task001_run002/bold.nii.gz')
+    data = img.get_data()
+    new_data = data[:, :, 15:31, :100]
+    # Adjust affine for slicing
+    vox_trans = nib.affines.from_matvec(np.eye(3), [0, 0, 15])
+    new_affine = img.affine.dot(vox_trans)
+    new_img = nib.Nifti1Image(new_data, new_affine, img.header)
+    nib.save(new_img, 'an_example_4d.nii')
