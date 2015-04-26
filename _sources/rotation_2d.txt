@@ -21,15 +21,15 @@ We can see from the picture that:
 
 .. math::
 
-    x_2 = c - f
+    x_2 = r - u
 
-    y_2 = e + d
+    y_2 = t + s
 
-We are going to use some basic trigonometry to get the lengths of $c, f, e,
-d$.
+We are going to use some basic trigonometry to get the lengths of $r, u, t,
+s$.
 
 Because the angles in a triangle sum to 180 degrees, $\phi$ on the picture is
-$90 - \alpha$ and therefore the angle between lines $b, e$ is also $\alpha$.
+$90 - \alpha$ and therefore the angle between lines $q, t$ is also $\alpha$.
 
 Remembering the definitions of $\cos$ and $\sin$:
 
@@ -47,25 +47,25 @@ Thus:
 
     y_1 = \sin \alpha L
 
-    a = \cos \beta L
+    p = \cos \beta L
 
-    b = \sin \beta L
+    q = \sin \beta L
 
-    c = \cos \alpha a = \cos \alpha \cos \beta L = \cos \beta x_1
+    r = \cos \alpha p = \cos \alpha \cos \beta L = \cos \beta x_1
 
-    d = \sin \alpha a = \sin \alpha \cos \beta L = \cos \beta y_1
+    s = \sin \alpha p = \sin \alpha \cos \beta L = \cos \beta y_1
 
-    e = \cos \alpha b = \cos \alpha \sin \beta L = \sin \beta x_1
+    t = \cos \alpha q = \cos \alpha \sin \beta L = \sin \beta x_1
 
-    f = \sin \alpha b = \sin \alpha \sin \beta L = \sin \beta y_1
+    u = \sin \alpha q = \sin \alpha \sin \beta L = \sin \beta y_1
 
 So:
 
 .. math::
 
-    x_2 = c - f = \cos \beta x_1 - \sin \beta y_1
+    x_2 = r - u = \cos \beta x_1 - \sin \beta y_1
 
-    y_2 = e + d = \sin \beta x_1 + \cos \beta y_1
+    y_2 = t + s = \sin \beta x_1 + \cos \beta y_1
 
 Luckily this is the same result as `wikipedia on rotation matrices
 <https://en.wikipedia.org/wiki/Rotation_matrix>`_.
