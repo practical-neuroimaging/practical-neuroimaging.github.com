@@ -26,9 +26,7 @@
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="author" title="About these documents" href="about.html" />
     <link rel="top" title="Practical neuroimaging analysis" href="index.html" />
-    <link rel="up" title="Schedule" href="schedule.html" />
-    <link rel="next" title="Day 10: coordinate systems and cross-modality registration" href="day10.html" />
-    <link rel="prev" title="Day 8: 1D interpolation and slice timing" href="day8.html" /> 
+    <link rel="prev" title="Slice timing correction" href="slice_timing.html" /> 
   </head>
   <body>
     <div class="related">
@@ -38,16 +36,12 @@
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="day10.html" title="Day 10: coordinate systems and cross-modality registration"
-             accesskey="N">next</a> |</li>
-        <li class="right" >
-          <a href="day8.html" title="Day 8: 1D interpolation and slice timing"
+          <a href="slice_timing.html" title="Slice timing correction"
              accesskey="P">previous</a> |</li>
 <big><big><big><li><a href="index.html">Home</a> |&nbsp;</li>
   <li><a href="https://github.com/practical-neuroimaging/pna2015">Exercises</a> |&nbsp;</li>
   <li><a href="https://calmail.berkeley.edu/manage/list/listinfo/practical_fmri@lists.berkeley.edu">Mailing list</a> |&nbsp;</li></big></big></big>
-
-          <li><a href="schedule.html" accesskey="U">Schedule</a> &raquo;</li> 
+ 
       </ul>
     </div>  
 
@@ -56,38 +50,33 @@
         <div class="bodywrapper">
           <div class="body">
             
-  <div class="section" id="day-9-optimization-2d-interpolation-and-registration">
-<h1>Day 9: optimization, 2D interpolation and registration<a class="headerlink" href="#day-9-optimization-2d-interpolation-and-registration" title="Permalink to this headline">¶</a></h1>
-<p>4 / 24 / 2015</p>
-<div class="section" id="reading">
-<h2>Reading<a class="headerlink" href="#reading" title="Permalink to this headline">¶</a></h2>
-<p>The reading for this weeks class is a notebook in the <cite>pna2015</cite> repository:</p>
-<div class="highlight-python"><div class="highlight"><pre>cd pna2015
-git pull
-ipython notebook
-</pre></div>
-</div>
-<p>The main notebook is <tt class="docutils literal"><span class="pre">day9/optimizing_space.ipynb</span></tt> - but you&#8217;ll see a couple
-of other notebooks there that the main notebook links to.</p>
-<p>Here are the notebooks generated as non-interactive web pages, for reference:</p>
-<ul class="simple">
-<li><a class="reference external" href="http://nbviewer.ipython.org/github/practical-neuroimaging/pna2015/blob/master/day9/optimizing_space.ipynb">main notebook on spatial registration</a>;</li>
-<li><a class="reference external" href="http://nbviewer.ipython.org/github/practical-neuroimaging/pna2015/blob/master/day9/functions_are_objects.ipynb">background on Python functions</a>;</li>
-<li><a class="reference external" href="http://nbviewer.ipython.org/github/practical-neuroimaging/pna2015/blob/master/day9/global_scope.ipynb">background on global variable scope</a>.</li>
-</ul>
-<p>You may also want to have a look at <a class="reference internal" href="rotation_2d.html"><em>Formula for rotating a vector in 2D</em></a>.</p>
-</div>
-<div class="section" id="day">
-<h2>Day<a class="headerlink" href="#day" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li>Convert optimization notebook to Python module;</li>
-<li>Run;</li>
-<li>Try different cost functions;</li>
-<li>Try different optimization methods;</li>
-<li>Local minima with a 180 degree rotation;</li>
-<li>Investigate and run FSL motion correction.</li>
-</ul>
-</div>
+  <div class="section" id="formula-for-rotating-a-vector-in-2d">
+<h1>Formula for rotating a vector in 2D<a class="headerlink" href="#formula-for-rotating-a-vector-in-2d" title="Permalink to this headline">¶</a></h1>
+<p>Let&#8217;s say we have a point <span class="math">\((x_1, y_1)\)</span>.  The point also defines the vector <span class="math">\((x_1, y_1)\)</span>.</p>
+<p>We rotate this vector anticlockwise around the origin by <span class="math">\(\beta\)</span> degrees.</p>
+<p>The rotated vector has coordinates <span class="math">\((x_2, y_2)\)</span>.</p>
+<p>Can we get the coordintes of <span class="math">\((x_2, y_2)\)</span> given <span class="math">\((x_1, y_1)\)</span> and <span class="math">\(\beta\)</span>?</p>
+<img alt="_images/rotation_2d.png" src="_images/rotation_2d.png" />
+<p><span class="math">\(L\)</span> is the length of the vectors <span class="math">\((x_1, y_1)\)</span> and <span class="math">\((x_2, y_2)\)</span> : <span class="math">\(L =
+\|(x_1, y_1)\| = \|(x_2, y_2)\|\)</span>.</p>
+<p><span class="math">\(\alpha\)</span> is the angle between the x axis and <span class="math">\((x_1, y_1)\)</span>.</p>
+<p>We can see from the picture that:</p>
+<div class="math">
+\[x_2 = c - f\]\[y_2 = e + d\]</div>
+<p>We are going to use some basic trigonometry to get the lengths of <span class="math">\(c, f, e,
+d\)</span>.</p>
+<p>Because the angles in a triangle sum to 180 degrees, <span class="math">\(\phi\)</span> on the picture is
+<span class="math">\(90 - \alpha\)</span> and therefore the angle between lines <span class="math">\(b, e\)</span> is also <span class="math">\(\alpha\)</span>.</p>
+<p>Remembering the definitions of <span class="math">\(\cos\)</span> and <span class="math">\(\sin\)</span>:</p>
+<div class="math">
+\[\cos\theta = \frac{A}{H} \implies A = \cos \theta H\]\[\sin\theta = \frac{O}{H} \implies O = \sin \theta H\]</div>
+<p>Thus:</p>
+<div class="math">
+\[x_1 = \cos \alpha L\]\[y_1 = \sin \alpha L\]\[a = \cos \beta L\]\[b = \sin \beta L\]\[c = \cos \alpha a = \cos \alpha \cos \beta L = \cos \beta x_1\]\[d = \sin \alpha a = \sin \alpha \cos \beta L = \cos \beta y_1\]\[e = \cos \alpha b = \cos \alpha \sin \beta L = \sin \beta x_1\]\[f = \sin \alpha b = \sin \alpha \sin \beta L = \sin \beta y_1\]</div>
+<p>So:</p>
+<div class="math">
+\[x_2 = c - f = \cos \beta x_1 - \sin \beta y_1\]\[y_2 = e + d = \sin \beta x_1 + \cos \beta y_1\]</div>
+<p>Luckily this is the same result as <a class="reference external" href="https://en.wikipedia.org/wiki/Rotation_matrix">wikipedia on rotation matrices</a>.</p>
 </div>
 
 
@@ -96,24 +85,12 @@ of other notebooks there that the main notebook links to.</p>
       </div>
       <div class="sphinxsidebar">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="index.html">Table Of Contents</a></h3>
-  <ul>
-<li><a class="reference internal" href="#">Day 9: optimization, 2D interpolation and registration</a><ul>
-<li><a class="reference internal" href="#reading">Reading</a></li>
-<li><a class="reference internal" href="#day">Day</a></li>
-</ul>
-</li>
-</ul>
-
   <h4>Previous topic</h4>
-  <p class="topless"><a href="day8.html"
-                        title="previous chapter">Day 8: 1D interpolation and slice timing</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="day10.html"
-                        title="next chapter">Day 10: coordinate systems and cross-modality registration</a></p>
+  <p class="topless"><a href="slice_timing.html"
+                        title="previous chapter">Slice timing correction</a></p>
   <h3>This Page</h3>
   <ul class="this-page-menu">
-    <li><a href="_sources/day9.txt"
+    <li><a href="_sources/rotation_2d.txt"
            rel="nofollow">Show Source</a></li>
   </ul>
 <div id="searchbox" style="display: none">
@@ -140,16 +117,12 @@ of other notebooks there that the main notebook links to.</p>
           <a href="genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="day10.html" title="Day 10: coordinate systems and cross-modality registration"
-             >next</a> |</li>
-        <li class="right" >
-          <a href="day8.html" title="Day 8: 1D interpolation and slice timing"
+          <a href="slice_timing.html" title="Slice timing correction"
              >previous</a> |</li>
 <big><big><big><li><a href="index.html">Home</a> |&nbsp;</li>
   <li><a href="https://github.com/practical-neuroimaging/pna2015">Exercises</a> |&nbsp;</li>
   <li><a href="https://calmail.berkeley.edu/manage/list/listinfo/practical_fmri@lists.berkeley.edu">Mailing list</a> |&nbsp;</li></big></big></big>
-
-          <li><a href="schedule.html" >Schedule</a> &raquo;</li> 
+ 
       </ul>
     </div>
     <div class="footer">
