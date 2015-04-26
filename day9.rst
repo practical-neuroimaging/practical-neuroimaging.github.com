@@ -26,6 +26,8 @@ Here are the notebooks generated as non-interactive web pages, for reference:
 * `background on global variable scope
   <http://nbviewer.ipython.org/github/practical-neuroimaging/pna2015/blob/master/day9/global_scope.ipynb>`_.
 
+You may also want to have a look at :doc:`rotation_2d`.
+
 ***
 Day
 ***
