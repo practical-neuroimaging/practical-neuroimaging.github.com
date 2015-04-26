@@ -112,7 +112,7 @@
      inkscape:pageshadow="2"
      inkscape:zoom="1.4271653"
      inkscape:cx="250.48301"
-     inkscape:cy="184.93753"
+     inkscape:cy="16.772006"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -336,7 +336,7 @@
          sodipodi:role="line"
          id="tspan8227"
          x="231.92828"
-         y="365.68628">a</tspan></text>
+         y="365.68628">p</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
@@ -348,7 +348,7 @@
          id="tspan8231"
          x="285.18073"
          y="229.75249"
-         style="font-size:32px;fill:#0000ff">b</tspan></text>
+         style="font-size:32px;fill:#0000ff">q</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:32px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ff0000;fill-opacity:1;stroke:none;font-family:Sans"
@@ -359,7 +359,7 @@
          sodipodi:role="line"
          id="tspan8235"
          x="258.55447"
-         y="475.69458">c</tspan></text>
+         y="475.69458">r</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
@@ -371,31 +371,31 @@
          id="tspan8239"
          x="340.53519"
          y="404.92493"
-         style="font-size:32px;fill:#ff0000">d</tspan></text>
+         style="font-size:32px;fill:#ff0000">s</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#800080;fill-opacity:1;stroke:none;font-family:Sans"
-       x="339.83447"
-       y="195.41872"
+       x="343.83447"
+       y="183.41872"
        id="text8241"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan8243"
-         x="339.83447"
-         y="195.41872"
-         style="font-size:32px;fill:#800080">e</tspan></text>
+         x="343.83447"
+         y="183.41872"
+         style="font-size:32px;fill:#800080">t</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#800080;fill-opacity:1;stroke:none;font-family:Sans"
-       x="305.5007"
-       y="145.66974"
+       x="303.5007"
+       y="135.66974"
        id="text8245"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan8247"
-         x="305.5007"
-         y="145.66974"
-         style="font-size:32px;fill:#800080">f</tspan></text>
+         x="303.5007"
+         y="135.66974"
+         style="font-size:32px;fill:#800080">u</tspan></text>
     <path
        style="fill:none;stroke:#800080;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:6, 6;stroke-dashoffset:0;marker-start:url(#Arrow1Mstart);marker-end:url(#Arrow1Mend)"
        d="m 261.35725,112.73733 c 102.30069,0 103.70207,0 103.70207,0"
@@ -472,7 +472,7 @@
        sodipodi:cy="203.09439"
        sodipodi:rx="83.73243"
        sodipodi:ry="86.184814"
-       d="m 304.50898,131.68864 a 83.73243,86.184814 0 0 1 47.24012,-14.7783"
+       d="m 304.50898,131.68864 c 13.94567,-9.70134 30.40823,-14.85138 47.24012,-14.7783"
        transform="translate(20.463814,87.284299)"
        sodipodi:start="4.1180503"
        sodipodi:end="4.7166075"
@@ -497,7 +497,7 @@
        sodipodi:cy="259.14957"
        sodipodi:rx="58.857933"
        sodipodi:ry="63.062073"
-       d="m 368.44111,322.20859 a 58.857933,63.062073 0 0 1 -50.6605,-29.9295"
+       d="m 368.44111,322.20859 c -20.61347,0.21728 -39.83073,-11.136 -50.6605,-29.9295"
        transform="translate(5.4293299,36.658091)"
        sodipodi:start="1.5609586"
        sodipodi:end="2.5884688"
