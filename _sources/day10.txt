@@ -4,20 +4,19 @@ Day 10: coordinate systems and cross-modality registration
 
 5 / 1 / 2015
 
-Reading:
+*******
+Reading
+*******
 
-* Tutorial on coordinate systems at:
+* Please read this tutorial on coordinate systems at:
   http://nipy.org/nibabel/coordinate_systems.html
-* Mutual information : e.g.
-  http://nbviewer.ipython.org/urls/bitbucket.org/matthewbrett/talks/raw/master/processing_i/mutual_information_example.ipynb
 
-Need to fix this up.
+***
+Day
+***
 
-Day:
-
-* Load EPI;
-* Load anatomical;
-* Reslicing using coordinate transforms;
-* Scipy ndimage and affine_transform;
-* FSL coregistration;
-* SPM coregistration.
+* Reslicing EPI / anatomical using coordinate transforms;
+* Motion correction and image affines;
+* SPM motion correction;
+* SPM coregistration;
+* Assessing motio correction with PCA.
