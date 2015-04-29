@@ -43,4 +43,4 @@ Course news and announcements go to the `mailing list`_
     script_for_git_tutorials
     slice_timing
     rotation_2d
-
+    orthogonal_dots
