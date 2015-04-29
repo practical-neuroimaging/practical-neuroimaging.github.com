@@ -54,10 +54,12 @@
 <h1>The dot product of two unit vectors<a class="headerlink" href="#the-dot-product-of-two-unit-vectors" title="Permalink to this headline">¶</a></h1>
 <p>The dot product of two unit vectors <span class="math">\(\hat{a}, \hat{b}\)</span> is <span class="math">\(\cos \theta\)</span>, where
 <span class="math">\(\theta\)</span> is the angle between the unit vectors.</p>
+<div class="section" id="proof">
+<h2>Proof<a class="headerlink" href="#proof" title="Permalink to this headline">¶</a></h2>
 <p>We remember the rotation formula from <a class="reference internal" href="rotation_2d.html"><em>Formula for rotating a vector in 2D</em></a>:</p>
 <div class="math">
-\[x_2 = \cos \beta x_1 - \sin \beta y_1
-y_2 = \sin \beta x_1 + \cos \beta y_1\]</div>
+\[\begin{split}x_2 = \cos \beta x_1 - \sin \beta y_1 \\
+y_2 = \sin \beta x_1 + \cos \beta y_1\end{split}\]</div>
 <p>Now consider the unit vector <span class="math">\(\hat{a} = (x_1, y_1)\)</span> rotated by <span class="math">\(\theta\)</span> to get
 <span class="math">\(\hat{b} = (x_2, y_2)\)</span>:</p>
 <div class="math">
@@ -70,13 +72,17 @@ y_2 = \sin \beta x_1 + \cos \beta y_1\]</div>
 <p>Because we have assumed <span class="math">\(\hat{a}\)</span> is a unit vector, <span class="math">\(\| \hat{a} |\ = x1^2 + y1^2 = 1\)</span> and:</p>
 <div class="math">
 \[\hat{a} \cdot \hat{b}:math:` = `\cos \theta\]</div>
+</div>
+<div class="section" id="dot-product-of-not-unit-vectors">
+<h2>Dot product of not-unit vectors<a class="headerlink" href="#dot-product-of-not-unit-vectors" title="Permalink to this headline">¶</a></h2>
 <p>Now take two non-unit vectors <span class="math">\(\vec{x}, \vec{y}\)</span>:</p>
 <div class="math">
-\[\hat{x} = \frac{1}{\| \vec{x} \|}\vec{x}
-\hat{y} = \frac{1}{\| \vec{x} \|}\vec{x}\]</div>
+\[\begin{split}\hat{x} = \frac{1}{\| \vec{x} \|}\vec{x} \\
+\hat{y} = \frac{1}{\| \vec{x} \|}\vec{x}\end{split}\]</div>
 <p>From the rules of the dot product and the result from the unit vectors above:</p>
 <div class="math">
 \[\vec{x} \cdot \vec{y} = \| \vec{x} \| \| \vec{y} \| \cos \theta\]</div>
+</div>
 </div>
 
 
@@ -85,6 +91,15 @@ y_2 = \sin \beta x_1 + \cos \beta y_1\]</div>
       </div>
       <div class="sphinxsidebar">
         <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">The dot product of two unit vectors</a><ul>
+<li><a class="reference internal" href="#proof">Proof</a></li>
+<li><a class="reference internal" href="#dot-product-of-not-unit-vectors">Dot product of not-unit vectors</a></li>
+</ul>
+</li>
+</ul>
+
   <h4>Previous topic</h4>
   <p class="topless"><a href="rotation_2d.html"
                         title="previous chapter">Formula for rotating a vector in 2D</a></p>
