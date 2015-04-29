@@ -5,11 +5,15 @@ The dot product of two unit vectors
 The dot product of two unit vectors $\hat{a}, \hat{b}$ is $\cos \theta$, where
 $\theta$ is the angle between the unit vectors.
 
+*****
+Proof
+*****
+
 We remember the rotation formula from :doc:`rotation_2d`:
 
 .. math::
 
-    x_2 = \cos \beta x_1 - \sin \beta y_1
+    x_2 = \cos \beta x_1 - \sin \beta y_1 \\
     y_2 = \sin \beta x_1 + \cos \beta y_1
 
 Now consider the unit vector $\hat{a} = (x_1, y_1)$ rotated by $\theta$ to get
@@ -30,11 +34,15 @@ Because we have assumed $\hat{a}$ is a unit vector, :math:`\| \hat{a} |\ = x1^2 
 
     \hat{a} \cdot \hat{b}$ = $\cos \theta
 
+*******************************
+Dot product of not-unit vectors
+*******************************
+
 Now take two non-unit vectors $\vec{x}, \vec{y}$:
 
 .. math::
 
-    \hat{x} = \frac{1}{\| \vec{x} \|}\vec{x}
+    \hat{x} = \frac{1}{\| \vec{x} \|}\vec{x} \\
     \hat{y} = \frac{1}{\| \vec{x} \|}\vec{x}
 
 From the rules of the dot product and the result from the unit vectors above:
