@@ -1,6 +1,6 @@
-###################################
-The dot product of two unit vectors
-###################################
+#########################################
+The dot product of two unit vectors in 2D
+#########################################
 
 The dot product of two unit vectors $\hat{a}, \hat{b}$ is $\cos \theta$, where
 $\theta$ is the angle between the unit vectors.
