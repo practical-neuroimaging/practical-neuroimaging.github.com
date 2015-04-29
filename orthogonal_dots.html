@@ -26,8 +26,7 @@
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="author" title="About these documents" href="about.html" />
     <link rel="top" title="Practical neuroimaging analysis" href="index.html" />
-    <link rel="next" title="The dot product of two unit vectors" href="orthogonal_dots.html" />
-    <link rel="prev" title="Slice timing correction" href="slice_timing.html" /> 
+    <link rel="prev" title="Formula for rotating a vector in 2D" href="rotation_2d.html" /> 
   </head>
   <body>
     <div class="related">
@@ -37,10 +36,7 @@
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="orthogonal_dots.html" title="The dot product of two unit vectors"
-             accesskey="N">next</a> |</li>
-        <li class="right" >
-          <a href="slice_timing.html" title="Slice timing correction"
+          <a href="rotation_2d.html" title="Formula for rotating a vector in 2D"
              accesskey="P">previous</a> |</li>
 <big><big><big><li><a href="index.html">Home</a> |&nbsp;</li>
   <li><a href="https://github.com/practical-neuroimaging/pna2015">Exercises</a> |&nbsp;</li>
@@ -54,33 +50,33 @@
         <div class="bodywrapper">
           <div class="body">
             
-  <div class="section" id="formula-for-rotating-a-vector-in-2d">
-<h1>Formula for rotating a vector in 2D<a class="headerlink" href="#formula-for-rotating-a-vector-in-2d" title="Permalink to this headline">¶</a></h1>
-<p>Let&#8217;s say we have a point <span class="math">\((x_1, y_1)\)</span>.  The point also defines the vector <span class="math">\((x_1, y_1)\)</span>.</p>
-<p>We rotate this vector anticlockwise around the origin by <span class="math">\(\beta\)</span> degrees.</p>
-<p>The rotated vector has coordinates <span class="math">\((x_2, y_2)\)</span>.</p>
-<p>Can we get the coordintes of <span class="math">\((x_2, y_2)\)</span> given <span class="math">\((x_1, y_1)\)</span> and <span class="math">\(\beta\)</span>?</p>
-<img alt="_images/rotation_2d.png" src="_images/rotation_2d.png" />
-<p><span class="math">\(L\)</span> is the length of the vectors <span class="math">\((x_1, y_1)\)</span> and <span class="math">\((x_2, y_2)\)</span> : <span class="math">\(L =
-\|(x_1, y_1)\| = \|(x_2, y_2)\|\)</span>.</p>
-<p><span class="math">\(\alpha\)</span> is the angle between the x axis and <span class="math">\((x_1, y_1)\)</span>.</p>
-<p>We can see from the picture that:</p>
+  <div class="section" id="the-dot-product-of-two-unit-vectors">
+<h1>The dot product of two unit vectors<a class="headerlink" href="#the-dot-product-of-two-unit-vectors" title="Permalink to this headline">¶</a></h1>
+<p>The dot product of two unit vectors <span class="math">\(\hat{a}, \hat{b}\)</span> is <span class="math">\(\cos \theta\)</span>, where
+<span class="math">\(\theta\)</span> is the angle between the unit vectors.</p>
+<p>We remember the rotation formula from <a class="reference internal" href="rotation_2d.html"><em>Formula for rotating a vector in 2D</em></a>:</p>
 <div class="math">
-\[x_2 = r - u\]\[y_2 = t + s\]</div>
-<p>We are going to use some basic trigonometry to get the lengths of <span class="math">\(r, u, t,
-s\)</span>.</p>
-<p>Because the angles in a triangle sum to 180 degrees, <span class="math">\(\phi\)</span> on the picture is
-<span class="math">\(90 - \alpha\)</span> and therefore the angle between lines <span class="math">\(q, t\)</span> is also <span class="math">\(\alpha\)</span>.</p>
-<p>Remembering the definitions of <span class="math">\(\cos\)</span> and <span class="math">\(\sin\)</span>:</p>
+\[x_2 = \cos \beta x_1 - \sin \beta y_1
+y_2 = \sin \beta x_1 + \cos \beta y_1\]</div>
+<p>Now consider the unit vector <span class="math">\(\hat{a} = (x_1, y_1)\)</span> rotated by <span class="math">\(\theta\)</span> to get
+<span class="math">\(\hat{b} = (x_2, y_2)\)</span>:</p>
 <div class="math">
-\[\cos\theta = \frac{A}{H} \implies A = \cos \theta H\]\[\sin\theta = \frac{O}{H} \implies O = \sin \theta H\]</div>
-<p>Thus:</p>
+\[\begin{split}\hat{a} \cdot \hat{b} = x_1 x_2 + y_1 y_2 \\
+= x_1 (\cos \theta x_1 - \sin \theta y_1) + y_1 (\sin \theta x_1 + \cos
+  \theta y_1) \\
+= \cos \theta x_1^2 - \sin \theta x_1 y_1 + \sin \theta x_1 y_1 + \cos
+  \theta y_1^2 \\
+= \cos \theta (x1^2 + y1^2)\end{split}\]</div>
+<p>Because we have assumed <span class="math">\(\hat{a}\)</span> is a unit vector, <span class="math">\(\| \hat{a} |\ = x1^2 + y1^2 = 1\)</span> and:</p>
 <div class="math">
-\[x_1 = \cos \alpha L\]\[y_1 = \sin \alpha L\]\[p = \cos \beta L\]\[q = \sin \beta L\]\[r = \cos \alpha p = \cos \alpha \cos \beta L = \cos \beta x_1\]\[s = \sin \alpha p = \sin \alpha \cos \beta L = \cos \beta y_1\]\[t = \cos \alpha q = \cos \alpha \sin \beta L = \sin \beta x_1\]\[u = \sin \alpha q = \sin \alpha \sin \beta L = \sin \beta y_1\]</div>
-<p>So:</p>
+\[\hat{a} \cdot \hat{b}:math:` = `\cos \theta\]</div>
+<p>Now take two non-unit vectors <span class="math">\(\vec{x}, \vec{y}\)</span>:</p>
 <div class="math">
-\[x_2 = r - u = \cos \beta x_1 - \sin \beta y_1\]\[y_2 = t + s = \sin \beta x_1 + \cos \beta y_1\]</div>
-<p>Luckily this is the same result as <a class="reference external" href="https://en.wikipedia.org/wiki/Rotation_matrix">wikipedia on rotation matrices</a>.</p>
+\[\hat{x} = \frac{1}{\| \vec{x} \|}\vec{x}
+\hat{y} = \frac{1}{\| \vec{x} \|}\vec{x}\]</div>
+<p>From the rules of the dot product and the result from the unit vectors above:</p>
+<div class="math">
+\[\vec{x} \cdot \vec{y} = \| \vec{x} \| \| \vec{y} \| \cos \theta\]</div>
 </div>
 
 
@@ -90,14 +86,11 @@ s\)</span>.</p>
       <div class="sphinxsidebar">
         <div class="sphinxsidebarwrapper">
   <h4>Previous topic</h4>
-  <p class="topless"><a href="slice_timing.html"
-                        title="previous chapter">Slice timing correction</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="orthogonal_dots.html"
-                        title="next chapter">The dot product of two unit vectors</a></p>
+  <p class="topless"><a href="rotation_2d.html"
+                        title="previous chapter">Formula for rotating a vector in 2D</a></p>
   <h3>This Page</h3>
   <ul class="this-page-menu">
-    <li><a href="_sources/rotation_2d.txt"
+    <li><a href="_sources/orthogonal_dots.txt"
            rel="nofollow">Show Source</a></li>
   </ul>
 <div id="searchbox" style="display: none">
@@ -124,10 +117,7 @@ s\)</span>.</p>
           <a href="genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="orthogonal_dots.html" title="The dot product of two unit vectors"
-             >next</a> |</li>
-        <li class="right" >
-          <a href="slice_timing.html" title="Slice timing correction"
+          <a href="rotation_2d.html" title="Formula for rotating a vector in 2D"
              >previous</a> |</li>
 <big><big><big><li><a href="index.html">Home</a> |&nbsp;</li>
   <li><a href="https://github.com/practical-neuroimaging/pna2015">Exercises</a> |&nbsp;</li>
