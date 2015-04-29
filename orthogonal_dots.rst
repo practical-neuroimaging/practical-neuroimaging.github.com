@@ -32,7 +32,7 @@ Because we have assumed $\hat{a}$ is a unit vector, :math:`\| \hat{a} |\ = x_1^2
 
 .. math::
 
-    \hat{a} \cdot \hat{b}$ = $\cos \theta
+    \hat{a} \cdot \hat{b} = \cos \theta
 
 *******************************
 Dot product of not-unit vectors
