@@ -26,9 +26,9 @@ $\hat{b} = (x_2, y_2)$:
       \theta y_1) \\
     = \cos \theta x_1^2 - \sin \theta x_1 y_1 + \sin \theta x_1 y_1 + \cos
       \theta y_1^2 \\
-    = \cos \theta (x1^2 + y1^2)
+    = \cos \theta (x_1^2 + y_1^2)
 
-Because we have assumed $\hat{a}$ is a unit vector, :math:`\| \hat{a} |\ = x1^2 + y1^2 = 1` and:
+Because we have assumed $\hat{a}$ is a unit vector, :math:`\| \hat{a} |\ = x_1^2 + y_1^2 = 1` and:
 
 .. math::
 
