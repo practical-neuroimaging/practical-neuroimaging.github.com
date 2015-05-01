@@ -43,7 +43,7 @@ Now take two non-unit vectors $\vec{x}, \vec{y}$:
 .. math::
 
     \hat{x} = \frac{1}{\| \vec{x} \|}\vec{x} \\
-    \hat{y} = \frac{1}{\| \vec{x} \|}\vec{x}
+    \hat{y} = \frac{1}{\| \vec{y} \|}\vec{y}
 
 From the rules of the dot product and the result from the unit vectors above:
 
