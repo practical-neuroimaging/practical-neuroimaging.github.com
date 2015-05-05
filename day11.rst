@@ -4,22 +4,20 @@ Day 11: registration between subjects
 
 5 / 8 / 2015
 
-Reading:
+*******
+Reading
+*******
 
-* Localization paper at http://matthew.dynevor.org/_downloads/location.pdf
-* Tutorial on inter-subject registration (spatial normalization). Yet to be
-  written.  Some material at:
+* `Introduction to spatial normalization <https://vimeo.com/126900408>`_
+* 15 minute section from the `lecture on spatial processing by Ged Ridgway
+  <https://www.ucl.ac.uk/stream/media/swatch?v=1d42446d1c34>`_ - section on
+  registration between subjects is from 35.00 - 50.07.
 
-  * http://nbviewer.ipython.org/urls/raw.github.com/practical-neuroimaging/pna-notebooks/master/ANTS_normalization.ipynb
-  * http://nbviewer.ipython.org/urls/raw.github.com/practical-neuroimaging/pna-notebooks/master/template_registration.ipynb
-  * http://nipy.org/dipy/examples_built/syn_registration_2d.html#example-syn-registration-2d
-  * http://nipy.org/dipy/examples_built/syn_registration_2d.html#example-syn-registration-3d
+***
+Day
+***
 
-Day:
-
-* Affine registration using scipy;
-* Affine registration using FSL;
-* Warping in 2D using dipy regtools;
+* Making the distortion field;
+* Optmizing the distortion field;
 * Diagnosing the warp using the deformation mesh;
-* Affine plus warping using FSL;
 * Thinking about what makes a good registration.
