@@ -16,8 +16,10 @@ Reading
 Day
 ***
 
-* Smoothing as convolution;
-* HRF regressor model on smoothed and unsmoothed data;
-* Different smoothing levels;
-* single voxel;
-* whole brain.
+* Saving data with nibabel;
+* Smoothing with `scipy.ndimage`;
+* Edge effects in smoothing;
+* Introduction to nipype_;
+* Scripting and extending an SPM analysis with nipype;
+
+.. include:: links_names.inc
