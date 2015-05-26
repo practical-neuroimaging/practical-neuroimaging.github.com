@@ -4,16 +4,22 @@ Day 15: statistical inference
 
 6 / 5 / 2015
 
-Reading:
+*******
+Reading
+*******
 
-* Bonferroni correction : e.g.
-  http://nbviewer.ipython.org/urls/raw.github.com/practical-neuroimaging/pna-notebooks/master/bonferonni_notes.ipynb
-* Random fields : e.g. http://perrin.dynevor.org/random_fields.html
-* FDR: http://nbviewer.ipython.org/github/practical-neuroimaging/pna-notebooks/blob/master/FDR.ipynb
+* `Bonferroni correction <http://perrin.dynevor.org/bonferroni_correction.html>`_
+* `Random field correction <http://perrin.dynevor.org/random_fields.html>`_
 
-Day:
+You might also consider reading on the `False Discovery Rate
+<http://nbviewer.ipython.org/github/practical-neuroimaging/pna-notebooks/blob/master/FDR.ipynb>`_
+
+***
+Day
+***
 
 * Generate map of T
-* correct using Bonferroni;
+* correct using Bonferroni correction;
+* Investigate effect of smoothness;
 * correct using random fields;
-* correct using FDR;
+* correct using FDR.
