@@ -91,6 +91,8 @@
 .. FMRI datasets
 .. _openfmri: https://openfmri.org/
 .. _duncan et al data: https://openfmri.org/dataset/ds000107
+.. _ds107 dataset: https://openfmri.org/dataset/ds000107
+.. _ds114 dataset: https://openfmri.org/dataset/ds000114
 
 .. Languages
 .. _matlab: http://www.mathworks.com
@@ -137,6 +139,7 @@
 
 .. Licenses
 .. _cc-by-nc-sa: http://creativecommons.org/licenses/by-nc-sa/4.0
+.. _pddl 1.0: http://opendatacommons.org/licenses/pddl/1.0/
 
 .. Neuroimaging stuff
 .. _BOLD: https://en.wikipedia.org/wiki/Blood-oxygen-level_dependent

@@ -24,6 +24,7 @@ Course news and announcements go to the `mailing list`_
     reading
     office_hours
     installation
+    example_data
     schedule
     choosing_editor
 
