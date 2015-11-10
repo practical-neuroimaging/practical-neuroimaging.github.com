@@ -112,8 +112,8 @@ be:
     :nofigs:
 
     >>> time_for_slice_0 = 0
-    >>> time_for_slice_0 = time_for_single_slice * 8
-    >>> time_for_slice_0
+    >>> time_for_slice_1 = time_for_single_slice * 8
+    >>> time_for_slice_1
     1.0
 
 It may be a problem that different slices correspond to different times.
