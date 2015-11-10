@@ -29,8 +29,8 @@
     <link rel="next" title="Slice timing correction" href="slice_timing.html" />
     <link rel="prev" title="Practical neuroimaging, the sequel" href="schedule_2015.html" /> 
   </head>
-  <body>
-    <div class="related">
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -52,7 +52,7 @@
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body">
+          <div class="body" role="main">
             
   <div class="section" id="script-for-git-tutorial-screencasts">
 <h1>Script for git tutorial screencasts<a class="headerlink" href="#script-for-git-tutorial-screencasts" title="Permalink to this headline">¶</a></h1>
@@ -135,7 +135,7 @@ previously taken a snapshot of these files, and so far assumes they should not
 go into our snapshots.</p>
 <p>As you remember from the git parable, before we do a snapshot, we first put
 the stuff that will go into the snapshot, into the staging area.   We do that
-with <tt class="docutils literal"><span class="pre">git</span> <span class="pre">add</span></tt>.</p>
+with <code class="docutils literal"><span class="pre">git</span> <span class="pre">add</span></code>.</p>
 <p>Now let&#8217;s add nobel_prize.txt to the staging area:</p>
 <div class="highlight-python"><div class="highlight"><pre>git add nobel_prize.txt
 </pre></div>
@@ -184,7 +184,7 @@ git status
 </pre></div>
 </div>
 <p>Notice that I now have two files in the objects directory - these correspond
-to the first snapshot I made of <tt class="docutils literal"><span class="pre">nobel_prize.txt</span></tt> and the second that I just
+to the first snapshot I made of <code class="docutils literal"><span class="pre">nobel_prize.txt</span></code> and the second that I just
 made.  This reminds us that git is very careful to make use we don&#8217;t
 accidentally lose our backups.   Even though we probably don&#8217;t care about the
 first version of the file, git will keep it for us for a month or so, in the
@@ -246,7 +246,7 @@ bookmarks.</p>
 <p>You can see from the commit message that git seems to be on a &#8220;branch&#8221; called
 &#8220;master&#8221;.</p>
 <p>&#8220;master&#8221; is the default branch, the branch that git creates by default.</p>
-<p>We can see which branch we are on using <tt class="docutils literal"><span class="pre">git</span> <span class="pre">branch</span></tt>:</p>
+<p>We can see which branch we are on using <code class="docutils literal"><span class="pre">git</span> <span class="pre">branch</span></code>:</p>
 <div class="highlight-python"><div class="highlight"><pre>git branch
 </pre></div>
 </div>
@@ -258,7 +258,7 @@ hash:</p>
 <div class="highlight-python"><div class="highlight"><pre>git log
 </pre></div>
 </div>
-<p>We can also see which commit the branch is pointing at by using the <tt class="docutils literal"><span class="pre">-v</span></tt>
+<p>We can also see which commit the branch is pointing at by using the <code class="docutils literal"><span class="pre">-v</span></code>
 flag:</p>
 <div class="highlight-python"><div class="highlight"><pre>git branch -v
 </pre></div>
@@ -267,16 +267,16 @@ flag:</p>
 git commit that starts with &#8216;d839074&#8217; - the same hash reported by git log.</p>
 <p>In the git parable, we stored the branch positions in a text file, and git
 does something very similar.  Git records the current position of each branch
-in a tiny text file in the <tt class="docutils literal"><span class="pre">.git/refs/heads</span></tt> directory.  Here is the current
-contents of <tt class="docutils literal"><span class="pre">.git/refs/heads/master</span></tt> - the current position of the master
+in a tiny text file in the <code class="docutils literal"><span class="pre">.git/refs/heads</span></code> directory.  Here is the current
+contents of <code class="docutils literal"><span class="pre">.git/refs/heads/master</span></code> - the current position of the master
 branch:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="n">cat</span> <span class="o">.</span><span class="n">git</span><span class="o">/</span><span class="n">refs</span><span class="o">/</span><span class="n">heads</span><span class="o">/</span><span class="n">master</span>
 </pre></div>
 </div>
 <p>As you can see it points to the commit (snapshot) hash we see in the output
-from <tt class="docutils literal"><span class="pre">git</span> <span class="pre">log</span></tt> and from <tt class="docutils literal"><span class="pre">git</span> <span class="pre">branch</span> <span class="pre">-v</span></tt>.</p>
+from <code class="docutils literal"><span class="pre">git</span> <span class="pre">log</span></code> and from <code class="docutils literal"><span class="pre">git</span> <span class="pre">branch</span> <span class="pre">-v</span></code>.</p>
 <p>Now let&#8217;s make a new commit.</p>
-<p>I&#8217;ll now make some edits to <tt class="docutils literal"><span class="pre">nobel_prize.txt</span></tt>. First I delete the last
+<p>I&#8217;ll now make some edits to <code class="docutils literal"><span class="pre">nobel_prize.txt</span></code>. First I delete the last
 sentence.  Now I add:</p>
 <div class="highlight-python"><div class="highlight"><pre>I am starting to feel famous while I write this paper.
 </pre></div>
@@ -286,12 +286,12 @@ staging area:</p>
 <div class="highlight-python"><div class="highlight"><pre>git status
 </pre></div>
 </div>
-<p>Sure enough, the <tt class="docutils literal"><span class="pre">nobel_prize.txt</span></tt> paper has new changes that the staging
+<p>Sure enough, the <code class="docutils literal"><span class="pre">nobel_prize.txt</span></code> paper has new changes that the staging
 area does not know about.</p>
 <p>Remember that the staging area always starts off the contents of the last
 commit.</p>
 <p>In fact, we can ask git to tell us exactly what changes there are in the
-working tree, compared to the staging area, with the <tt class="docutils literal"><span class="pre">git</span> <span class="pre">diff</span></tt> command:</p>
+working tree, compared to the staging area, with the <code class="docutils literal"><span class="pre">git</span> <span class="pre">diff</span></code> command:</p>
 <div class="highlight-python"><div class="highlight"><pre>git diff
 </pre></div>
 </div>
@@ -318,7 +318,7 @@ commit.</p>
 this commit.</p>
 <p>Our new commit points back to the first commit to record the history, that
 our latest commit follows on from the first commit.</p>
-<p>We can see that by using the <tt class="docutils literal"><span class="pre">--parents</span></tt> flag to git log:</p>
+<p>We can see that by using the <code class="docutils literal"><span class="pre">--parents</span></code> flag to git log:</p>
 <div class="highlight-python"><div class="highlight"><pre>git log --parents
 </pre></div>
 </div>
@@ -340,7 +340,7 @@ commit is:</p>
 </div>
 <p>You can see that the branch position has moved to point to the latest commit.</p>
 <p>You won&#8217;t be surprised to see that git stored this information in the
-<tt class="docutils literal"><span class="pre">.git/refs/heads/master</span></tt> file:</p>
+<code class="docutils literal"><span class="pre">.git/refs/heads/master</span></code> file:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="n">cat</span> <span class="o">.</span><span class="n">git</span><span class="o">/</span><span class="n">refs</span><span class="o">/</span><span class="n">heads</span><span class="o">/</span><span class="n">master</span>
 </pre></div>
 </div>
@@ -352,7 +352,7 @@ commit is:</p>
           </div>
         </div>
       </div>
-      <div class="sphinxsidebar">
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
   <h3><a href="index.html">Table Of Contents</a></h3>
   <ul>
@@ -369,12 +369,14 @@ commit is:</p>
   <h4>Next topic</h4>
   <p class="topless"><a href="slice_timing.html"
                         title="next chapter">Slice timing correction</a></p>
-  <h3>This Page</h3>
-  <ul class="this-page-menu">
-    <li><a href="_sources/script_for_git_tutorials.txt"
-           rel="nofollow">Show Source</a></li>
-  </ul>
-<div id="searchbox" style="display: none">
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/script_for_git_tutorials.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="search.html" method="get">
       <input type="text" name="q" />
@@ -391,7 +393,7 @@ commit is:</p>
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -409,9 +411,9 @@ commit is:</p>
  
       </ul>
     </div>
-    <div class="footer">
+    <div class="footer" role="contentinfo">
         &copy; Copyright 2013-2015, Matthew Brett and J-B Poline.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
     </div>
   </body>
 </html>

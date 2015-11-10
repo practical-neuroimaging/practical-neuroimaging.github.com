@@ -29,8 +29,8 @@
     <link rel="next" title="Formula for rotating a vector in 2D" href="rotation_2d.html" />
     <link rel="prev" title="Script for git tutorial screencasts" href="script_for_git_tutorials.html" /> 
   </head>
-  <body>
-    <div class="related">
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -52,7 +52,7 @@
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body">
+          <div class="body" role="main">
             
   <div class="section" id="slice-timing-correction">
 <h1>Slice timing correction<a class="headerlink" href="#slice-timing-correction" title="Permalink to this headline">¶</a></h1>
@@ -64,7 +64,7 @@ slice corresponds to a different time.</p>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">data</span> <span class="o">=</span> <span class="n">img</span><span class="o">.</span><span class="n">get_data</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>You can get the 4D image from <a class="reference download internal" href="_downloads/an_example_4d.nii"><tt class="xref download docutils literal"><span class="pre">an_example_4d.nii</span></tt></a>.</p>
+<p>You can get the 4D image from <a class="reference download internal" href="_downloads/an_example_4d.nii"><code class="xref download docutils literal"><span class="pre">an_example_4d.nii</span></code></a>.</p>
 <p>This 4D FMRI image has 16 slices on the third axis (slices in z) and 100
 volumes:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">data</span><span class="o">.</span><span class="n">shape</span>
@@ -116,8 +116,8 @@ to acquire a single slice will be:</p>
 <p>The times of acquisition of first and second slices (slice 0 and slice 1) will
 be:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">time_for_slice_0</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">time_for_slice_0</span> <span class="o">=</span> <span class="n">time_for_single_slice</span> <span class="o">*</span> <span class="mi">8</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">time_for_slice_0</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">time_for_slice_1</span> <span class="o">=</span> <span class="n">time_for_single_slice</span> <span class="o">*</span> <span class="mi">8</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">time_for_slice_1</span>
 <span class="go">1.0</span>
 </pre></div>
 </div>
@@ -283,7 +283,7 @@ interpolated values from the slice 1 time course:</p>
 <p>It is inconvenient to have to do this calculation for every point. We also
 need a good way of deciding what to do about values at the beginning and the
 end.</p>
-<p>Luckily <tt class="docutils literal"><span class="pre">scipy</span></tt> has a sub-package called <tt class="docutils literal"><span class="pre">scipy.interpolate</span></tt> that takes
+<p>Luckily <code class="docutils literal"><span class="pre">scipy</span></code> has a sub-package called <code class="docutils literal"><span class="pre">scipy.interpolate</span></code> that takes
 care of this for us.</p>
 <p>We use it by first creating an interpolation object, that will do the
 interpolation:</p>
@@ -291,7 +291,7 @@ interpolation:</p>
 </pre></div>
 </div>
 <p>This class can do more fancy interpolation, but we will use it for linear
-interpolation (<tt class="docutils literal"><span class="pre">k=1</span></tt> argument below):</p>
+interpolation (<code class="docutils literal"><span class="pre">k=1</span></code> argument below):</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">lin_interper</span> <span class="o">=</span> <span class="n">Interp</span><span class="p">(</span><span class="n">times_slice_1</span><span class="p">,</span> <span class="n">time_course_slice_1</span><span class="p">,</span> <span class="n">k</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">type</span><span class="p">(</span><span class="n">lin_interper</span><span class="p">)</span>
 <span class="go">...InterpolatedUnivariateSpline</span>
@@ -316,7 +316,7 @@ calculation above.</p>
 </div>
 <p>So now we can just replace the original values from the red line (values for
 slice 1) with our best guess values if the slice had been taken at the same
-times as slice 0 (black <tt class="docutils literal"><span class="pre">x</span></tt> on the plot).  This gives us a whole new time
+times as slice 0 (black <code class="docutils literal"><span class="pre">x</span></code> on the plot).  This gives us a whole new time
 series, that has been <em>interpolated</em> from the original:</p>
 <p>We plot the interpolated time course against the slice 0 times:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">times_slice_0</span><span class="p">,</span> <span class="n">interped_vals</span><span class="p">,</span> <span class="s">&#39;r:+&#39;</span><span class="p">,</span>
@@ -345,7 +345,7 @@ the other slices.  This new 4D image has been <em>slice time corrected</em>.</p>
           </div>
         </div>
       </div>
-      <div class="sphinxsidebar">
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
   <h3><a href="index.html">Table Of Contents</a></h3>
   <ul>
@@ -362,12 +362,14 @@ the other slices.  This new 4D image has been <em>slice time corrected</em>.</p>
   <h4>Next topic</h4>
   <p class="topless"><a href="rotation_2d.html"
                         title="next chapter">Formula for rotating a vector in 2D</a></p>
-  <h3>This Page</h3>
-  <ul class="this-page-menu">
-    <li><a href="_sources/slice_timing.txt"
-           rel="nofollow">Show Source</a></li>
-  </ul>
-<div id="searchbox" style="display: none">
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/slice_timing.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="search.html" method="get">
       <input type="text" name="q" />
@@ -384,7 +386,7 @@ the other slices.  This new 4D image has been <em>slice time corrected</em>.</p>
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -402,9 +404,9 @@ the other slices.  This new 4D image has been <em>slice time corrected</em>.</p>
  
       </ul>
     </div>
-    <div class="footer">
+    <div class="footer" role="contentinfo">
         &copy; Copyright 2013-2015, Matthew Brett and J-B Poline.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
     </div>
   </body>
 </html>

@@ -27,8 +27,8 @@
     <link rel="author" title="About these documents" href="../about.html" />
     <link rel="top" title="Practical neuroimaging analysis" href="../index.html" /> 
   </head>
-  <body>
-    <div class="related">
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -44,7 +44,7 @@
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body">
+          <div class="body" role="main">
             
   <div class="section" id="git-homework">
 <span id="id1"></span><h1>Git homework<a class="headerlink" href="#git-homework" title="Permalink to this headline">¶</a></h1>
@@ -76,7 +76,7 @@ an online service for git repositories called <a class="reference external" href
 github</a> and follow the
 instructions there.</p>
 <p>You might want to check your favorite editor is working properly - see
-<a class="reference internal" href="git_setup.html#git-editor-setup-2013"><em>Git setup for different editors</em></a>.</p>
+<a class="reference internal" href="git_setup.html#git-editor-setup-2013"><span>Git setup for different editors</span></a>.</p>
 </div>
 <div class="section" id="fork-the-main-repository">
 <h2>&#8220;Fork&#8221; the main repository<a class="headerlink" href="#fork-the-main-repository" title="Permalink to this headline">¶</a></h2>
@@ -88,17 +88,17 @@ copy is on the github servers.</p>
 <a class="reference external" href="https://github.com/practical-neuroimaging/pna-utils">https://github.com/practical-neuroimaging/pna-utils</a></li>
 <li>Click on the &#8220;Fork&#8221; button near the top right of the page.  You want to fork
 to your own account</li>
-<li>After a while you should get dumped at your own &#8220;fork&#8221; of the <tt class="docutils literal"><span class="pre">pna-utils</span></tt>
+<li>After a while you should get dumped at your own &#8220;fork&#8221; of the <code class="docutils literal"><span class="pre">pna-utils</span></code>
 repository, like this (for my github username):
 <a class="reference external" href="https://github.com/matthew-brett/pna-utils">https://github.com/matthew-brett/pna-utils</a> (your username will appear in the
-URL instead of <tt class="docutils literal"><span class="pre">matthew-brett</span></tt>)</li>
+URL instead of <code class="docutils literal"><span class="pre">matthew-brett</span></code>)</li>
 </ul>
 </div>
 <div class="section" id="clone-your-forked-repository-to-your-computer">
 <h2>&#8220;Clone&#8221; your forked repository to your computer<a class="headerlink" href="#clone-your-forked-repository-to-your-computer" title="Permalink to this headline">¶</a></h2>
 <p>A few lines down from the top of the page like
 <a class="reference external" href="https://github.com/matthew-brett/pna-utils">https://github.com/matthew-brett/pna-utils</a> (with your username), you&#8217;ll see the
-URL to paste for doing a <tt class="docutils literal"><span class="pre">git</span> <span class="pre">clone</span></tt>.  For me, the URL is:</p>
+URL to paste for doing a <code class="docutils literal"><span class="pre">git</span> <span class="pre">clone</span></code>.  For me, the URL is:</p>
 <blockquote>
 <div><a class="reference external" href="https://github.com/matthew-brett/pna-utils.git">https://github.com/matthew-brett/pna-utils.git</a></div></blockquote>
 <p>So next do:</p>
@@ -114,9 +114,9 @@ history on your machine.</p>
 <h2>Find and fix the bugs<a class="headerlink" href="#find-and-fix-the-bugs" title="Permalink to this headline">¶</a></h2>
 <p>The problem the new code was designed to solve, was to run through the Haxby
 dataset, and set the TR and the slice timing value into each image file.</p>
-<p>The script to do this is <tt class="docutils literal"><span class="pre">fixup_openfmri.py</span></tt>.  But:</p>
+<p>The script to do this is <code class="docutils literal"><span class="pre">fixup_openfmri.py</span></code>.  But:</p>
 <p>There are two bugs I&#8217;ve left in the code.  One of them causes a test failure.
-To find that one, first work out how to run the tests (hint : <tt class="docutils literal"><span class="pre">nosetests</span></tt>).
+To find that one, first work out how to run the tests (hint : <code class="docutils literal"><span class="pre">nosetests</span></code>).
 Fix!  The other one makes the script fail if you call it.  Fix!</p>
 </div>
 <div class="section" id="make-a-new-commit-with-the-fixes">
@@ -137,17 +137,17 @@ Fix!  The other one makes the script fail if you call it.  Fix!</p>
 <div class="highlight-python"><div class="highlight"><pre>git commit -m &quot;Message about what you did&quot;
 </pre></div>
 </div>
-<p>When you do this, you make a new commit on the <tt class="docutils literal"><span class="pre">master</span></tt> branch.  More
+<p>When you do this, you make a new commit on the <code class="docutils literal"><span class="pre">master</span></code> branch.  More
 explanation next class.</p>
 </div>
 <div class="section" id="push-the-new-commit-back-up-to-your-fork">
 <h2>Push the new commit back up to your fork<a class="headerlink" href="#push-the-new-commit-back-up-to-your-fork" title="Permalink to this headline">¶</a></h2>
 <p>Now you want to let me see the changes so I can add them back.  To do this, you
-want to <tt class="docutils literal"><span class="pre">push</span></tt> your changes back up to github.  To do this:</p>
+want to <code class="docutils literal"><span class="pre">push</span></code> your changes back up to github.  To do this:</p>
 <div class="highlight-python"><div class="highlight"><pre>git push origin master --set-upstream
 </pre></div>
 </div>
-<p>This pushes the new changes up to the <tt class="docutils literal"><span class="pre">master</span></tt> branch in your copy of the
+<p>This pushes the new changes up to the <code class="docutils literal"><span class="pre">master</span></code> branch in your copy of the
 repository on github.</p>
 <p>If you&#8217;ve used the default &#8220;https&#8221; URL above (as I have) github will ask you for
 your github username and password when you do this.</p>
@@ -175,7 +175,7 @@ the changes because that&#8217;s where you &#8220;forked&#8221; from originally.
           </div>
         </div>
       </div>
-      <div class="sphinxsidebar">
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
   <h3><a href="../index.html">Table Of Contents</a></h3>
   <ul>
@@ -193,12 +193,14 @@ the changes because that&#8217;s where you &#8220;forked&#8221; from originally.
 </li>
 </ul>
 
-  <h3>This Page</h3>
-  <ul class="this-page-menu">
-    <li><a href="../_sources/2013/git_homework.txt"
-           rel="nofollow">Show Source</a></li>
-  </ul>
-<div id="searchbox" style="display: none">
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/2013/git_homework.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="../search.html" method="get">
       <input type="text" name="q" />
@@ -215,7 +217,7 @@ the changes because that&#8217;s where you &#8220;forked&#8221; from originally.
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -227,9 +229,9 @@ the changes because that&#8217;s where you &#8220;forked&#8221; from originally.
  
       </ul>
     </div>
-    <div class="footer">
+    <div class="footer" role="contentinfo">
         &copy; Copyright 2013-2015, Matthew Brett and J-B Poline.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
     </div>
   </body>
 </html>

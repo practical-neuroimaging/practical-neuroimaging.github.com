@@ -29,8 +29,8 @@
     <link rel="next" title="Practical neuroimaging, the sequel" href="schedule_2015.html" />
     <link rel="prev" title="Convolution" href="on_convolution.html" /> 
   </head>
-  <body>
-    <div class="related">
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -52,14 +52,14 @@
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body">
+          <div class="body" role="main">
             
   <div class="section" id="putting-modules-on-the-python-path">
 <h1>Putting modules on the Python path<a class="headerlink" href="#putting-modules-on-the-python-path" title="Permalink to this headline">¶</a></h1>
-<p>Let&#8217;s say I have a Python module called <tt class="docutils literal"><span class="pre">myfunctions.py</span></tt>.  I have stored this
-in a directory <tt class="docutils literal"><span class="pre">/Users/mb312/code</span></tt>.  So, the full path to the file is
-<tt class="docutils literal"><span class="pre">/Users/mb312/code/myfunctions.py</span></tt>.</p>
-<p>Here is the contents of <tt class="docutils literal"><span class="pre">myfunctions.py</span></tt>:</p>
+<p>Let&#8217;s say I have a Python module called <code class="docutils literal"><span class="pre">myfunctions.py</span></code>.  I have stored this
+in a directory <code class="docutils literal"><span class="pre">/Users/mb312/code</span></code>.  So, the full path to the file is
+<code class="docutils literal"><span class="pre">/Users/mb312/code/myfunctions.py</span></code>.</p>
+<p>Here is the contents of <code class="docutils literal"><span class="pre">myfunctions.py</span></code>:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="sd">&quot;&quot;&quot; Some useful functions that I use, usefully</span>
 <span class="sd">&quot;&quot;&quot;</span>
 
@@ -67,14 +67,14 @@ in a directory <tt class="docutils literal"><span class="pre">/Users/mb312/code<
     <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span> <span class="o">+</span> <span class="mi">1</span>
 </pre></div>
 </div>
-<p>I&#8217;m working in some directory <tt class="docutils literal"><span class="pre">/Users/mb312/working</span></tt>
-(<tt class="docutils literal"><span class="pre">/Users/mb312/working</span></tt> is my current directory).</p>
-<p>I want to be able to start Python, <tt class="docutils literal"><span class="pre">import</span> <span class="pre">myfunctions</span></tt>, and then
+<p>I&#8217;m working in some directory <code class="docutils literal"><span class="pre">/Users/mb312/working</span></code>
+(<code class="docutils literal"><span class="pre">/Users/mb312/working</span></code> is my current directory).</p>
+<p>I want to be able to start Python, <code class="docutils literal"><span class="pre">import</span> <span class="pre">myfunctions</span></code>, and then
 do something like:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="k">print</span><span class="p">(</span><span class="n">myfunctions</span><span class="o">.</span><span class="n">add_badly</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
 </pre></div>
 </div>
-<p>and get the expected answer <tt class="docutils literal"><span class="pre">14</span></tt>.</p>
+<p>and get the expected answer <code class="docutils literal"><span class="pre">14</span></code>.</p>
 <p>If I start Python and do that:</p>
 <div class="highlight-python"><div class="highlight"><pre>$ python
 Python 2.7.9 (v2.7.9:648dcafa7e5f, Dec 10 2014, 10:10:46)
@@ -86,9 +86,9 @@ File &quot;&lt;stdin&gt;&quot;, line 1, in &lt;module&gt;
 ImportError: No module named myfunctions
 </pre></div>
 </div>
-<p>This is because Python does not know where to find <tt class="docutils literal"><span class="pre">myfunctions.py</span></tt>.</p>
-<p>When Python is looking for a new module, like <tt class="docutils literal"><span class="pre">myfunctions.py</span></tt>, it searches
-a list of directories stored as the <tt class="docutils literal"><span class="pre">path</span></tt> variable, in the <tt class="docutils literal"><span class="pre">sys</span></tt> module.</p>
+<p>This is because Python does not know where to find <code class="docutils literal"><span class="pre">myfunctions.py</span></code>.</p>
+<p>When Python is looking for a new module, like <code class="docutils literal"><span class="pre">myfunctions.py</span></code>, it searches
+a list of directories stored as the <code class="docutils literal"><span class="pre">path</span></code> variable, in the <code class="docutils literal"><span class="pre">sys</span></code> module.</p>
 <p>Here is the contents of that variable on my system:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">sys</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="k">print</span><span class="p">(</span><span class="s">&#39;</span><span class="se">\n</span><span class="s">&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="p">))</span>
@@ -106,24 +106,24 @@ a list of directories stored as the <tt class="docutils literal"><span class="pr
 <span class="go">/Library/Python/2.7/site-packages</span>
 </pre></div>
 </div>
-<p>Notice that <tt class="docutils literal"><span class="pre">sys.path</span></tt> is a simple list:</p>
+<p>Notice that <code class="docutils literal"><span class="pre">sys.path</span></code> is a simple list:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="nb">type</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="p">)</span>
 <span class="go">&lt;type &#39;list&#39;&gt;</span>
 </pre></div>
 </div>
-<p>When I run the command <tt class="docutils literal"><span class="pre">import</span> <span class="pre">myfunctions</span></tt>, Python will look for a file
-<tt class="docutils literal"><span class="pre">myfunctions.py</span></tt> <a class="footnote-reference" href="#on-extensions" id="id1">[1]</a> in each of the directories in the list,
+<p>When I run the command <code class="docutils literal"><span class="pre">import</span> <span class="pre">myfunctions</span></code>, Python will look for a file
+<code class="docutils literal"><span class="pre">myfunctions.py</span></code> <a class="footnote-reference" href="#on-extensions" id="id1">[1]</a> in each of the directories in the list,
 starting with the first.  As soon as it finds this file, it stops, and imports
-it.  If it does not find the file, I get the <tt class="docutils literal"><span class="pre">ImportError</span></tt> we saw above.</p>
-<p>The <tt class="docutils literal"><span class="pre">sys.path</span></tt> list of directories is also called the <em>module search path</em>.
+it.  If it does not find the file, I get the <code class="docutils literal"><span class="pre">ImportError</span></code> we saw above.</p>
+<p>The <code class="docutils literal"><span class="pre">sys.path</span></code> list of directories is also called the <em>module search path</em>.
 See <a class="reference external" href="https://docs.python.org/2/tutorial/modules.html#the-module-search-path">https://docs.python.org/2/tutorial/modules.html#the-module-search-path</a> for
 more detail.</p>
-<p>If we want to be able to <tt class="docutils literal"><span class="pre">import</span> <span class="pre">myfunctions</span></tt> we need to put <em>the directory
+<p>If we want to be able to <code class="docutils literal"><span class="pre">import</span> <span class="pre">myfunctions</span></code> we need to put <em>the directory
 containing the module</em> into the <em>module search path</em>.  In our case we want to
-put the directory <tt class="docutils literal"><span class="pre">/Users/mb312/code</span></tt> onto the module search path.</p>
+put the directory <code class="docutils literal"><span class="pre">/Users/mb312/code</span></code> onto the module search path.</p>
 <p>There are various ways to do this, but the most direct way to do that, is to
-change the value of the <tt class="docutils literal"><span class="pre">sys.path</span></tt> variable after starting Python.</p>
-<p>Because <tt class="docutils literal"><span class="pre">sys.path</span></tt> is a list of strings, I can append my directory
+change the value of the <code class="docutils literal"><span class="pre">sys.path</span></code> variable after starting Python.</p>
+<p>Because <code class="docutils literal"><span class="pre">sys.path</span></code> is a list of strings, I can append my directory
 string to the list using standard list methods, so that Python will now search
 the new directory.  In my case:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s">&#39;/Users/mb312/code&#39;</span><span class="p">)</span>
@@ -137,12 +137,12 @@ the new directory.  In my case:</p>
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
 <tr><td class="label"><a class="fn-backref" href="#id1">[1]</a></td><td>Most Python code is stored in files with the extension
-<tt class="docutils literal"><span class="pre">.py</span></tt>.  You can also write <a class="reference external" href="https://docs.python.org/2/extending/extending.html">extensions</a> for Python, which
+<code class="docutils literal"><span class="pre">.py</span></code>.  You can also write <a class="reference external" href="https://docs.python.org/2/extending/extending.html">extensions</a> for Python, which
 are compiled libraries that Python can also import.  You can define
-functions and classes in these files as you can for Python code in <tt class="docutils literal"><span class="pre">.py</span></tt>
+functions and classes in these files as you can for Python code in <code class="docutils literal"><span class="pre">.py</span></code>
 files.  These files have filename extensions that depend on the platform
-you are running on.  On Linux or OSX the extension is generally <tt class="docutils literal"><span class="pre">.so</span></tt>, on
-Windows, the extension is often <tt class="docutils literal"><span class="pre">.pyd</span></tt>.</td></tr>
+you are running on.  On Linux or OSX the extension is generally <code class="docutils literal"><span class="pre">.so</span></code>, on
+Windows, the extension is often <code class="docutils literal"><span class="pre">.pyd</span></code>.</td></tr>
 </tbody>
 </table>
 </div>
@@ -151,7 +151,7 @@ Windows, the extension is often <tt class="docutils literal"><span class="pre">.
           </div>
         </div>
       </div>
-      <div class="sphinxsidebar">
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
   <h4>Previous topic</h4>
   <p class="topless"><a href="on_convolution.html"
@@ -159,12 +159,14 @@ Windows, the extension is often <tt class="docutils literal"><span class="pre">.
   <h4>Next topic</h4>
   <p class="topless"><a href="schedule_2015.html"
                         title="next chapter">Practical neuroimaging, the sequel</a></p>
-  <h3>This Page</h3>
-  <ul class="this-page-menu">
-    <li><a href="_sources/python_path.txt"
-           rel="nofollow">Show Source</a></li>
-  </ul>
-<div id="searchbox" style="display: none">
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/python_path.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="search.html" method="get">
       <input type="text" name="q" />
@@ -181,7 +183,7 @@ Windows, the extension is often <tt class="docutils literal"><span class="pre">.
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -199,9 +201,9 @@ Windows, the extension is often <tt class="docutils literal"><span class="pre">.
  
       </ul>
     </div>
-    <div class="footer">
+    <div class="footer" role="contentinfo">
         &copy; Copyright 2013-2015, Matthew Brett and J-B Poline.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
     </div>
   </body>
 </html>

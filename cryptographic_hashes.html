@@ -29,8 +29,8 @@
     <link rel="next" title="The git parable" href="git_parable.html" />
     <link rel="prev" title="Choosing an editor" href="choosing_editor.html" /> 
   </head>
-  <body>
-    <div class="related">
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -52,7 +52,7 @@
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body">
+          <div class="body" role="main">
             
   <div class="section" id="cryptographic-hashes">
 <h1>Cryptographic hashes<a class="headerlink" href="#cryptographic-hashes" title="Permalink to this headline">¶</a></h1>
@@ -73,9 +73,9 @@ exact block of data. Let&#8217;s run this in Python:</p>
 </div>
 <p>Not too exciting so far. However, the rather magical nature of this
 string is not yet apparent. Here&#8217;s the trick:</p>
-<p>There is no practical way for you to find another <tt class="docutils literal"><span class="pre">message</span></tt> that
-will give the same <tt class="docutils literal"><span class="pre">hash_value</span></tt></p>
-<p>The <tt class="docutils literal"><span class="pre">hash_value</span></tt> then is (very nearly) completely unique to that set of bytes.</p>
+<p>There is no practical way for you to find another <code class="docutils literal"><span class="pre">message</span></code> that
+will give the same <code class="docutils literal"><span class="pre">hash_value</span></code></p>
+<p>The <code class="docutils literal"><span class="pre">hash_value</span></code> then is (very nearly) completely unique to that set of bytes.</p>
 <p>For example, a tiny change in the string makes the hash completely
 different. Here I&#8217;ve just added a full stop at the end:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">sha1_hash_function</span><span class="p">(</span><span class="s">&quot;git is a rude word in UK English.&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">hexdigest</span><span class="p">()</span>
@@ -92,7 +92,7 @@ rude word in UK English&#8221;.</p>
           </div>
         </div>
       </div>
-      <div class="sphinxsidebar">
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
   <h4>Previous topic</h4>
   <p class="topless"><a href="choosing_editor.html"
@@ -100,12 +100,14 @@ rude word in UK English&#8221;.</p>
   <h4>Next topic</h4>
   <p class="topless"><a href="git_parable.html"
                         title="next chapter">The git parable</a></p>
-  <h3>This Page</h3>
-  <ul class="this-page-menu">
-    <li><a href="_sources/cryptographic_hashes.txt"
-           rel="nofollow">Show Source</a></li>
-  </ul>
-<div id="searchbox" style="display: none">
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/cryptographic_hashes.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="search.html" method="get">
       <input type="text" name="q" />
@@ -122,7 +124,7 @@ rude word in UK English&#8221;.</p>
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -140,9 +142,9 @@ rude word in UK English&#8221;.</p>
  
       </ul>
     </div>
-    <div class="footer">
+    <div class="footer" role="contentinfo">
         &copy; Copyright 2013-2015, Matthew Brett and J-B Poline.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
     </div>
   </body>
 </html>

@@ -29,8 +29,8 @@
     <link rel="next" title="Git setup for different editors" href="git_setup.html" />
     <link rel="prev" title="Cryptographic hashes" href="cryptographic_hashes.html" /> 
   </head>
-  <body>
-    <div class="related">
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -52,7 +52,7 @@
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body">
+          <div class="body" role="main">
             
   <div class="section" id="the-git-parable">
 <h1>The git parable<a class="headerlink" href="#the-git-parable" title="Permalink to this headline">¶</a></h1>
@@ -63,7 +63,7 @@ Preston-Werner, with his kind permission.  Please contact Tom
 Preston-Werner for permission to copy this version or the original.</p>
 <p>The only changes from the original are:</p>
 <ul class="last simple">
-<li>the addition of <a class="reference internal" href="#on-hashes"><em>a short section on cryptographic hashes</em></a> (copyright Matthew Brett, released to the public domain);</li>
+<li>the addition of <a class="reference internal" href="#on-hashes"><span>a short section on cryptographic hashes</span></a> (copyright Matthew Brett, released to the public domain);</li>
 <li>I have added many of Johan Herland&#8217;s nice illustrations from
 <a class="reference external" href="https://github.com/jherland/git_parable">https://github.com/jherland/git_parable</a> – the illustrations are his
 copyright, released under <a class="reference external" href="http://creativecommons.org/licenses/by-nc-sa/4.0">CC-by-NC-SA</a>.;</li>
@@ -261,18 +261,18 @@ functions</a>.</p>
 <p>A <em>hash</em> is the result of running a <em>hash function</em> over a block of
 data. The hash is a fixed length string that is the <em>fingerprint</em> of that
 exact block of data. For example, let&#8217;s say you had a text file called
-<tt class="docutils literal"><span class="pre">my_file</span></tt> with exactly this text as its contents:
+<code class="docutils literal"><span class="pre">my_file</span></code> with exactly this text as its contents:
 return):</p>
 <div class="highlight-python"><div class="highlight"><pre>git is a rude word in UK English
 </pre></div>
 </div>
-<p>(The sentence has a carriage return at the end). You can run the <tt class="docutils literal"><span class="pre">SHA1</span></tt> <em>hash
-function</em> over the contents of this file (e.g. with the <tt class="docutils literal"><span class="pre">shasum</span></tt> command in
+<p>(The sentence has a carriage return at the end). You can run the <code class="docutils literal"><span class="pre">SHA1</span></code> <em>hash
+function</em> over the contents of this file (e.g. with the <code class="docutils literal"><span class="pre">shasum</span></code> command in
 Unix), and you will get this hash value:
-<tt class="docutils literal"><span class="pre">30ad6c360a692c1fe66335bb00d00e0528346be5</span></tt>.</p>
+<code class="docutils literal"><span class="pre">30ad6c360a692c1fe66335bb00d00e0528346be5</span></code>.</p>
 <p>Not too exciting so far. However, the rather magical nature of this string is
 not yet apparent. Here&#8217;s the trick – there is no practical way for you to
-find a file with different contents to <tt class="docutils literal"><span class="pre">my_file</span></tt> that will give the same hash
+find a file with different contents to <code class="docutils literal"><span class="pre">my_file</span></code> that will give the same hash
 value.</p>
 <p>The hash value then is (very nearly) completely unique to the sequence of bytes
 in that file.</p>
@@ -282,9 +282,9 @@ different.  If you just add a full-stop at the end of the sentence:</p>
 </pre></div>
 </div>
 <p>– and save the file, it now has a completely different hash value,
-<tt class="docutils literal"><span class="pre">23d97b00299c250b43049be67c97cf2e5ffc2428</span></tt>.</p>
+<code class="docutils literal"><span class="pre">23d97b00299c250b43049be67c97cf2e5ffc2428</span></code>.</p>
 <p>So, I give you a file, and you calculate the hash value, and it comes out as
-<tt class="docutils literal"><span class="pre">30ad6c360a692c1fe66335bb00d00e0528346be5</span></tt> then you can be very sure that the
+<code class="docutils literal"><span class="pre">30ad6c360a692c1fe66335bb00d00e0528346be5</span></code> then you can be very sure that the
 data I gave you was exactly a file with the text &#8220;git is a rude word in UK
 English&#8221; (plus a carriage return).</p>
 </div>
@@ -385,27 +385,27 @@ of the code you wrote last night makes you cringe a little bit. The code
 is good overall, but you made a lot of mistakes early on that you
 corrected in later snapshots.</p>
 <p>Let&#8217;s say the branch on which you did your drunken development is called
-<tt class="docutils literal"><span class="pre">drunk</span></tt> and you made three snapshots after you got home from the bar. If
-the name <tt class="docutils literal"><span class="pre">drunk</span></tt> points at the latest snapshot on that branch, then you
+<code class="docutils literal"><span class="pre">drunk</span></code> and you made three snapshots after you got home from the bar. If
+the name <code class="docutils literal"><span class="pre">drunk</span></code> points at the latest snapshot on that branch, then you
 can use a useful notation to refer to the parent of that snapshot. The
-notation <tt class="docutils literal"><span class="pre">drunk^</span></tt> means the parent of the snapshot pointed to by
-the branch name <tt class="docutils literal"><span class="pre">drunk</span></tt>. Similarly <tt class="docutils literal"><span class="pre">drunk^^</span></tt> means the
-grandparent of the <tt class="docutils literal"><span class="pre">drunk</span></tt> snapshot. So the three snapshots in
-chronological order are <tt class="docutils literal"><span class="pre">drunk^^</span></tt>, <tt class="docutils literal"><span class="pre">drunk^</span></tt>, and <tt class="docutils literal"><span class="pre">drunk</span></tt>.</p>
+notation <code class="docutils literal"><span class="pre">drunk^</span></code> means the parent of the snapshot pointed to by
+the branch name <code class="docutils literal"><span class="pre">drunk</span></code>. Similarly <code class="docutils literal"><span class="pre">drunk^^</span></code> means the
+grandparent of the <code class="docutils literal"><span class="pre">drunk</span></code> snapshot. So the three snapshots in
+chronological order are <code class="docutils literal"><span class="pre">drunk^^</span></code>, <code class="docutils literal"><span class="pre">drunk^</span></code>, and <code class="docutils literal"><span class="pre">drunk</span></code>.</p>
 <img alt="_images/gp-drunk-parents.png" src="_images/gp-drunk-parents.png" />
 <p>You&#8217;d really like those three lousy snapshots to be two clean snapshots.
 One that changes an existing function, and one that adds a new file. To
-accomplish this revision of history you copy <tt class="docutils literal"><span class="pre">drunk</span></tt> to &#8216;working&#8217; and
+accomplish this revision of history you copy <code class="docutils literal"><span class="pre">drunk</span></code> to &#8216;working&#8217; and
 delete the file that is new in the series. Now &#8216;working&#8217; represents the
 correct modifications to the existing function. You create a new
 snapshot from &#8216;working&#8217; and write the message to be appropriate to the
-changes. For the parent you specify the SHA1 of the <tt class="docutils literal"><span class="pre">drunk^^^</span></tt> snapshot,
+changes. For the parent you specify the SHA1 of the <code class="docutils literal"><span class="pre">drunk^^^</span></code> snapshot,
 essentially creating a new branch off of the same snapshot as last night.</p>
 <img alt="_images/gp-drunk-rewrite.png" src="_images/gp-drunk-rewrite.png" />
-<p>Now you can copy <tt class="docutils literal"><span class="pre">drunk</span></tt> to &#8216;working&#8217; and roll a snapshot with the new file
+<p>Now you can copy <code class="docutils literal"><span class="pre">drunk</span></code> to &#8216;working&#8217; and roll a snapshot with the new file
 addition. As the parent you specify that snapshot you created just before this
 one.</p>
-<p>As the last step, you change the branch name <tt class="docutils literal"><span class="pre">drunk</span></tt> to point to the last
+<p>As the last step, you change the branch name <code class="docutils literal"><span class="pre">drunk</span></code> to point to the last
 snapshot you just made.</p>
 <img alt="_images/gp-finish-rewrite.png" src="_images/gp-finish-rewrite.png" />
 <p>The history of the &#8216;drunk&#8217; branch now represents a nicer version of what
@@ -577,7 +577,7 @@ go, and become a Git master!</p>
           </div>
         </div>
       </div>
-      <div class="sphinxsidebar">
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
   <h3><a href="index.html">Table Of Contents</a></h3>
   <ul>
@@ -607,12 +607,14 @@ go, and become a Git master!</p>
   <h4>Next topic</h4>
   <p class="topless"><a href="git_setup.html"
                         title="next chapter">Git setup for different editors</a></p>
-  <h3>This Page</h3>
-  <ul class="this-page-menu">
-    <li><a href="_sources/git_parable.txt"
-           rel="nofollow">Show Source</a></li>
-  </ul>
-<div id="searchbox" style="display: none">
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/git_parable.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="search.html" method="get">
       <input type="text" name="q" />
@@ -629,7 +631,7 @@ go, and become a Git master!</p>
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -647,9 +649,9 @@ go, and become a Git master!</p>
  
       </ul>
     </div>
-    <div class="footer">
+    <div class="footer" role="contentinfo">
         &copy; Copyright 2013-2015, Matthew Brett and J-B Poline.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
     </div>
   </body>
 </html>
