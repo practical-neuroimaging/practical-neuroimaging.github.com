@@ -19,9 +19,9 @@ d_ax.annotate(
     '', xy=(x1, y1+0.1), xycoords='data',
     xytext=(x, y1+0.1), textcoords='data',
     arrowprops={'arrowstyle': '<->', 'color': 'g'})
-d_ax.annotate('$x_2-x_1$', (x1 + dx / 2 - 0.2, y1-0.2), fontsize=16)
+d_ax.annotate('$x_2-x_1$', (x1 + dx / 2 + 0.4, y1-0.2), fontsize=16)
 d_ax.annotate('$y_2-y_1$', (x2 + 0.1, y1 + dy / 2), fontsize=16)
-d_ax.annotate('$x-x1$', (x1 + 0.4, y1 + 0.2), fontsize=16)
+d_ax.annotate('$x-x1$', (x1 + 0.6, y1 + 0.2), fontsize=16)
 d_ax.annotate('$x$', (x + 0.1, y1 - 1), fontsize=16)
 d_ax.annotate('$y$', (x1, y + 0.1), fontsize=16)
 d_ax.axis((4.3, 7.3, 4, 8))
