@@ -60,7 +60,7 @@
 in a directory <code class="docutils literal"><span class="pre">/Users/mb312/code</span></code>.  So, the full path to the file is
 <code class="docutils literal"><span class="pre">/Users/mb312/code/myfunctions.py</span></code>.</p>
 <p>Here is the contents of <code class="docutils literal"><span class="pre">myfunctions.py</span></code>:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="sd">&quot;&quot;&quot; Some useful functions that I use, usefully</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot; Some useful functions that I use, usefully</span>
 <span class="sd">&quot;&quot;&quot;</span>
 
 <span class="k">def</span> <span class="nf">add_badly</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
@@ -71,12 +71,12 @@ in a directory <code class="docutils literal"><span class="pre">/Users/mb312/cod
 (<code class="docutils literal"><span class="pre">/Users/mb312/working</span></code> is my current directory).</p>
 <p>I want to be able to start Python, <code class="docutils literal"><span class="pre">import</span> <span class="pre">myfunctions</span></code>, and then
 do something like:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="k">print</span><span class="p">(</span><span class="n">myfunctions</span><span class="o">.</span><span class="n">add_badly</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">myfunctions</span><span class="o">.</span><span class="n">add_badly</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
 </pre></div>
 </div>
 <p>and get the expected answer <code class="docutils literal"><span class="pre">14</span></code>.</p>
 <p>If I start Python and do that:</p>
-<div class="highlight-python"><div class="highlight"><pre>$ python
+<div class="highlight-default"><div class="highlight"><pre><span></span>$ python
 Python 2.7.9 (v2.7.9:648dcafa7e5f, Dec 10 2014, 10:10:46)
 [GCC 4.2.1 (Apple Inc. build 5666) (dot 3)] on darwin
 Type &quot;help&quot;, &quot;copyright&quot;, &quot;credits&quot; or &quot;license&quot; for more information.
@@ -90,8 +90,8 @@ ImportError: No module named myfunctions
 <p>When Python is looking for a new module, like <code class="docutils literal"><span class="pre">myfunctions.py</span></code>, it searches
 a list of directories stored as the <code class="docutils literal"><span class="pre">path</span></code> variable, in the <code class="docutils literal"><span class="pre">sys</span></code> module.</p>
 <p>Here is the contents of that variable on my system:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">sys</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span><span class="p">(</span><span class="s">&#39;</span><span class="se">\n</span><span class="s">&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="p">))</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">sys</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="p">))</span>
 
 <span class="go">/Library/Frameworks/Python.framework/Versions/2.7/lib/python27.zip</span>
 <span class="go">/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7</span>
@@ -107,7 +107,7 @@ a list of directories stored as the <code class="docutils literal"><span class="
 </pre></div>
 </div>
 <p>Notice that <code class="docutils literal"><span class="pre">sys.path</span></code> is a simple list:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="nb">type</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="p">)</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">type</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="p">)</span>
 <span class="go">&lt;type &#39;list&#39;&gt;</span>
 </pre></div>
 </div>
@@ -126,11 +126,11 @@ change the value of the <code class="docutils literal"><span class="pre">sys.pat
 <p>Because <code class="docutils literal"><span class="pre">sys.path</span></code> is a list of strings, I can append my directory
 string to the list using standard list methods, so that Python will now search
 the new directory.  In my case:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s">&#39;/Users/mb312/code&#39;</span><span class="p">)</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;/Users/mb312/code&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Now we can import our custom module:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">myfunctions</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">myfunctions</span>
 </pre></div>
 </div>
 <table class="docutils footnote" frame="void" id="on-extensions" rules="none">
@@ -174,9 +174,6 @@ Windows, the extension is often <code class="docutils literal"><span class="pre"
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
-    <p class="searchtip" style="font-size: 90%">
-    Enter search terms or a module, class or function name.
-    </p>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
@@ -203,7 +200,7 @@ Windows, the extension is often <code class="docutils literal"><span class="pre"
     </div>
     <div class="footer" role="contentinfo">
         &copy; Copyright 2013-2015, Matthew Brett and J-B Poline.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.
     </div>
   </body>
 </html>

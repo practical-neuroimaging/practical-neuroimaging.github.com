@@ -63,9 +63,9 @@ functions</a>.</p>
 <p>A <em>hash</em> is the result of running a <em>hash function</em> over a block of
 data. The hash is a fixed length string that is the <em>signature</em> of that
 exact block of data. Let&#8217;s run this in Python:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">hashlib</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">hashlib</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">sha1_hash_function</span> <span class="o">=</span> <span class="n">hashlib</span><span class="o">.</span><span class="n">sha1</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">message</span> <span class="o">=</span> <span class="s">&quot;git is a rude word in UK English&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">message</span> <span class="o">=</span> <span class="s2">&quot;git is a rude word in UK English&quot;</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">hash_value</span> <span class="o">=</span> <span class="n">sha1_hash_function</span><span class="p">(</span><span class="n">message</span><span class="p">)</span><span class="o">.</span><span class="n">hexdigest</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">hash_value</span>
 <span class="go">&#39;fec41478c4f497c1d90fd28610f4272c78a6867e&#39;</span>
@@ -78,7 +78,7 @@ will give the same <code class="docutils literal"><span class="pre">hash_value</
 <p>The <code class="docutils literal"><span class="pre">hash_value</span></code> then is (very nearly) completely unique to that set of bytes.</p>
 <p>For example, a tiny change in the string makes the hash completely
 different. Here I&#8217;ve just added a full stop at the end:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">sha1_hash_function</span><span class="p">(</span><span class="s">&quot;git is a rude word in UK English.&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">hexdigest</span><span class="p">()</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">sha1_hash_function</span><span class="p">(</span><span class="s2">&quot;git is a rude word in UK English.&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">hexdigest</span><span class="p">()</span>
 <span class="go">&#39;9e87add001f13aa79ed7b42a5effbfc60aa8584e&#39;</span>
 </pre></div>
 </div>
@@ -115,9 +115,6 @@ rude word in UK English&#8221;.</p>
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
-    <p class="searchtip" style="font-size: 90%">
-    Enter search terms or a module, class or function name.
-    </p>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
@@ -144,7 +141,7 @@ rude word in UK English&#8221;.</p>
     </div>
     <div class="footer" role="contentinfo">
         &copy; Copyright 2013-2015, Matthew Brett and J-B Poline.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.
     </div>
   </body>
 </html>

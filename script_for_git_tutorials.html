@@ -68,54 +68,54 @@
 </ul>
 <p>In the terms of the <a class="reference external" href="http://tom.preston-werner.com/2009/05/19/the-git-parable.html">git parable</a>, snapshot is the same thing as a commit.</p>
 <p><a class="reference external" href="http://practical-neuroimaging.github.io/git_parable.html">Our own version of the git parable</a></p>
-<div class="highlight-python"><div class="highlight"><pre>git config --global user.name &quot;Matthew Brett&quot;
-git config --global user.email &quot;matthew.brett@gmail.com&quot;
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">config</span> <span class="o">--</span><span class="k">global</span> <span class="n">user</span><span class="o">.</span><span class="n">name</span> <span class="s2">&quot;Matthew Brett&quot;</span>
+<span class="n">git</span> <span class="n">config</span> <span class="o">--</span><span class="k">global</span> <span class="n">user</span><span class="o">.</span><span class="n">email</span> <span class="s2">&quot;matthew.brett@gmail.com&quot;</span>
 </pre></div>
 </div>
 <p>Change to home directory:</p>
-<div class="highlight-python"><div class="highlight"><pre>cd ~
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">~</span>
 </pre></div>
 </div>
 <p>A git repository consists of a working directory (or working tree) with a
 hidden subdirectory containing the files that git uses to store and track
 snapshots.</p>
 <p>First make the working directory:</p>
-<div class="highlight-python"><div class="highlight"><pre>mkdir thrilling_paper
-cd thrilling paper
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">mkdir</span> <span class="n">thrilling_paper</span>
+<span class="n">cd</span> <span class="n">thrilling</span> <span class="n">paper</span>
 </pre></div>
 </div>
 <p>This is our working directory.</p>
 <p>There are no files in the directory at the moment.</p>
 <p>Let&#8217;s start the paper:</p>
-<div class="highlight-python"><div class="highlight"><pre>vim nobel_prize.txt
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">vim</span> <span class="n">nobel_prize</span><span class="o">.</span><span class="n">txt</span>
 </pre></div>
 </div>
 <p>then:</p>
-<div class="highlight-python"><div class="highlight"><pre>How the brain works
--------------------
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">How</span> <span class="n">the</span> <span class="n">brain</span> <span class="n">works</span>
+<span class="o">-------------------</span>
 
-It sends electrical messages around and that adds up to everything.
+<span class="n">It</span> <span class="n">sends</span> <span class="n">electrical</span> <span class="n">messages</span> <span class="n">around</span> <span class="ow">and</span> <span class="n">that</span> <span class="n">adds</span> <span class="n">up</span> <span class="n">to</span> <span class="n">everything</span><span class="o">.</span>
 </pre></div>
 </div>
 <p>Let&#8217;s make an analysis script as well:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">random</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
 
 <span class="n">the_number</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
 <span class="k">while</span> <span class="n">the_number</span> <span class="o">!=</span> <span class="mi">42</span><span class="p">:</span>
-    <span class="k">print</span><span class="p">(</span><span class="s">&quot;Oops, try again&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Oops, try again&quot;</span><span class="p">)</span>
     <span class="n">the_number</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
 
-<span class="k">print</span><span class="p">(</span><span class="s">&quot;The answer is&quot;</span><span class="p">,</span> <span class="n">the_number</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The answer is&quot;</span><span class="p">,</span> <span class="n">the_number</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Now let&#8217;s say we&#8217;re ready to start making snapshots with git.</p>
 <p>First we make a git repository to store the snapshots and history:</p>
-<div class="highlight-python"><div class="highlight"><pre>git init
-ls
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">init</span>
+<span class="n">ls</span>
 </pre></div>
 </div>
 <p>The directory <cite>.git</cite> is hidden:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="n">ls</span> <span class="o">-</span><span class="n">a</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">ls</span> <span class="o">-</span><span class="n">a</span>
 <span class="n">ls</span> <span class="o">.</span><span class="n">git</span>
 </pre></div>
 </div>
@@ -125,9 +125,9 @@ our branches and tags, and the <cite>objects</cite> directory will store our fil
 directory snapshots.</p>
 <p>We haven&#8217;t taken any snapshots yet, so there is nothing in the objects
 directory:</p>
-<div class="highlight-python"><div class="highlight"><pre>ls .git/objects
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">ls</span> <span class="o">.</span><span class="n">git</span><span class="o">/</span><span class="n">objects</span>
 
-git status
+<span class="n">git</span> <span class="n">status</span>
 </pre></div>
 </div>
 <p>Notice that the files are &#8216;untracked&#8217;.  That means that git has never
@@ -137,40 +137,40 @@ go into our snapshots.</p>
 the stuff that will go into the snapshot, into the staging area.   We do that
 with <code class="docutils literal"><span class="pre">git</span> <span class="pre">add</span></code>.</p>
 <p>Now let&#8217;s add nobel_prize.txt to the staging area:</p>
-<div class="highlight-python"><div class="highlight"><pre>git add nobel_prize.txt
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">add</span> <span class="n">nobel_prize</span><span class="o">.</span><span class="n">txt</span>
 </pre></div>
 </div>
 <p>What just happened?  First, we can see that a snapshot of <cite>nobel_prize.txt</cite> has
 gone into the staging area:</p>
-<div class="highlight-python"><div class="highlight"><pre>git status
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">status</span>
 </pre></div>
 </div>
 <p>Second, behind the scenes, git has made a copy of the file and put it into its
 objects directory:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="n">ls</span> <span class="o">.</span><span class="n">git</span><span class="o">/</span><span class="n">objects</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">ls</span> <span class="o">.</span><span class="n">git</span><span class="o">/</span><span class="n">objects</span>
 </pre></div>
 </div>
 <p>The file has a filename that comes from its hash.  Don&#8217;t worry about that for
 now.  We can even get git to fetch this stored copy of <cite>nobel_prize.txt</cite> for
 us, with git show.  Don&#8217;t worry about the details of this command:</p>
-<div class="highlight-python"><div class="highlight"><pre>git show :nobel_prize.txt
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">show</span> <span class="p">:</span><span class="n">nobel_prize</span><span class="o">.</span><span class="n">txt</span>
 </pre></div>
 </div>
 <p>This is the snapshot of the file that has gone into the staging area.</p>
 <p>If we now change the file in the working tree, it will be different from the
 snapshot version.</p>
 <p>Edit nobel_prize.txt:</p>
-<div class="highlight-python"><div class="highlight"><pre>I have discovered the electrical impulses in the brain change when I think
-about being famous.
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">I</span> <span class="n">have</span> <span class="n">discovered</span> <span class="n">the</span> <span class="n">electrical</span> <span class="n">impulses</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">brain</span> <span class="n">change</span> <span class="n">when</span> <span class="n">I</span> <span class="n">think</span>
+<span class="n">about</span> <span class="n">being</span> <span class="n">famous</span><span class="o">.</span>
 </pre></div>
 </div>
 <p>The copy of nobel_prize.txt in the working directory contains a new sentence.
 But the snapshot stored copy is the same as it was when we took the snapshot:</p>
-<div class="highlight-python"><div class="highlight"><pre>git show :nobel_prize.txt
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">show</span> <span class="p">:</span><span class="n">nobel_prize</span><span class="o">.</span><span class="n">txt</span>
 </pre></div>
 </div>
 <p>Now what happens when I do a git status?:</p>
-<div class="highlight-python"><div class="highlight"><pre>git status
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">status</span>
 </pre></div>
 </div>
 <p>The green shows the initial snapshot I did of this file, into the staging
@@ -178,9 +178,9 @@ area.  The red &#8216;not staged for commit&#8217; shows that the file that is i
 working tree is different from the file in the staging area.  The redness of
 the red text is warning me that I may want to update my copy in the staging
 area.  I&#8217;ll do that now:</p>
-<div class="highlight-python"><div class="highlight"><pre>git add nobel_prize.txt
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">add</span> <span class="n">nobel_prize</span><span class="o">.</span><span class="n">txt</span>
 
-git status
+<span class="n">git</span> <span class="n">status</span>
 </pre></div>
 </div>
 <p>Notice that I now have two files in the objects directory - these correspond
@@ -192,8 +192,8 @@ first version of the file, git will keep it for us for a month or so, in the
 housekeeping clearout, and that backup will disappear, unless it is part of
 any of the full snapshots (commits) that will come on to soon.</p>
 <p>Now I will also add <cite>analysis_script.txt</cite>:</p>
-<div class="highlight-python"><div class="highlight"><pre>git add analysis_script.txt
-git status
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">add</span> <span class="n">analysis_script</span><span class="o">.</span><span class="n">txt</span>
+<span class="n">git</span> <span class="n">status</span>
 </pre></div>
 </div>
 <p>So now both files are in the staging area, and the versions in the staging
@@ -206,7 +206,7 @@ to be committed.</p>
 snapshot of the working tree.</p>
 <p>Let&#8217;s do the commit.</p>
 <p>I&#8217;m first going to do the commit as I would normally do it:</p>
-<div class="highlight-python"><div class="highlight"><pre>git commit
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">commit</span>
 </pre></div>
 </div>
 <p>Git opened my text editor for me and shows me some helpful information about
@@ -225,12 +225,12 @@ You will then need to set up your text editor properly.  Google is your
 friend.</p>
 <p>So, just to show you how it works, if your text editor isn&#8217;t set up right,
 I&#8217;ll use the <cite>-m</cite> flag to pass the message, so git doesn&#8217;t open the editor:</p>
-<div class="highlight-python"><div class="highlight"><pre>git commit -m &quot;First snapshot of my files&quot;
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">commit</span> <span class="o">-</span><span class="n">m</span> <span class="s2">&quot;First snapshot of my files&quot;</span>
 </pre></div>
 </div>
 <p>Git helpfully tells us what went into the snapshot.</p>
 <p>Now I can look at the short history of the project:</p>
-<div class="highlight-python"><div class="highlight"><pre>git log
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">log</span>
 </pre></div>
 </div>
 </div>
@@ -247,7 +247,7 @@ bookmarks.</p>
 &#8220;master&#8221;.</p>
 <p>&#8220;master&#8221; is the default branch, the branch that git creates by default.</p>
 <p>We can see which branch we are on using <code class="docutils literal"><span class="pre">git</span> <span class="pre">branch</span></code>:</p>
-<div class="highlight-python"><div class="highlight"><pre>git branch
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">branch</span>
 </pre></div>
 </div>
 <p>At the moment we only have one branch &#8220;master&#8221;</p>
@@ -255,12 +255,12 @@ bookmarks.</p>
 particular snapshot.  Remember a snapshot is a &#8220;commit&#8221; in git terminology.</p>
 <p>Remember that git log showed us the identifier for the commit - the commit
 hash:</p>
-<div class="highlight-python"><div class="highlight"><pre>git log
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">log</span>
 </pre></div>
 </div>
 <p>We can also see which commit the branch is pointing at by using the <code class="docutils literal"><span class="pre">-v</span></code>
 flag:</p>
-<div class="highlight-python"><div class="highlight"><pre>git branch -v
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">branch</span> <span class="o">-</span><span class="n">v</span>
 </pre></div>
 </div>
 <p>As you can see the output tells us that the &#8220;master&#8221; branch is pointing to the
@@ -270,7 +270,7 @@ does something very similar.  Git records the current position of each branch
 in a tiny text file in the <code class="docutils literal"><span class="pre">.git/refs/heads</span></code> directory.  Here is the current
 contents of <code class="docutils literal"><span class="pre">.git/refs/heads/master</span></code> - the current position of the master
 branch:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="n">cat</span> <span class="o">.</span><span class="n">git</span><span class="o">/</span><span class="n">refs</span><span class="o">/</span><span class="n">heads</span><span class="o">/</span><span class="n">master</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">cat</span> <span class="o">.</span><span class="n">git</span><span class="o">/</span><span class="n">refs</span><span class="o">/</span><span class="n">heads</span><span class="o">/</span><span class="n">master</span>
 </pre></div>
 </div>
 <p>As you can see it points to the commit (snapshot) hash we see in the output
@@ -278,12 +278,12 @@ from <code class="docutils literal"><span class="pre">git</span> <span class="pr
 <p>Now let&#8217;s make a new commit.</p>
 <p>I&#8217;ll now make some edits to <code class="docutils literal"><span class="pre">nobel_prize.txt</span></code>. First I delete the last
 sentence.  Now I add:</p>
-<div class="highlight-python"><div class="highlight"><pre>I am starting to feel famous while I write this paper.
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">I</span> <span class="n">am</span> <span class="n">starting</span> <span class="n">to</span> <span class="n">feel</span> <span class="n">famous</span> <span class="k">while</span> <span class="n">I</span> <span class="n">write</span> <span class="n">this</span> <span class="n">paper</span><span class="o">.</span>
 </pre></div>
 </div>
 <p>I do git status to show me what has changed between the working tree and the
 staging area:</p>
-<div class="highlight-python"><div class="highlight"><pre>git status
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">status</span>
 </pre></div>
 </div>
 <p>Sure enough, the <code class="docutils literal"><span class="pre">nobel_prize.txt</span></code> paper has new changes that the staging
@@ -292,24 +292,24 @@ area does not know about.</p>
 commit.</p>
 <p>In fact, we can ask git to tell us exactly what changes there are in the
 working tree, compared to the staging area, with the <code class="docutils literal"><span class="pre">git</span> <span class="pre">diff</span></code> command:</p>
-<div class="highlight-python"><div class="highlight"><pre>git diff
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">diff</span>
 </pre></div>
 </div>
 <p>Git diff only works well on simple text files like the files in our working
 tree.  The new lines are in green with a plus.  Any deleted lines are in red
 with a minus sign preceding.</p>
 <p>OK - I am happy to add these changes to the staging area for the new commit:</p>
-<div class="highlight-python"><div class="highlight"><pre>git add nobel_prize.txt
-git status
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">add</span> <span class="n">nobel_prize</span><span class="o">.</span><span class="n">txt</span>
+<span class="n">git</span> <span class="n">status</span>
 </pre></div>
 </div>
 <p>All seems ready.</p>
 <p>Let&#8217;s make the new commit:</p>
-<div class="highlight-python"><div class="highlight"><pre>git commit -m &quot;More inspiring thoughts&quot;
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">commit</span> <span class="o">-</span><span class="n">m</span> <span class="s2">&quot;More inspiring thoughts&quot;</span>
 </pre></div>
 </div>
 <p>Let&#8217;s look at the history of our project now:</p>
-<div class="highlight-python"><div class="highlight"><pre>git log
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">log</span>
 </pre></div>
 </div>
 <p>The project has two commits, the commit we have just done, and the first
@@ -319,7 +319,7 @@ this commit.</p>
 <p>Our new commit points back to the first commit to record the history, that
 our latest commit follows on from the first commit.</p>
 <p>We can see that by using the <code class="docutils literal"><span class="pre">--parents</span></code> flag to git log:</p>
-<div class="highlight-python"><div class="highlight"><pre>git log --parents
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">log</span> <span class="o">--</span><span class="n">parents</span>
 </pre></div>
 </div>
 <p>We still have the hash of our commit at the beginning of the first line.
@@ -331,17 +331,17 @@ of history between the commits.</p>
 when we make a commit.  The branch position moves from pointing to the
 previous commit, to point to the current commit.  As we remember, the current
 commit is:</p>
-<div class="highlight-python"><div class="highlight"><pre>git log
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">log</span>
 </pre></div>
 </div>
 <p>Here is the position of the &#8216;master&#8217; branch now:</p>
-<div class="highlight-python"><div class="highlight"><pre>git branch -v
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">branch</span> <span class="o">-</span><span class="n">v</span>
 </pre></div>
 </div>
 <p>You can see that the branch position has moved to point to the latest commit.</p>
 <p>You won&#8217;t be surprised to see that git stored this information in the
 <code class="docutils literal"><span class="pre">.git/refs/heads/master</span></code> file:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="n">cat</span> <span class="o">.</span><span class="n">git</span><span class="o">/</span><span class="n">refs</span><span class="o">/</span><span class="n">heads</span><span class="o">/</span><span class="n">master</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">cat</span> <span class="o">.</span><span class="n">git</span><span class="o">/</span><span class="n">refs</span><span class="o">/</span><span class="n">heads</span><span class="o">/</span><span class="n">master</span>
 </pre></div>
 </div>
 <p>You now know most of the important things you need to know to understand git.</p>
@@ -384,9 +384,6 @@ commit is:</p>
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
-    <p class="searchtip" style="font-size: 90%">
-    Enter search terms or a module, class or function name.
-    </p>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
@@ -413,7 +410,7 @@ commit is:</p>
     </div>
     <div class="footer" role="contentinfo">
         &copy; Copyright 2013-2015, Matthew Brett and J-B Poline.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.
     </div>
   </body>
 </html>

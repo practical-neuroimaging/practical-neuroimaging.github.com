@@ -76,7 +76,7 @@ an online service for git repositories called <a class="reference external" href
 github</a> and follow the
 instructions there.</p>
 <p>You might want to check your favorite editor is working properly - see
-<a class="reference internal" href="git_setup.html#git-editor-setup-2013"><span>Git setup for different editors</span></a>.</p>
+<a class="reference internal" href="git_setup.html#git-editor-setup-2013"><span class="std std-ref">Git setup for different editors</span></a>.</p>
 </div>
 <div class="section" id="fork-the-main-repository">
 <h2>&#8220;Fork&#8221; the main repository<a class="headerlink" href="#fork-the-main-repository" title="Permalink to this headline">¶</a></h2>
@@ -102,8 +102,8 @@ URL to paste for doing a <code class="docutils literal"><span class="pre">git</s
 <blockquote>
 <div><a class="reference external" href="https://github.com/matthew-brett/pna-utils.git">https://github.com/matthew-brett/pna-utils.git</a></div></blockquote>
 <p>So next do:</p>
-<div class="highlight-python"><div class="highlight"><pre>cd ~/code
-git clone https://github.com/&lt;your-github-username&gt;/pna-utils.git
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">~/</span><span class="n">code</span>
+<span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/&lt;</span><span class="n">your</span><span class="o">-</span><span class="n">github</span><span class="o">-</span><span class="n">username</span><span class="o">&gt;/</span><span class="n">pna</span><span class="o">-</span><span class="n">utils</span><span class="o">.</span><span class="n">git</span>
 </pre></div>
 </div>
 <p>If you are on windows, use the git bash shell that got installed with git; on
@@ -122,19 +122,19 @@ Fix!  The other one makes the script fail if you call it.  Fix!</p>
 <div class="section" id="make-a-new-commit-with-the-fixes">
 <h2>Make a new commit with the fixes<a class="headerlink" href="#make-a-new-commit-with-the-fixes" title="Permalink to this headline">¶</a></h2>
 <p>For each file that you change, when you&#8217;ve finished editing, do:</p>
-<div class="highlight-python"><div class="highlight"><pre>git add &lt;name_of_file&gt;
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">add</span> <span class="o">&lt;</span><span class="n">name_of_file</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 <p>Check what files you&#8217;ve changed with:</p>
-<div class="highlight-python"><div class="highlight"><pre>git status
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">status</span>
 </pre></div>
 </div>
 <p>Check the changes you haven&#8217;t added yet (not in the staging area) with:</p>
-<div class="highlight-python"><div class="highlight"><pre>git diff
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">diff</span>
 </pre></div>
 </div>
 <p>When you are done, do:</p>
-<div class="highlight-python"><div class="highlight"><pre>git commit -m &quot;Message about what you did&quot;
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">commit</span> <span class="o">-</span><span class="n">m</span> <span class="s2">&quot;Message about what you did&quot;</span>
 </pre></div>
 </div>
 <p>When you do this, you make a new commit on the <code class="docutils literal"><span class="pre">master</span></code> branch.  More
@@ -144,7 +144,7 @@ explanation next class.</p>
 <h2>Push the new commit back up to your fork<a class="headerlink" href="#push-the-new-commit-back-up-to-your-fork" title="Permalink to this headline">¶</a></h2>
 <p>Now you want to let me see the changes so I can add them back.  To do this, you
 want to <code class="docutils literal"><span class="pre">push</span></code> your changes back up to github.  To do this:</p>
-<div class="highlight-python"><div class="highlight"><pre>git push origin master --set-upstream
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">push</span> <span class="n">origin</span> <span class="n">master</span> <span class="o">--</span><span class="nb">set</span><span class="o">-</span><span class="n">upstream</span>
 </pre></div>
 </div>
 <p>This pushes the new changes up to the <code class="docutils literal"><span class="pre">master</span></code> branch in your copy of the
@@ -208,9 +208,6 @@ the changes because that&#8217;s where you &#8220;forked&#8221; from originally.
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
-    <p class="searchtip" style="font-size: 90%">
-    Enter search terms or a module, class or function name.
-    </p>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
@@ -231,7 +228,7 @@ the changes because that&#8217;s where you &#8220;forked&#8221; from originally.
     </div>
     <div class="footer" role="contentinfo">
         &copy; Copyright 2013-2015, Matthew Brett and J-B Poline.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.
     </div>
   </body>
 </html>

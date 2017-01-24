@@ -39,7 +39,7 @@ Here is the description from the second (NeuroImage) paper linked above:
     total scan time of 7 min 12.5 s.
 
 There are more acquisition parameters listed at
-http://www.gigasciencejournal.com/content/2/1/6/table/T1
+http://gigascience.biomedcentral.com/articles/10.1186/2047-217X-2-6#Tab1
 
 The analysis scripts are available at:
 https://github.com/chrisfilo/2010-Reliability-Study

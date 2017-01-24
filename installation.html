@@ -76,7 +76,7 @@ the other download links are in Europe).</p>
 <p>Open the <code class="docutils literal"><span class="pre">cmd</span></code> program program by clicking on the Windows Start button and
 typing <code class="docutils literal"><span class="pre">cmd</span></code> (Return).</p>
 <p>At the prompt, type:</p>
-<div class="highlight-python"><div class="highlight"><pre>pip install nibabel
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">nibabel</span>
 </pre></div>
 </div>
 <p>This will cause pip to install the <code class="docutils literal"><span class="pre">nibabel</span></code> package for reading
@@ -89,11 +89,11 @@ neuroimaging file formats.</p>
 <p>Open the cmd program again.  Change directory to the directory containing the
 script file, e.g. <code class="docutils literal"><span class="pre">cd</span> <span class="pre">Downloads</span></code>.</p>
 <p>Run the script with:</p>
-<div class="highlight-python"><div class="highlight"><pre>python check_pna_install.py
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">check_pna_install</span><span class="o">.</span><span class="n">py</span>
 </pre></div>
 </div>
 <p>If you have any problems, follow the printed instructions after you run the
-script, and let us know (see <a class="reference internal" href="#installation-problems"><span>Installation problems</span></a>).</p>
+script, and let us know (see <a class="reference internal" href="#installation-problems"><span class="std std-ref">Installation problems</span></a>).</p>
 </div>
 <div class="section" id="install-git-the-version-control-system">
 <h3>Install git, the version control system<a class="headerlink" href="#install-git-the-version-control-system" title="Permalink to this headline">¶</a></h3>
@@ -125,7 +125,7 @@ defaults.</p>
 run spotlight or click on the spotlight icon and type <code class="docutils literal"><span class="pre">terminal</span></code> to find
 this if you don&#8217;t know where it is on your Mac).</p>
 <p>At the Terminal.app prompt, type (or copy / paste):</p>
-<div class="highlight-python"><div class="highlight"><pre>pip install numpy scipy matplotlib pandas ipython[notebook,test] nibabel
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">numpy</span> <span class="n">scipy</span> <span class="n">matplotlib</span> <span class="n">pandas</span> <span class="n">ipython</span><span class="p">[</span><span class="n">notebook</span><span class="p">,</span><span class="n">test</span><span class="p">]</span> <span class="n">nibabel</span>
 </pre></div>
 </div>
 <p>This will cause pip to install the named packages, including the <code class="docutils literal"><span class="pre">nibabel</span></code>
@@ -138,11 +138,11 @@ package for reading neuroimaging file formats.</p>
 <p>Open the Terminal.app again if it is not already open.  Change directory to
 the directory containing the script file, e.g. <code class="docutils literal"><span class="pre">cd</span> <span class="pre">Downloads</span></code>.</p>
 <p>Run the script with:</p>
-<div class="highlight-python"><div class="highlight"><pre>python2.7 check_pna_install.py
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">python2</span><span class="o">.</span><span class="mi">7</span> <span class="n">check_pna_install</span><span class="o">.</span><span class="n">py</span>
 </pre></div>
 </div>
 <p>If you have any problems, follow the printed instructions after you run the
-script, and let us know (see <a class="reference internal" href="#installation-problems"><span>Installation problems</span></a>).</p>
+script, and let us know (see <a class="reference internal" href="#installation-problems"><span class="std std-ref">Installation problems</span></a>).</p>
 </div>
 <div class="section" id="id2">
 <h3>Install git, the version control system<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
@@ -173,46 +173,46 @@ down.</p>
 <div class="section" id="if-you-are-using-linux">
 <h2>If you are using Linux<a class="headerlink" href="#if-you-are-using-linux" title="Permalink to this headline">¶</a></h2>
 <p>If you are using recent Ubuntu or Debian, try the following commands:</p>
-<div class="highlight-python"><div class="highlight"><pre>sudo apt-get update
-sudo apt-get install -y python-pip
-sudo apt-get install -y python-dev
-sudo apt-get install -y python-matplotlib
-sudo apt-get install -y python-scipy python-nose python-pandas
-sudo pip install -U pip
-sudo pip install nibabel
-sudo pip install -U ipython[notebook]
-sudo apt-get install -y git
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">update</span>
+<span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="o">-</span><span class="n">y</span> <span class="n">python</span><span class="o">-</span><span class="n">pip</span>
+<span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="o">-</span><span class="n">y</span> <span class="n">python</span><span class="o">-</span><span class="n">dev</span>
+<span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="o">-</span><span class="n">y</span> <span class="n">python</span><span class="o">-</span><span class="n">matplotlib</span>
+<span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="o">-</span><span class="n">y</span> <span class="n">python</span><span class="o">-</span><span class="n">scipy</span> <span class="n">python</span><span class="o">-</span><span class="n">nose</span> <span class="n">python</span><span class="o">-</span><span class="n">pandas</span>
+<span class="n">sudo</span> <span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">U</span> <span class="n">pip</span>
+<span class="n">sudo</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">nibabel</span>
+<span class="n">sudo</span> <span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">U</span> <span class="n">ipython</span><span class="p">[</span><span class="n">notebook</span><span class="p">]</span>
+<span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="o">-</span><span class="n">y</span> <span class="n">git</span>
 </pre></div>
 </div>
 <p>On Fedora or related distros:</p>
-<div class="highlight-python"><div class="highlight"><pre>sudo yum install -y make gcc-c++
-sudo yum install -y python-pip
-sudo yum install -y python-ipython-notebook python-matplotlib
-sudo yum install -y python-scipy python-nose python-pandas
-sudo pip install -U pip
-sudo pip install nibabel
-sudo pip install -U ipython[notebook]
-sudo yum install -y git
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">yum</span> <span class="n">install</span> <span class="o">-</span><span class="n">y</span> <span class="n">make</span> <span class="n">gcc</span><span class="o">-</span><span class="n">c</span><span class="o">++</span>
+<span class="n">sudo</span> <span class="n">yum</span> <span class="n">install</span> <span class="o">-</span><span class="n">y</span> <span class="n">python</span><span class="o">-</span><span class="n">pip</span>
+<span class="n">sudo</span> <span class="n">yum</span> <span class="n">install</span> <span class="o">-</span><span class="n">y</span> <span class="n">python</span><span class="o">-</span><span class="n">ipython</span><span class="o">-</span><span class="n">notebook</span> <span class="n">python</span><span class="o">-</span><span class="n">matplotlib</span>
+<span class="n">sudo</span> <span class="n">yum</span> <span class="n">install</span> <span class="o">-</span><span class="n">y</span> <span class="n">python</span><span class="o">-</span><span class="n">scipy</span> <span class="n">python</span><span class="o">-</span><span class="n">nose</span> <span class="n">python</span><span class="o">-</span><span class="n">pandas</span>
+<span class="n">sudo</span> <span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">U</span> <span class="n">pip</span>
+<span class="n">sudo</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">nibabel</span>
+<span class="n">sudo</span> <span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">U</span> <span class="n">ipython</span><span class="p">[</span><span class="n">notebook</span><span class="p">]</span>
+<span class="n">sudo</span> <span class="n">yum</span> <span class="n">install</span> <span class="o">-</span><span class="n">y</span> <span class="n">git</span>
 </pre></div>
 </div>
 <p>Check the installation with:</p>
-<div class="highlight-python"><div class="highlight"><pre>wget https://nipy.bic.berkeley.edu/pna/check_pna_install.py
-python check_pna_install.py
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">wget</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">nipy</span><span class="o">.</span><span class="n">bic</span><span class="o">.</span><span class="n">berkeley</span><span class="o">.</span><span class="n">edu</span><span class="o">/</span><span class="n">pna</span><span class="o">/</span><span class="n">check_pna_install</span><span class="o">.</span><span class="n">py</span>
+<span class="n">python</span> <span class="n">check_pna_install</span><span class="o">.</span><span class="n">py</span>
 </pre></div>
 </div>
 <p>If you have any problems, follow the printed instructions after you run the
-script, and let us know (see <a class="reference internal" href="#installation-problems"><span>Installation problems</span></a>).</p>
+script, and let us know (see <a class="reference internal" href="#installation-problems"><span class="std std-ref">Installation problems</span></a>).</p>
 </div>
 <div class="section" id="if-you-have-already-have-python-from-anaconda-or-enthought-canopy">
 <h2>If you have already have Python from Anaconda or Enthought Canopy<a class="headerlink" href="#if-you-have-already-have-python-from-anaconda-or-enthought-canopy" title="Permalink to this headline">¶</a></h2>
 <p>If you already have some large Python packaging system installed, such as the
 <cite>Anaconda</cite>, <a class="reference external" href="https://www.enthought.com/products/canopy/">Enthought Canopy</a> or <a class="reference external" href="https://code.google.com/p/pythonxy/">Python(X,Y)</a>, you will need to install
 one extra package - <a class="reference external" href="http://nipy.org/nibabel">nibabel</a>.  If you are using Python(X,Y) then go to the
-<a class="reference internal" href="#python-xy-pip"><span>Use pip to install the nibabel package</span></a> section for instructions.  Otherwise, please read on.</p>
+<a class="reference internal" href="#python-xy-pip"><span class="std std-ref">Use pip to install the nibabel package</span></a> section for instructions.  Otherwise, please read on.</p>
 <p>First make sure you have <a class="reference external" href="http://pypi.python.org/pypi/pip">pip</a> (the Python package manager) installed on your
 system, by typing <a class="reference external" href="http://pypi.python.org/pypi/pip">pip</a> from the command line.  You should see the help for
 pip.  Then install nibabel with:</p>
-<div class="highlight-python"><div class="highlight"><pre>pip install nibabel
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">nibabel</span>
 </pre></div>
 </div>
 <p>Download (right-click, save as) this Python script file to your computer:
@@ -220,11 +220,11 @@ pip.  Then install nibabel with:</p>
 <p>Finally, check your installation by opening your command line application,
 changing into the directory containing the <code class="docutils literal"><span class="pre">check_pna_install.py</span></code> script,
 and running the following command:</p>
-<div class="highlight-python"><div class="highlight"><pre>python check_pna_install.py
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">check_pna_install</span><span class="o">.</span><span class="n">py</span>
 </pre></div>
 </div>
 <p>If you have any problems, follow the printed instructions after you run the
-script, and let us know (see <a class="reference internal" href="#installation-problems"><span>Installation problems</span></a>).</p>
+script, and let us know (see <a class="reference internal" href="#installation-problems"><span class="std std-ref">Installation problems</span></a>).</p>
 </div>
 <div class="section" id="if-you-don-t-want-to-do-an-install-on-your-machine-yet">
 <h2>If you don&#8217;t want to do an install on your machine yet<a class="headerlink" href="#if-you-don-t-want-to-do-an-install-on-your-machine-yet" title="Permalink to this headline">¶</a></h2>
@@ -253,7 +253,7 @@ course software installed.</p>
 </div>
 <div class="section" id="installation-problems">
 <span id="id3"></span><h2>Installation problems<a class="headerlink" href="#installation-problems" title="Permalink to this headline">¶</a></h2>
-<p>Any problems at all, please come see us in <a class="reference internal" href="office_hours.html#office-hours"><span>Office hours</span></a>, or email:</p>
+<p>Any problems at all, please come see us in <a class="reference internal" href="office_hours.html#office-hours"><span class="std std-ref">Office hours</span></a>, or email:</p>
 <ul class="simple">
 <li>matthew dot brett at gmail dot com</li>
 <li>jbpoline at gmail.com</li>
@@ -318,9 +318,6 @@ course software installed.</p>
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
-    <p class="searchtip" style="font-size: 90%">
-    Enter search terms or a module, class or function name.
-    </p>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
@@ -347,7 +344,7 @@ course software installed.</p>
     </div>
     <div class="footer" role="contentinfo">
         &copy; Copyright 2013-2015, Matthew Brett and J-B Poline.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.
     </div>
   </body>
 </html>
