@@ -3,6 +3,9 @@
 .. Course
 .. _mailing list: https://calmail.berkeley.edu/manage/list/listinfo/practical_fmri@lists.berkeley.edu
 .. _course web directory: http://nipy.bic.berkeley.edu/practical_neuroimaging/
+.. _psych214:
+.. _psych214 course on functional MRI methods:
+   https://bic-berkeley.github.io/psych-214-fall-2016/
 
 .. Version control
 .. _git: http://git-scm.com
