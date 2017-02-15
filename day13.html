@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Course on Practical Neuroimaging in Python &mdash; Practical neuroimaging analysis</title>
+    <title>Course on Practical Neuroimaging in Python &#8212; Practical neuroimaging analysis</title>
     
     <link rel="stylesheet" href="_static/nature.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -17,7 +17,8 @@
         VERSION:     '0.2',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
       };
     </script>
     <script type="text/javascript" src="_static/jquery.js"></script>
@@ -25,8 +26,8 @@
     <script type="text/javascript" src="_static/doctools.js"></script>
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="author" title="About these documents" href="about.html" />
-    <link rel="top" title="Practical neuroimaging analysis" href="index.html" />
-    <link rel="up" title="Schedule" href="schedule.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Day 14: random effects, choosing models" href="day14.html" />
     <link rel="prev" title="Day 12: smoothing and modeling" href="day12.html" /> 
   </head>
@@ -47,7 +48,7 @@
   <li><a href="https://github.com/practical-neuroimaging/pna2015">Exercises</a> |&nbsp;</li>
   <li><a href="https://calmail.berkeley.edu/manage/list/listinfo/practical_fmri@lists.berkeley.edu">Mailing list</a> |&nbsp;</li></big></big></big>
 
-          <li class="nav-item nav-item-1"><a href="schedule.html" accesskey="U">Schedule</a> &raquo;</li> 
+          <li class="nav-item nav-item-1"><a href="schedule.html" accesskey="U">Schedule</a> &#187;</li> 
       </ul>
     </div>  
 
@@ -61,13 +62,12 @@
 <p>5 / 22 / 2015</p>
 <dl class="docutils">
 <dt>Reading:</dt>
-<dd><ul class="first last">
-<li><p class="first">slides from Jeanette Mumford about linear model. There are many slides, but see these between 17 and 77:
-<a class="reference external" href="http://mumford.fmripower.org/2010_summercourse/stat_modeling_2010.pdf">http://mumford.fmripower.org/2010_summercourse/stat_modeling_2010.pdf</a></p>
-</li>
+<dd><ul class="first last simple">
+<li>slides from Jeanette Mumford about linear model. There are many slides, but see these between 17 and 77:
+<a class="reference external" href="http://mumford.fmripower.org/2010_summercourse/stat_modeling_2010.pdf">http://mumford.fmripower.org/2010_summercourse/stat_modeling_2010.pdf</a></li>
 <li><dl class="first docutils">
 <dt>Two recording commenting these slides - may (or may not) help you going through them:</dt>
-<dd><ul class="first last simple">
+<dd><ul class="first last">
 <li>slides 17-51: <a class="reference external" href="http://nipy.bic.berkeley.edu/practical_neuroimaging/glm_estimation.avi">http://nipy.bic.berkeley.edu/practical_neuroimaging/glm_estimation.avi</a></li>
 <li>slides 52-77: <a class="reference external" href="http://nipy.bic.berkeley.edu/practical_neuroimaging/hypothesistesting.avi">http://nipy.bic.berkeley.edu/practical_neuroimaging/hypothesistesting.avi</a></li>
 </ul>
@@ -78,35 +78,30 @@
 </dd>
 </dl>
 <p>Day:</p>
-<ul>
-<li><p class="first">Simple model with intercept and slope</p>
-</li>
+<ul class="simple">
+<li>Simple model with intercept and slope</li>
 <li><dl class="first docutils">
 <dt>Constructing your model</dt>
-<dd><ul class="first last simple">
+<dd><ul class="first last">
 <li>Motion parameters as confounds;</li>
 <li>low frequencies as confounds;</li>
 </ul>
 </dd>
 </dl>
 </li>
-<li><p class="first">Estimating the parameters</p>
-</li>
+<li>Estimating the parameters</li>
 <li><dl class="first docutils">
 <dt>What is the distribution of the parameters?</dt>
-<dd><ul class="first last simple">
+<dd><ul class="first last">
 <li>bias</li>
 <li>variance</li>
 </ul>
 </dd>
 </dl>
 </li>
-<li><p class="first">t and F tests, and associated contrasts, simple Anova;</p>
-</li>
-<li><p class="first">Example: Contrasts for motion;</p>
-</li>
-<li><p class="first">Correlation between regressors;</p>
-</li>
+<li>t and F tests, and associated contrasts, simple Anova;</li>
+<li>Example: Contrasts for motion;</li>
+<li>Correlation between regressors;</li>
 </ul>
 </div>
 
@@ -125,15 +120,15 @@
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
-      <li><a href="_sources/day13.txt"
+      <li><a href="_sources/day13.rst.txt"
             rel="nofollow">Show Source</a></li>
     </ul>
    </div>
 <div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="search.html" method="get">
-      <input type="text" name="q" />
-      <input type="submit" value="Go" />
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
@@ -159,12 +154,12 @@
   <li><a href="https://github.com/practical-neuroimaging/pna2015">Exercises</a> |&nbsp;</li>
   <li><a href="https://calmail.berkeley.edu/manage/list/listinfo/practical_fmri@lists.berkeley.edu">Mailing list</a> |&nbsp;</li></big></big></big>
 
-          <li class="nav-item nav-item-1"><a href="schedule.html" >Schedule</a> &raquo;</li> 
+          <li class="nav-item nav-item-1"><a href="schedule.html" >Schedule</a> &#187;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &copy; Copyright 2013-2015, Matthew Brett and J-B Poline.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.
+        &#169; Copyright 2013-2015, Matthew Brett and J-B Poline.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.1.
     </div>
   </body>
 </html>

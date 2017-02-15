@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Course on Practical Neuroimaging in Python &mdash; Practical neuroimaging analysis</title>
+    <title>Course on Practical Neuroimaging in Python &#8212; Practical neuroimaging analysis</title>
     
     <link rel="stylesheet" href="../_static/nature.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -17,7 +17,8 @@
         VERSION:     '0.2',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
       };
     </script>
     <script type="text/javascript" src="../_static/jquery.js"></script>
@@ -25,7 +26,8 @@
     <script type="text/javascript" src="../_static/doctools.js"></script>
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="author" title="About these documents" href="../about.html" />
-    <link rel="top" title="Practical neuroimaging analysis" href="../index.html" /> 
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
   </head>
   <body role="document">
     <div class="related" role="navigation" aria-label="related navigation">
@@ -70,24 +72,20 @@ choose the right tools.</p>
 <h2>Notes<a class="headerlink" href="#notes" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="the-problem-of-incorrect-findings">
 <h3>The problem of incorrect findings<a class="headerlink" href="#the-problem-of-incorrect-findings" title="Permalink to this headline">¶</a></h3>
-<ul>
-<li><p class="first">Why most published research findings are false:
-<a class="reference external" href="http://www.plosmedicine.org/article/info:doi/10.1371/journal.pmed.0020124">http://www.plosmedicine.org/article/info:doi/10.1371/journal.pmed.0020124</a></p>
-</li>
-<li><p class="first">Blog discussion including estimates of false findings in neuroimaging:
+<ul class="simple">
+<li>Why most published research findings are false:
+<a class="reference external" href="http://www.plosmedicine.org/article/info:doi/10.1371/journal.pmed.0020124">http://www.plosmedicine.org/article/info:doi/10.1371/journal.pmed.0020124</a></li>
+<li>Blog discussion including estimates of false findings in neuroimaging:
 <a class="reference external" href="http://www.danielbor.com/dilemma-weak-neuroimaging/">http://www.danielbor.com/dilemma-weak-neuroimaging/</a> with Nancy Kanwisher&#8217;s
 lead-off on replication here:
-<a class="reference external" href="http://www.danielbor.com/dilemma-weak-neuroimaging/#comment-77">http://www.danielbor.com/dilemma-weak-neuroimaging/#comment-77</a></p>
-</li>
-<li><p class="first"><a class="reference external" href="http://en.wikipedia.org/wiki/Climatic_Research_Unit_email_controversy">Climategate</a> The
-<a class="reference external" href="http://www.anenglishmanscastle.com/HARRY_READ_ME.txt">HARRY_READ_ME.txt file</a></p>
-</li>
-<li><p class="first">Take no-one&#8217;s word for it - <a class="reference external" href="http://en.wikipedia.org/wiki/Nullius_in_verba">Nullius in verba</a> - motto of the Royal
-Society.</p>
-</li>
+<a class="reference external" href="http://www.danielbor.com/dilemma-weak-neuroimaging/#comment-77">http://www.danielbor.com/dilemma-weak-neuroimaging/#comment-77</a></li>
+<li><a class="reference external" href="http://en.wikipedia.org/wiki/Climatic_Research_Unit_email_controversy">Climategate</a> The
+<a class="reference external" href="http://www.anenglishmanscastle.com/HARRY_READ_ME.txt">HARRY_READ_ME.txt file</a></li>
+<li>Take no-one&#8217;s word for it - <a class="reference external" href="http://en.wikipedia.org/wiki/Nullius_in_verba">Nullius in verba</a> - motto of the Royal
+Society.</li>
 <li><dl class="first docutils">
 <dt>Python used as main teaching language:</dt>
-<dd><ul class="first last simple">
+<dd><ul class="first last">
 <li><a class="reference external" href="http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-189-a-gentle-introduction-to-programming-using-python-january-iap-2011/index.htm">by MIT</a></li>
 <li><a class="reference external" href="http://www-inst.eecs.berkeley.edu/~cs61a/sp13/">by Berkeley</a></li>
 </ul>
@@ -96,7 +94,7 @@ Society.</p>
 </li>
 <li><dl class="first docutils">
 <dt>Python compared to MATLAB:</dt>
-<dd><ul class="first last simple">
+<dd><ul class="first last">
 <li><a class="reference external" href="http://stevetjoa.com/305/">http://stevetjoa.com/305/</a></li>
 <li><a class="reference external" href="http://www.scipy.org/NumPy_for_Matlab_Users">http://www.scipy.org/NumPy_for_Matlab_Users</a></li>
 </ul>
@@ -182,15 +180,15 @@ directory, running the command <code class="docutils literal"><span class="pre">
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
-      <li><a href="../_sources/2013/day0.txt"
+      <li><a href="../_sources/2013/day0.rst.txt"
             rel="nofollow">Show Source</a></li>
     </ul>
    </div>
 <div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" />
-      <input type="submit" value="Go" />
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
@@ -213,8 +211,8 @@ directory, running the command <code class="docutils literal"><span class="pre">
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &copy; Copyright 2013-2015, Matthew Brett and J-B Poline.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.
+        &#169; Copyright 2013-2015, Matthew Brett and J-B Poline.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.1.
     </div>
   </body>
 </html>

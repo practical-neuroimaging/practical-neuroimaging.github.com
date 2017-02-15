@@ -12,7 +12,7 @@ analysis at UC Berkeley `brain imaging center`_ (BIC).
 The pages are for the 2015 course.
 
 You can find more recent versions of a lot of the material on the website for
-the 2016 `PSYCH214 course on functional MRI methods`.
+the 2016 `PSYCH214 course on functional MRI methods`_.
 
 Pages from the previous (2013) course are :doc:`here <2013/index>`.
 

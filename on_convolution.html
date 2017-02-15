@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Course on Practical Neuroimaging in Python &mdash; Practical neuroimaging analysis</title>
+    <title>Course on Practical Neuroimaging in Python &#8212; Practical neuroimaging analysis</title>
     
     <link rel="stylesheet" href="_static/nature.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -17,7 +17,8 @@
         VERSION:     '0.2',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
       };
     </script>
     <script type="text/javascript" src="_static/jquery.js"></script>
@@ -25,7 +26,8 @@
     <script type="text/javascript" src="_static/doctools.js"></script>
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="author" title="About these documents" href="about.html" />
-    <link rel="top" title="Practical neuroimaging analysis" href="index.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Putting modules on the Python path" href="python_path.html" />
     <link rel="prev" title="Git setup for different editors" href="git_setup.html" /> 
   </head>
@@ -170,10 +172,7 @@ shift it by 4 seconds-worth to give our predicted output:</p>
 <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Output BOLD signal for event at time=4&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>(<a class="reference external" href=".//on_convolution-4.png">png</a>, <a class="reference external" href=".//on_convolution-4.hires.png">hires.png</a>, <a class="reference external" href=".//on_convolution-4.pdf">pdf</a>)</p>
-<div class="figure">
-<img alt="_images/on_convolution-4.png" src="_images/on_convolution-4.png" />
-</div>
+<p>()</p>
 <p>Our impulse so far has an amplitude of 1.  What if the impulse was twice as
 strong, with an amplitude of 2?</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">neural_signal</span><span class="p">[</span><span class="n">i_time_4</span><span class="p">]</span> <span class="o">=</span> <span class="mi">2</span>  <span class="c1"># An impulse with amplitude 2</span>
@@ -201,10 +200,7 @@ shifting by 4, as before, and then multiplying the HRF by 2:</p>
 <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Output BOLD signal for amplitude 2 impulse&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>(<a class="reference external" href=".//on_convolution-6.png">png</a>, <a class="reference external" href=".//on_convolution-6.hires.png">hires.png</a>, <a class="reference external" href=".//on_convolution-6.pdf">pdf</a>)</p>
-<div class="figure">
-<img alt="_images/on_convolution-6.png" src="_images/on_convolution-6.png" />
-</div>
+<p>()</p>
 <p>What if I have several impulses?  For example, imagine I had an impulse
 amplitude 2 at time == 4, then another of amplitude 1 at time == 10, and another
 of amplitude 3 at time == 20.</p>
@@ -241,10 +237,7 @@ the HRF shifted to time == 20 and scaled by 3:</p>
 <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Output BOLD signal for three impulses&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>(<a class="reference external" href=".//on_convolution-8.png">png</a>, <a class="reference external" href=".//on_convolution-8.hires.png">hires.png</a>, <a class="reference external" href=".//on_convolution-8.pdf">pdf</a>)</p>
-<div class="figure">
-<img alt="_images/on_convolution-8.png" src="_images/on_convolution-8.png" />
-</div>
+<p>()</p>
 <p>At the moment, an <em>impulse</em> is an event that lasts for just one time point. In
 our case, the time vector (<code class="docutils literal"><span class="pre">times</span></code> in the code above) has one point for every
 0.1 seconds (10 time points per second).</p>
@@ -259,10 +252,7 @@ seconds apart:</p>
 <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Neural model including event lasting 0.5 seconds&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>(<a class="reference external" href=".//on_convolution-9.png">png</a>, <a class="reference external" href=".//on_convolution-9.hires.png">hires.png</a>, <a class="reference external" href=".//on_convolution-9.pdf">pdf</a>)</p>
-<div class="figure">
-<img alt="_images/on_convolution-9.png" src="_images/on_convolution-9.png" />
-</div>
+<p>()</p>
 <p>Now I need to add a new shifted HRF for the impulse corresponding to time == 4,
 and for time == 4.1 and so on until time == 4.4:</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">bold_signal</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">n_time_points</span><span class="p">)</span>
@@ -276,10 +266,7 @@ and for time == 4.1 and so on until time == 4.4:</p>
 <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Output BOLD signal with event lasting 0.5 seconds&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>(<a class="reference external" href=".//on_convolution-10.png">png</a>, <a class="reference external" href=".//on_convolution-10.hires.png">hires.png</a>, <a class="reference external" href=".//on_convolution-10.pdf">pdf</a>)</p>
-<div class="figure">
-<img alt="_images/on_convolution-10.png" src="_images/on_convolution-10.png" />
-</div>
+<p>()</p>
 </div>
 <div class="section" id="working-out-an-algorithm">
 <h3>Working out an algorithm<a class="headerlink" href="#working-out-an-algorithm" title="Permalink to this headline">¶</a></h3>
@@ -598,15 +585,15 @@ function <span class="math">\(g\)</span> is reversed and shifted.</p>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
-      <li><a href="_sources/on_convolution.txt"
+      <li><a href="_sources/on_convolution.rst.txt"
             rel="nofollow">Show Source</a></li>
     </ul>
    </div>
 <div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="search.html" method="get">
-      <input type="text" name="q" />
-      <input type="submit" value="Go" />
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
@@ -635,8 +622,8 @@ function <span class="math">\(g\)</span> is reversed and shifted.</p>
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &copy; Copyright 2013-2015, Matthew Brett and J-B Poline.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.
+        &#169; Copyright 2013-2015, Matthew Brett and J-B Poline.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.1.
     </div>
   </body>
 </html>
